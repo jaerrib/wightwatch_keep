@@ -1,20 +1,23 @@
 [gd_scene load_steps=11 format=3 uid="uid://2h05uwsdvof2"]
 
 [ext_resource type="Texture2D" uid="uid://c5pj7tpnj03d0" path="res://assets/player/player.png" id="1_8afob"]
+[ext_resource type="Script" uid="uid://bay430eedeaus" path="res://scenes/player/player.gd" id="1_dovo2"]
 
-[sub_resource type="Animation" id="Animation_dovo2"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_75vfm"]
+resource_name = "attack"
+length = 0.2
+step = 0.025
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [1]
+"values": [5, 6, 7, 5]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -23,10 +26,28 @@ tracks/1/path = NodePath("SwordHitBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [true]
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_p47bc"]
+resource_name = "climbing"
+length = 0.5
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [8, 9]
 }
 
 [sub_resource type="Animation" id="Animation_8afob"]
@@ -81,56 +102,8 @@ tracks/0/keys = {
 "values": [4, 5, 6]
 }
 
-[sub_resource type="Animation" id="Animation_p47bc"]
-resource_name = "climbing"
-length = 0.5
-loop_mode = 1
-step = 0.25
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [8, 9]
-}
-
-[sub_resource type="Animation" id="Animation_75vfm"]
-resource_name = "attack"
-length = 0.2
-step = 0.025
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [5, 6, 7, 5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SwordHitBox/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, false, true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gmlin"]
 _data = {
-&"RESET": SubResource("Animation_dovo2"),
 &"attack": SubResource("Animation_75vfm"),
 &"climbing": SubResource("Animation_p47bc"),
 &"idle": SubResource("Animation_8afob"),
@@ -145,11 +118,14 @@ size = Vector2(8, 13)
 size = Vector2(10, 16)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 89
+script = ExtResource("1_dovo2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_8afob")
 hframes = 10
-frame = 1
+frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -161,11 +137,13 @@ autoplay = "idle"
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_dovo2")
 
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+
 [node name="SwordHitBox" type="Area2D" parent="."]
+position = Vector2(9, 0)
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox"]
-position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_8afob")
 disabled = true
-
-[node name="Sound" type="AudioStreamPlayer2D" parent="."]
