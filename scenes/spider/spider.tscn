@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://ttoxj5efrtrk"]
+
+[ext_resource type="PackedScene" uid="uid://cf57h23ilq1xh" path="res://scenes/enemy_base/enemy_base.tscn" id="1_vy7m6"]
+[ext_resource type="Texture2D" uid="uid://daoopdteshq56" path="res://assets/enemies/spider.png" id="2_congr"]
+[ext_resource type="Script" uid="uid://16j8ylk1vcra" path="res://scenes/spider/spider.gd" id="2_xtdh8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtdh8"]
+atlas = ExtResource("2_congr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3wrh"]
+atlas = ExtResource("2_congr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1eoj"]
+atlas = ExtResource("2_congr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ydlul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtdh8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3wrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1eoj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbgft"]
+size = Vector2(10, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uj1gu"]
+size = Vector2(10, 7)
+
+[node name="Spider" instance=ExtResource("1_vy7m6")]
+script = ExtResource("2_xtdh8")
+speed = 40.0
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_ydlul")
+autoplay = "default"
+frame_progress = 0.298416
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_mbgft")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_uj1gu")
+
+[node name="FloorDetection" type="RayCast2D" parent="." index="4"]
+position = Vector2(-8, 0)
+target_position = Vector2(0, 16)
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
