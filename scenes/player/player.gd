@@ -17,7 +17,7 @@ var _state: PlayerState = PlayerState.IDLE
 var _on_ladder: bool = false
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var hit_box: CollisionShape2D = $HitBox
+@onready var hit_box: Area2D = $HitBox
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var sound: AudioStreamPlayer2D = $Sound
 @onready var sword_hit_box: Area2D = $SwordHitBox
