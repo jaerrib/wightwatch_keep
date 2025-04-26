@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://cgwqni2nbbesf"]
+
+[ext_resource type="PackedScene" uid="uid://cf57h23ilq1xh" path="res://scenes/enemy_base/enemy_base.tscn" id="1_yq0o5"]
+[ext_resource type="Script" uid="uid://bw42sybid1vra" path="res://scenes/slime/slime.gd" id="2_d7aas"]
+[ext_resource type="Texture2D" uid="uid://crdvbn2fuxlup" path="res://assets/enemies/slime.png" id="3_olu8f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdl0g"]
+atlas = ExtResource("3_olu8f")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdc4u"]
+atlas = ExtResource("3_olu8f")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71ewr"]
+atlas = ExtResource("3_olu8f")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nsj70"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdl0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdc4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71ewr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olu8f"]
+size = Vector2(11, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdl0g"]
+size = Vector2(11, 8)
+
+[node name="Slime" instance=ExtResource("1_yq0o5")]
+script = ExtResource("2_d7aas")
+speed = 5.0
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_nsj70")
+autoplay = "default"
+frame = 2
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_olu8f")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_mdl0g")
+
+[node name="FloorDetection" type="RayCast2D" parent="." index="4"]
+position = Vector2(-8, 0)
+target_position = Vector2(0, 16)
+
+[node name="MoveTimer" type="Timer" parent="." index="5"]
+wait_time = 2.0
+one_shot = true
+
+[node name="PauseTimer" type="Timer" parent="." index="6"]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="timeout" from="PauseTimer" to="." method="_on_pause_timer_timeout"]

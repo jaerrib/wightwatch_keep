@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=10 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="Texture2D" uid="uid://btdlwhboa3pxi" path="res://assets/tiles/tiles.png" id="2_u6jkd"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="4_ncu3c"]
 [ext_resource type="PackedScene" uid="uid://hxifn0jcytmw" path="res://scenes/sword_skeleton/sword_skeleton.tscn" id="5_kr674"]
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="6_tn631"]
+[ext_resource type="PackedScene" uid="uid://cgwqni2nbbesf" path="res://scenes/slime/slime.tscn" id="7_p2h7h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tlib"]
 texture = ExtResource("2_u6jkd")
@@ -69,4 +70,6 @@ position = Vector2(64, 136)
 
 [node name="Bat" parent="Enemies" instance=ExtResource("6_tn631")]
 position = Vector2(240, 136)
-speed = 30.0
+
+[node name="Slime" parent="Enemies" instance=ExtResource("7_p2h7h")]
+position = Vector2(112, 184)
