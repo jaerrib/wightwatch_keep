@@ -11,9 +11,9 @@ var _moving: bool = false
 
 
 func _ready() -> void:
+	super._ready()
 	move_timer.start()
 	_moving = true
-	super._ready()
 
 
 func _physics_process(delta: float) -> void:
