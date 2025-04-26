@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=8 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="Texture2D" uid="uid://btdlwhboa3pxi" path="res://assets/tiles/tiles.png" id="2_u6jkd"]
 [ext_resource type="PackedScene" uid="uid://ttoxj5efrtrk" path="res://scenes/spider/spider.tscn" id="3_3tlib"]
 [ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="4_ncu3c"]
+[ext_resource type="PackedScene" uid="uid://hxifn0jcytmw" path="res://scenes/sword_skeleton/sword_skeleton.tscn" id="5_kr674"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tlib"]
 texture = ExtResource("2_u6jkd")
@@ -45,6 +46,8 @@ sources/0 = SubResource("TileSetAtlasSource_3tlib")
 
 [node name="Player" parent="." instance=ExtResource("1_myc1q")]
 position = Vector2(32, 184)
+right_collision_position = null
+left_collision_position = null
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -55,10 +58,10 @@ tile_set = SubResource("TileSet_ncu3c")
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Spider" parent="Enemies" instance=ExtResource("3_3tlib")]
-position = Vector2(80, 136)
-
-[node name="Spider2" parent="Enemies" instance=ExtResource("3_3tlib")]
-position = Vector2(272, 88)
+position = Vector2(288, 88)
 
 [node name="Skeleton" parent="Enemies" instance=ExtResource("4_ncu3c")]
-position = Vector2(224, 136)
+position = Vector2(168, 184)
+
+[node name="SwordSkeleton" parent="Enemies" instance=ExtResource("5_kr674")]
+position = Vector2(64, 136)

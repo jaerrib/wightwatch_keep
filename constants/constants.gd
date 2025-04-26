@@ -6,5 +6,5 @@ enum ObjectType {
 	HEART,
 }
 
-const PLAYER_GROUP: String = "Player"
-const MOVEABLES_GROUP: String = "Moveables"
+const PLAYER_GROUP: String = "player"
+const MOVEABLES_GROUP: String = "moveables"

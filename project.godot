@@ -25,6 +25,11 @@ window/size/viewport_width=320
 window/size/viewport_height=240
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+moveables=""
+player=""
+
 [input]
 
 up={
@@ -69,6 +74,7 @@ attack={
 2d_physics/layer_7="exit"
 2d_physics/layer_8="dangers"
 2d_physics/layer_9="ladders"
+2d_physics/layer_10="enemy_weapon"
 
 [rendering]
 

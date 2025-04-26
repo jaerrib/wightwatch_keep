@@ -55,7 +55,7 @@ sprite_frames = SubResource("SpriteFrames_jyd5v")
 autoplay = "default"
 frame_progress = 0.709666
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="1" groups=["moveables"]]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_k7ymt")
 
