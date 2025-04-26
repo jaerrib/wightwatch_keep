@@ -81,7 +81,7 @@ position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_wwmj5")
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-visible = false
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_d73lp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="4"]
