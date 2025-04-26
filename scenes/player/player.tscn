@@ -138,9 +138,9 @@ shape = SubResource("RectangleShape2D_dovo2")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 
-[node name="HitBox" type="Area2D" parent="."]
+[node name="HitBox" type="Area2D" parent="." groups=["player"]]
 collision_layer = 2
-collision_mask = 488
+collision_mask = 1000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, 1.5)
@@ -154,3 +154,5 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox"]
 shape = SubResource("RectangleShape2D_8afob")
 disabled = true
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

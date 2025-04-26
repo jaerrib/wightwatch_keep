@@ -68,7 +68,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qsunu"]
-size = Vector2(9, 16)
+size = Vector2(8.125, 16)
 
 [node name="SwordSkeleton" instance=ExtResource("1_at72v")]
 script = ExtResource("2_wwmj5")
@@ -80,11 +80,8 @@ left_collision_position = Vector2(-8, 0)
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_wwmj5")
 
-[node name="HitBox" parent="." index="2"]
-position = Vector2(-1, 0)
-
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(1, 1.5)
+visible = false
 shape = SubResource("RectangleShape2D_d73lp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="4"]
@@ -104,9 +101,11 @@ target_position = Vector2(0, 16)
 
 [node name="SwordHitBox" type="Area2D" parent="." index="7"]
 position = Vector2(-8, 0)
+collision_layer = 512
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox" index="0"]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.0625, 0)
 shape = SubResource("RectangleShape2D_qsunu")
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
