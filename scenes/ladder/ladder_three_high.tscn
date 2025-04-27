@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyrp5u3y7nens"]
+
+[ext_resource type="Script" uid="uid://c2sdyvfycdveo" path="res://scenes/ladder/ladder.gd" id="1_x44dp"]
+[ext_resource type="Texture2D" uid="uid://cekwjw8r070o5" path="res://assets/tiles/ladder.png" id="2_jthrc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ker02"]
+size = Vector2(16, 48)
+
+[node name="LadderThreeHigh" type="Node2D"]
+script = ExtResource("1_x44dp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jthrc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 16)
+texture = ExtResource("2_jthrc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(0, 32)
+texture = ExtResource("2_jthrc")
+
+[node name="LadderArea" type="Area2D" parent="."]
+collision_layer = 257
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderArea"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_ker02")
+
+[connection signal="area_entered" from="LadderArea" to="." method="_on_ladder_area_area_entered"]
+[connection signal="area_exited" from="LadderArea" to="." method="_on_ladder_area_area_exited"]

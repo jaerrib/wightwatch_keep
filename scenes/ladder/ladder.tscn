@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds0e8yc5lsbt2"]
+
+[ext_resource type="Texture2D" uid="uid://cekwjw8r070o5" path="res://assets/tiles/ladder.png" id="1_1hr68"]
+[ext_resource type="Script" uid="uid://c2sdyvfycdveo" path="res://scenes/ladder/ladder.gd" id="1_ker02"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ker02"]
+size = Vector2(16, 16)
+
+[node name="Ladder" type="Node2D"]
+script = ExtResource("1_ker02")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1hr68")
+
+[node name="LadderArea" type="Area2D" parent="."]
+collision_layer = 256
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderArea"]
+shape = SubResource("RectangleShape2D_ker02")
+
+[connection signal="area_entered" from="LadderArea" to="." method="_on_ladder_area_area_entered"]
+[connection signal="area_exited" from="LadderArea" to="." method="_on_ladder_area_area_exited"]
