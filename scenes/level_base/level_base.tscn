@@ -1,49 +1,13 @@
-[gd_scene load_steps=11 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=9 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
-[ext_resource type="Texture2D" uid="uid://btdlwhboa3pxi" path="res://assets/tiles/tiles.png" id="2_u6jkd"]
+[ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
 [ext_resource type="PackedScene" uid="uid://ttoxj5efrtrk" path="res://scenes/spider/spider.tscn" id="3_3tlib"]
 [ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="4_ncu3c"]
 [ext_resource type="PackedScene" uid="uid://hxifn0jcytmw" path="res://scenes/sword_skeleton/sword_skeleton.tscn" id="5_kr674"]
 [ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="6_48c0a"]
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="6_tn631"]
 [ext_resource type="PackedScene" uid="uid://cgwqni2nbbesf" path="res://scenes/slime/slime.tscn" id="7_p2h7h"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tlib"]
-texture = ExtResource("2_u6jkd")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:0/0 = 0
-6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:0/0 = 0
-7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-8:0/0 = 0
-8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:0/0 = 0
-9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-10:0/0 = 0
-10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-11:0/0 = 0
-11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-7:2/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_ncu3c"]
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_3tlib")
 
 [node name="LevelBase" type="Node2D"]
 
@@ -56,7 +20,7 @@ left_collision_position = null
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
 tile_map_data = PackedByteArray("AAAAAAwAAAAIAAAAAAABAAwAAAAIAAAAAAACAAwAAAAGAAAAAAADAAwAAAAFAAAAAAAEAAwAAAAIAAAAAAANAAwAAAAGAAAAAAAOAAwAAAAGAAAAAAAPAAwAAAAHAAAAAAAQAAwAAAAHAAAAAAARAAwAAAAIAAAAAAASAAwAAAAIAAAAAAAFAAwAAAAFAAAAAAAGAAwAAAAHAAAAAAAHAAwAAAAIAAAAAAAIAAwAAAAFAAAAAAAKAAwAAAAGAAAAAAALAAwAAAAFAAAAAAAMAAwAAAAFAAAAAAAJAAwAAAAHAAAAAAATAAgAAAAFAAAAAAATAAkAAAAIAAAAAAATAAoAAAAGAAAAAAATAAsAAAAFAAAAAAATAAwAAAAHAAAAAAAAAAAAAAAHAAAAAAABAAAAAAAGAAAAAAACAAAAAAAFAAAAAAADAAAAAAAFAAAAAAAEAAAAAAAIAAAAAAAFAAAAAAAFAAAAAAAGAAAAAAAHAAAAAAAHAAAAAAAIAAAAAAAIAAAAAAAFAAAAAAAJAAAAAAAHAAAAAAAKAAAAAAAGAAAAAAALAAAAAAAHAAAAAAAMAAAAAAAFAAAAAAANAAAAAAAIAAAAAAAOAAAAAAAFAAAAAAAPAAAAAAAFAAAAAAAQAAAAAAAIAAAAAAARAAAAAAAFAAAAAAASAAAAAAAGAAAAAAATAAAAAAAGAAAAAAATAAEAAAAIAAAAAAATAAIAAAAHAAAAAAATAAMAAAAIAAAAAAATAAQAAAAHAAAAAAATAAUAAAAHAAAAAAATAAYAAAAGAAAAAAATAAcAAAAFAAAAAAAAAAEAAAAFAAAAAAAAAAIAAAAGAAAAAAAAAAMAAAAGAAAAAAAAAAQAAAAIAAAAAAAAAAUAAAAGAAAAAAAAAAYAAAAIAAAAAAAAAAcAAAAIAAAAAAAAAAgAAAAHAAAAAAAAAAkAAAAHAAAAAAAAAAoAAAAHAAAAAAAAAAsAAAAGAAAAAAABAAkAAAAIAAAAAAACAAkAAAAGAAAAAAADAAkAAAAHAAAAAAAEAAkAAAAFAAAAAAAFAAkAAAAGAAAAAAAIAAsAAAAGAAAAAAAKAAkAAAAIAAAAAAALAAkAAAAHAAAAAAAMAAkAAAAIAAAAAAAPAAkAAAAIAAAAAAAOAAkAAAAIAAAAAAANAAkAAAAIAAAAAAASAAYAAAAIAAAAAAARAAYAAAAFAAAAAAAQAAYAAAAFAAAAAAAKAAgAAAAIAAAAAAAGAAkAAAAIAAAAAAAMAAYAAAAHAAAAAAASAAoAAAAFAAAAAAASAAsAAAAHAAAAAAARAAsAAAAHAAAAAAALAAgAAAAIAAAAAAAKAAcAAAAGAAAAAAAHAAkAAAAGAAAAAAA=")
-tile_set = SubResource("TileSet_ncu3c")
+tile_set = ExtResource("2_48c0a")
 
 [node name="Enemies" type="Node2D" parent="."]
 
