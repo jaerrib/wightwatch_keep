@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2ixiw7r2mq3b"]
+
+[ext_resource type="Script" uid="uid://ctrah6c33b50u" path="res://scenes/object_maker/object_maker.gd" id="1_y8j11"]
+
+[node name="ObjectMaker" type="Node2D"]
+script = ExtResource("1_y8j11")
