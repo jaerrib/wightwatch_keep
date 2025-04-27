@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=11 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
@@ -9,8 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="6_tn631"]
 [ext_resource type="PackedScene" uid="uid://cgwqni2nbbesf" path="res://scenes/slime/slime.tscn" id="7_p2h7h"]
 [ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="9_cr6la"]
+[ext_resource type="PackedScene" uid="uid://c2ixiw7r2mq3b" path="res://scenes/object_maker/object_maker.tscn" id="10_v0a34"]
 
 [node name="LevelBase" type="Node2D"]
+
+[node name="ObjectMaker" parent="." instance=ExtResource("10_v0a34")]
 
 [node name="Player" parent="." instance=ExtResource("1_myc1q")]
 position = Vector2(32, 184)
