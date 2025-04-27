@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c5ps7sp0v1sfc"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://c5ps7sp0v1sfc"]
 
 [ext_resource type="Texture2D" uid="uid://btdlwhboa3pxi" path="res://assets/tiles/tiles.png" id="1_r26qx"]
+[ext_resource type="Texture2D" uid="uid://4l7d51oi2d56" path="res://assets/tiles/water.png" id="2_avnle"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tlib"]
 texture = ExtResource("1_r26qx")
@@ -33,7 +34,20 @@ texture = ExtResource("1_r26qx")
 4:3/0 = 0
 5:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a8jc2"]
+texture = ExtResource("2_avnle")
+0:0/animation_columns = 6
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 0.2
+0:0/animation_frame_1/duration = 0.2
+0:0/animation_frame_2/duration = 0.2
+0:0/animation_frame_3/duration = 0.2
+0:0/animation_frame_4/duration = 0.2
+0:0/animation_frame_5/duration = 0.2
+0:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_3tlib")
+sources/2 = SubResource("TileSetAtlasSource_a8jc2")
