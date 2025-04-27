@@ -72,6 +72,7 @@ func get_input(delta) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	if Input.is_action_just_pressed("attack"):
+			SoundManager.play_clip(sound, SoundManager.SOUND_PLAYER_ATTACK)
 			animation_player.play("attack")
 	velocity.y = clampf(velocity.y, JUMP_VELOCITY, MAX_FALL)
 

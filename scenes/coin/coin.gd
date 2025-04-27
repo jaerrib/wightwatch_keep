@@ -35,7 +35,7 @@ func remove() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if _collectable:
 		removal_timer.start()
-		#SoundManager.play_clip(sound, SoundManager.SOUND_COIN)
+		SoundManager.play_clip(sound, SoundManager.SOUND_COIN)
 
 
 func _on_collection_timer_timeout() -> void:
