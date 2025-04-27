@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=10 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
@@ -8,13 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="6_48c0a"]
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="6_tn631"]
 [ext_resource type="PackedScene" uid="uid://cgwqni2nbbesf" path="res://scenes/slime/slime.tscn" id="7_p2h7h"]
+[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="9_cr6la"]
 
 [node name="LevelBase" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_myc1q")]
 position = Vector2(32, 184)
-right_collision_position = null
-left_collision_position = null
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -41,3 +40,11 @@ position = Vector2(112, 184)
 
 [node name="MedusaHead" parent="Enemies" instance=ExtResource("6_48c0a")]
 position = Vector2(224, 56)
+
+[node name="Torches" type="Node2D" parent="."]
+
+[node name="Torch" parent="Torches" instance=ExtResource("9_cr6la")]
+position = Vector2(56, 176)
+
+[node name="Torch2" parent="Torches" instance=ExtResource("9_cr6la")]
+position = Vector2(240, 176)
