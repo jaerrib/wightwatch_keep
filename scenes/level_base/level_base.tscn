@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=12 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cgwqni2nbbesf" path="res://scenes/slime/slime.tscn" id="7_p2h7h"]
 [ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="9_cr6la"]
 [ext_resource type="PackedScene" uid="uid://c2ixiw7r2mq3b" path="res://scenes/object_maker/object_maker.tscn" id="10_v0a34"]
+[ext_resource type="PackedScene" uid="uid://bkjtcs7sws4xk" path="res://scenes/key/key.tscn" id="11_uakon"]
 
 [node name="LevelBase" type="Node2D"]
 
@@ -51,3 +52,6 @@ position = Vector2(56, 176)
 
 [node name="Torch2" parent="Torches" instance=ExtResource("9_cr6la")]
 position = Vector2(240, 176)
+
+[node name="Key" parent="." instance=ExtResource("11_uakon")]
+position = Vector2(296, 152)
