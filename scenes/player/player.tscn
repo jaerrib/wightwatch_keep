@@ -119,6 +119,7 @@ size = Vector2(10, 16)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 0
+collision_mask = 257
 script = ExtResource("1_dovo2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -140,7 +141,7 @@ shape = SubResource("RectangleShape2D_dovo2")
 
 [node name="HitBox" type="Area2D" parent="." groups=["player"]]
 collision_layer = 2
-collision_mask = 1000
+collision_mask = 744
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, 1.5)
@@ -155,4 +156,5 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_8afob")
 disabled = true
 
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

@@ -132,7 +132,7 @@ func on_ladder(value: bool) -> void:
 
 
 func _on_animation_player_animation_finished(anim_name: String) -> void:
-	if anim_name == "attack" or anim_name == "attack_left":
+	if anim_name == "attack":
 		if _on_ladder:
 			animation_player.play("climbing")
 
