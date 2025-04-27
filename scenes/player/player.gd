@@ -138,4 +138,4 @@ func _on_animation_player_animation_finished(anim_name: String) -> void:
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
-	pass
+	print(area.name)
