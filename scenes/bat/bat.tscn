@@ -46,9 +46,6 @@ frame_progress = 0.359677
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_gb2kl")
 
-[node name="HitBox" parent="." index="2"]
-collision_mask = 12
-
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_ffes0")
