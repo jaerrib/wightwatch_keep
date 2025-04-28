@@ -1,26 +1,37 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2ypjoidrdsfy"]
+[gd_scene load_steps=11 format=3 uid="uid://c2ypjoidrdsfy"]
 
 [ext_resource type="Texture2D" uid="uid://ps7qhdebf3d5" path="res://assets/danger/pool.png" id="1_3c4p4"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c4p4"]
+atlas = ExtResource("1_3c4p4")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_lkk3n"]
 atlas = ExtResource("1_3c4p4")
-region = Rect2(0, 0, 24, 16)
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v2byc"]
 atlas = ExtResource("1_3c4p4")
-region = Rect2(24, 0, 24, 16)
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_heq0u"]
 atlas = ExtResource("1_3c4p4")
-region = Rect2(48, 0, 24, 16)
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cu368"]
 atlas = ExtResource("1_3c4p4")
-region = Rect2(72, 0, 24, 16)
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g2ot"]
+atlas = ExtResource("1_3c4p4")
+region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1g2ot"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c4p4")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lkk3n")
 }, {
@@ -32,6 +43,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cu368")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g2ot")
 }],
 "loop": true,
 "name": &"default",
@@ -39,22 +53,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6r684"]
-size = Vector2(24, 8)
+size = Vector2(16, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_icjic"]
-size = Vector2(24, 8)
+size = Vector2(16, 8)
 
 [node name="Pool" type="StaticBody2D"]
 collision_mask = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(12, 8)
+position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_1g2ot")
 autoplay = "default"
-frame_progress = 0.759052
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(12, 12)
+position = Vector2(8, 12)
 shape = SubResource("RectangleShape2D_6r684")
 
 [node name="HitBox" type="Area2D" parent="."]
@@ -62,5 +76,5 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(12, 4)
+position = Vector2(8, 4)
 shape = SubResource("RectangleShape2D_icjic")
