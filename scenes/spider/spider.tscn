@@ -21,6 +21,14 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xtdh8")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtdh8")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g3wrh")
@@ -29,7 +37,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_o1eoj")
 }],
 "loop": true,
-"name": &"default",
+"name": &"move",
 "speed": 5.0
 }]
 
@@ -45,8 +53,8 @@ speed = 40.0
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_ydlul")
-autoplay = "default"
-frame_progress = 0.298416
+animation = &"move"
+autoplay = "idle"
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, 4.5)
