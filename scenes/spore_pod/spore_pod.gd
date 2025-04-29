@@ -16,9 +16,7 @@ func _process(delta: float) -> void:
 
 func determine_activity() -> void:
 	if _spores:
-		hit_box.monitoring = false
-		if spore_timer.is_stopped():
-			spore_timer.start()
+		return
 	else:
 		if _nearby:
 			animated_sprite_2d.play("active")
@@ -39,6 +37,7 @@ func check_player_proximity() -> void:
 func _on_burst_timer_timeout() -> void:
 	animated_sprite_2d.play("burst")
 	_spores = true
+	hit_box.set_collision_mask_value(3, false)
 	spore_timer.start()
 
 
