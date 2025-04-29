@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=22 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bkjtcs7sws4xk" path="res://scenes/key/key.tscn" id="11_uakon"]
 [ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="14_3sd2b"]
 [ext_resource type="PackedScene" uid="uid://cavmo0gvu020i" path="res://scenes/spore_pod/spore_pod.tscn" id="15_r4foc"]
+[ext_resource type="PackedScene" uid="uid://cylfy3tmf2x4d" path="res://scenes/ghost/ghost.tscn" id="16_idvcd"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="17_bkv5l"]
 [ext_resource type="PackedScene" uid="uid://bc1nsd8d2vmla" path="res://scenes/exit/exit.tscn" id="17_qgxpy"]
 [ext_resource type="PackedScene" uid="uid://be1hcdqxqmu3k" path="res://scenes/box/box.tscn" id="18_bkv5l"]
@@ -80,6 +81,9 @@ position = Vector2(144, 40)
 
 [node name="SporePod" parent="Enemies" instance=ExtResource("15_r4foc")]
 position = Vector2(224, 40)
+
+[node name="Ghost" parent="Enemies" instance=ExtResource("16_idvcd")]
+position = Vector2(88, 56)
 
 [node name="Torches" type="Node2D" parent="."]
 
