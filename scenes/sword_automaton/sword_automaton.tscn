@@ -1,0 +1,128 @@
+[gd_scene load_steps=8 format=3 uid="uid://8jbh2iqskd6c"]
+
+[ext_resource type="Script" uid="uid://835r6ege5fgd" path="res://scenes/sword_automaton/sword_automaton.gd" id="1_8hag7"]
+[ext_resource type="Texture2D" uid="uid://b66toi40othp0" path="res://assets/enemies/blade_automaton.png" id="1_x345d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8hag7"]
+radius = 3.53553
+height = 22.6274
+
+[sub_resource type="Animation" id="Animation_8hag7"]
+resource_name = "rotate"
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.785398, -5.49779]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/CollisionShape2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.785398, -5.49779]
+}
+
+[sub_resource type="Animation" id="Animation_x345d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/CollisionShape2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.99283]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2j5a"]
+_data = {
+&"RESET": SubResource("Animation_x345d"),
+&"rotate": SubResource("Animation_8hag7")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k2j5a"]
+radius = 3.53553
+height = 22.6274
+
+[node name="SwordAutomaton" type="AnimatableBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_8hag7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x345d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8hag7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_k2j5a")
+}
+autoplay = "rotate"
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+rotation = 1.99283
+shape = SubResource("CapsuleShape2D_k2j5a")
+
+[node name="RemovalTimer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="RemovalTimer" to="." method="_on_removal_timer_timeout"]

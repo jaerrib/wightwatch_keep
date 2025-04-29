@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=23 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="6_48c0a"]
 [ext_resource type="PackedScene" uid="uid://c2ypjoidrdsfy" path="res://scenes/pool/pool.tscn" id="6_bkv5l"]
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="6_tn631"]
+[ext_resource type="PackedScene" uid="uid://8jbh2iqskd6c" path="res://scenes/sword_automaton/sword_automaton.tscn" id="7_3dygm"]
 [ext_resource type="PackedScene" uid="uid://cgwqni2nbbesf" path="res://scenes/slime/slime.tscn" id="7_p2h7h"]
 [ext_resource type="PackedScene" uid="uid://cyrp5u3y7nens" path="res://scenes/ladder/ladder_three_high.tscn" id="8_qgxpy"]
 [ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="9_cr6la"]
@@ -50,6 +51,13 @@ position = Vector2(240, 96)
 
 [node name="Pool2" parent="Node2D/Dangers" instance=ExtResource("6_bkv5l")]
 position = Vector2(224, 96)
+
+[node name="P1" type="Marker2D" parent="Node2D/Dangers"]
+position = Vector2(136, 72)
+
+[node name="SwordAutomaton" parent="Node2D/Dangers" node_paths=PackedStringArray("destination") instance=ExtResource("7_3dygm")]
+position = Vector2(136, 168)
+destination = NodePath("../P1")
 
 [node name="Ladders" type="Node" parent="Node2D"]
 
