@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=21 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://c2ixiw7r2mq3b" path="res://scenes/object_maker/object_maker.tscn" id="10_v0a34"]
 [ext_resource type="PackedScene" uid="uid://bkjtcs7sws4xk" path="res://scenes/key/key.tscn" id="11_uakon"]
 [ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="14_3sd2b"]
+[ext_resource type="PackedScene" uid="uid://cavmo0gvu020i" path="res://scenes/spore_pod/spore_pod.tscn" id="15_r4foc"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="17_bkv5l"]
 [ext_resource type="PackedScene" uid="uid://bc1nsd8d2vmla" path="res://scenes/exit/exit.tscn" id="17_qgxpy"]
 [ext_resource type="PackedScene" uid="uid://be1hcdqxqmu3k" path="res://scenes/box/box.tscn" id="18_bkv5l"]
@@ -72,10 +73,13 @@ position = Vector2(240, 136)
 position = Vector2(112, 184)
 
 [node name="MedusaHead" parent="Enemies" instance=ExtResource("6_48c0a")]
-position = Vector2(224, 56)
+position = Vector2(288, 24)
 
 [node name="Mimic" parent="Enemies" instance=ExtResource("14_3sd2b")]
 position = Vector2(144, 40)
+
+[node name="SporePod" parent="Enemies" instance=ExtResource("15_r4foc")]
+position = Vector2(224, 40)
 
 [node name="Torches" type="Node2D" parent="."]
 
