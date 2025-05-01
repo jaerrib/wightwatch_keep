@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpgkr8ae4p8ep"]
+
+[ext_resource type="PackedScene" uid="uid://c0bjvjlq328um" path="res://scenes/base_projectile/base_projectile.tscn" id="1_2jaj6"]
+[ext_resource type="Texture2D" uid="uid://bs78ikuhqxtvu" path="res://assets/enemies/sprectral_monk.png" id="2_5lj3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4kw0"]
+size = Vector2(6, 11)
+
+[node name="Magic" instance=ExtResource("1_2jaj6")]
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="0"]
+position = Vector2(0.5, 0.5)
+scale = Vector2(0.15, 0.25)
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_5lj3n")
+hframes = 5
+frame = 4
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_c4kw0")
