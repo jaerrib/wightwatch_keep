@@ -6,5 +6,11 @@ enum ObjectType {
 	HEART,
 }
 
+enum ProjectileType {
+	CANNONBALL,
+	FLASK,
+	MAGIC,
+}
+
 const PLAYER_GROUP: String = "player"
 const MOVEABLES_GROUP: String = "moveables"

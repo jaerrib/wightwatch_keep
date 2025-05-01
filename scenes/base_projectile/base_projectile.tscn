@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0bjvjlq328um"]
+
+[ext_resource type="Script" uid="uid://bsuqe6gnb74ca" path="res://scenes/base_projectile/base_projectile.gd" id="1_kqkoc"]
+
+[node name="BaseProjectile" type="Area2D"]
+script = ExtResource("1_kqkoc")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(4.17233e-07, 4.17233e-07)
+scale = Vector2(0.8, 0.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="RemovalTimer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
