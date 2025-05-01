@@ -11,7 +11,8 @@ signal on_create_object(
 signal on_create_projectile(
 	position: Vector2, 
 	direction: Vector2, 
-	speed: float, 
+	speed: float,
+	flip_sprite: bool,
 	projectile_type: BaseProjectile.ProjectileType,
 	)
 

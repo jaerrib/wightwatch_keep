@@ -9,6 +9,7 @@ const OBJECT_SCENES: Dictionary = {
 
 const PROJECTILE_SCENE: Dictionary = {
 	Constants.ProjectileType.CANNONBALL: preload("res://scenes/cannon_ball/cannonball.tscn"),
+	Constants.ProjectileType.MAGIC: preload("res://scenes/magic/magic.tscn"),
 }
 
 func _ready() -> void:
@@ -28,15 +29,14 @@ func on_create_projectile(
 	start_pos: Vector2,
 	direction: Vector2,
 	speed: float,
+	flip_sprite: bool,
 	projectile_type: BaseProjectile.ProjectileType ) -> void:
 	if !PROJECTILE_SCENE.has(projectile_type):
-		print("NOPE")
 		return
 	var scene = PROJECTILE_SCENE[projectile_type].instantiate()
 	scene.position = start_pos
-	scene.setup(direction, speed)
+	scene.setup(direction, speed, flip_sprite)
 	call_deferred(ADD_OBJECT, scene, start_pos)
-	print("SCENE", scene)
 
 
 func add_object(obj: Node, global_position: Vector2) -> void:

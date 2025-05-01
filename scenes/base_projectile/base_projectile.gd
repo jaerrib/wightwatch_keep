@@ -6,18 +6,23 @@ enum ProjectileType { CANNONBALL, FLASK, MAGIC }
 
 var _direction: Vector2 = Vector2.ZERO
 var _speed: float = 200.0
+var _flip_sprite: bool = false
 
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
+
+func _ready() -> void:
+	sprite_2d.flip_h = _flip_sprite
 
 
 func _process(delta: float) -> void:
 	position += _direction * _speed * delta
 
 
-func setup(direction: Vector2, speed: float) -> void:
+func setup(direction: Vector2, speed: float, flip_sprite: bool) -> void:
 	_direction = direction.normalized()
 	_speed = speed
+	_flip_sprite = flip_sprite
 
 
 func deactivate () -> void:
