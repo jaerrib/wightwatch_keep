@@ -5,6 +5,7 @@ extends StaticBody2D
 var _direction: Vector2 = Vector2.ZERO
 var _shoot_position: Vector2
 var _speed: float = 50
+var _flip_sprite: bool = false
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
@@ -15,6 +16,7 @@ func _ready() -> void:
 		_direction = Vector2.RIGHT
 	else:
 		_direction = Vector2.LEFT
+	_flip_sprite = sprite_2d.flip_h
 	set_shoot_position()
 
 
@@ -24,6 +26,7 @@ func _on_shoot_timer_timeout() -> void:
 		_shoot_position,
 		_direction,
 		_speed,
+		_flip_sprite,
 		BaseProjectile.ProjectileType.CANNONBALL
 		)
 		
