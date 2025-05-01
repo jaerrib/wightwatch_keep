@@ -8,6 +8,13 @@ signal on_create_object(
 	ob_type: Constants.ObjectType,
 )
 
+signal on_create_projectile(
+	position: Vector2, 
+	direction: Vector2, 
+	speed: float, 
+	projectile_type: BaseProjectile.ProjectileType,
+	)
+
 signal on_coin_collected
 signal on_exit_reached
 signal on_key_collected
