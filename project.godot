@@ -76,6 +76,7 @@ attack={
 2d_physics/layer_8="dangers"
 2d_physics/layer_9="ladders"
 2d_physics/layer_10="enemy_weapon"
+2d_physics/layer_11="enemy_projectile"
 
 [rendering]
 

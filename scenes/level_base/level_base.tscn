@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=24 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="17_bkv5l"]
 [ext_resource type="PackedScene" uid="uid://bc1nsd8d2vmla" path="res://scenes/exit/exit.tscn" id="17_qgxpy"]
 [ext_resource type="PackedScene" uid="uid://be1hcdqxqmu3k" path="res://scenes/box/box.tscn" id="18_bkv5l"]
+[ext_resource type="PackedScene" uid="uid://qd1e01m0b4bv" path="res://scenes/cannon/cannon.tscn" id="18_e5rkq"]
 
 [node name="LevelBase" type="Node2D"]
 
@@ -92,6 +93,13 @@ position = Vector2(224, 40)
 
 [node name="Ghost" parent="Enemies" instance=ExtResource("16_idvcd")]
 position = Vector2(88, 56)
+
+[node name="Cannon" parent="Enemies" instance=ExtResource("18_e5rkq")]
+position = Vector2(216, 88)
+
+[node name="Cannon2" parent="Enemies" instance=ExtResource("18_e5rkq")]
+position = Vector2(121, 40)
+flipped = true
 
 [node name="Torches" type="Node2D" parent="."]
 
