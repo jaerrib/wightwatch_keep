@@ -8,7 +8,7 @@ const OBJECT_SCENES: Dictionary = {
 }
 
 const PROJECTILE_SCENE: Dictionary = {
-	Constants.ProjectileType.CANNONBALL: preload("res://scenes/cannon_ball/cannonballl.tscn"),
+	Constants.ProjectileType.CANNONBALL: preload("res://scenes/cannon_ball/cannonball.tscn"),
 }
 
 func _ready() -> void:
