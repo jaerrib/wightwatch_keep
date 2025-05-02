@@ -1,5 +1,7 @@
 class_name Constants
 
+enum EnemyType { SLIME }
+
 enum ObjectType {
 	COIN,
 	EXPLOSION,

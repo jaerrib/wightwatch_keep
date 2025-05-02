@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://cs5qt3q63yv7l"]
+
+[ext_resource type="PackedScene" uid="uid://cf57h23ilq1xh" path="res://scenes/enemy_base/enemy_base.tscn" id="1_claux"]
+[ext_resource type="Texture2D" uid="uid://bbbu3k2tl43rw" path="res://assets/enemies/alchemical_ooze.png" id="2_iyb6y"]
+[ext_resource type="Script" uid="uid://c1ns8gk51kimo" path="res://scenes/alchemical_ooze/alchemical_ooze.gd" id="2_yw4sb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyb6y"]
+atlas = ExtResource("2_iyb6y")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yw4sb"]
+atlas = ExtResource("2_iyb6y")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07dqn"]
+atlas = ExtResource("2_iyb6y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcasa"]
+atlas = ExtResource("2_iyb6y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c5sf"]
+atlas = ExtResource("2_iyb6y")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8sp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyb6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yw4sb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07dqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcasa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c5sf")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftdf8"]
+size = Vector2(20, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tywb"]
+size = Vector2(20, 18)
+
+[node name="AlchemicalOoze" instance=ExtResource("1_claux")]
+script = ExtResource("2_yw4sb")
+speed = 5.0
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_x8sp4")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_ftdf8")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_1tywb")
+
+[node name="FloorDetection" type="RayCast2D" parent="." index="4"]
+position = Vector2(-11, 8)
+target_position = Vector2(0, 11)
+
+[node name="MoveTimer" type="Timer" parent="." index="5"]
+wait_time = 2.0
+one_shot = true
+
+[node name="PauseTimer" type="Timer" parent="." index="6"]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="timeout" from="PauseTimer" to="." method="_on_pause_timer_timeout"]
