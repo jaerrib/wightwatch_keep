@@ -14,6 +14,7 @@ const SLIME_SCENE: Dictionary = {
 const PROJECTILE_SCENE: Dictionary = {
 	Constants.ProjectileType.CANNONBALL: preload("res://scenes/cannon_ball/cannonball.tscn"),
 	Constants.ProjectileType.MAGIC: preload("res://scenes/magic/magic.tscn"),
+	Constants.ProjectileType.FLASK: preload("res://scenes/flask/flask.tscn"),
 }
 
 

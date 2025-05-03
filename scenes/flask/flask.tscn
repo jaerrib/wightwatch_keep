@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://f6rhnhlxmk52"]
+
+[ext_resource type="Script" uid="uid://bhlac5pbismif" path="res://scenes/flask/flask.gd" id="1_p7on7"]
+[ext_resource type="Texture2D" uid="uid://cq0p4lk2bcs5a" path="res://assets/enemies/flask_wraith.png" id="1_uldfh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p7on7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7on7"]
+size = Vector2(4, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88bbm"]
+size = Vector2(4, 3)
+
+[node name="Flask" type="RigidBody2D" node_paths=PackedStringArray("sprite")]
+collision_layer = 1024
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_p7on7")
+gravity_scale = 0.5
+script = ExtResource("1_p7on7")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uldfh")
+hframes = 10
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_p7on7")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 1024
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_88bbm")
+
+[node name="FloorDetection" type="RayCast2D" parent="."]
+target_position = Vector2(0, 2)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
