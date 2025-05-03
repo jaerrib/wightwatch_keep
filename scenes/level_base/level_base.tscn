@@ -1,23 +1,17 @@
-[gd_scene load_steps=24 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=18 format=4 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
-[ext_resource type="PackedScene" uid="uid://ttoxj5efrtrk" path="res://scenes/spider/spider.tscn" id="3_3tlib"]
 [ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="4_0oed1"]
-[ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="4_ncu3c"]
-[ext_resource type="PackedScene" uid="uid://hxifn0jcytmw" path="res://scenes/sword_skeleton/sword_skeleton.tscn" id="5_kr674"]
 [ext_resource type="PackedScene" uid="uid://dcguxpbvv842t" path="res://scenes/spikes/spikes.tscn" id="5_od1d2"]
-[ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="6_48c0a"]
 [ext_resource type="PackedScene" uid="uid://c2ypjoidrdsfy" path="res://scenes/pool/pool.tscn" id="6_bkv5l"]
-[ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="6_tn631"]
-[ext_resource type="PackedScene" uid="uid://8jbh2iqskd6c" path="res://scenes/sword_automaton/sword_automaton.tscn" id="7_3dygm"]
 [ext_resource type="PackedScene" uid="uid://cyrp5u3y7nens" path="res://scenes/ladder/ladder_three_high.tscn" id="8_qgxpy"]
 [ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="9_cr6la"]
 [ext_resource type="PackedScene" uid="uid://c2ixiw7r2mq3b" path="res://scenes/object_maker/object_maker.tscn" id="10_v0a34"]
 [ext_resource type="PackedScene" uid="uid://bkjtcs7sws4xk" path="res://scenes/key/key.tscn" id="11_uakon"]
+[ext_resource type="PackedScene" uid="uid://b60bywinfuw4f" path="res://scenes/flask_wraith/flask_wraith.tscn" id="13_qgxpy"]
 [ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="14_3sd2b"]
 [ext_resource type="PackedScene" uid="uid://cavmo0gvu020i" path="res://scenes/spore_pod/spore_pod.tscn" id="15_r4foc"]
-[ext_resource type="PackedScene" uid="uid://cylfy3tmf2x4d" path="res://scenes/ghost/ghost.tscn" id="16_idvcd"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="17_bkv5l"]
 [ext_resource type="PackedScene" uid="uid://bc1nsd8d2vmla" path="res://scenes/exit/exit.tscn" id="17_qgxpy"]
 [ext_resource type="PackedScene" uid="uid://qd1e01m0b4bv" path="res://scenes/cannon/cannon.tscn" id="18_e5rkq"]
@@ -53,13 +47,6 @@ position = Vector2(240, 96)
 [node name="Pool2" parent="Node2D/Dangers" instance=ExtResource("6_bkv5l")]
 position = Vector2(224, 96)
 
-[node name="P1" type="Marker2D" parent="Node2D/Dangers"]
-position = Vector2(136, 72)
-
-[node name="SwordAutomaton" parent="Node2D/Dangers" node_paths=PackedStringArray("destination") instance=ExtResource("7_3dygm")]
-position = Vector2(136, 168)
-destination = NodePath("../P1")
-
 [node name="Ladders" type="Node" parent="Node2D"]
 
 [node name="LadderThreeHigh" parent="Node2D/Ladders" instance=ExtResource("8_qgxpy")]
@@ -67,29 +54,11 @@ position = Vector2(264, 152)
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Spider" parent="Enemies" instance=ExtResource("3_3tlib")]
-position = Vector2(24, 56)
-
-[node name="Skeleton" parent="Enemies" instance=ExtResource("4_ncu3c")]
-position = Vector2(168, 184)
-
-[node name="SwordSkeleton" parent="Enemies" instance=ExtResource("5_kr674")]
-position = Vector2(64, 136)
-
-[node name="Bat" parent="Enemies" instance=ExtResource("6_tn631")]
-position = Vector2(240, 136)
-
-[node name="MedusaHead" parent="Enemies" instance=ExtResource("6_48c0a")]
-position = Vector2(288, 24)
-
 [node name="Mimic" parent="Enemies" instance=ExtResource("14_3sd2b")]
 position = Vector2(144, 40)
 
 [node name="SporePod" parent="Enemies" instance=ExtResource("15_r4foc")]
 position = Vector2(224, 40)
-
-[node name="Ghost" parent="Enemies" instance=ExtResource("16_idvcd")]
-position = Vector2(88, 56)
 
 [node name="Cannon" parent="Enemies" instance=ExtResource("18_e5rkq")]
 position = Vector2(216, 88)
@@ -102,7 +71,10 @@ flipped = true
 position = Vector2(248, 184)
 
 [node name="AlchemicalOoze" parent="Enemies" instance=ExtResource("19_e5rkq")]
-position = Vector2(96, 184)
+position = Vector2(64, 128)
+
+[node name="FlaskWraith" parent="Enemies" instance=ExtResource("13_qgxpy")]
+position = Vector2(104, 184)
 
 [node name="Torches" type="Node2D" parent="."]
 
