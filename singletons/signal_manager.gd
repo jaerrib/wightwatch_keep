@@ -19,5 +19,7 @@ signal on_create_projectile(
 signal on_coin_collected
 signal on_create_slime(position: Vector2)
 signal on_exit_reached
+signal on_game_over
 signal on_key_collected
 signal on_ladder(val: bool)
+signal on_level_start(level: int)
