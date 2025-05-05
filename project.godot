@@ -17,8 +17,9 @@ config/icon="uid://ihnlxrx28p4o"
 
 [autoload]
 
-SignalManager="*res://singletons/signal_manager.gd"
 SoundManager="*res://singletons/sound_manager.gd"
+SignalManager="*res://singletons/signal_manager.gd"
+GameManager="*res://singletons/game_manager.gd"
 
 [display]
 
