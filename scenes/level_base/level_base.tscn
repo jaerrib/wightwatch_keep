@@ -1,100 +1,70 @@
-[gd_scene load_steps=18 format=4 uid="uid://8elgt0vlduob"]
+[gd_scene load_steps=9 format=3 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
+[ext_resource type="Script" uid="uid://cpu8i24wwtp1s" path="res://scenes/level_base/level_base.gd" id="1_p2h7h"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
-[ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="4_0oed1"]
-[ext_resource type="PackedScene" uid="uid://dcguxpbvv842t" path="res://scenes/spikes/spikes.tscn" id="5_od1d2"]
-[ext_resource type="PackedScene" uid="uid://c2ypjoidrdsfy" path="res://scenes/pool/pool.tscn" id="6_bkv5l"]
-[ext_resource type="PackedScene" uid="uid://cyrp5u3y7nens" path="res://scenes/ladder/ladder_three_high.tscn" id="8_qgxpy"]
-[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="9_cr6la"]
+[ext_resource type="Shader" uid="uid://duyhok2fywa0y" path="res://scenes/level_base/scanlines.gdshader" id="6_tn631"]
 [ext_resource type="PackedScene" uid="uid://c2ixiw7r2mq3b" path="res://scenes/object_maker/object_maker.tscn" id="10_v0a34"]
 [ext_resource type="PackedScene" uid="uid://bkjtcs7sws4xk" path="res://scenes/key/key.tscn" id="11_uakon"]
-[ext_resource type="PackedScene" uid="uid://b60bywinfuw4f" path="res://scenes/flask_wraith/flask_wraith.tscn" id="13_qgxpy"]
-[ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="14_3sd2b"]
-[ext_resource type="PackedScene" uid="uid://cavmo0gvu020i" path="res://scenes/spore_pod/spore_pod.tscn" id="15_r4foc"]
-[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="17_bkv5l"]
 [ext_resource type="PackedScene" uid="uid://bc1nsd8d2vmla" path="res://scenes/exit/exit.tscn" id="17_qgxpy"]
-[ext_resource type="PackedScene" uid="uid://qd1e01m0b4bv" path="res://scenes/cannon/cannon.tscn" id="18_e5rkq"]
-[ext_resource type="PackedScene" uid="uid://d2spcqwy8wug1" path="res://scenes/spectral_monk/spectral_monk.tscn" id="19_8fpbh"]
-[ext_resource type="PackedScene" uid="uid://cs5qt3q63yv7l" path="res://scenes/alchemical_ooze/alchemical_ooze.tscn" id="19_e5rkq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p2h7h"]
+shader = ExtResource("6_tn631")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 0.5
+shader_parameter/warp_amount = 0.05
+shader_parameter/vignette_amount = 0.5
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/grille_amount = 0.05
+shader_parameter/brightness_boost = 1.2
 
 [node name="LevelBase" type="Node2D"]
+script = ExtResource("1_p2h7h")
 
-[node name="ObjectMaker" parent="." instance=ExtResource("10_v0a34")]
+[node name="TileMapLayers" type="Node2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource("1_myc1q")]
-position = Vector2(32, 184)
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
-tile_map_data = PackedByteArray("AAAAAAwAAAAGAAAAAAABAAwAAAAFAAAAAAACAAwAAAAHAAAAAAADAAwAAAAGAAAAAAAEAAwAAAAFAAAAAAAOAAwAAAAFAAAAAAAPAAwAAAAGAAAAAAAQAAwAAAAHAAAAAAARAAwAAAAFAAAAAAASAAwAAAAHAAAAAAAFAAwAAAAFAAAAAAAGAAwAAAAGAAAAAAAHAAwAAAAHAAAAAAAIAAwAAAAGAAAAAAAKAAwAAAAGAAAAAAALAAwAAAAHAAAAAAAJAAwAAAAGAAAAAAATAAgAAAAHAAAAAAATAAkAAAAGAAAAAAATAAoAAAAGAAAAAAATAAsAAAAGAAAAAAATAAwAAAAFAAAAAAAAAAAAAAAFAAAAAAABAAAAAAAGAAAAAAACAAAAAAAGAAAAAAADAAAAAAAHAAAAAAAEAAAAAAAFAAAAAAAFAAAAAAAHAAAAAAAGAAAAAAAFAAAAAAAHAAAAAAAGAAAAAAAIAAAAAAAHAAAAAAAJAAAAAAAFAAAAAAAKAAAAAAAFAAAAAAALAAAAAAAGAAAAAAAMAAAAAAAFAAAAAAANAAAAAAAFAAAAAAAOAAAAAAAFAAAAAAAPAAAAAAAFAAAAAAAQAAAAAAAHAAAAAAARAAAAAAAGAAAAAAASAAAAAAAGAAAAAAATAAAAAAAHAAAAAAATAAEAAAAFAAAAAAATAAIAAAAHAAAAAAATAAMAAAAHAAAAAAATAAQAAAAGAAAAAAATAAUAAAAGAAAAAAATAAYAAAAGAAAAAAATAAcAAAAGAAAAAAAAAAEAAAAGAAAAAAAAAAIAAAAGAAAAAAAAAAMAAAAFAAAAAAAAAAQAAAAGAAAAAAAAAAUAAAAFAAAAAAAAAAYAAAAGAAAAAAAAAAcAAAAHAAAAAAAAAAgAAAAGAAAAAAAAAAkAAAAGAAAAAAAAAAoAAAAFAAAAAAAAAAsAAAAFAAAAAAABAAkAAAAFAAAAAAACAAkAAAAFAAAAAAADAAkAAAAHAAAAAAAEAAkAAAAHAAAAAAAFAAkAAAAGAAAAAAAIAAsAAAAHAAAAAAAKAAkAAAAHAAAAAAALAAkAAAAFAAAAAAAMAAkAAAAHAAAAAAAPAAkAAAAFAAAAAAAOAAkAAAAGAAAAAAANAAkAAAAHAAAAAAASAAYAAAAGAAAAAAARAAYAAAAGAAAAAAAQAAYAAAAGAAAAAAAKAAgAAAAHAAAAAAAGAAkAAAAFAAAAAAAMAAYAAAAGAAAAAAASAAoAAAAFAAAAAAASAAsAAAAHAAAAAAARAAsAAAAHAAAAAAALAAgAAAAHAAAAAAAKAAcAAAAFAAAAAAAHAAkAAAAGAAAAAAABAAcAAAAFAAAAAAAMAAwAAgAAAAAAAAANAAwAAgAAAAAAAAAHAAMAAAAFAAAAAAAIAAMAAAAFAAAAAAAJAAMAAAAHAAAAAAAKAAMAAAAHAAAAAAALAAMAAAAFAAAAAAAMAAMAAAAGAAAAAAANAAMAAAAGAAAAAAAOAAMAAAAHAAAAAAAPAAMAAAAGAAAAAAANAAYAAAAGAAAAAAASAAQAAAAFAAAAAAASAAUAAAAFAAAAAAARAAUAAAAFAAAAAAAQAAMAAAAFAAAAAAADAAQAAAAGAAAAAAACAAQAAAAFAAAAAAABAAQAAAAGAAAAAAAEAAQAAAAFAAAAAAAFAAUAAAAFAAAAAAAGAAUAAAAGAAAAAAA=")
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayers"]
 tile_set = ExtResource("2_48c0a")
 
-[node name="Secrets" type="Node" parent="Node2D"]
-
-[node name="SecretBlock" parent="Node2D/Secrets" instance=ExtResource("4_0oed1")]
-position = Vector2(24, 136)
-
-[node name="Dangers" type="Node" parent="Node2D"]
-
-[node name="Spikes" parent="Node2D/Dangers" instance=ExtResource("5_od1d2")]
-position = Vector2(104, 136)
-
-[node name="Pool" parent="Node2D/Dangers" instance=ExtResource("6_bkv5l")]
-position = Vector2(240, 96)
-
-[node name="Pool2" parent="Node2D/Dangers" instance=ExtResource("6_bkv5l")]
-position = Vector2(224, 96)
-
-[node name="Ladders" type="Node" parent="Node2D"]
-
-[node name="LadderThreeHigh" parent="Node2D/Ladders" instance=ExtResource("8_qgxpy")]
-position = Vector2(264, 152)
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="Mimic" parent="Enemies" instance=ExtResource("14_3sd2b")]
-position = Vector2(144, 40)
-
-[node name="SporePod" parent="Enemies" instance=ExtResource("15_r4foc")]
-position = Vector2(224, 40)
-
-[node name="Cannon" parent="Enemies" instance=ExtResource("18_e5rkq")]
-position = Vector2(216, 88)
-
-[node name="Cannon2" parent="Enemies" instance=ExtResource("18_e5rkq")]
-position = Vector2(121, 40)
-flipped = true
-
-[node name="SpectralMonk" parent="Enemies" instance=ExtResource("19_8fpbh")]
-position = Vector2(248, 184)
-
-[node name="AlchemicalOoze" parent="Enemies" instance=ExtResource("19_e5rkq")]
-position = Vector2(64, 128)
-
-[node name="FlaskWraith" parent="Enemies" instance=ExtResource("13_qgxpy")]
-position = Vector2(104, 184)
+[node name="Secrets" type="Node2D" parent="."]
 
 [node name="Torches" type="Node2D" parent="."]
 
-[node name="Torch" parent="Torches" instance=ExtResource("9_cr6la")]
-position = Vector2(56, 176)
-
-[node name="Torch2" parent="Torches" instance=ExtResource("9_cr6la")]
-position = Vector2(240, 176)
-
-[node name="Key" parent="." instance=ExtResource("11_uakon")]
-position = Vector2(296, 152)
+[node name="Ladders" type="Node2D" parent="."]
 
 [node name="Exit" parent="." instance=ExtResource("17_qgxpy")]
-position = Vector2(24, 104)
 
-[node name="MovingPlatorms" type="Node" parent="."]
+[node name="Player" parent="." instance=ExtResource("1_myc1q")]
 
-[node name="P1" type="Marker2D" parent="MovingPlatorms"]
-position = Vector2(40, 112)
+[node name="Key" parent="." instance=ExtResource("11_uakon")]
 
-[node name="MovingPlatform" parent="MovingPlatorms" node_paths=PackedStringArray("destination") instance=ExtResource("17_bkv5l")]
-position = Vector2(152, 112)
-destination = NodePath("../P1")
+[node name="ObjectMaker" parent="." instance=ExtResource("10_v0a34")]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Paths" type="Node2D" parent="."]
+
+[node name="Dangers" type="Node2D" parent="."]
+
+[node name="MovingPlatforms" type="Node2D" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Scanlines" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_p2h7h")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorOverlay" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.294118, 0, 0.509804, 0.501961)
