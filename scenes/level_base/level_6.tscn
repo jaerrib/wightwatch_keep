@@ -3,10 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_xfkqj"]
 
 [node name="Level6" instance=ExtResource("1_xfkqj")]
-color_overlay = "556B2F80"
 
 [node name="TileMapLayer" parent="TileMapLayers" index="0"]
 tile_map_data = PackedByteArray("AAAAAA4AAAAGAAAAAAABAA4AAAAGAAAAAAACAA4AAAAFAAAAAAADAA4AAAAFAAAAAAAEAA4AAAAGAAAAAAAFAA4AAAAHAAAAAAAGAA4AAAAGAAAAAAAHAA4AAAAGAAAAAAAIAA4AAAAHAAAAAAAJAA4AAAAFAAAAAAAKAA4AAAAHAAAAAAALAA4AAAAGAAAAAAAMAA4AAAAGAAAAAAANAA4AAAAFAAAAAAAOAA4AAAAHAAAAAAAPAA4AAAAFAAAAAAAQAA4AAAAGAAAAAAARAA4AAAAFAAAAAAASAA4AAAAHAAAAAAATAA4AAAAHAAAAAAA=")
 
 [node name="Player" parent="." index="5"]
 position = Vector2(56, 208)
+
+[node name="LevelOverlay" parent="CanvasLayer" index="1"]
+color = Color(0.333333, 0.419608, 0.184314, 0.501961)
