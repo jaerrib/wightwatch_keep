@@ -5,6 +5,7 @@ extends Area2D
 
 
 func _ready() -> void:
+	monitoring = false
 	animated_sprite_2d.play("idle")
 	SignalManager.on_key_collected.connect(on_key_collected)
 	
@@ -18,4 +19,4 @@ func on_key_collected() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	#SoundManager.play_clip(sound, SoundManager.SOUND_EXIT)
 	SignalManager.on_exit_reached.emit()
-	print("EXIT REACHED")
+	GameManager.load_next_level_scene()
