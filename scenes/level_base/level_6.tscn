@@ -1,14 +1,120 @@
-[gd_scene load_steps=2 format=4 uid="uid://b3fqyw16iwi6d"]
+[gd_scene load_steps=10 format=4 uid="uid://b3fqyw16iwi6d"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_xfkqj"]
+[ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="2_ku7dm"]
+[ext_resource type="PackedScene" uid="uid://be1hcdqxqmu3k" path="res://scenes/box/box.tscn" id="2_vgtew"]
+[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="3_mgp2r"]
+[ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="3_x462v"]
+[ext_resource type="PackedScene" uid="uid://cavmo0gvu020i" path="res://scenes/spore_pod/spore_pod.tscn" id="6_0rve0"]
+[ext_resource type="PackedScene" uid="uid://cgwqni2nbbesf" path="res://scenes/slime/slime.tscn" id="7_pv1en"]
+[ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="8_pv1en"]
+[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="9_7ln4x"]
 
 [node name="Level6" instance=ExtResource("1_xfkqj")]
 
 [node name="TileMapLayer" parent="TileMapLayers" index="0"]
-tile_map_data = PackedByteArray("AAAAAA4AAAAGAAAAAAABAA4AAAAGAAAAAAACAA4AAAAFAAAAAAADAA4AAAAFAAAAAAAEAA4AAAAGAAAAAAAFAA4AAAAHAAAAAAAGAA4AAAAGAAAAAAAHAA4AAAAGAAAAAAAIAA4AAAAHAAAAAAAJAA4AAAAFAAAAAAAKAA4AAAAHAAAAAAALAA4AAAAGAAAAAAAMAA4AAAAGAAAAAAANAA4AAAAFAAAAAAAOAA4AAAAHAAAAAAAPAA4AAAAFAAAAAAAQAA4AAAAGAAAAAAARAA4AAAAFAAAAAAASAA4AAAAHAAAAAAATAA4AAAAHAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAA4AAAAGAAAAAAABAA4AAAAGAAAAAAACAA4AAAAFAAAAAAADAA4AAAAFAAAAAAAEAA4AAAAGAAAAAAAFAA4AAgAAAAAAAAAGAA4AAgAAAAAAAAAHAA4AAAAGAAAAAAAIAA4AAAAHAAAAAAAJAA4AAAAFAAAAAAAKAA4AAAAHAAAAAAALAA4AAAAGAAAAAAAMAA4AAAAGAAAAAAANAA4AAgAAAAAAAAAOAA4AAgAAAAAAAAAPAA4AAAAFAAAAAAAQAA4AAAAGAAAAAAARAA4AAAAFAAAAAAASAA4AAAAHAAAAAAATAA4AAAAHAAAAAAATAAAAAAAHAAAAAAASAAAAAAAGAAAAAAARAAAAAAAHAAAAAAAQAAAAAAAHAAAAAAAPAAAAAAAGAAAAAAAOAAAAAAAFAAAAAAANAAAAAAAHAAAAAAAMAAAAAAAFAAAAAAALAAAAAAAHAAAAAAAKAAAAAAAHAAAAAAAJAAAAAAAHAAAAAAAIAAAAAAAFAAAAAAAHAAAAAAAGAAAAAAAGAAAAAAAGAAAAAAAFAAAAAAAHAAAAAAAEAAAAAAAHAAAAAAADAAAAAAAGAAAAAAACAAAAAAAGAAAAAAABAAAAAAAFAAAAAAAAAAAAAAAHAAAAAAATAAEAAAAFAAAAAAATAAIAAAAFAAAAAAATAAMAAAAFAAAAAAATAAQAAAAFAAAAAAATAAUAAAAFAAAAAAATAAYAAAAGAAAAAAATAAcAAAAFAAAAAAATAAgAAAAFAAAAAAATAAkAAAAGAAAAAAATAAoAAAAFAAAAAAATAAsAAAAFAAAAAAATAAwAAAAHAAAAAAATAA0AAAAHAAAAAAAAAAEAAAAHAAAAAAAAAAIAAAAGAAAAAAAAAAMAAAAHAAAAAAAAAAQAAAAHAAAAAAAAAAUAAAAHAAAAAAAAAAYAAAABAAAAAAAAAAcAAAAGAAAAAAAAAAgAAAAHAAAAAAAAAAkAAAAHAAAAAAAAAAoAAAAHAAAAAAAAAAsAAAAFAAAAAAAAAAwAAAAFAAAAAAAAAA0AAAAFAAAAAAABAAoAAAAFAAAAAAACAAoAAAAHAAAAAAADAAoAAAAGAAAAAAAEAAoAAAAFAAAAAAAFAAoAAAAHAAAAAAAGAAoAAAAGAAAAAAAHAAoAAAAFAAAAAAAIAAoAAAAHAAAAAAAJAAoAAAAFAAAAAAAJAA0AAAAFAAAAAAAKAA0AAAAGAAAAAAAPAA0AAAAFAAAAAAAQAAoAAAAHAAAAAAAPAAoAAAAGAAAAAAAMAAgAAAAFAAAAAAAMAAkAAAAHAAAAAAAMAAoAAAAFAAAAAAALAAoAAAAGAAAAAAAKAAoAAAAHAAAAAAAIAAgAAAAHAAAAAAAHAAgAAAAFAAAAAAADAAcAAAAFAAAAAAACAAcAAAAFAAAAAAABAAcAAAAFAAAAAAABAAQAAAAGAAAAAAACAAQAAAAHAAAAAAADAAQAAAAGAAAAAAAJAAQAAAAHAAAAAAAKAAQAAAAHAAAAAAAMAAMAAAAFAAAAAAAPAAQAAAAHAAAAAAAQAAQAAAAHAAAAAAAEAAQAAAAFAAAAAAAGAAMAAAAHAAAAAAARAAQAAAAFAAAAAAAOAAMAAAAFAAAAAAANAAQAAAAFAAAAAAALAAQAAAAFAAAAAAAFAAMAAAAHAAAAAAASAAgAAAAHAAAAAAAGAAkAAAAFAAMAAAA=")
 
-[node name="Player" parent="." index="5"]
-position = Vector2(56, 208)
+[node name="Box" parent="Secrets" index="0" instance=ExtResource("2_vgtew")]
+position = Vector2(136, 152)
+
+[node name="SecretBlock" parent="Secrets" index="1" instance=ExtResource("3_x462v")]
+position = Vector2(120, 152)
+
+[node name="Chest" parent="Chests" index="0" instance=ExtResource("2_ku7dm")]
+position = Vector2(24, 152)
+
+[node name="Chest2" parent="Chests" index="1" instance=ExtResource("2_ku7dm")]
+position = Vector2(296, 216)
+
+[node name="Torch" parent="Torches" index="0" instance=ExtResource("3_mgp2r")]
+position = Vector2(48, 32)
+
+[node name="Torch2" parent="Torches" index="1" instance=ExtResource("3_mgp2r")]
+position = Vector2(176, 32)
+
+[node name="Torch3" parent="Torches" index="2" instance=ExtResource("3_mgp2r")]
+position = Vector2(256, 32)
+
+[node name="Torch4" parent="Torches" index="3" instance=ExtResource("3_mgp2r")]
+position = Vector2(200, 112)
+
+[node name="Torch5" parent="Torches" index="4" instance=ExtResource("3_mgp2r")]
+position = Vector2(104, 112)
+
+[node name="Torch6" parent="Torches" index="5" instance=ExtResource("3_mgp2r")]
+position = Vector2(248, 144)
+
+[node name="Torch7" parent="Torches" index="6" instance=ExtResource("3_mgp2r")]
+position = Vector2(264, 192)
+
+[node name="Torch8" parent="Torches" index="7" instance=ExtResource("3_mgp2r")]
+position = Vector2(184, 200)
+
+[node name="Torch9" parent="Torches" index="8" instance=ExtResource("3_mgp2r")]
+position = Vector2(136, 200)
+
+[node name="Torch10" parent="Torches" index="9" instance=ExtResource("3_mgp2r")]
+position = Vector2(41, 200)
+
+[node name="Exit" parent="." index="5"]
+position = Vector2(24, 56)
+
+[node name="Player" parent="." index="6"]
+position = Vector2(32, 104)
+
+[node name="Key" parent="." index="7"]
+position = Vector2(24, 216)
+
+[node name="SporePod" parent="Enemies" index="0" instance=ExtResource("6_0rve0")]
+position = Vector2(168, 56)
+
+[node name="SporePod2" parent="Enemies" index="1" instance=ExtResource("6_0rve0")]
+position = Vector2(264, 56)
+
+[node name="SporePod3" parent="Enemies" index="2" instance=ExtResource("6_0rve0")]
+position = Vector2(216, 56)
+
+[node name="SporePod4" parent="Enemies" index="3" instance=ExtResource("6_0rve0")]
+position = Vector2(200, 216)
+
+[node name="SporePod5" parent="Enemies" index="4" instance=ExtResource("6_0rve0")]
+position = Vector2(120, 216)
+
+[node name="Slime" parent="Enemies" index="5" instance=ExtResource("7_pv1en")]
+position = Vector2(48, 56)
+
+[node name="Slime2" parent="Enemies" index="6" instance=ExtResource("7_pv1en")]
+position = Vector2(64, 152)
+
+[node name="Slime3" parent="Enemies" index="7" instance=ExtResource("7_pv1en")]
+position = Vector2(48, 216)
+
+[node name="Bat" parent="Enemies" index="8" instance=ExtResource("8_pv1en")]
+position = Vector2(120, 96)
+
+[node name="Bat2" parent="Enemies" index="9" instance=ExtResource("8_pv1en")]
+position = Vector2(184, 120)
+
+[node name="Bat3" parent="Enemies" index="10" instance=ExtResource("8_pv1en")]
+position = Vector2(248, 104)
+
+[node name="Bat4" parent="Enemies" index="11" instance=ExtResource("8_pv1en")]
+position = Vector2(232, 192)
+
+[node name="P1" type="Marker2D" parent="Paths" index="0"]
+position = Vector2(296, 72)
+
+[node name="P2" type="Marker2D" parent="Paths" index="1"]
+position = Vector2(280, 136)
+
+[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("9_7ln4x")]
+position = Vector2(296, 120)
+destination = NodePath("../../Paths/P1")
+
+[node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("9_7ln4x")]
+position = Vector2(280, 216)
+destination = NodePath("../../Paths/P2")
 
 [node name="LevelOverlay" parent="CanvasLayer" index="1"]
 color = Color(0.333333, 0.419608, 0.184314, 0.501961)
