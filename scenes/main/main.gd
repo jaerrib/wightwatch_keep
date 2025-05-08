@@ -6,4 +6,4 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
-		GameManager.load_game_container_scene()
+		GameManager.load_next_level_scene()
