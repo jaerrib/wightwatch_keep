@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3ch6qbcily7y"]
+[gd_scene load_steps=7 format=3 uid="uid://b3ch6qbcily7y"]
 
-[ext_resource type="FontFile" uid="uid://c68gjc4nwofmq" path="res://assets/fonts/visitor-brk.visitor-tt2-brk.ttf" id="1_cgeww"]
+[ext_resource type="Script" uid="uid://b2xk7tgg228f0" path="res://scenes/hud/hud.gd" id="1_c45xl"]
+[ext_resource type="FontFile" uid="uid://c68gjc4nwofmq" path="res://assets/fonts/visitor-brk.visitor-tt2-brk.ttf" id="2_0bx4p"]
 [ext_resource type="Texture2D" uid="uid://bjeuse8q2xppq" path="res://assets/ui/heart.png" id="2_c45xl"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_c45xl"]
+font = ExtResource("2_0bx4p")
+
 [sub_resource type="LabelSettings" id="LabelSettings_0bx4p"]
-font = ExtResource("1_cgeww")
-font_size = 12
+font = ExtResource("2_0bx4p")
+
+[sub_resource type="LabelSettings" id="LabelSettings_mgtrf"]
+font = ExtResource("2_0bx4p")
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -16,6 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+script = ExtResource("1_c45xl")
 
 [node name="MC" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -39,36 +46,81 @@ color = Color(0, 0, 0, 0.752941)
 
 [node name="HB" type="HBoxContainer" parent="MC/MC2"]
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_vertical = 4
+
+[node name="Spacer" type="Control" parent="MC/MC2/HB"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
 
 [node name="ScoreLabel" type="Label" parent="MC/MC2/HB"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 0
 text = "000000"
+label_settings = SubResource("LabelSettings_c45xl")
+vertical_alignment = 2
+
+[node name="HBHearts2" type="HBoxContainer" parent="MC/MC2/HB"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="LevelLText" type="Label" parent="MC/MC2/HB/HBHearts2"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "FLOOR"
 label_settings = SubResource("LabelSettings_0bx4p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="MC/MC2/HB/HBHearts2"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "1"
+label_settings = SubResource("LabelSettings_mgtrf")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HBHearts" type="HBoxContainer" parent="MC/MC2/HB"]
 layout_mode = 2
 
 [node name="Heart1" type="TextureRect" parent="MC/MC2/HB/HBHearts"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_c45xl")
+stretch_mode = 2
 
 [node name="Heart2" type="TextureRect" parent="MC/MC2/HB/HBHearts"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_c45xl")
+stretch_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="MC/MC2/HB/HBHearts"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_c45xl")
+stretch_mode = 2
 
 [node name="Heart4" type="TextureRect" parent="MC/MC2/HB/HBHearts"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_c45xl")
+stretch_mode = 2
 
 [node name="Heart5" type="TextureRect" parent="MC/MC2/HB/HBHearts"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_c45xl")
+stretch_mode = 2
+
+[node name="Spacer2" type="Control" parent="MC/MC2/HB"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

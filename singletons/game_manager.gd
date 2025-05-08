@@ -26,3 +26,7 @@ func set_next_level() -> void:
 	_current_level += 1
 	if _current_level > TOTAL_LEVELS:
 		_current_level = 1
+
+
+func get_current_level() -> int:
+	return _current_level
