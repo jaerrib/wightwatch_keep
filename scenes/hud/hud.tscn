@@ -1,26 +1,28 @@
 [gd_scene load_steps=11 format=3 uid="uid://b3ch6qbcily7y"]
 
 [ext_resource type="Script" uid="uid://b2xk7tgg228f0" path="res://scenes/hud/hud.gd" id="1_c45xl"]
-[ext_resource type="FontFile" uid="uid://dqmo6s7pvjy4r" path="res://assets/fonts/visitor-brk.visitor-tt1-brk.ttf" id="1_cgeww"]
 [ext_resource type="FontFile" uid="uid://c68gjc4nwofmq" path="res://assets/fonts/visitor-brk.visitor-tt2-brk.ttf" id="2_0bx4p"]
 [ext_resource type="Texture2D" uid="uid://bjeuse8q2xppq" path="res://assets/ui/heart.png" id="2_c45xl"]
 [ext_resource type="FontFile" uid="uid://b0820jsp2pmm0" path="res://assets/fonts/8-bit-limit.o-brk.ttf" id="4_mgtrf"]
+[ext_resource type="FontFile" uid="uid://b8dqyry4eqxty" path="res://assets/fonts/8-bit-limit.brk.ttf" id="5_mgtrf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c45xl"]
 font = ExtResource("2_0bx4p")
 
 [sub_resource type="LabelSettings" id="LabelSettings_0bx4p"]
 font = ExtResource("2_0bx4p")
+font_size = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_mgtrf"]
 font = ExtResource("2_0bx4p")
+font_size = 12
 
 [sub_resource type="LabelSettings" id="LabelSettings_v7mo4"]
 font = ExtResource("4_mgtrf")
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_n56i7"]
-font = ExtResource("1_cgeww")
+font = ExtResource("5_mgtrf")
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -63,7 +65,7 @@ layout_mode = 2
 
 [node name="ScoreLabel" type="Label" parent="MC/MC2/HB"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 2
 text = "000000"
 label_settings = SubResource("LabelSettings_c45xl")
 vertical_alignment = 2
@@ -75,7 +77,7 @@ size_flags_vertical = 4
 
 [node name="LevelLText" type="Label" parent="MC/MC2/HB/HBLevel"]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 4
 text = "FLOOR"
 label_settings = SubResource("LabelSettings_0bx4p")
 horizontal_alignment = 1
@@ -91,6 +93,7 @@ vertical_alignment = 1
 
 [node name="HBHearts" type="HBoxContainer" parent="MC/MC2/HB"]
 layout_mode = 2
+size_flags_horizontal = 10
 
 [node name="Heart1" type="TextureRect" parent="MC/MC2/HB/HBHearts"]
 layout_mode = 2
@@ -166,6 +169,53 @@ vertical_alignment = 1
 [node name="Label2" type="Label" parent="ColorRect/VBLevelComplete"]
 layout_mode = 2
 text = "Press <jump> to advance"
+label_settings = SubResource("LabelSettings_n56i7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBPlayerDied" type="VBoxContainer" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBPlayerDied"]
+layout_mode = 2
+text = "You Died"
+label_settings = SubResource("LabelSettings_v7mo4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HB" type="HBoxContainer" parent="ColorRect/VBPlayerDied"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LivesLabel" type="Label" parent="ColorRect/VBPlayerDied/HB"]
+layout_mode = 2
+text = "3"
+label_settings = SubResource("LabelSettings_n56i7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect/VBPlayerDied/HB"]
+layout_mode = 2
+text = " Lives Left"
+label_settings = SubResource("LabelSettings_n56i7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ColorRect/VBPlayerDied"]
+layout_mode = 2
+text = "Press <jump> to continue"
 label_settings = SubResource("LabelSettings_n56i7")
 horizontal_alignment = 1
 vertical_alignment = 1

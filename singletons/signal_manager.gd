@@ -1,7 +1,8 @@
 extends Node
 
 signal on_enemy_hit(points: int)
-signal on_player_hit(dmg: int)
+signal on_player_hit
+signal on_player_died
 
 signal on_create_object(
 	pos: Vector2,

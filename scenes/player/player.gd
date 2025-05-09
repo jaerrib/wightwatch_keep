@@ -12,7 +12,7 @@ const RUN_SPEED: float = 120.0
 @export var right_collision_position: Vector2 = Vector2(9,0)
 @export var left_collision_position: Vector2 = Vector2(-9,0)
 
-var _lives: int = 5
+#var _lives: int = 5
 var _state: PlayerState = PlayerState.IDLE
 var _on_ladder: bool = false
 
@@ -116,17 +116,6 @@ func calculate_state() -> void:
 				set_state(PlayerState.JUMP)
 
 
-func reduce_lives(reduction: int) -> bool:
-	_lives -= reduction
-	#SignalManager.on_player_hit.emit(_lives)
-	if _lives <=0:
-		#SignalManager.on_game_over.emit()
-		set_physics_process(false)
-		animation_player.stop()
-		#invincible_player.stop()
-		return false
-	return true
-
 
 func on_ladder(value: bool) -> void:
 	_on_ladder = value
@@ -139,4 +128,4 @@ func _on_animation_player_animation_finished(anim_name: String) -> void:
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
-	print(area.name)
+	SignalManager.on_player_hit.emit()

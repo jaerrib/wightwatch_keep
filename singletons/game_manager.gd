@@ -22,6 +22,10 @@ func load_next_level_scene() -> void:
 	get_tree().change_scene_to_packed(_level_scenes[_current_level])
 
 
+func reload_current_level_scene() -> void:
+	get_tree().change_scene_to_packed(_level_scenes[_current_level])
+
+
 func set_next_level() -> void:
 	_current_level += 1
 	if _current_level > TOTAL_LEVELS:
