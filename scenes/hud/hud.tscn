@@ -203,3 +203,5 @@ vertical_alignment = 1
 
 [node name="ContinueTimer" type="Timer" parent="."]
 one_shot = true
+
+[connection signal="timeout" from="ContinueTimer" to="." method="_on_continue_timer_timeout"]

@@ -19,4 +19,3 @@ func on_key_collected() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	#SoundManager.play_clip(sound, SoundManager.SOUND_EXIT)
 	SignalManager.on_exit_reached.emit()
-	GameManager.load_next_level_scene()

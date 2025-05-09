@@ -23,6 +23,7 @@ func _ready() -> void:
 	#SignalManager.on_level_started.connect(on_player_hit)
 	#SignalManager.on_game_over.connect(on_game_over)
 	SignalManager.on_score_updated.connect(on_score_updated)
+	SignalManager.on_exit_reached.connect(on_exit_reached)
 	#SignalManager.on_level_complete.connect(on_level_complete)
 
 
@@ -54,7 +55,7 @@ func on_game_over() -> void:
 	vb_game_over.show()
 
 
-func on_level_complete() -> void:
+func on_exit_reached() -> void:
 	show_hud()
 	vb_level_complete.show()
 

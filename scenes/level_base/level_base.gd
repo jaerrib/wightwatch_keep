@@ -5,7 +5,7 @@ extends Node2D
 
 
 func _ready() -> void:
-	pass
+	SignalManager.on_game_over.connect(on_game_over)
 
 
 func _process(_delta: float) -> void:
