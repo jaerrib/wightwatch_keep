@@ -43,6 +43,7 @@ size = Vector2(13, 11)
 [node name="Mimic" instance=ExtResource("1_d4f43")]
 script = ExtResource("2_twew8")
 speed = 40.0
+points = 100
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_d4f43")

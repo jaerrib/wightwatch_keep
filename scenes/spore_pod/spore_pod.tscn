@@ -93,6 +93,7 @@ size = Vector2(13, 14)
 
 [node name="SporePod" instance=ExtResource("1_wed03")]
 script = ExtResource("2_f4mt2")
+points = 100
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_wvh5m")

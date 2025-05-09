@@ -50,6 +50,7 @@ size = Vector2(10, 7)
 [node name="Spider" instance=ExtResource("1_vy7m6")]
 script = ExtResource("2_xtdh8")
 speed = 40.0
+points = 150
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_ydlul")

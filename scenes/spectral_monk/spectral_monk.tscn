@@ -53,6 +53,7 @@ size = Vector2(12, 13)
 
 [node name="SpectralMonk" instance=ExtResource("1_v75g3")]
 script = ExtResource("2_ssifd")
+points = 300
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_iuo8y")

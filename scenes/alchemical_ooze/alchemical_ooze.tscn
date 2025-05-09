@@ -61,6 +61,7 @@ size = Vector2(20, 18)
 [node name="AlchemicalOoze" instance=ExtResource("1_claux")]
 script = ExtResource("2_yw4sb")
 speed = 5.0
+points = 200
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_x8sp4")

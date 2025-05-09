@@ -42,6 +42,7 @@ size = Vector2(11, 8)
 [node name="Slime" instance=ExtResource("1_yq0o5")]
 script = ExtResource("2_d7aas")
 speed = 5.0
+points = 100
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(1, 0)

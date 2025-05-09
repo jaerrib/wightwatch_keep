@@ -75,6 +75,7 @@ script = ExtResource("2_wwmj5")
 speed = 10.0
 right_collision_position = Vector2(9, 0)
 left_collision_position = Vector2(-8, 0)
+points = 200
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, 1.5)

@@ -93,6 +93,7 @@ size = Vector2(9, 12)
 
 [node name="FlaskWraith" instance=ExtResource("1_sxunq")]
 script = ExtResource("2_wrw7b")
+points = 200
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_srise")

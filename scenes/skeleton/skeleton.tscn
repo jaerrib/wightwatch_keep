@@ -49,6 +49,7 @@ size = Vector2(6, 12)
 [node name="Skeleton" instance=ExtResource("1_f1x6x")]
 script = ExtResource("2_hj3yb")
 speed = 10.0
+points = 150
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_jyd5v")
