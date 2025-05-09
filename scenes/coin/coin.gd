@@ -1,9 +1,8 @@
 class_name Coin extends Area2D
 
-
 const GRAVITY: float = 160.0
 const JUMP: float = -80.0
-const POINTS: int = 2
+const POINTS: int = 50
 
 var _collectable: bool = false
 var _speed_y: float = JUMP
@@ -36,6 +35,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if _collectable:
 		removal_timer.start()
 		SoundManager.play_clip(sound, SoundManager.SOUND_COIN)
+		SignalManager.on_coin_collected.emit(POINTS)
 
 
 func _on_collection_timer_timeout() -> void:
