@@ -31,8 +31,7 @@ func die() -> void:
 	_dying = true
 	set_physics_process(false)
 	hide()
-	# pick up, sound, and explosion
-	#SignalManager.on_enemy_hit.emit(points)
+	SignalManager.on_enemy_hit.emit(points)
 	SignalManager.on_create_object.emit(global_position, Constants.ObjectType.EXPLOSION)
 	SignalManager.on_create_object.emit(global_position, Constants.ObjectType.COIN)
 	removal_timer.start()
