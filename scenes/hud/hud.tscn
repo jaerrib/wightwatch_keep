@@ -68,12 +68,12 @@ text = "000000"
 label_settings = SubResource("LabelSettings_c45xl")
 vertical_alignment = 2
 
-[node name="HBHearts2" type="HBoxContainer" parent="MC/MC2/HB"]
+[node name="HBLevel" type="HBoxContainer" parent="MC/MC2/HB"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 
-[node name="LevelLText" type="Label" parent="MC/MC2/HB/HBHearts2"]
+[node name="LevelLText" type="Label" parent="MC/MC2/HB/HBLevel"]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "FLOOR"
@@ -81,7 +81,7 @@ label_settings = SubResource("LabelSettings_0bx4p")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LevelLabel" type="Label" parent="MC/MC2/HB/HBHearts2"]
+[node name="LevelLabel" type="Label" parent="MC/MC2/HB/HBLevel"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "1"
@@ -141,7 +141,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="VBComplete" type="VBoxContainer" parent="ColorRect"]
+[node name="VBLevelComplete" type="VBoxContainer" parent="ColorRect"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -156,14 +156,14 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="ColorRect/VBComplete"]
+[node name="Label" type="Label" parent="ColorRect/VBLevelComplete"]
 layout_mode = 2
 text = "Floor Complete"
 label_settings = SubResource("LabelSettings_v7mo4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="ColorRect/VBComplete"]
+[node name="Label2" type="Label" parent="ColorRect/VBLevelComplete"]
 layout_mode = 2
 text = "Press <jump> to advance"
 label_settings = SubResource("LabelSettings_n56i7")
@@ -198,3 +198,8 @@ text = "Press <jump> for main menu"
 label_settings = SubResource("LabelSettings_n56i7")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+
+[node name="ContinueTimer" type="Timer" parent="."]
+one_shot = true

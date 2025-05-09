@@ -1,6 +1,6 @@
 extends Node
 
-signal on_enemy_hit
+signal on_enemy_hit(points: int)
 signal on_player_hit(dmg: int)
 
 signal on_create_object(
@@ -16,9 +16,10 @@ signal on_create_projectile(
 	projectile_type: BaseProjectile.ProjectileType,
 	)
 
-signal on_coin_collected
+signal on_coin_collected(points: int)
 signal on_create_slime(position: Vector2)
 signal on_exit_reached
 signal on_game_over
 signal on_key_collected
 signal on_ladder(val: bool)
+signal on_score_updated(score: int)
