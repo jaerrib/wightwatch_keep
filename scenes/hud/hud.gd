@@ -66,7 +66,7 @@ func on_game_over() -> void:
 
 
 func on_player_died() -> void:
-	#sound.play()
+	#sound.play()	
 	PlayerManager.reduce_lives()
 	if PlayerManager.get_lives() <= 0:
 		return

@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 enum PlayerState { IDLE, RUN, JUMP, FALL, ON_LADDER }
 
 const CLIMB_SPEED: float = 300.0
-const FALLEN_OFF: float = 500.0
+const FALLEN_OFF: float = 325.0
 const GRAVITY: float = 690.0
 const JUMP_VELOCITY: float = -175.0
 const MAX_FALL: float = 400.0
@@ -12,7 +12,6 @@ const RUN_SPEED: float = 120.0
 @export var right_collision_position: Vector2 = Vector2(9,0)
 @export var left_collision_position: Vector2 = Vector2(-9,0)
 
-#var _lives: int = 5
 var _state: PlayerState = PlayerState.IDLE
 var _on_ladder: bool = false
 
@@ -48,7 +47,9 @@ func set_sword_hit_box_position() -> void:
 func fallen_off() -> void:
 	if global_position.y < FALLEN_OFF:
 		return
+	set_physics_process(false)
 	queue_free()
+	SignalManager.on_player_died.emit()
 
 
 func get_input(delta) -> void:

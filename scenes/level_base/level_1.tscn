@@ -72,5 +72,5 @@ position = Vector2(232, 88)
 [node name="Bat3" parent="Enemies" index="4" instance=ExtResource("5_ggaws")]
 position = Vector2(216, 24)
 
-[node name="LevelOverlay" parent="CanvasLayer" index="1"]
+[node name="LevelOverlay" parent="CanvasLayer" index="2"]
 color = Color(0.294118, 0, 0.509804, 0.501961)
