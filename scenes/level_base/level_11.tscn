@@ -1,0 +1,99 @@
+[gd_scene load_steps=12 format=4 uid="uid://dn211wa8lesbk"]
+
+[ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_fwm1m"]
+[ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_8t0r3"]
+[ext_resource type="PackedScene" uid="uid://uhrc54c3ahkx" path="res://scenes/heart/heart.tscn" id="3_metjo"]
+[ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="4_8g4j4"]
+[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="5_svu35"]
+[ext_resource type="PackedScene" uid="uid://cyrp5u3y7nens" path="res://scenes/ladder/ladder_three_high.tscn" id="6_lefdg"]
+[ext_resource type="PackedScene" uid="uid://brikx0rid0pxt" path="res://scenes/ladder/ladder_two_high.tscn" id="7_63gch"]
+[ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="8_tie5h"]
+[ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="9_jsudk"]
+[ext_resource type="PackedScene" uid="uid://d2spcqwy8wug1" path="res://scenes/spectral_monk/spectral_monk.tscn" id="10_ktrbt"]
+[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="11_mrfwj"]
+
+[node name="Level15" instance=ExtResource("1_fwm1m")]
+
+[node name="TileMapLayer" parent="TileMapLayers" index="0"]
+tile_map_data = PackedByteArray("AAATAAAAAAAHAAAAAAASAAAAAAAFAAAAAAARAAAAAAAGAAAAAAAQAAAAAAAGAAAAAAAPAAAAAAAFAAAAAAAOAAAAAAAHAAAAAAANAAAAAAAFAAAAAAAMAAAAAAAGAAAAAAALAAAAAAAFAAAAAAAKAAAAAAAFAAAAAAAJAAAAAAAHAAAAAAAIAAAAAAAGAAAAAAAHAAAAAAAGAAAAAAAGAAAAAAAHAAAAAAAFAAAAAAAGAAAAAAAEAAAAAAAGAAAAAAADAAAAAAAFAAAAAAACAAAAAAAGAAAAAAABAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAA0AAAAGAAAAAAAAAA4AAAAHAAAAAAABAA4AAAAGAAAAAAACAA4AAAAHAAAAAAADAA4AAAAFAAAAAAAEAA4AAAAGAAAAAAAFAA4AAAAFAAAAAAAGAA4AAAAGAAAAAAAHAA4AAAAGAAAAAAAIAA4AAAAHAAAAAAAJAA4AAAAGAAAAAAAKAA4AAAAHAAAAAAALAA4AAAAGAAAAAAAMAA4AAAAHAAAAAAANAA4AAAAFAAAAAAAOAA4AAAAHAAAAAAAPAA4AAAAFAAAAAAAQAA4AAAAFAAAAAAARAA4AAAAHAAAAAAASAA4AAAAGAAAAAAATAA4AAAAHAAAAAAATAAEAAAAFAAAAAAATAAIAAAAGAAAAAAATAAMAAAAHAAAAAAATAAQAAAAHAAAAAAATAAUAAAAHAAAAAAATAAYAAAAGAAAAAAATAAcAAAAFAAAAAAATAAgAAAAHAAAAAAATAAkAAAAFAAAAAAATAAoAAAAGAAAAAAATAAsAAAAJAAAAAAATAAwAAAAFAAAAAAATAA0AAAAGAAAAAAAAAAEAAAAFAAAAAAAAAAIAAAABAAAAAAAAAAMAAAAHAAAAAAAAAAQAAAAJAAAAAAAAAAUAAAAJAAAAAAAAAAYAAAAGAAAAAAAAAAcAAAAHAAAAAAAAAAgAAAAJAAAAAAAAAAkAAAAJAAAAAAAAAAoAAAAGAAAAAAAAAAsAAAAJAAAAAAAAAAwAAAAJAAAAAAARAAwAAAAFAAAAAAAQAAwAAAAHAAAAAAAPAAwAAAAHAAAAAAAOAAwAAAAHAAAAAAANAAwAAAAFAAAAAAAFAAwAAAAGAAAAAAAHAAwAAAAFAAAAAAAGAAwAAAAGAAAAAAAIAAsAAAAFAAAAAAAJAAsAAAAGAAAAAAAKAAsAAAAFAAAAAAALAAsAAAAGAAAAAAAMAAwAAAAFAAAAAAARAAoAAAAHAAAAAAASAAoAAAAFAAAAAAARAAgAAAAHAAAAAAARAAcAAAAHAAAAAAARAAYAAAAFAAAAAAARAAUAAAAFAAAAAAARAAQAAAAGAAAAAAARAAMAAAAFAAAAAAAQAAMAAAAHAAAAAAAQAAcAAAAFAAAAAAAPAAcAAAAFAAAAAAAOAAYAAAAHAAAAAAANAAUAAAAFAAAAAAAMAAUAAAAHAAAAAAALAAQAAAAGAAAAAAALAAYAAAAHAAAAAAAKAAYAAAAFAAAAAAAJAAcAAAAFAAAAAAAIAAgAAAAFAAAAAAAKAAMAAAAGAAAAAAAJAAMAAAAFAAAAAAAIAAQAAAAGAAAAAAAHAAUAAAAHAAAAAAAGAAUAAAAHAAAAAAAFAAYAAAAGAAAAAAAEAAcAAAAHAAAAAAADAAcAAAAHAAAAAAABAAcAAAAGAAAAAAACAAoAAAAGAAAAAAABAAMAAAAFAAAAAAACAAMAAAAGAAAAAAADAAMAAAAGAAAAAAAFAA0AAAAHAAIAAAALAA0AAAAHAAIAAAALAAwAAAAHAAEAAAAIAAwAAAAHAAEAAAAIAA0AAAAHAAIAAAAOAA0AAAAHAAIAAAAQAAEAAAAHAAEAAAAQAAIAAAAHAAIAAAADAAIAAAAHAAIAAAADAAEAAAAHAAEAAAAKAAEAAAAHAAEAAAAKAAIAAAAHAAIAAAAMAAYAAAABAAEAAAAMAAcAAAABAAEAAAAMAAgAAAABAAEAAAALAAcAAAABAAEAAAAOAAcAAAABAAEAAAANAAYAAAABAAEAAAAIAAUAAAABAAEAAAAIAAYAAAABAAEAAAAJAAQAAAABAAEAAAAOAAEAAAABAAEAAAAOAAIAAAABAAEAAAANAAEAAAABAAEAAAAGAAEAAAABAAEAAAAGAAIAAAABAAEAAAAFAAEAAAABAAEAAAAJAAgAAAABAAEAAAAEAAgAAAABAAEAAAAEAAkAAAABAAEAAAAFAAcAAAABAAEAAAAFAAgAAAABAAEAAAA=")
+
+[node name="SecretBlock" parent="Secrets" index="0" instance=ExtResource("2_8t0r3")]
+position = Vector2(296, 152)
+
+[node name="Heart" parent="Hearts" index="0" instance=ExtResource("3_metjo")]
+position = Vector2(88, 184)
+
+[node name="Chest" parent="Chests" index="0" instance=ExtResource("4_8g4j4")]
+position = Vector2(184, 88)
+
+[node name="Torch" parent="Torches" index="0" instance=ExtResource("5_svu35")]
+position = Vector2(120, 40)
+
+[node name="Torch2" parent="Torches" index="1" instance=ExtResource("5_svu35")]
+position = Vector2(200, 40)
+
+[node name="Torch3" parent="Torches" index="2" instance=ExtResource("5_svu35")]
+position = Vector2(72, 72)
+
+[node name="Torch4" parent="Torches" index="3" instance=ExtResource("5_svu35")]
+position = Vector2(248, 72)
+
+[node name="Torch5" parent="Torches" index="4" instance=ExtResource("5_svu35")]
+position = Vector2(104, 168)
+
+[node name="Torch6" parent="Torches" index="5" instance=ExtResource("5_svu35")]
+position = Vector2(216, 168)
+
+[node name="LadderThreeHigh" parent="Ladders" index="0" instance=ExtResource("6_lefdg")]
+position = Vector2(24, 168)
+
+[node name="LadderTwoHigh" parent="Ladders" index="1" instance=ExtResource("7_63gch")]
+position = Vector2(40, 120)
+
+[node name="LadderTwoHigh2" parent="Ladders" index="2" instance=ExtResource("7_63gch")]
+position = Vector2(120, 136)
+
+[node name="LadderTwoHigh3" parent="Ladders" index="3" instance=ExtResource("7_63gch")]
+position = Vector2(264, 168)
+
+[node name="LadderTwoHigh4" parent="Ladders" index="4" instance=ExtResource("7_63gch")]
+position = Vector2(296, 200)
+
+[node name="Exit" parent="." index="6"]
+position = Vector2(280, 40)
+
+[node name="Player" parent="." index="7"]
+position = Vector2(32, 40)
+
+[node name="Key" parent="." index="8"]
+position = Vector2(264, 104)
+
+[node name="Mimic" parent="Enemies" index="0" instance=ExtResource("8_tie5h")]
+position = Vector2(168, 216)
+
+[node name="Skeleton" parent="Enemies" index="1" instance=ExtResource("9_jsudk")]
+position = Vector2(56, 216)
+
+[node name="Skeleton2" parent="Enemies" index="2" instance=ExtResource("9_jsudk")]
+position = Vector2(120, 216)
+
+[node name="Skeleton3" parent="Enemies" index="3" instance=ExtResource("9_jsudk")]
+position = Vector2(200, 216)
+
+[node name="Skeleton4" parent="Enemies" index="4" instance=ExtResource("9_jsudk")]
+position = Vector2(264, 216)
+
+[node name="Skeleton5" parent="Enemies" index="5" instance=ExtResource("9_jsudk")]
+position = Vector2(232, 184)
+
+[node name="SpectralMonk" parent="Enemies" index="6" instance=ExtResource("10_ktrbt")]
+position = Vector2(160, 168)
+
+[node name="P1" type="Marker2D" parent="Paths" index="0"]
+position = Vector2(296, 56)
+
+[node name="Platform1" parent="MovingPlatforms" index="0" instance=ExtResource("11_mrfwj")]
+position = Vector2(296, 144)
+
+[node name="LevelOverlay" parent="CanvasLayer" index="2"]
+color = Color(0.545098, 0, 0, 0.501961)

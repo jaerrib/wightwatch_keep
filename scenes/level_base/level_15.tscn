@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhiybg52enmcg"]
+
+[ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_8a4bp"]
+
+[node name="Level12" instance=ExtResource("1_8a4bp")]
+
+[node name="LevelOverlay" parent="CanvasLayer" index="2"]
+color = Color(0.545098, 0, 0, 0.501961)
