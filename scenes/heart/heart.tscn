@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://uhrc54c3ahkx"]
+
+[ext_resource type="Texture2D" uid="uid://bjeuse8q2xppq" path="res://assets/ui/heart.png" id="1_3t35b"]
+[ext_resource type="Script" uid="uid://dpxql15y20ew7" path="res://scenes/heart/heart.gd" id="1_jgyhw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgyhw"]
+size = Vector2(9, 8)
+
+[node name="Heart" type="Area2D"]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_jgyhw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3t35b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_jgyhw")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+
+[node name="RemovalTimer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="RemovalTimer" to="." method="_on_removal_timer_timeout"]

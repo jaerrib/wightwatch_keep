@@ -29,6 +29,8 @@ tile_set = ExtResource("2_48c0a")
 
 [node name="Secrets" type="Node2D" parent="."]
 
+[node name="Hearts" type="Node2D" parent="."]
+
 [node name="Chests" type="Node2D" parent="."]
 
 [node name="Torches" type="Node2D" parent="."]

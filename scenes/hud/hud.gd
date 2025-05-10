@@ -25,6 +25,7 @@ func _ready() -> void:
 	SignalManager.on_game_over.connect(on_game_over)
 	SignalManager.on_score_updated.connect(on_score_updated)
 	SignalManager.on_exit_reached.connect(on_exit_reached)
+	SignalManager.on_heart_collected.connect(set_hearts)
 	set_hearts()
 
 
