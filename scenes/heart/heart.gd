@@ -12,6 +12,8 @@ func remove() -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
+	if PlayerManager.player_is_at_full_hearts():
+		return
 	PlayerManager.increase_hearts(heal_amt)
 	SignalManager.on_heart_collected.emit()
 	removal_timer.start()

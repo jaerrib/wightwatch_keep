@@ -39,3 +39,7 @@ func reduce_lives() -> void:
 
 func gain_extra_life() -> void:
 	_lives += 1
+
+
+func player_is_at_full_hearts() -> bool:
+	return _hearts == MAX_HEARTS
