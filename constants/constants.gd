@@ -6,6 +6,7 @@ enum ObjectType {
 	COIN,
 	EXPLOSION,
 	HEART,
+	HEART_LARGE,
 }
 
 enum ProjectileType {

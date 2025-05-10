@@ -5,6 +5,7 @@ const ADD_OBJECT: String = "add_object"
 const OBJECT_SCENES: Dictionary = {
 	Constants.ObjectType.COIN: preload("res://scenes/coin/coin.tscn"),
 	Constants.ObjectType.EXPLOSION: preload("res://scenes/explosion/explosion.tscn"),
+	Constants.ObjectType.HEART_LARGE: preload("res://scenes/heart_large/heart_large.tscn")
 }
 
 const SLIME_SCENE: Dictionary = {
@@ -50,7 +51,6 @@ func on_create_slime(position: Vector2):
 	var scene = SLIME_SCENE[0].instantiate()
 	scene.position = position
 	call_deferred("add_child", scene)
-	print("MADE SLIMEd")
 
 
 func add_object(obj: Node, global_position: Vector2) -> void:

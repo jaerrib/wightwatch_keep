@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dpxql15y20ew7" path="res://scenes/heart/heart.gd" id="1_jgyhw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jgyhw"]
-size = Vector2(9, 8)
+size = Vector2(14, 11)
 
 [node name="Heart" type="Area2D"]
 collision_layer = 32
