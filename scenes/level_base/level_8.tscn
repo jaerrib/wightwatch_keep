@@ -91,20 +91,25 @@ position = Vector2(248, 96)
 [node name="Spikes" parent="Dangers" index="0" instance=ExtResource("8_lpan3")]
 position = Vector2(296, 120)
 
-[node name="Platform1" parent="MovingPlatforms" index="0" instance=ExtResource("7_tehan")]
+[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("7_tehan")]
 position = Vector2(88, 192)
+destination = NodePath("../../Paths/P1")
 
-[node name="Platform2" parent="MovingPlatforms" index="1" instance=ExtResource("7_tehan")]
+[node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("7_tehan")]
 position = Vector2(72, 56)
+destination = NodePath("../../Paths/P2")
 
-[node name="Platform3" parent="MovingPlatforms" index="2" instance=ExtResource("7_tehan")]
+[node name="Platform3" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("7_tehan")]
 position = Vector2(120, 56)
+destination = NodePath("../../Paths/P3")
 
-[node name="Platform4" parent="MovingPlatforms" index="3" instance=ExtResource("7_tehan")]
+[node name="Platform4" parent="MovingPlatforms" index="3" node_paths=PackedStringArray("destination") instance=ExtResource("7_tehan")]
 position = Vector2(200, 56)
+destination = NodePath("../../Paths/P4")
 
-[node name="Platform5" parent="MovingPlatforms" index="4" instance=ExtResource("7_tehan")]
+[node name="Platform5" parent="MovingPlatforms" index="4" node_paths=PackedStringArray("destination") instance=ExtResource("7_tehan")]
 position = Vector2(248, 56)
+destination = NodePath("../../Paths/P5")
 
 [node name="LevelOverlay" parent="CanvasLayer" index="2"]
 color = Color(0.333333, 0.419608, 0.184314, 0.501961)
