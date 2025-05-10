@@ -1,0 +1,110 @@
+[gd_scene load_steps=11 format=4 uid="uid://brh8u4dx586nk"]
+
+[ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_t017g"]
+[ext_resource type="PackedScene" uid="uid://uhrc54c3ahkx" path="res://scenes/heart/heart.tscn" id="2_kiojb"]
+[ext_resource type="PackedScene" uid="uid://cyrp5u3y7nens" path="res://scenes/ladder/ladder_three_high.tscn" id="2_lhvwf"]
+[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="2_pdi3g"]
+[ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="2_yoqvb"]
+[ext_resource type="PackedScene" uid="uid://brikx0rid0pxt" path="res://scenes/ladder/ladder_two_high.tscn" id="3_pdi3g"]
+[ext_resource type="PackedScene" uid="uid://cavmo0gvu020i" path="res://scenes/spore_pod/spore_pod.tscn" id="4_yoqvb"]
+[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="7_tehan"]
+[ext_resource type="PackedScene" uid="uid://dcguxpbvv842t" path="res://scenes/spikes/spikes.tscn" id="8_lpan3"]
+[ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="8_xlamp"]
+
+[node name="Level8" instance=ExtResource("1_t017g")]
+
+[node name="TileMapLayer" parent="TileMapLayers" index="0"]
+tile_map_data = PackedByteArray("AAAAAAAAAAAHAAAAAAABAAAAAAAHAAAAAAACAAAAAAAGAAAAAAADAAAAAAAFAAAAAAAEAAAAAAAGAAAAAAAFAAAAAAAFAAAAAAAGAAAAAAAHAAAAAAAHAAAAAAAGAAAAAAAIAAAAAAAFAAAAAAAJAAAAAAAGAAAAAAAKAAAAAAAHAAAAAAALAAAAAAAGAAAAAAAMAAAAAAAHAAAAAAANAAAAAAAFAAAAAAAOAAAAAAAFAAAAAAAPAAAAAAAFAAAAAAAQAAAAAAAFAAAAAAARAAAAAAAGAAAAAAASAAAAAAAHAAAAAAATAAAAAAAFAAAAAAATAA4AAAAGAAAAAAASAA4AAAAGAAAAAAARAA4AAAAHAAAAAAAQAA4AAAAFAAAAAAAPAA4AAAAFAAAAAAAOAA4AAgAAAAAAAAANAA4AAgAAAAAAAAAMAA4AAgAAAAAAAAALAA4AAgAAAAAAAAAKAA4AAgAAAAAAAAAJAA4AAgAAAAAAAAAIAA4AAgAAAAAAAAAHAA4AAgAAAAAAAAAGAA4AAgAAAAAAAAAFAA4AAgAAAAAAAAAEAA4AAAAGAAAAAAADAA4AAAAHAAAAAAACAA4AAAAHAAAAAAABAA4AAAAHAAAAAAAAAA4AAAAFAAAAAAATAAEAAAAGAAAAAAATAAIAAAAFAAAAAAATAAMAAAAFAAAAAAATAAQAAAAHAAAAAAATAAUAAAAHAAAAAAATAAYAAAAGAAAAAAATAAcAAAAHAAAAAAATAAgAAAAFAAAAAAATAAkAAAAGAAAAAAATAAoAAAAHAAAAAAATAAsAAAAHAAAAAAATAAwAAAAFAAAAAAATAA0AAAAGAAAAAAAAAA0AAAABAAAAAAAAAAwAAAAGAAAAAAAAAAsAAAAHAAAAAAAAAAoAAAAGAAAAAAAAAAkAAAAFAAAAAAAAAAgAAAAHAAAAAAAAAAcAAAAHAAAAAAAAAAYAAAAFAAAAAAAAAAUAAAAFAAAAAAAAAAQAAAAHAAAAAAAAAAMAAAAFAAAAAAAAAAIAAAAGAAAAAAAAAAEAAAAHAAAAAAAPAAwAAAAHAAAAAAAPAA0AAAAFAAAAAAAQAA0AAAAFAAAAAAAEAAsAAAAFAAAAAAACAAsAAAAHAAAAAAABAAsAAAAGAAAAAAAEAAgAAAAFAAAAAAADAAgAAAAFAAAAAAACAAgAAAAGAAAAAAAQAAgAAAAGAAAAAAARAAgAAAAFAAAAAAASAAgAAAAHAAAAAAASAAMAAAAFAAAAAAAJAAcAAAAFAAAAAAAKAAcAAAAHAAAAAAACAAUAAAAFAAAAAAABAAUAAAAHAAAAAAAQAAwAAAAGAAEAAAARAA0AAAAGAAEAAAAPAAsAAAAEAAEAAAAEAA0AAAAFAAEAAAABAA0AAAAEAAEAAAACAA0AAAAFAAEAAAABAAoAAAAFAAEAAAACAAoAAAAGAAEAAAACAAcAAAAFAAEAAAADAAcAAAAFAAEAAAAQAAcAAAAGAAEAAAARAAcAAAAGAAEAAAAKAAYAAAAEAAEAAAAJAAYAAAAGAAEAAAACAAQAAAAGAAEAAAADAA0AAAAEAAEAAAASAAQAAAABAAEAAAASAAUAAAABAAEAAAAJAAgAAAABAAEAAAAJAAkAAAABAAEAAAAKAAgAAAABAAEAAAASAAkAAAABAAEAAAARAAkAAAABAAEAAAASAAoAAAABAAEAAAACAAEAAAABAAEAAAADAAEAAAABAAEAAAABAAEAAAABAAEAAAACAAIAAAABAAEAAAAGAAEAAAABAAEAAAAGAAIAAAABAAEAAAAKAAEAAAABAAEAAAAKAAIAAAABAAEAAAAJAAEAAAABAAEAAAAKAAMAAAABAAEAAAAOAAEAAAABAAEAAAARAAEAAAABAAEAAAAQAAEAAAABAAEAAAAQAAIAAAABAAEAAAA=")
+
+[node name="Heart" parent="Hearts" index="0" instance=ExtResource("2_kiojb")]
+position = Vector2(120, 24)
+
+[node name="Heart2" parent="Hearts" index="1" instance=ExtResource("2_kiojb")]
+position = Vector2(200, 24)
+
+[node name="Chest" parent="Chests" index="0" instance=ExtResource("2_yoqvb")]
+position = Vector2(296, 40)
+
+[node name="Torch" parent="Torches" index="0" instance=ExtResource("2_pdi3g")]
+position = Vector2(40, 64)
+
+[node name="Torch2" parent="Torches" index="1" instance=ExtResource("2_pdi3g")]
+position = Vector2(168, 96)
+
+[node name="Torch3" parent="Torches" index="2" instance=ExtResource("2_pdi3g")]
+position = Vector2(280, 112)
+
+[node name="Torch4" parent="Torches" index="3" instance=ExtResource("2_pdi3g")]
+position = Vector2(248, 176)
+
+[node name="Torch5" parent="Torches" index="4" instance=ExtResource("2_pdi3g")]
+position = Vector2(280, 192)
+
+[node name="LadderThreeHigh" parent="Ladders" index="0" instance=ExtResource("2_lhvwf")]
+position = Vector2(56, 184)
+
+[node name="LadderTwoHigh" parent="Ladders" index="1" instance=ExtResource("3_pdi3g")]
+position = Vector2(24, 136)
+
+[node name="LadderTwoHigh2" parent="Ladders" index="2" instance=ExtResource("3_pdi3g")]
+position = Vector2(56, 88)
+
+[node name="Exit" parent="." index="6"]
+position = Vector2(152, 104)
+
+[node name="Player" parent="." index="7"]
+position = Vector2(32, 216)
+
+[node name="Key" parent="." index="8"]
+position = Vector2(296, 216)
+
+[node name="SporePod" parent="Enemies" index="0" instance=ExtResource("4_yoqvb")]
+position = Vector2(24, 72)
+
+[node name="SporePod2" parent="Enemies" index="1" instance=ExtResource("4_yoqvb")]
+position = Vector2(72, 120)
+
+[node name="SporePod3" parent="Enemies" index="2" instance=ExtResource("4_yoqvb")]
+position = Vector2(72, 168)
+
+[node name="Bat" parent="Enemies" index="3" instance=ExtResource("8_xlamp")]
+position = Vector2(184, 136)
+
+[node name="Bat2" parent="Enemies" index="4" instance=ExtResource("8_xlamp")]
+position = Vector2(128, 168)
+
+[node name="P1" type="Marker2D" parent="Paths" index="0"]
+position = Vector2(232, 192)
+
+[node name="P2" type="Marker2D" parent="Paths" index="1"]
+position = Vector2(72, 88)
+
+[node name="P3" type="Marker2D" parent="Paths" index="2"]
+position = Vector2(120, 112)
+
+[node name="P4" type="Marker2D" parent="Paths" index="3"]
+position = Vector2(200, 112)
+
+[node name="P5" type="Marker2D" parent="Paths" index="4"]
+position = Vector2(248, 96)
+
+[node name="Spikes" parent="Dangers" index="0" instance=ExtResource("8_lpan3")]
+position = Vector2(296, 120)
+
+[node name="Platform1" parent="MovingPlatforms" index="0" instance=ExtResource("7_tehan")]
+position = Vector2(88, 192)
+
+[node name="Platform2" parent="MovingPlatforms" index="1" instance=ExtResource("7_tehan")]
+position = Vector2(72, 56)
+
+[node name="Platform3" parent="MovingPlatforms" index="2" instance=ExtResource("7_tehan")]
+position = Vector2(120, 56)
+
+[node name="Platform4" parent="MovingPlatforms" index="3" instance=ExtResource("7_tehan")]
+position = Vector2(200, 56)
+
+[node name="Platform5" parent="MovingPlatforms" index="4" instance=ExtResource("7_tehan")]
+position = Vector2(248, 56)
+
+[node name="LevelOverlay" parent="CanvasLayer" index="2"]
+color = Color(0.333333, 0.419608, 0.184314, 0.501961)
