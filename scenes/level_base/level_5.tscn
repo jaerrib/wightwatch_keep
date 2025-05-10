@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://c2qmdjdbbcocf"]
+[gd_scene load_steps=12 format=4 uid="uid://c2qmdjdbbcocf"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_x57gy"]
 [ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_7xffs"]
 [ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="3_f61qn"]
 [ext_resource type="PackedScene" uid="uid://brikx0rid0pxt" path="res://scenes/ladder/ladder_two_high.tscn" id="3_match"]
 [ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="3_vntt4"]
+[ext_resource type="PackedScene" uid="uid://b2wdggulo22b0" path="res://scenes/chest_heart/chest_heart.tscn" id="4_06wu7"]
 [ext_resource type="PackedScene" uid="uid://cyrp5u3y7nens" path="res://scenes/ladder/ladder_three_high.tscn" id="4_vntt4"]
 [ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="5_f61qn"]
 [ext_resource type="PackedScene" uid="uid://ttoxj5efrtrk" path="res://scenes/spider/spider.tscn" id="6_06wu7"]
@@ -22,7 +23,7 @@ position = Vector2(200, 216)
 [node name="Chest" parent="Chests" index="0" instance=ExtResource("3_f61qn")]
 position = Vector2(56, 40)
 
-[node name="Chest2" parent="Chests" index="1" instance=ExtResource("3_f61qn")]
+[node name="ChestHeart" parent="Chests" index="1" instance=ExtResource("4_06wu7")]
 position = Vector2(72, 168)
 
 [node name="Torch" parent="Torches" index="0" instance=ExtResource("3_vntt4")]
@@ -64,13 +65,13 @@ position = Vector2(40, 152)
 [node name="Ladder2" parent="Ladders" index="4" instance=ExtResource("6_vntt4")]
 position = Vector2(24, 184)
 
-[node name="Exit" parent="." index="5"]
+[node name="Exit" parent="." index="6"]
 position = Vector2(232, 216)
 
-[node name="Player" parent="." index="6"]
+[node name="Player" parent="." index="7"]
 position = Vector2(280, 40)
 
-[node name="Key" parent="." index="7"]
+[node name="Key" parent="." index="8"]
 position = Vector2(296, 216)
 
 [node name="Skeleton" parent="Enemies" index="0" instance=ExtResource("5_f61qn")]
@@ -109,5 +110,5 @@ position = Vector2(256, 88)
 [node name="Bat4" parent="Enemies" index="11" instance=ExtResource("7_r1ksi")]
 position = Vector2(120, 184)
 
-[node name="LevelOverlay" parent="CanvasLayer" index="1"]
+[node name="LevelOverlay" parent="CanvasLayer" index="2"]
 color = Color(0.294118, 0, 0.509804, 0.501961)
