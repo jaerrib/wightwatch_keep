@@ -37,6 +37,7 @@ func check_player_proximity() -> void:
 func _on_burst_timer_timeout() -> void:
 	animated_sprite_2d.play("burst")
 	_spores = true
+	hit_box.set_collision_layer_value(4, true)
 	hit_box.set_collision_mask_value(3, false)
 	spore_timer.start()
 
