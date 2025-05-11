@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3ch6qbcily7y"]
+[gd_scene load_steps=12 format=3 uid="uid://b3ch6qbcily7y"]
 
 [ext_resource type="Script" uid="uid://b2xk7tgg228f0" path="res://scenes/hud/hud.gd" id="1_c45xl"]
 [ext_resource type="FontFile" uid="uid://c68gjc4nwofmq" path="res://assets/fonts/visitor-brk.visitor-tt2-brk.ttf" id="2_0bx4p"]
 [ext_resource type="Texture2D" uid="uid://bjeuse8q2xppq" path="res://assets/ui/heart.png" id="2_c45xl"]
 [ext_resource type="FontFile" uid="uid://b0820jsp2pmm0" path="res://assets/fonts/8-bit-limit.o-brk.ttf" id="4_mgtrf"]
 [ext_resource type="FontFile" uid="uid://b8dqyry4eqxty" path="res://assets/fonts/8-bit-limit.brk.ttf" id="5_mgtrf"]
+[ext_resource type="AudioStream" uid="uid://bx305226s2eg6" path="res://assets/audio/Game Over.ogg" id="6_v7mo4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c45xl"]
 font = ExtResource("2_0bx4p")
@@ -250,6 +251,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_v7mo4")
+volume_db = -5.0
 
 [node name="ContinueTimer" type="Timer" parent="."]
 one_shot = true

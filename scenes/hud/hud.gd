@@ -61,9 +61,17 @@ func show_hud() -> void:
 
 
 func on_game_over() -> void:
-	#sound.play()
+	stop_level_music()
+	sound.play()
 	show_hud()
 	vb_game_over.show()
+
+
+func stop_level_music():
+	for node in get_tree().get_nodes_in_group("level_music"):
+		if node is AudioStreamPlayer and node.playing:
+			node.stop()
+
 
 
 func on_player_died() -> void:
