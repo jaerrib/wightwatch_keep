@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://c2qmdjdbbcocf"]
+[gd_scene load_steps=13 format=4 uid="uid://c2qmdjdbbcocf"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_x57gy"]
 [ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_7xffs"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ttoxj5efrtrk" path="res://scenes/spider/spider.tscn" id="6_06wu7"]
 [ext_resource type="PackedScene" uid="uid://ds0e8yc5lsbt2" path="res://scenes/ladder/ladder.tscn" id="6_vntt4"]
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="7_r1ksi"]
+[ext_resource type="AudioStream" uid="uid://y7q6jw5nt1f2" path="res://assets/audio/Crypt.ogg" id="12_r1ksi"]
 
 [node name="Level5" instance=ExtResource("1_x57gy")]
 
@@ -109,6 +110,9 @@ position = Vector2(256, 88)
 
 [node name="Bat4" parent="Enemies" index="11" instance=ExtResource("7_r1ksi")]
 position = Vector2(120, 184)
+
+[node name="Music" parent="." index="14"]
+stream = ExtResource("12_r1ksi")
 
 [node name="LevelOverlay" parent="CanvasLayer" index="2"]
 color = Color(0.294118, 0, 0.509804, 0.501961)

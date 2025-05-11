@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://brh8u4dx586nk"]
+[gd_scene load_steps=12 format=4 uid="uid://brh8u4dx586nk"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_t017g"]
 [ext_resource type="PackedScene" uid="uid://uhrc54c3ahkx" path="res://scenes/heart/heart.tscn" id="2_kiojb"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="7_tehan"]
 [ext_resource type="PackedScene" uid="uid://dcguxpbvv842t" path="res://scenes/spikes/spikes.tscn" id="8_lpan3"]
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="8_xlamp"]
+[ext_resource type="AudioStream" uid="uid://timqgr7shy7q" path="res://assets/audio/Garden.ogg" id="11_pwpsl"]
 
 [node name="Level8" instance=ExtResource("1_t017g")]
 
@@ -110,6 +111,9 @@ destination = NodePath("../../Paths/P4")
 [node name="Platform5" parent="MovingPlatforms" index="4" node_paths=PackedStringArray("destination") instance=ExtResource("7_tehan")]
 position = Vector2(248, 56)
 destination = NodePath("../../Paths/P5")
+
+[node name="Music" parent="." index="14"]
+stream = ExtResource("11_pwpsl")
 
 [node name="LevelOverlay" parent="CanvasLayer" index="2"]
 color = Color(0.333333, 0.419608, 0.184314, 0.501961)

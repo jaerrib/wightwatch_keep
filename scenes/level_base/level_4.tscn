@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://husn14umboal"]
+[gd_scene load_steps=10 format=4 uid="uid://husn14umboal"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_p804s"]
 [ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="2_6yrc8"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="5_i6pf4"]
 [ext_resource type="PackedScene" uid="uid://ttoxj5efrtrk" path="res://scenes/spider/spider.tscn" id="6_6xc6u"]
 [ext_resource type="PackedScene" uid="uid://dcguxpbvv842t" path="res://scenes/spikes/spikes.tscn" id="7_4c2bj"]
+[ext_resource type="AudioStream" uid="uid://y7q6jw5nt1f2" path="res://assets/audio/Crypt.ogg" id="9_g37tb"]
 
 [node name="Level4" instance=ExtResource("1_p804s")]
 
@@ -41,13 +42,13 @@ position = Vector2(40, 136)
 [node name="LadderThreeHigh2" parent="Ladders" index="1" instance=ExtResource("3_rebgp")]
 position = Vector2(280, 136)
 
-[node name="Exit" parent="." index="5"]
+[node name="Exit" parent="." index="6"]
 position = Vector2(168, 88)
 
-[node name="Player" parent="." index="6"]
+[node name="Player" parent="." index="7"]
 position = Vector2(184, 40)
 
-[node name="Key" parent="." index="7"]
+[node name="Key" parent="." index="8"]
 position = Vector2(88, 216)
 
 [node name="Skeleton" parent="Enemies" index="0" instance=ExtResource("4_g37tb")]
@@ -86,5 +87,8 @@ position = Vector2(184, 136)
 [node name="Spikes2" parent="Dangers" index="1" instance=ExtResource("7_4c2bj")]
 position = Vector2(136, 136)
 
-[node name="LevelOverlay" parent="CanvasLayer" index="1"]
+[node name="Music" parent="." index="14"]
+stream = ExtResource("9_g37tb")
+
+[node name="LevelOverlay" parent="CanvasLayer" index="2"]
 color = Color(0.294118, 0, 0.509804, 0.501961)

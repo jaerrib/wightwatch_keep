@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dn211wa8lesbk"]
+[gd_scene load_steps=13 format=4 uid="uid://dn211wa8lesbk"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_fwm1m"]
 [ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_8t0r3"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="9_jsudk"]
 [ext_resource type="PackedScene" uid="uid://d2spcqwy8wug1" path="res://scenes/spectral_monk/spectral_monk.tscn" id="10_ktrbt"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="11_mrfwj"]
+[ext_resource type="AudioStream" uid="uid://ci8d2tbapfl0p" path="res://assets/audio/Sanctuary.ogg" id="12_metjo"]
 
 [node name="Level15" instance=ExtResource("1_fwm1m")]
 
@@ -92,8 +93,12 @@ position = Vector2(160, 168)
 [node name="P1" type="Marker2D" parent="Paths" index="0"]
 position = Vector2(296, 56)
 
-[node name="Platform1" parent="MovingPlatforms" index="0" instance=ExtResource("11_mrfwj")]
+[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("11_mrfwj")]
 position = Vector2(296, 144)
+destination = NodePath("../../Paths/P1")
+
+[node name="Music" parent="." index="14"]
+stream = ExtResource("12_metjo")
 
 [node name="LevelOverlay" parent="CanvasLayer" index="2"]
 color = Color(0.545098, 0, 0, 0.501961)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://d04dkprfqfpbr"]
+[gd_scene load_steps=6 format=3 uid="uid://d04dkprfqfpbr"]
 
 [ext_resource type="FontFile" uid="uid://b8dqyry4eqxty" path="res://assets/fonts/8-bit-limit.brk.ttf" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://0omryxihp3te" path="res://scenes/main/main.gd" id="1_iuonh"]
-[ext_resource type="AudioStream" uid="uid://bx17yjm4dhqu3" path="res://assets/audio/background_music1.ogg" id="2_l3cfh"]
 [ext_resource type="Shader" uid="uid://duyhok2fywa0y" path="res://scenes/level_base/scanlines.gdshader" id="3_k2fmo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iuonh"]
@@ -38,7 +37,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_l3cfh")
 volume_db = 0.5
 autoplay = true
 
