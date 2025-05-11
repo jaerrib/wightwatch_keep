@@ -53,7 +53,7 @@ tile_set = ExtResource("2_48c0a")
 
 [node name="MovingPlatforms" type="Node2D" parent="."]
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." groups=["level_music"]]
 volume_db = -5.0
 autoplay = true
 

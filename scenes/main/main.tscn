@@ -1,12 +1,52 @@
-[gd_scene load_steps=6 format=3 uid="uid://d04dkprfqfpbr"]
+[gd_scene load_steps=10 format=3 uid="uid://d04dkprfqfpbr"]
 
 [ext_resource type="FontFile" uid="uid://b8dqyry4eqxty" path="res://assets/fonts/8-bit-limit.brk.ttf" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://0omryxihp3te" path="res://scenes/main/main.gd" id="1_iuonh"]
+[ext_resource type="AudioStream" uid="uid://b2er7ryp3obvs" path="res://assets/audio/wind.ogg" id="2_l3cfh"]
 [ext_resource type="Shader" uid="uid://duyhok2fywa0y" path="res://scenes/level_base/scanlines.gdshader" id="3_k2fmo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iuonh"]
 font = ExtResource("1_hyk8p")
 font_size = 32
+
+[sub_resource type="Animation" id="Animation_l3cfh"]
+resource_name = "pulse"
+length = 0.25
+loop_mode = 2
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.501961, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6q06x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ow5a4"]
+_data = {
+&"RESET": SubResource("Animation_6q06x"),
+&"pulse": SubResource("Animation_l3cfh")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l3cfh"]
 shader = ExtResource("3_k2fmo")
@@ -37,7 +77,8 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-volume_db = 0.5
+stream = ExtResource("2_l3cfh")
+volume_db = -5.0
 autoplay = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -59,6 +100,11 @@ label_settings = SubResource("LabelSettings_iuonh")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ow5a4")
+}
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Scanlines" type="ColorRect" parent="CanvasLayer"]
@@ -70,10 +116,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="LevelOverlay" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.501961)
+[node name="PulseDelay" type="Timer" parent="."]
+wait_time = 3.5
+one_shot = true
+
+[connection signal="timeout" from="PulseDelay" to="." method="_on_pulse_delay_timeout"]

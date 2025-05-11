@@ -33,6 +33,7 @@ window/stretch/mode="canvas_items"
 
 moveables=""
 player=""
+level_music=""
 
 [input]
 
