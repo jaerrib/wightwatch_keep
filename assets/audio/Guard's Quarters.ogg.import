@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://byw8hesaxtnii"
+path="res://.godot/imported/Guard's Quarters.ogg-a4c8a013e98c91b0a3fc20844163764e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/Guard's Quarters.ogg"
+dest_files=["res://.godot/imported/Guard's Quarters.ogg-a4c8a013e98c91b0a3fc20844163764e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

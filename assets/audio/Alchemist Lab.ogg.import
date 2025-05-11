@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://xcq7bcbce8v5"
+path="res://.godot/imported/Alchemist Lab.ogg-550843dc53f1ca240c498d7c5ff4f52d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/Alchemist Lab.ogg"
+dest_files=["res://.godot/imported/Alchemist Lab.ogg-550843dc53f1ca240c498d7c5ff4f52d.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
