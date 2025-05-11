@@ -95,5 +95,5 @@ position = Vector2(295, 70)
 [node name="Music" parent="." index="14"]
 stream = ExtResource("11_04kqm")
 
-[node name="LevelOverlay" parent="CanvasLayer" index="2"]
+[node name="LevelOverlay" parent="CanvasLayer" index="3"]
 color = Color(0.545098, 0, 0, 0.501961)

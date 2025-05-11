@@ -90,7 +90,7 @@ position = Vector2(104, 104)
 position = Vector2(280, 120)
 
 [node name="P1" type="Marker2D" parent="Paths" index="0"]
-position = Vector2(72, 168)
+position = Vector2(72, 176)
 
 [node name="P2" type="Marker2D" parent="Paths" index="1"]
 position = Vector2(72, 208)
@@ -102,10 +102,10 @@ position = Vector2(24, 104)
 position = Vector2(184, 136)
 
 [node name="P5" type="Marker2D" parent="Paths" index="4"]
-position = Vector2(296, 112)
+position = Vector2(296, 120)
 
 [node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("10_qojk0")]
-position = Vector2(248, 168)
+position = Vector2(248, 176)
 destination = NodePath("../../Paths/P1")
 
 [node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("10_qojk0")]
@@ -127,5 +127,5 @@ destination = NodePath("../../Paths/P5")
 [node name="Music" parent="." index="14"]
 stream = ExtResource("11_ycvm1")
 
-[node name="LevelOverlay" parent="CanvasLayer" index="2"]
+[node name="LevelOverlay" parent="CanvasLayer" index="3"]
 color = Color(0.545098, 0, 0, 0.501961)

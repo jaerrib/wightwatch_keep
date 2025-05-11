@@ -130,5 +130,5 @@ destination = NodePath("../../Paths/P2")
 [node name="Music" parent="." index="14"]
 stream = ExtResource("11_boirc")
 
-[node name="LevelOverlay" parent="CanvasLayer" index="2"]
+[node name="LevelOverlay" parent="CanvasLayer" index="3"]
 color = Color(0.333333, 0.419608, 0.184314, 0.501961)
