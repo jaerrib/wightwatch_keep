@@ -6,6 +6,7 @@
 
 [node name="HeartLarge" instance=ExtResource("1_hxkpq")]
 script = ExtResource("2_hxkpq")
+heal_amt = 5
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_8v2n8")
