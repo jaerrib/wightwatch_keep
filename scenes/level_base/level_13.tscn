@@ -93,7 +93,7 @@ position = Vector2(280, 120)
 position = Vector2(72, 176)
 
 [node name="P2" type="Marker2D" parent="Paths" index="1"]
-position = Vector2(72, 208)
+position = Vector2(72, 216)
 
 [node name="P3" type="Marker2D" parent="Paths" index="2"]
 position = Vector2(24, 104)
