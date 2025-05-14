@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci54e8o4wq1nl"]
+
+[ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_cci8g"]
+[ext_resource type="AudioStream" uid="uid://byw8hesaxtnii" path="res://assets/audio/Guard's Quarters.ogg" id="2_aat2v"]
+
+[node name="Level17" instance=ExtResource("1_cci8g")]
+
+[node name="Music" parent="." index="14"]
+stream = ExtResource("2_aat2v")
+
+[node name="LevelOverlay" parent="CanvasLayer" index="3"]
+color = Color(0.27451, 0.509804, 0.705882, 0.501961)
