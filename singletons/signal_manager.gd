@@ -25,3 +25,4 @@ signal on_heart_collected
 signal on_key_collected
 signal on_ladder(val: bool)
 signal on_score_updated(score: int)
+signal on_stone_collected
