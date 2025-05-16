@@ -1,9 +1,145 @@
-[gd_scene load_steps=3 format=3 uid="uid://buxmoedhkvxo8"]
+[gd_scene load_steps=14 format=4 uid="uid://buxmoedhkvxo8"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_n8m12"]
 [ext_resource type="AudioStream" uid="uid://byw8hesaxtnii" path="res://assets/audio/Guard's Quarters.ogg" id="2_ocl86"]
+[ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_uwunb"]
+[ext_resource type="PackedScene" uid="uid://cg4hvldawovi3" path="res://scenes/stone/stone.tscn" id="3_nphya"]
+[ext_resource type="PackedScene" uid="uid://uhrc54c3ahkx" path="res://scenes/heart/heart.tscn" id="4_7wqks"]
+[ext_resource type="PackedScene" uid="uid://cah1313xuan27" path="res://scenes/heart_large/heart_large.tscn" id="5_j6c2j"]
+[ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="6_gcfev"]
+[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="7_nphya"]
+[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="8_7wqks"]
+[ext_resource type="PackedScene" uid="uid://8jbh2iqskd6c" path="res://scenes/sword_automaton/sword_automaton.tscn" id="8_j6c2j"]
+[ext_resource type="PackedScene" uid="uid://hxifn0jcytmw" path="res://scenes/sword_skeleton/sword_skeleton.tscn" id="9_gcfev"]
+[ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="10_tdfme"]
+[ext_resource type="PackedScene" uid="uid://qd1e01m0b4bv" path="res://scenes/cannon/cannon.tscn" id="11_yf58k"]
 
 [node name="Level19" instance=ExtResource("1_n8m12")]
+metadata/_edit_horizontal_guides_ = [192.0]
+
+[node name="TileMapLayer" parent="TileMapLayers" index="0"]
+tile_map_data = PackedByteArray("AAATAA4AAwAIAAwAAAASAA4AAwAIAAwAAAARAA4AAwAIAAwAAAAQAA4AAwAIAAwAAAAPAA4AAwAIAAwAAAAOAA4AAwAIAAwAAAANAA4AAwAIAAwAAAAMAA4AAwAIAAwAAAALAA4AAwAIAAwAAAAKAA4AAwAIAAwAAAAJAA4AAwAIAAwAAAAIAA4AAwAIAAwAAAAHAA4AAwAIAAwAAAAGAA4AAwAIAAwAAAAFAA4AAwAIAAwAAAAEAA4AAwAIAAwAAAADAA4AAwAIAAwAAAACAA4AAwAIAAwAAAABAA4AAwAIAAwAAAAAAA4AAwAIAAwAAAATAAEAAwAIAAwAAAATAAAAAwAIAAwAAAATAAIAAwAIAAwAAAATAAMAAwAIAAwAAAATAAQAAwAIAAwAAAATAAUAAwAIAAwAAAATAAYAAwAIAAwAAAATAAcAAwAIAAwAAAATAAgAAwAIAAwAAAATAAkAAwAIAAwAAAATAAoAAwAIAAwAAAATAAsAAwAIAAwAAAATAAwAAwAIAAwAAAATAA0AAwAIAAwAAAASAAAAAwAIAAwAAAARAAAAAwAIAAwAAAAQAAAAAwAIAAwAAAAPAAAAAwAIAAwAAAAOAAAAAwAIAAwAAAANAAAAAwAIAAwAAAAMAAAAAwAIAAwAAAALAAAAAwAIAAwAAAAKAAAAAwAIAAwAAAAJAAAAAwAIAAwAAAAIAAAAAwAIAAwAAAAHAAAAAwAIAAwAAAAGAAAAAwAIAAwAAAAFAAAAAwAIAAwAAAAEAAAAAwAIAAwAAAADAAAAAwAIAAwAAAACAAAAAwAIAAwAAAABAAAAAwAIAAwAAAAAAAAAAwAIAAwAAAASAAIAAwAIAAwAAAARAAIAAwAIAAwAAAAGAAIAAwAIAAwAAAAGAAUAAwAIAAwAAAAHAAYAAwAIAAwAAAASAAUAAwAIAAwAAAARAAUAAwAIAAwAAAAQAAUAAwAIAAwAAAAPAAUAAwAIAAwAAAAOAAUAAwAIAAwAAAANAAUAAwAIAAwAAAAMAAUAAwAIAAwAAAALAAQAAwAIAAwAAAAKAAQAAwAIAAwAAAAJAAQAAwAIAAwAAAAOAAgAAwAIAAwAAAAPAAgAAwAIAAwAAAAQAAgAAwAIAAwAAAALAAcAAwAIAAwAAAAKAAcAAwAIAAwAAAAJAAgAAwAIAAwAAAAIAAgAAwAIAAwAAAAHAAgAAwAIAAwAAAAGAAgAAwAIAAwAAAAFAAgAAwAIAAwAAAAEAAgAAwAIAAwAAAADAAgAAwAIAAwAAAACAAgAAwAIAAwAAAABAAgAAwAIAAwAAAAAAAgAAwAIAAwAAAAAAAYAAwAIAAwAAAAAAAcAAwAIAAwAAAADAAUAAwAIAAwAAAACAAUAAwAIAAwAAAABAAUAAwAIAAwAAAAAAAUAAwAIAAwAAAD//wUAAwAIAAwAAAD+/wUAAwAIAAwAAAD9/wUAAwAIAAwAAAD8/wUAAwAIAAwAAAD8/wQAAwAIAAwAAAD8/wMAAwAIAAwAAAAAAAMAAwAIAAwAAAD//wMAAwAIAAwAAAD+/wMAAwAIAAwAAAD9/wMAAwAIAAwAAAAAAAEAAwAIAAwAAAAAAAIAAwAIAAwAAAAAAAkAAwAIAAwAAAAAAAoAAwAIAAwAAAD//woAAwAIAAwAAAD+/woAAwAIAAwAAAD9/woAAwAIAAwAAAD8/woAAwAIAAwAAAD//w4AAwAIAAwAAAD+/w4AAwAIAAwAAAD9/w4AAwAIAAwAAAD8/w4AAwAIAAwAAAD8/wsAAwAIAAwAAAD8/wwAAwAIAAwAAAD8/w0AAwAIAAwAAAAAAAwAAwAIAAwAAAD//wwAAwAIAAwAAAD+/wwAAwAIAAwAAAD9/wwAAwAIAAwAAAABAAwAAwAIAAwAAAACAAwAAwAIAAwAAAADAAwAAwAIAAwAAAAFAA0AAwAIAAwAAAAHAAsAAwAIAAwAAAAIAAsAAwAIAAwAAAAJAAsAAwAIAAwAAAAGAAsAAwAIAAwAAAAKAAwAAwAIAAwAAAAKAA0AAwAIAAwAAAALAAwAAwAIAAwAAAALAA0AAwAIAAwAAAAMAA0AAwAIAAwAAAAJAA0AAAABAAAAAAAOAAcAAwACABIAAAAOAAYAAwABABIAAAAQAAYAAwABABIAAAAQAAcAAwABABIAAAAGAAEAAwABABIAAAAGAAwAAAAHAAEAAAAGAA0AAAAHAAIAAAAHAAkAAAAHAAEAAAAHAAoAAAAHAAIAAAAGAAYAAAAHAAEAAAAGAAcAAAAHAAIAAAADAAoAAAAHAAEAAAADAAsAAAAHAAIAAAADAAkAAAAHAAEAAAADAAQAAwACABIAAAADAAMAAwAAABIAAAADAAIAAwABABIAAAADAAEAAwAAABIAAAAOAAEAAAABAAEAAAAOAAIAAAABAAEAAAANAAEAAAABAAEAAAARAAMAAAABAAEAAAASAAsAAwAJAA8AAAARAAsAAwAJAA8AAAA=")
+
+[node name="SecretBlock" parent="Secrets" index="0" instance=ExtResource("2_uwunb")]
+position = Vector2(8, 216)
+
+[node name="SecretBlock2" parent="Secrets" index="1" instance=ExtResource("2_uwunb")]
+position = Vector2(40, 216)
+
+[node name="Stone" parent="Secrets" index="2" instance=ExtResource("3_nphya")]
+position = Vector2(-40, 216)
+
+[node name="Heart" parent="Hearts" index="0" instance=ExtResource("4_7wqks")]
+position = Vector2(-40, 184)
+
+[node name="HeartLarge" parent="Hearts" index="1" instance=ExtResource("5_j6c2j")]
+position = Vector2(-40, 72)
+
+[node name="Chest" parent="Chests" index="0" instance=ExtResource("6_gcfev")]
+position = Vector2(24, 216)
+
+[node name="Chest2" parent="Chests" index="1" instance=ExtResource("6_gcfev")]
+position = Vector2(296, 72)
+
+[node name="Chest3" parent="Chests" index="2" instance=ExtResource("6_gcfev")]
+position = Vector2(296, 168)
+
+[node name="Torch" parent="Torches" index="0" instance=ExtResource("7_nphya")]
+position = Vector2(40, 168)
+
+[node name="Torch2" parent="Torches" index="1" instance=ExtResource("7_nphya")]
+position = Vector2(200, 168)
+
+[node name="Torch3" parent="Torches" index="2" instance=ExtResource("7_nphya")]
+position = Vector2(248, 104)
+
+[node name="Torch4" parent="Torches" index="3" instance=ExtResource("7_nphya")]
+position = Vector2(120, 72)
+
+[node name="Torch5" parent="Torches" index="4" instance=ExtResource("7_nphya")]
+position = Vector2(40, 56)
+
+[node name="Torch6" parent="Torches" index="5" instance=ExtResource("7_nphya")]
+position = Vector2(248, 200)
+
+[node name="Exit" parent="." index="6"]
+position = Vector2(24, 120)
+
+[node name="Player" parent="." index="7"]
+position = Vector2(120, 216)
+
+[node name="Key" parent="." index="8"]
+position = Vector2(296, 24)
+
+[node name="SwordAutomaton" parent="Enemies" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("8_j6c2j")]
+position = Vector2(296, 216)
+destination = NodePath("../../Paths/SwordP1")
+
+[node name="SwordSkeleton" parent="Enemies" index="1" instance=ExtResource("9_gcfev")]
+position = Vector2(-24, 184)
+
+[node name="SwordSkeleton2" parent="Enemies" index="2" instance=ExtResource("9_gcfev")]
+position = Vector2(-24, 72)
+
+[node name="SwordSkeleton3" parent="Enemies" index="3" instance=ExtResource("9_gcfev")]
+position = Vector2(264, 216)
+
+[node name="Skeleton" parent="Enemies" index="4" instance=ExtResource("10_tdfme")]
+position = Vector2(120, 120)
+
+[node name="Skeleton2" parent="Enemies" index="5" instance=ExtResource("10_tdfme")]
+position = Vector2(72, 120)
+
+[node name="Skeleton3" parent="Enemies" index="6" instance=ExtResource("10_tdfme")]
+position = Vector2(280, 72)
+
+[node name="Skeleton4" parent="Enemies" index="7" instance=ExtResource("10_tdfme")]
+position = Vector2(216, 72)
+
+[node name="Cannon" parent="Enemies" index="8" instance=ExtResource("11_yf58k")]
+position = Vector2(152, 56)
+
+[node name="Cannon2" parent="Enemies" index="9" instance=ExtResource("11_yf58k")]
+position = Vector2(168, 56)
+flipped = true
+
+[node name="Cannon3" parent="Enemies" index="10" instance=ExtResource("11_yf58k")]
+position = Vector2(152, 120)
+
+[node name="Cannon4" parent="Enemies" index="11" instance=ExtResource("11_yf58k")]
+position = Vector2(168, 104)
+flipped = true
+
+[node name="Cannon5" parent="Enemies" index="12" instance=ExtResource("11_yf58k")]
+position = Vector2(152, 168)
+
+[node name="Cannon6" parent="Enemies" index="13" instance=ExtResource("11_yf58k")]
+position = Vector2(168, 184)
+flipped = true
+
+[node name="P1" type="Marker2D" parent="Paths" index="0"]
+position = Vector2(120, 40)
+
+[node name="P2" type="Marker2D" parent="Paths" index="1"]
+position = Vector2(88, 40)
+
+[node name="P3" type="Marker2D" parent="Paths" index="2"]
+position = Vector2(216, 120)
+
+[node name="SwordP1" type="Marker2D" parent="Paths" index="3"]
+position = Vector2(200, 120)
+
+[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("8_7wqks")]
+position = Vector2(264, 40)
+destination = NodePath("../../Paths/P1")
+
+[node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("8_7wqks")]
+position = Vector2(88, 112)
+destination = NodePath("../../Paths/P2")
+
+[node name="Platform3" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("8_7wqks")]
+position = Vector2(216, 224)
+destination = NodePath("../../Paths/P3")
 
 [node name="Music" parent="." index="14"]
 stream = ExtResource("2_ocl86")
