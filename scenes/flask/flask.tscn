@@ -37,7 +37,18 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_88bbm")
 
 [node name="FloorDetection" type="RayCast2D" parent="."]
-target_position = Vector2(0, 2)
+target_position = Vector2(0, 3)
+
+[node name="FloorDetection2" type="RayCast2D" parent="."]
+rotation = -1.5708
+target_position = Vector2(-1.31134e-07, 3)
+
+[node name="FloorDetection3" type="RayCast2D" parent="."]
+target_position = Vector2(-3, 0)
+
+[node name="FloorDetection4" type="RayCast2D" parent="."]
+rotation = 3.14159
+target_position = Vector2(2.62268e-07, 3)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
