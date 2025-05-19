@@ -1,12 +1,115 @@
-[gd_scene load_steps=3 format=4 uid="uid://buy5mssbrbysb"]
+[gd_scene load_steps=12 format=4 uid="uid://buy5mssbrbysb"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_ub1ql"]
 [ext_resource type="AudioStream" uid="uid://xcq7bcbce8v5" path="res://assets/audio/Alchemist Lab.ogg" id="2_athn3"]
+[ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_m8iep"]
+[ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="3_r65lr"]
+[ext_resource type="PackedScene" uid="uid://b2wdggulo22b0" path="res://scenes/chest_heart/chest_heart.tscn" id="4_erax4"]
+[ext_resource type="PackedScene" uid="uid://brikx0rid0pxt" path="res://scenes/ladder/ladder_two_high.tscn" id="5_j1104"]
+[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="5_sf63q"]
+[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="6_avbxd"]
+[ext_resource type="PackedScene" uid="uid://cs5qt3q63yv7l" path="res://scenes/alchemical_ooze/alchemical_ooze.tscn" id="6_sf63q"]
+[ext_resource type="PackedScene" uid="uid://b60bywinfuw4f" path="res://scenes/flask_wraith/flask_wraith.tscn" id="7_488a0"]
+[ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="8_kuq4u"]
 
 [node name="Level21" instance=ExtResource("1_ub1ql")]
 
 [node name="TileMapLayer" parent="TileMapLayers" index="0"]
-tile_map_data = PackedByteArray("AAATAAAAAwAKABIAAAASAAAAAwAKABIAAAARAAAAAwAKABIAAAAQAAAAAwAKABIAAAAPAAAAAwAKABIAAAAOAAAAAwAKABIAAAANAAAAAwAKABIAAAAMAAAAAwAKABIAAAALAAAAAwAKABIAAAAKAAAAAwAKABIAAAAJAAAAAwAKABIAAAAIAAAAAwAKABIAAAAHAAAAAwAKABIAAAAGAAAAAwAKABIAAAAFAAAAAwAKABIAAAAEAAAAAwAKABIAAAADAAAAAwALABIAAAACAAAAAwALABIAAAABAAAAAwAKABIAAAAAAAAAAwAKABIAAAAAAA4AAwAKABIAAAABAA4AAwAKABIAAAACAA4AAwALABIAAAADAA4AAwAKABIAAAAEAA4AAwAKABIAAAAFAA4AAwALABIAAAAGAA4AAwALABIAAAAHAA4AAwAKABIAAAAIAA4AAwALABIAAAAJAA4AAwALABIAAAAKAA4AAwAKABIAAAALAA4AAwAKABIAAAAMAA4AAwAKABIAAAANAA4AAwALABIAAAAOAA4AAwALABIAAAAPAA4AAwAKABIAAAAQAA4AAwALABIAAAARAA4AAwAKABIAAAASAA4AAwAKABIAAAATAA4AAwALABIAAAATAAEAAwAKABIAAAATAAIAAwAKABIAAAATAAMAAwALABIAAAATAAQAAwAKABIAAAATAAUAAwAKABIAAAATAAYAAwAKABIAAAATAAcAAwALABIAAAATAAgAAwAKABIAAAATAAkAAwALABIAAAATAAoAAwAKABIAAAATAAsAAwALABIAAAATAAwAAwAKABIAAAATAA0AAwAKABIAAAAAAAEAAwALABIAAAAAAAIAAwALABIAAAAAAAMAAwAKABIAAAAAAAQAAwAKABIAAAAAAAUAAwAKABIAAAAAAAYAAwALABIAAAAAAAcAAwAKABIAAAAAAAgAAwALABIAAAAAAAkAAwAKABIAAAAAAAoAAwAKABIAAAAAAAsAAwAKABIAAAAAAAwAAwALABIAAAAAAA0AAwAKABIAAAA=")
+tile_map_data = PackedByteArray("AAATAAAAAwAKABIAAAASAAAAAwAKABIAAAARAAAAAwAKABIAAAAQAAAAAwAKABIAAAAPAAAAAwAKABIAAAAOAAAAAwAKABIAAAANAAAAAwAKABIAAAAMAAAAAwAKABIAAAALAAAAAwAKABIAAAAKAAAAAwAKABIAAAAJAAAAAwAKABIAAAAIAAAAAwAKABIAAAAHAAAAAwAKABIAAAAGAAAAAwAKABIAAAAFAAAAAwAKABIAAAAEAAAAAwAKABIAAAADAAAAAwALABIAAAACAAAAAwALABIAAAABAAAAAwAKABIAAAAAAAAAAwAKABIAAAAAAA4AAwAKABIAAAABAA4AAwAKABIAAAACAA4AAwALABIAAAADAA4AAwAKABIAAAAEAA4AAwAKABIAAAAFAA4AAwALABIAAAAGAA4AAwALABIAAAAHAA4AAwAKABIAAAAIAA4AAwALABIAAAAJAA4AAwALABIAAAAKAA4AAwAKABIAAAALAA4AAwAKABIAAAAMAA4AAwAKABIAAAANAA4AAwALABIAAAAOAA4AAwALABIAAAAPAA4AAwAKABIAAAAQAA4AAwALABIAAAARAA4AAwAKABIAAAASAA4AAwAKABIAAAATAA4AAwALABIAAAATAAEAAwAKABIAAAATAAIAAwAKABIAAAATAAMAAwALABIAAAATAAQAAwAKABIAAAATAAUAAwAKABIAAAATAAYAAwAKABIAAAATAAcAAwALABIAAAATAAkAAwALABIAAAATAAsAAwALABIAAAATAAwAAwAKABIAAAATAA0AAwAKABIAAAAAAAEAAwALABIAAAAAAAIAAwALABIAAAAAAAMAAwAKABIAAAAAAAQAAwAKABIAAAAAAAUAAwAKABIAAAAAAAYAAwALABIAAAAAAAcAAwAKABIAAAAAAAgAAwALABIAAAAAAAkAAwAKABIAAAAAAAoAAwAKABIAAAAAAAsAAwAKABIAAAAAAAwAAwALABIAAAAAAA0AAAABAAAAAAAUAAsAAwAIAA0AAAAVAAsAAwAIAA0AAAAUAAkAAwAIAA0AAAAUAAcAAwAIAA0AAAAVAAcAAwAIAA0AAAAWAAcAAwAIAA0AAAAWAAgAAwAIAA0AAAAWAAkAAwAIAA0AAAAWAAoAAwAIAA0AAAAWAAsAAwAIAA0AAAASAAkAAwAIAA0AAAARAAkAAwAIAA0AAAAQAAkAAwAIAA0AAAAPAAkAAwAIAA0AAAAOAAgAAwAIAA0AAAANAAgAAwAIAA0AAAAGAAgAAwAIAA0AAAAFAAgAAwAIAA0AAAAEAAgAAwAIAA0AAAABAAkAAwAIAA0AAAACAAoAAwAIAA0AAAAGAAsAAwAIAA0AAAAHAAsAAwAIAA0AAAAIAAsAAwAIAA0AAAAJAAsAAwAIAA0AAAAGAAUAAwAIAA0AAAAFAAQAAwAIAA0AAAAEAAQAAwAIAA0AAAADAAQAAwAIAA0AAAACAAQAAwAIAA0AAAABAAQAAwAIAA0AAAAOAAQAAwAIAA0AAAAPAAQAAwAIAA0AAAAQAAQAAwAIAA0AAAARAAQAAwAIAA0AAAASAAQAAwAIAA0AAAAIAAMAAwAIAA0AAAAJAAMAAwAIAA0AAAAOAAsAAwAIAA0AAAAOAAwAAwAIAA0AAAAOAA0AAwAIAA0AAAAOAAkAAwAIAA0AAAAMAAgAAwAIAA0AAAAFAAsAAwAIAA0AAAAKAAMAAwAIAA0AAAAKAAsAAwAIAA0AAAAKAAcAAwAIAA0AAAAJAAYAAwAIAA0AAAAIAAcAAwAIAA0AAAAMAAUAAwAIAA0AAAANAAQAAwAIAA0AAAADAAsAAwAIAA0AAAAIAAEAAwAAABIAAAAIAAIAAwAAABIAAAAKAAEAAwAAABIAAAAKAAIAAwACABIAAAAGAAYAAwADABIAAAAGAAcAAwADABIAAAAEAAUAAwADABIAAAAEAAYAAwADABIAAAAEAAcAAwADABIAAAAFAAkAAwADABIAAAAFAAoAAwADABIAAAAJAAQAAwABABIAAAAJAAUAAwAAABIAAAAKAAgAAwADABIAAAAKAAkAAwADABIAAAAKAAoAAwADABIAAAAQAAUAAAABAAEAAAARAAUAAAABAAEAAAARAAYAAAABAAEAAAARAAoAAAABAAEAAAARAAsAAAABAAEAAAAQAAoAAAABAAEAAAACAAUAAAABAAEAAAACAAYAAAABAAEAAAABAAUAAAABAAEAAAAGAAEAAAABAAEAAAAGAAIAAAABAAEAAAAFAAEAAAABAAEAAAAPAAEAAAABAAEAAAAQAAEAAAABAAEAAAASAAoAAAABAAEAAAA=")
+
+[node name="SecretBlock" parent="Secrets" index="0" instance=ExtResource("2_m8iep")]
+position = Vector2(104, 216)
+
+[node name="SecretBlock2" parent="Secrets" index="1" instance=ExtResource("2_m8iep")]
+position = Vector2(104, 200)
+
+[node name="SecretBlock3" parent="Secrets" index="2" instance=ExtResource("2_m8iep")]
+position = Vector2(88, 216)
+
+[node name="SecretBlock4" parent="Secrets" index="3" instance=ExtResource("2_m8iep")]
+position = Vector2(88, 200)
+
+[node name="SecretBlock5" parent="Secrets" index="4" instance=ExtResource("2_m8iep")]
+position = Vector2(328, 136)
+
+[node name="SecretBlock6" parent="Secrets" index="5" instance=ExtResource("2_m8iep")]
+position = Vector2(344, 136)
+
+[node name="SecretBlock7" parent="Secrets" index="6" instance=ExtResource("2_m8iep")]
+position = Vector2(328, 168)
+
+[node name="Chest" parent="Chests" index="0" instance=ExtResource("3_r65lr")]
+position = Vector2(296, 56)
+
+[node name="Chest2" parent="Chests" index="1" instance=ExtResource("3_r65lr")]
+position = Vector2(296, 216)
+
+[node name="ChestHeart" parent="Chests" index="2" instance=ExtResource("4_erax4")]
+position = Vector2(280, 216)
+
+[node name="Torch" parent="Torches" index="0" instance=ExtResource("5_sf63q")]
+position = Vector2(104, 152)
+
+[node name="Torch2" parent="Torches" index="1" instance=ExtResource("5_sf63q")]
+position = Vector2(152, 152)
+
+[node name="Torch3" parent="Torches" index="2" instance=ExtResource("5_sf63q")]
+position = Vector2(216, 104)
+
+[node name="Torch4" parent="Torches" index="3" instance=ExtResource("5_sf63q")]
+position = Vector2(224, 40)
+
+[node name="Torch5" parent="Torches" index="4" instance=ExtResource("5_sf63q")]
+position = Vector2(280, 40)
+
+[node name="Torch6" parent="Torches" index="5" instance=ExtResource("5_sf63q")]
+position = Vector2(72, 40)
+
+[node name="Torch7" parent="Torches" index="6" instance=ExtResource("5_sf63q")]
+position = Vector2(40, 40)
+
+[node name="LadderTwoHigh" parent="Ladders" index="0" instance=ExtResource("5_j1104")]
+position = Vector2(184, 183)
+
+[node name="Exit" parent="." index="6"]
+position = Vector2(216, 216)
+
+[node name="Player" parent="." index="7"]
+position = Vector2(32, 216)
+
+[node name="Key" parent="." index="8"]
+position = Vector2(152, 40)
+
+[node name="AlchemicalOoze" parent="Enemies" index="0" instance=ExtResource("6_sf63q")]
+position = Vector2(136, 208)
+
+[node name="AlchemicalOoze2" parent="Enemies" index="1" instance=ExtResource("6_sf63q")]
+position = Vector2(136, 160)
+
+[node name="FlaskWraith" parent="Enemies" index="2" instance=ExtResource("7_488a0")]
+position = Vector2(72, 120)
+
+[node name="FlaskWraith2" parent="Enemies" index="3" instance=ExtResource("7_488a0")]
+position = Vector2(232, 120)
+
+[node name="FlaskWraith3" parent="Enemies" index="4" instance=ExtResource("7_488a0")]
+position = Vector2(232, 56)
+
+[node name="FlaskWraith4" parent="Enemies" index="5" instance=ExtResource("7_488a0")]
+position = Vector2(72, 56)
+
+[node name="Mimic" parent="Enemies" index="6" instance=ExtResource("8_kuq4u")]
+position = Vector2(24, 56)
+
+[node name="Mimic2" parent="Enemies" index="7" instance=ExtResource("8_kuq4u")]
+position = Vector2(296, 136)
+
+[node name="P1" type="Marker2D" parent="Paths" index="0"]
+position = Vector2(248, 184)
+
+[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("6_avbxd")]
+position = Vector2(248, 224)
+destination = NodePath("../../Paths/P1")
 
 [node name="Music" parent="." index="14"]
 stream = ExtResource("2_athn3")
