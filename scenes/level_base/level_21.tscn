@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://buy5mssbrbysb"]
+[gd_scene load_steps=13 format=4 uid="uid://buy5mssbrbysb"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_ub1ql"]
 [ext_resource type="AudioStream" uid="uid://xcq7bcbce8v5" path="res://assets/audio/Alchemist Lab.ogg" id="2_athn3"]
 [ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_m8iep"]
+[ext_resource type="PackedScene" uid="uid://cg4hvldawovi3" path="res://scenes/stone/stone.tscn" id="3_488a0"]
 [ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="3_r65lr"]
 [ext_resource type="PackedScene" uid="uid://b2wdggulo22b0" path="res://scenes/chest_heart/chest_heart.tscn" id="4_erax4"]
 [ext_resource type="PackedScene" uid="uid://brikx0rid0pxt" path="res://scenes/ladder/ladder_two_high.tscn" id="5_j1104"]
@@ -37,6 +38,9 @@ position = Vector2(344, 136)
 
 [node name="SecretBlock7" parent="Secrets" index="6" instance=ExtResource("2_m8iep")]
 position = Vector2(328, 168)
+
+[node name="Stone" parent="Secrets" index="7" instance=ExtResource("3_488a0")]
+position = Vector2(264, 216)
 
 [node name="Chest" parent="Chests" index="0" instance=ExtResource("3_r65lr")]
 position = Vector2(296, 56)
