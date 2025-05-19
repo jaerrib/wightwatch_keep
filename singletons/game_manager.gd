@@ -1,7 +1,7 @@
 extends Node
 
 const MAIN = preload("res://scenes/main/main.tscn")
-const TOTAL_LEVELS: int = 19
+const TOTAL_LEVELS: int = 21
 
 var _level_scenes: Dictionary = {}
 var _current_level: int = 0
