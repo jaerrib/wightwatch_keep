@@ -7,6 +7,7 @@
 size = Vector2(6, 11)
 
 [node name="Magic" instance=ExtResource("1_2jaj6")]
+collision_layer = 1024
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="0"]
 position = Vector2(0.5, 0.5)

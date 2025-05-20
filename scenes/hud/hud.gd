@@ -5,6 +5,7 @@ var _can_continue: bool = false
 
 @onready var color_rect: ColorRect = $ColorRect
 @onready var continue_timer: Timer = $ContinueTimer
+@onready var death_timer: Timer = $DeathTimer
 @onready var hb_hearts: HBoxContainer = $MC/MC2/HB/HBHearts
 @onready var level_label: Label = $MC/MC2/HB/HBLevel/LevelLabel
 @onready var lives_label: Label = $ColorRect/VBPlayerDied/HB/LivesLabel
@@ -76,13 +77,7 @@ func stop_level_music():
 
 func on_player_died() -> void:
 	#sound.play()	
-	PlayerManager.reduce_lives()
-	if PlayerManager.get_lives() <= 0:
-		return
-	lives_label.text  = str(PlayerManager.get_lives())
-	show_hud()
-	vb_player_died.show()
-
+	death_timer.start()
 
 func on_exit_reached() -> void:
 	show_hud()
@@ -91,3 +86,12 @@ func on_exit_reached() -> void:
 
 func _on_continue_timer_timeout() -> void:
 	_can_continue = true
+
+
+func _on_death_timer_timeout() -> void:
+	PlayerManager.reduce_lives()
+	if PlayerManager.get_lives() <= 0:
+		return
+	lives_label.text  = str(PlayerManager.get_lives())
+	show_hud()
+	vb_player_died.show()

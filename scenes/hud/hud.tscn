@@ -257,4 +257,9 @@ volume_db = -5.0
 [node name="ContinueTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="timeout" from="ContinueTimer" to="." method="_on_continue_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

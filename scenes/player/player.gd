@@ -20,6 +20,7 @@ var _state: PlayerState = PlayerState.IDLE
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision_shape_2d: CollisionShape2D = $SwordHitBox/CollisionShape2D
+@onready var death_sprite: AnimatedSprite2D = $DeathSprite
 @onready var hit_box: Area2D = $HitBox
 @onready var hurt_timer: Timer = $HurtTimer
 @onready var invincible_player: AnimationPlayer = $InvinciblePlayer
@@ -30,6 +31,7 @@ var _state: PlayerState = PlayerState.IDLE
 
 func _ready() -> void:
 	SignalManager.on_ladder.connect(on_ladder)
+	SignalManager.on_player_died.connect(on_player_died)
 
 
 func _physics_process(delta: float) -> void:
@@ -163,3 +165,10 @@ func _on_invincible_timer_timeout() -> void:
 
 func _on_hurt_timer_timeout() -> void:
 	set_state(PlayerState.IDLE)
+
+
+func on_player_died() -> void:
+	death_sprite.flip_h = sprite_2d.flip_h
+	sprite_2d.hide()
+	death_sprite.show()
+	death_sprite.play("death")
