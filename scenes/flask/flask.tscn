@@ -6,10 +6,10 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_p7on7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7on7"]
-size = Vector2(4, 3)
+size = Vector2(6, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88bbm"]
-size = Vector2(4, 3)
+size = Vector2(6, 5)
 
 [node name="Flask" type="RigidBody2D" node_paths=PackedStringArray("sprite")]
 collision_layer = 1024
@@ -37,16 +37,20 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_88bbm")
 
 [node name="FloorDetection" type="RayCast2D" parent="."]
+visible = false
 target_position = Vector2(0, 3)
 
 [node name="FloorDetection2" type="RayCast2D" parent="."]
+visible = false
 rotation = -1.5708
 target_position = Vector2(-1.31134e-07, 3)
 
 [node name="FloorDetection3" type="RayCast2D" parent="."]
+visible = false
 target_position = Vector2(-3, 0)
 
 [node name="FloorDetection4" type="RayCast2D" parent="."]
+visible = false
 rotation = 3.14159
 target_position = Vector2(2.62268e-07, 3)
 
