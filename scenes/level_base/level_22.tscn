@@ -160,14 +160,14 @@ position = Vector2(200, 136)
 [node name="P2" type="Marker2D" parent="Paths" index="1"]
 position = Vector2(88, 152)
 
+[node name="P3" type="Marker2D" parent="Paths" index="2"]
+position = Vector2(71, 48)
+
 [node name="Pool" parent="Dangers" index="0" instance=ExtResource("11_06qir")]
 position = Vector2(128, 128)
 
 [node name="Pool2" parent="Dangers" index="1" instance=ExtResource("11_06qir")]
 position = Vector2(160, 128)
-
-[node name="P3" type="Marker2D" parent="." index="13"]
-position = Vector2(71, 48)
 
 [node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("11_vw1ht")]
 position = Vector2(200, 224)
@@ -179,9 +179,9 @@ destination = NodePath("../../Paths/P2")
 
 [node name="Platform3" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("11_vw1ht")]
 position = Vector2(184, 48)
-destination = NodePath("../../P3")
+destination = NodePath("../../Paths/P3")
 
-[node name="Music" parent="." index="15"]
+[node name="Music" parent="." index="14"]
 stream = ExtResource("2_wukhq")
 
 [node name="LevelOverlay" parent="CanvasLayer" index="3"]
