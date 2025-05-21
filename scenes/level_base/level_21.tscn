@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://buy5mssbrbysb"]
+[gd_scene load_steps=15 format=4 uid="uid://buy5mssbrbysb"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_ub1ql"]
 [ext_resource type="AudioStream" uid="uid://xcq7bcbce8v5" path="res://assets/audio/Alchemist Lab.ogg" id="2_athn3"]
@@ -6,12 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://cg4hvldawovi3" path="res://scenes/stone/stone.tscn" id="3_488a0"]
 [ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="3_r65lr"]
 [ext_resource type="PackedScene" uid="uid://b2wdggulo22b0" path="res://scenes/chest_heart/chest_heart.tscn" id="4_erax4"]
+[ext_resource type="PackedScene" uid="uid://uhrc54c3ahkx" path="res://scenes/heart/heart.tscn" id="4_unuqw"]
 [ext_resource type="PackedScene" uid="uid://brikx0rid0pxt" path="res://scenes/ladder/ladder_two_high.tscn" id="5_j1104"]
 [ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="5_sf63q"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="6_avbxd"]
 [ext_resource type="PackedScene" uid="uid://cs5qt3q63yv7l" path="res://scenes/alchemical_ooze/alchemical_ooze.tscn" id="6_sf63q"]
 [ext_resource type="PackedScene" uid="uid://b60bywinfuw4f" path="res://scenes/flask_wraith/flask_wraith.tscn" id="7_488a0"]
 [ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="8_kuq4u"]
+[ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="11_kuq4u"]
 
 [node name="Level21" instance=ExtResource("1_ub1ql")]
 
@@ -41,6 +43,9 @@ position = Vector2(328, 168)
 
 [node name="Stone" parent="Secrets" index="7" instance=ExtResource("3_488a0")]
 position = Vector2(264, 216)
+
+[node name="Heart" parent="Hearts" index="0" instance=ExtResource("4_unuqw")]
+position = Vector2(200, 168)
 
 [node name="Chest" parent="Chests" index="0" instance=ExtResource("3_r65lr")]
 position = Vector2(296, 56)
@@ -107,6 +112,18 @@ position = Vector2(24, 56)
 
 [node name="Mimic2" parent="Enemies" index="7" instance=ExtResource("8_kuq4u")]
 position = Vector2(296, 136)
+
+[node name="MedusaHead" parent="Enemies" index="8" instance=ExtResource("11_kuq4u")]
+position = Vector2(24, 24)
+
+[node name="MedusaHead2" parent="Enemies" index="9" instance=ExtResource("11_kuq4u")]
+position = Vector2(296, 24)
+
+[node name="MedusaHead3" parent="Enemies" index="10" instance=ExtResource("11_kuq4u")]
+position = Vector2(296, 88)
+
+[node name="MedusaHead4" parent="Enemies" index="11" instance=ExtResource("11_kuq4u")]
+position = Vector2(24, 88)
 
 [node name="P1" type="Marker2D" parent="Paths" index="0"]
 position = Vector2(248, 184)
