@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://45t1s6y4ck73"]
+
+[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="1_g27q2"]
+[ext_resource type="Texture2D" uid="uid://cjkc32chxjeqw" path="res://assets/tiles/platform_wide.png" id="2_qrw3f"]
+
+[node name="MovingPlatform" instance=ExtResource("1_g27q2")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_qrw3f")
