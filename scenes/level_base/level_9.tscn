@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://b6afcl24ci0o7"]
+[gd_scene load_steps=12 format=4 uid="uid://b6afcl24ci0o7"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_3cv1p"]
 [ext_resource type="PackedScene" uid="uid://brikx0rid0pxt" path="res://scenes/ladder/ladder_two_high.tscn" id="2_2nyq7"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="7_a43lw"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="8_ckbfx"]
 [ext_resource type="AudioStream" uid="uid://timqgr7shy7q" path="res://assets/audio/Garden.ogg" id="10_4ctux"]
+[ext_resource type="PackedScene" uid="uid://45t1s6y4ck73" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="10_l8hb4"]
 
 [node name="Level9" instance=ExtResource("1_3cv1p")]
 
@@ -98,7 +99,7 @@ position = Vector2(72, 120)
 position = Vector2(176, 120)
 
 [node name="P3" type="Marker2D" parent="Paths" index="2"]
-position = Vector2(72, 168)
+position = Vector2(80, 176)
 
 [node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("8_ckbfx")]
 position = Vector2(152, 120)
@@ -108,8 +109,8 @@ destination = NodePath("../../Paths/P1")
 position = Vector2(248, 120)
 destination = NodePath("../../Paths/P2")
 
-[node name="Platform3" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("8_ckbfx")]
-position = Vector2(248, 168)
+[node name="Platform3" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("10_l8hb4")]
+position = Vector2(240, 176)
 destination = NodePath("../../Paths/P3")
 
 [node name="Music" parent="." index="14"]
