@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs183vdtnapkn"]
+
+[ext_resource type="Texture2D" uid="uid://cjkc32chxjeqw" path="res://assets/tiles/platform_wide.png" id="2_qrw3f"]
+
+[sub_resource type="GDScript" id="GDScript_8yl78"]
+script/source = "extends MovingPlatform
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yl78"]
+size = Vector2(32, 8)
+
+[node name="MovingPlatformWide" type="AnimatableBody2D"]
+script = SubResource("GDScript_8yl78")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["moveables"]]
+texture = ExtResource("2_qrw3f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_8yl78")

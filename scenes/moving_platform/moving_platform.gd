@@ -1,4 +1,4 @@
-extends AnimatableBody2D
+class_name MovingPlatform extends AnimatableBody2D
 
 @export var destination: Marker2D
 @export var speed: float = 20.0
