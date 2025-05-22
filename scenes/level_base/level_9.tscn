@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="7_a43lw"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="8_ckbfx"]
 [ext_resource type="AudioStream" uid="uid://timqgr7shy7q" path="res://assets/audio/Garden.ogg" id="10_4ctux"]
-[ext_resource type="PackedScene" uid="uid://45t1s6y4ck73" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="10_l8hb4"]
+[ext_resource type="PackedScene" uid="uid://cs183vdtnapkn" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="10_l8hb4"]
 
 [node name="Level9" instance=ExtResource("1_3cv1p")]
 

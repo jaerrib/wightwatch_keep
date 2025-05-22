@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="8_jkl6n"]
 [ext_resource type="PackedScene" uid="uid://c2ypjoidrdsfy" path="res://scenes/pool/pool.tscn" id="8_rwnpm"]
 [ext_resource type="PackedScene" uid="uid://b60bywinfuw4f" path="res://scenes/flask_wraith/flask_wraith.tscn" id="9_lp4ob"]
-[ext_resource type="PackedScene" uid="uid://45t1s6y4ck73" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="9_m1xjb"]
+[ext_resource type="PackedScene" uid="uid://cs183vdtnapkn" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="9_m1xjb"]
 [ext_resource type="PackedScene" uid="uid://cs5qt3q63yv7l" path="res://scenes/alchemical_ooze/alchemical_ooze.tscn" id="10_iubui"]
 [ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="11_jsgt3"]
 

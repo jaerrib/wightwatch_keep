@@ -1,12 +1,204 @@
-[gd_scene load_steps=3 format=4 uid="uid://fhyoytm1pca7"]
+[gd_scene load_steps=14 format=4 uid="uid://fhyoytm1pca7"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_ogvk8"]
+[ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="2_00g5m"]
 [ext_resource type="AudioStream" uid="uid://xcq7bcbce8v5" path="res://assets/audio/Alchemist Lab.ogg" id="2_aaxh5"]
+[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="2_csdco"]
+[ext_resource type="PackedScene" uid="uid://ds0e8yc5lsbt2" path="res://scenes/ladder/ladder.tscn" id="2_fw4n4"]
+[ext_resource type="PackedScene" uid="uid://uhrc54c3ahkx" path="res://scenes/heart/heart.tscn" id="2_krb8e"]
+[ext_resource type="PackedScene" uid="uid://c2ypjoidrdsfy" path="res://scenes/pool/pool.tscn" id="2_riwet"]
+[ext_resource type="PackedScene" uid="uid://brikx0rid0pxt" path="res://scenes/ladder/ladder_two_high.tscn" id="3_csdco"]
+[ext_resource type="PackedScene" uid="uid://cyrp5u3y7nens" path="res://scenes/ladder/ladder_three_high.tscn" id="4_00g5m"]
+[ext_resource type="PackedScene" uid="uid://b60bywinfuw4f" path="res://scenes/flask_wraith/flask_wraith.tscn" id="8_2x8a7"]
+[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="9_6drgj"]
+[ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="9_t2t4f"]
+[ext_resource type="PackedScene" uid="uid://cs183vdtnapkn" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="10_5sxo6"]
 
 [node name="Level24" instance=ExtResource("1_ogvk8")]
 
 [node name="TileMapLayer" parent="TileMapLayers" index="0"]
-tile_map_data = PackedByteArray("AAATAAAAAwALABIAAAASAAAAAwALABIAAAARAAAAAwALABIAAAAQAAAAAwALABIAAAAPAAAAAwAKABIAAAAOAAAAAwAKABIAAAANAAAAAwALABIAAAAMAAAAAwALABIAAAALAAAAAwAKABIAAAAKAAAAAwAKABIAAAAJAAAAAwALABIAAAAIAAAAAwALABIAAAAHAAAAAwALABIAAAAGAAAAAwAKABIAAAAFAAAAAwAKABIAAAAEAAAAAwAKABIAAAADAAAAAwAKABIAAAACAAAAAwAKABIAAAABAAAAAwAKABIAAAAAAAAAAwAKABIAAAAAAA4AAwAKABIAAAABAA4AAwAKABIAAAACAA4AAwALABIAAAADAA4AAwAKABIAAAAEAA4AAwALABIAAAAFAA4AAwAKABIAAAAGAA4AAwALABIAAAAHAA4AAwALABIAAAAIAA4AAwAKABIAAAAJAA4AAwAKABIAAAAKAA4AAwAKABIAAAALAA4AAwALABIAAAAMAA4AAwALABIAAAANAA4AAwAKABIAAAAOAA4AAwAKABIAAAAPAA4AAwALABIAAAAQAA4AAwALABIAAAARAA4AAwALABIAAAASAA4AAwAKABIAAAATAA4AAwALABIAAAATAAEAAwALABIAAAATAAIAAwAKABIAAAATAAMAAwALABIAAAATAAQAAwAKABIAAAATAAUAAwAKABIAAAATAAYAAwALABIAAAATAAcAAwAKABIAAAATAAgAAwALABIAAAATAAkAAwALABIAAAATAAoAAwAKABIAAAATAAsAAwALABIAAAATAAwAAwAKABIAAAATAA0AAwAKABIAAAAAAAEAAwAKABIAAAAAAAIAAwAKABIAAAAAAAMAAwALABIAAAAAAAQAAwALABIAAAAAAAUAAwAKABIAAAAAAAYAAwAKABIAAAAAAAcAAwALABIAAAAAAAgAAwAKABIAAAAAAAkAAwALABIAAAAAAAoAAwAKABIAAAAAAAsAAwALABIAAAAAAAwAAwALABIAAAAAAA0AAwAKABIAAAA=")
+tile_map_data = PackedByteArray("AAATAAAAAwALABIAAAASAAAAAwALABIAAAARAAAAAwALABIAAAAQAAAAAwALABIAAAAPAAAAAwAKABIAAAAOAAAAAwAKABIAAAANAAAAAwALABIAAAAMAAAAAwALABIAAAALAAAAAwAKABIAAAAKAAAAAwAKABIAAAAJAAAAAwALABIAAAAIAAAAAwALABIAAAAHAAAAAwALABIAAAAGAAAAAwAKABIAAAAFAAAAAwAKABIAAAAEAAAAAwAKABIAAAADAAAAAwAKABIAAAACAAAAAwAKABIAAAABAAAAAwAKABIAAAAAAAAAAwAKABIAAAAAAA4AAwAKABIAAAABAA4AAwAKABIAAAACAA4AAwALABIAAAARAA4AAwALABIAAAASAA4AAwAKABIAAAATAA4AAwALABIAAAATAAEAAAAKAAAAAAATAAIAAAAKAAAAAAATAAMAAwALABIAAAATAAQAAwAKABIAAAATAAUAAwAKABIAAAATAAYAAwALABIAAAATAAcAAwAKABIAAAATAAgAAwALABIAAAATAAkAAwALABIAAAATAAoAAwAKABIAAAATAAsAAAAKAAAAAAATAAwAAAAKAAAAAAATAA0AAAAKAAAAAAAAAAEAAwAKABIAAAAAAAIAAAABAAAAAAAAAAMAAwALABIAAAAAAAQAAAAKAAAAAAAAAAUAAAAKAAAAAAAAAAYAAwAKABIAAAAAAAcAAAAKAAAAAAAAAAgAAAAKAAAAAAAAAAkAAAAKAAAAAAAAAAoAAwAKABIAAAAAAAsAAAAKAAAAAAAAAAwAAAAKAAAAAAAAAA0AAAAKAAAAAAARAAMAAwALABIAAAAPAAQAAwALABIAAAAOAAQAAwAKABIAAAANAAQAAwALABIAAAALAAMAAwAKABIAAAAKAAMAAwALABIAAAAJAAMAAwAKABIAAAAGAAMAAwAKABIAAAAFAAIAAwALABIAAAAFAAMAAwALABIAAAAEAAEAAwAKABIAAAAEAAIAAwALABIAAAAEAAMAAwALABIAAAADAAMAAwALABIAAAACAAMAAwALABIAAAACAAYAAwALABIAAAADAAYAAwAKABIAAAACAAoAAwAKABIAAAAJAAcAAwALABIAAAAKAAcAAwALABIAAAARAAYAAwALABIAAAARAAoAAwAKABIAAAAQAAoAAwALABIAAAANAAsAAwAKABIAAAAGAAsAAwAKABIAAAAFAAsAAwALABIAAAACAAQAAAAHAAEAAAACAAUAAAAHAAIAAAARAAQAAAAHAAEAAAARAAUAAAAHAAIAAAAJAAEAAwAAABIAAAAJAAIAAwACABIAAAALAAEAAwABABIAAAALAAIAAwABABIAAAANAAEAAwACABIAAAANAAIAAwACABIAAAANAAMAAwACABIAAAAPAAEAAwABABIAAAAPAAIAAwABABIAAAAPAAMAAwABABIAAAAQAAsAAwAFABIAAAAQAAwAAwAEABIAAAARAAsAAwAEABIAAAAFAAwAAwAFABIAAAASAA0AAAAGAAEAAAARAA0AAAAEAAEAAAABAA0AAAAFAAEAAAACAA0AAAAEAAEAAAAFAAQAAAABAAEAAAAGAAQAAAABAAEAAAAGAAUAAAABAAEAAAAOAAUAAAABAAEAAAAOAAYAAAABAAEAAAAPAAUAAAABAAEAAAA=")
+
+[node name="Heart" parent="Hearts" index="0" instance=ExtResource("2_krb8e")]
+position = Vector2(88, 168)
+
+[node name="Heart2" parent="Hearts" index="1" instance=ExtResource("2_krb8e")]
+position = Vector2(56, 40)
+
+[node name="Chest" parent="Chests" index="0" instance=ExtResource("2_00g5m")]
+position = Vector2(88, 24)
+
+[node name="Torch" parent="Torches" index="0" instance=ExtResource("2_csdco")]
+position = Vector2(168, 24)
+
+[node name="Torch2" parent="Torches" index="1" instance=ExtResource("2_csdco")]
+position = Vector2(232, 40)
+
+[node name="Torch3" parent="Torches" index="2" instance=ExtResource("2_csdco")]
+position = Vector2(280, 24)
+
+[node name="Torch4" parent="Torches" index="3" instance=ExtResource("2_csdco")]
+position = Vector2(280, 136)
+
+[node name="Torch5" parent="Torches" index="4" instance=ExtResource("2_csdco")]
+position = Vector2(280, 200)
+
+[node name="Torch6" parent="Torches" index="5" instance=ExtResource("2_csdco")]
+position = Vector2(216, 152)
+
+[node name="Torch7" parent="Torches" index="6" instance=ExtResource("2_csdco")]
+position = Vector2(104, 152)
+
+[node name="Torch8" parent="Torches" index="7" instance=ExtResource("2_csdco")]
+position = Vector2(40, 200)
+
+[node name="Torch9" parent="Torches" index="8" instance=ExtResource("2_csdco")]
+position = Vector2(40, 144)
+
+[node name="Ladder" parent="Ladders" index="0" instance=ExtResource("2_fw4n4")]
+position = Vector2(120, 184)
+
+[node name="Ladder2" parent="Ladders" index="1" instance=ExtResource("2_fw4n4")]
+position = Vector2(200, 184)
+
+[node name="LadderTwoHigh" parent="Ladders" index="2" instance=ExtResource("3_csdco")]
+position = Vector2(24, 56)
+
+[node name="LadderTwoHigh2" parent="Ladders" index="3" instance=ExtResource("3_csdco")]
+position = Vector2(296, 56)
+
+[node name="LadderThreeHigh" parent="Ladders" index="4" instance=ExtResource("4_00g5m")]
+position = Vector2(24, 104)
+
+[node name="LadderThreeHigh2" parent="Ladders" index="5" instance=ExtResource("4_00g5m")]
+position = Vector2(24, 168)
+
+[node name="LadderThreeHigh3" parent="Ladders" index="6" instance=ExtResource("4_00g5m")]
+position = Vector2(296, 168)
+
+[node name="Exit" parent="." index="6"]
+position = Vector2(56, 88)
+
+[node name="Player" parent="." index="7"]
+position = Vector2(40, 40)
+
+[node name="Key" parent="." index="8"]
+position = Vector2(104, 40)
+
+[node name="FlaskWraith" parent="Enemies" index="0" instance=ExtResource("8_2x8a7")]
+position = Vector2(168, 104)
+
+[node name="FlaskWraith2" parent="Enemies" index="1" instance=ExtResource("8_2x8a7")]
+position = Vector2(152, 136)
+
+[node name="FlaskWraith3" parent="Enemies" index="2" instance=ExtResource("8_2x8a7")]
+position = Vector2(168, 40)
+
+[node name="FlaskWraith4" parent="Enemies" index="3" instance=ExtResource("8_2x8a7")]
+position = Vector2(232, 56)
+
+[node name="MedusaHead" parent="Enemies" index="4" instance=ExtResource("9_t2t4f")]
+position = Vector2(120, 88)
+
+[node name="MedusaHead2" parent="Enemies" index="5" instance=ExtResource("9_t2t4f")]
+position = Vector2(200, 88)
+
+[node name="MedusaHead3" parent="Enemies" index="6" instance=ExtResource("9_t2t4f")]
+position = Vector2(104, 200)
+
+[node name="MedusaHead4" parent="Enemies" index="7" instance=ExtResource("9_t2t4f")]
+position = Vector2(216, 200)
+
+[node name="P1" type="Marker2D" parent="Paths" index="0"]
+position = Vector2(72, 136)
+
+[node name="P2" type="Marker2D" parent="Paths" index="1"]
+position = Vector2(120, 104)
+
+[node name="P3" type="Marker2D" parent="Paths" index="2"]
+position = Vector2(200, 136)
+
+[node name="P4" type="Marker2D" parent="Paths" index="3"]
+position = Vector2(248, 104)
+
+[node name="P5" type="Marker2D" parent="Paths" index="4"]
+position = Vector2(256, 224)
+
+[node name="P6" type="Marker2D" parent="Paths" index="5"]
+position = Vector2(64, 224)
+
+[node name="P7" type="Marker2D" parent="Paths" index="6"]
+position = Vector2(160, 208)
+
+[node name="Pool" parent="Dangers" index="0" instance=ExtResource("2_riwet")]
+position = Vector2(48, 224)
+
+[node name="Pool2" parent="Dangers" index="1" instance=ExtResource("2_riwet")]
+position = Vector2(64, 224)
+
+[node name="Pool3" parent="Dangers" index="2" instance=ExtResource("2_riwet")]
+position = Vector2(80, 224)
+
+[node name="Pool4" parent="Dangers" index="3" instance=ExtResource("2_riwet")]
+position = Vector2(96, 224)
+
+[node name="Pool5" parent="Dangers" index="4" instance=ExtResource("2_riwet")]
+position = Vector2(112, 224)
+
+[node name="Pool6" parent="Dangers" index="5" instance=ExtResource("2_riwet")]
+position = Vector2(128, 224)
+
+[node name="Pool7" parent="Dangers" index="6" instance=ExtResource("2_riwet")]
+position = Vector2(144, 224)
+
+[node name="Pool8" parent="Dangers" index="7" instance=ExtResource("2_riwet")]
+position = Vector2(160, 224)
+
+[node name="Pool9" parent="Dangers" index="8" instance=ExtResource("2_riwet")]
+position = Vector2(176, 224)
+
+[node name="Pool10" parent="Dangers" index="9" instance=ExtResource("2_riwet")]
+position = Vector2(192, 224)
+
+[node name="Pool11" parent="Dangers" index="10" instance=ExtResource("2_riwet")]
+position = Vector2(208, 224)
+
+[node name="Pool12" parent="Dangers" index="11" instance=ExtResource("2_riwet")]
+position = Vector2(224, 224)
+
+[node name="Pool13" parent="Dangers" index="12" instance=ExtResource("2_riwet")]
+position = Vector2(240, 224)
+
+[node name="Pool14" parent="Dangers" index="13" instance=ExtResource("2_riwet")]
+position = Vector2(256, 224)
+
+[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
+position = Vector2(72, 104)
+destination = NodePath("../../Paths/P1")
+
+[node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
+position = Vector2(120, 144)
+destination = NodePath("../../Paths/P2")
+
+[node name="Platform3" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
+position = Vector2(200, 104)
+destination = NodePath("../../Paths/P3")
+
+[node name="Platform4" parent="MovingPlatforms" index="3" node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
+position = Vector2(248, 168)
+destination = NodePath("../../Paths/P4")
+
+[node name="Platform5" parent="MovingPlatforms" index="4" node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
+position = Vector2(176, 224)
+destination = NodePath("../../Paths/P5")
+
+[node name="Platform6" parent="MovingPlatforms" index="5" node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
+position = Vector2(144, 224)
+destination = NodePath("../../Paths/P6")
+
+[node name="Platform7" parent="MovingPlatforms" index="6" node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
+position = Vector2(160, 152)
+destination = NodePath("../../Paths/P7")
 
 [node name="Music" parent="." index="14"]
 stream = ExtResource("2_aaxh5")
