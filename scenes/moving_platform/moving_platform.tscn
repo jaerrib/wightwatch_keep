@@ -4,9 +4,9 @@
 [ext_resource type="Script" uid="uid://bynhed4ulxya1" path="res://scenes/moving_platform/moving_platform.gd" id="1_evb6x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evb6x"]
-size = Vector2(16, 8)
+size = Vector2(32, 8)
 
-[node name="MovingPlatform" type="AnimatableBody2D"]
+[node name="MovingPlatform" type="AnimatableBody2D" groups=["moveables"]]
 script = ExtResource("1_evb6x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
