@@ -40,7 +40,7 @@ func check_attack() -> void:
 	var x_dir = _player_ref.global_position.x - global_position.x
 	var y_dir = _player_ref.global_position.y - global_position.y
 	_facing = (x_dir > 0 and !animated_sprite_2d.flip_h) or (x_dir < 0 and animated_sprite_2d.flip_h)
-	_nearby = (abs(x_dir) < 56) and abs(y_dir) < 16
+	_nearby = (abs(x_dir) < 56) and abs(y_dir) < 24
 	if !_attacking and !_waiting and _facing and _nearby:
 		attack()
 
