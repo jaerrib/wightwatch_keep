@@ -1,12 +1,189 @@
-[gd_scene load_steps=3 format=4 uid="uid://cqngxlc5o21gi"]
+[gd_scene load_steps=18 format=4 uid="uid://cqngxlc5o21gi"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_surfg"]
+[ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_4mxow"]
 [ext_resource type="AudioStream" uid="uid://xcq7bcbce8v5" path="res://assets/audio/Alchemist Lab.ogg" id="2_fland"]
+[ext_resource type="PackedScene" uid="uid://c2ypjoidrdsfy" path="res://scenes/pool/pool.tscn" id="2_r3aho"]
+[ext_resource type="PackedScene" uid="uid://ds0e8yc5lsbt2" path="res://scenes/ladder/ladder.tscn" id="2_t8gfo"]
+[ext_resource type="PackedScene" uid="uid://uhrc54c3ahkx" path="res://scenes/heart/heart.tscn" id="2_tyvo5"]
+[ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="3_r3aho"]
+[ext_resource type="PackedScene" uid="uid://cg4hvldawovi3" path="res://scenes/stone/stone.tscn" id="3_ulry2"]
+[ext_resource type="PackedScene" uid="uid://cyrp5u3y7nens" path="res://scenes/ladder/ladder_three_high.tscn" id="3_vq2yy"]
+[ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="4_5qb0q"]
+[ext_resource type="PackedScene" uid="uid://cs183vdtnapkn" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="4_slls7"]
+[ext_resource type="PackedScene" uid="uid://dcguxpbvv842t" path="res://scenes/spikes/spikes.tscn" id="5_lj8s0"]
+[ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="5_obc6b"]
+[ext_resource type="PackedScene" uid="uid://bfqx4md2c34ng" path="res://scenes/mimic/mimic.tscn" id="9_i0ub2"]
+[ext_resource type="PackedScene" uid="uid://b60bywinfuw4f" path="res://scenes/flask_wraith/flask_wraith.tscn" id="10_jaldj"]
+[ext_resource type="PackedScene" uid="uid://cs5qt3q63yv7l" path="res://scenes/alchemical_ooze/alchemical_ooze.tscn" id="11_jnbfy"]
+[ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="12_oks2r"]
 
 [node name="Level25" instance=ExtResource("1_surfg")]
 
 [node name="TileMapLayer" parent="TileMapLayers" index="0"]
-tile_map_data = PackedByteArray("AAATAAAAAwALABIAAAASAAAAAwALABIAAAARAAAAAwAKABIAAAAQAAAAAwAKABIAAAAPAAAAAwALABIAAAAOAAAAAwALABIAAAANAAAAAwAKABIAAAAMAAAAAwAKABIAAAALAAAAAwALABIAAAAKAAAAAwAKABIAAAAJAAAAAwALABIAAAAIAAAAAwAKABIAAAAHAAAAAwAKABIAAAAGAAAAAwAKABIAAAAFAAAAAwALABIAAAAEAAAAAwALABIAAAADAAAAAwALABIAAAACAAAAAwAKABIAAAABAAAAAwALABIAAAAAAAAAAwAKABIAAAAAAA4AAwAKABIAAAABAA4AAwAKABIAAAACAA4AAwAKABIAAAADAA4AAwALABIAAAAEAA4AAwALABIAAAAFAA4AAwALABIAAAAGAA4AAwAKABIAAAAHAA4AAwAKABIAAAAIAA4AAwALABIAAAAJAA4AAwALABIAAAAKAA4AAwALABIAAAALAA4AAwAKABIAAAAMAA4AAwAKABIAAAANAA4AAwAKABIAAAAOAA4AAwAKABIAAAAPAA4AAwALABIAAAAQAA4AAwAKABIAAAARAA4AAwALABIAAAASAA4AAwALABIAAAATAA4AAwALABIAAAATAAEAAwALABIAAAATAAIAAwALABIAAAATAAMAAwAKABIAAAATAAQAAwAKABIAAAATAAUAAwAKABIAAAATAAYAAwALABIAAAATAAcAAwALABIAAAATAAgAAwAKABIAAAATAAkAAwAKABIAAAATAAoAAwALABIAAAATAAsAAwALABIAAAATAAwAAwAKABIAAAATAA0AAwAKABIAAAAAAAEAAwAKABIAAAAAAAIAAwALABIAAAAAAAMAAwAKABIAAAAAAAQAAwALABIAAAAAAAUAAwALABIAAAAAAAYAAwAKABIAAAAAAAcAAwAKABIAAAAAAAgAAwAKABIAAAAAAAkAAwALABIAAAAAAAoAAwAKABIAAAAAAAsAAwALABIAAAAAAAwAAwALABIAAAAAAA0AAwAKABIAAAA=")
+tile_map_data = PackedByteArray("AAATAAAAAwALABIAAAASAAAAAwALABIAAAARAAAAAwAKABIAAAAQAAAAAwAKABIAAAAPAAAAAwALABIAAAAOAAAAAwALABIAAAANAAAAAwAKABIAAAAMAAAAAwAKABIAAAAJAAAAAwALABIAAAAIAAAAAwAKABIAAAAHAAAAAwAKABIAAAAGAAAAAwAKABIAAAAFAAAAAwALABIAAAAEAAAAAwALABIAAAADAAAAAwALABIAAAACAAAAAwAKABIAAAABAAAAAwALABIAAAAAAAAAAwAKABIAAAAAAA4AAwAKABIAAAABAA4AAwAKABIAAAAEAA4AAwALABIAAAAFAA4AAwALABIAAAAGAA4AAwAKABIAAAAHAA4AAwAKABIAAAAIAA4AAwALABIAAAAJAA4AAwALABIAAAAKAA4AAwALABIAAAALAA4AAwAKABIAAAAOAA4AAwAKABIAAAAPAA4AAwALABIAAAAQAA4AAwAKABIAAAARAA4AAwALABIAAAASAA4AAwALABIAAAATAA4AAwALABIAAAATAAMAAwAKABIAAAATAAQAAwAKABIAAAATAAUAAwAKABIAAAATAAYAAwALABIAAAATAAcAAwALABIAAAATAAgAAwAKABIAAAATAAkAAAABAAAAAAATAAoAAwALABIAAAATAAsAAwALABIAAAAAAAEAAwAKABIAAAAAAAIAAwALABIAAAAAAAMAAwAKABIAAAAAAAQAAwALABIAAAAAAAUAAwALABIAAAAAAAYAAwAKABIAAAAAAAcAAwAKABIAAAAAAAgAAwAKABIAAAAAAAkAAwALABIAAAAAAAoAAwAKABIAAAAAAAsAAwALABIAAAAAAAwAAwALABIAAAAAAA0AAwAKABIAAAAUAA4AAwAKABIAAAAVAA4AAwAKABIAAAAWAA4AAwALABIAAAAXAA4AAwALABIAAAAXAA0AAwAKABIAAAAXAAwAAwAKABIAAAAXAAsAAwALABIAAAAWAAsAAwALABIAAAAVAAsAAwAKABIAAAAUAAsAAwALABIAAAASAAoAAwAKABIAAAARAAoAAwALABIAAAAPAAoAAwAKABIAAAAOAAoAAwALABIAAAANAAoAAwAKABIAAAAMAAoAAwAKABIAAAAPAAgAAwAKABIAAAAPAAkAAwALABIAAAAMAAcAAwALABIAAAANAAcAAwAKABIAAAAOAAcAAwAKABIAAAAPAAcAAwAKABIAAAAQAAcAAwALABIAAAARAAcAAwAKABIAAAASAAcAAwAKABIAAAARAAUAAwALABIAAAASAAMAAwALABIAAAARAAMAAwAKABIAAAAQAAMAAwAKABIAAAAPAAMAAwALABIAAAAUAAAAAwAKABIAAAAVAAAAAwAKABIAAAAWAAAAAwAKABIAAAAUAAMAAwALABIAAAAVAAMAAwAKABIAAAAWAAMAAwAKABIAAAALAA0AAwAKABIAAAAKAAwAAwALABIAAAAJAAsAAwAKABIAAAAIAAsAAwALABIAAAABAA8AAwAKABIAAAABABAAAwALABIAAAABABEAAwALABIAAAAEAA8AAwAKABIAAAAEABAAAwALABIAAAAEABEAAwAKABIAAAABAAsAAwALABIAAAABAAgAAwALABIAAAABAAUAAwALABIAAAACAAUAAwAKABIAAAADAAMAAwALABIAAAAKAAcAAwALABIAAAAJAAYAAwAKABIAAAAIAAYAAwAKABIAAAAHAAYAAwALABIAAAAGAAYAAwALABIAAAAFAAYAAwAKABIAAAAHAAcAAwAKABIAAAAHAAgAAwAKABIAAAAJAP//AwAKABIAAAAJAP7/AwAKABIAAAAJAP3/AwAKABIAAAAJAPz/AwAKABIAAAAMAP//AwALABIAAAAMAP7/AwAKABIAAAAMAP3/AwALABIAAAAMAPz/AwALABIAAAAKAPz/AwALABIAAAALAPz/AwALABIAAAAMAA4AAgAAAAAAAAANAA4AAgAAAAAAAAAWAAEAAwALABIAAAAWAAIAAwAKABIAAAAIAAwAAAAHAAEAAAAIAA0AAAAHAAIAAAAQAAEAAAAHAAEAAAAQAAIAAAAHAAIAAAADAAIAAwADABIAAAADAAEAAwADABIAAAANAAsAAwAEABIAAAAMAAsAAwAFABIAAAANAAwAAwAFABIAAAAGAAcAAAABAAEAAAAIAAcAAAABAAEAAAAIAAgAAAABAAEAAAAJAAcAAAABAAEAAAANAAEAAAABAAEAAAAMAAEAAAABAAEAAAAMAAIAAAABAAEAAAAHAAEAAAABAAEAAAAFAAEAAAABAAEAAAAFAAIAAAABAAEAAAANAAgAAAABAAEAAAAQAAQAAAABAAEAAAA=")
+
+[node name="SecretBlock" parent="Secrets" index="0" instance=ExtResource("2_4mxow")]
+position = Vector2(312, 24)
+
+[node name="SecretBlock2" parent="Secrets" index="1" instance=ExtResource("2_4mxow")]
+position = Vector2(312, 200)
+
+[node name="SecretBlock3" parent="Secrets" index="2" instance=ExtResource("2_4mxow")]
+position = Vector2(312, 216)
+
+[node name="SecretBlock4" parent="Secrets" index="3" instance=ExtResource("2_4mxow")]
+position = Vector2(296, 216)
+
+[node name="SecretBlock5" parent="Secrets" index="4" instance=ExtResource("2_4mxow")]
+position = Vector2(296, 200)
+
+[node name="SecretBlock6" parent="Secrets" index="5" instance=ExtResource("2_4mxow")]
+position = Vector2(312, 40)
+
+[node name="Stone" parent="Secrets" index="6" instance=ExtResource("3_ulry2")]
+position = Vector2(296, 40)
+
+[node name="Heart" parent="Hearts" index="0" instance=ExtResource("2_tyvo5")]
+position = Vector2(360, 216)
+
+[node name="Heart2" parent="Hearts" index="1" instance=ExtResource("2_tyvo5")]
+position = Vector2(24, 216)
+
+[node name="Heart3" parent="Hearts" index="2" instance=ExtResource("2_tyvo5")]
+position = Vector2(344, 40)
+
+[node name="Chest" parent="Chests" index="0" instance=ExtResource("4_5qb0q")]
+position = Vector2(152, 216)
+
+[node name="Chest2" parent="Chests" index="1" instance=ExtResource("4_5qb0q")]
+position = Vector2(24, 168)
+
+[node name="Chest3" parent="Chests" index="2" instance=ExtResource("4_5qb0q")]
+position = Vector2(24, 120)
+
+[node name="Torch" parent="Torches" index="0" instance=ExtResource("5_obc6b")]
+position = Vector2(280, 136)
+
+[node name="Torch2" parent="Torches" index="1" instance=ExtResource("5_obc6b")]
+position = Vector2(232, 200)
+
+[node name="Torch3" parent="Torches" index="2" instance=ExtResource("5_obc6b")]
+position = Vector2(152, 152)
+
+[node name="Torch4" parent="Torches" index="3" instance=ExtResource("5_obc6b")]
+position = Vector2(248, 88)
+
+[node name="Torch5" parent="Torches" index="4" instance=ExtResource("5_obc6b")]
+position = Vector2(184, 88)
+
+[node name="Torch6" parent="Torches" index="5" instance=ExtResource("5_obc6b")]
+position = Vector2(136, 72)
+
+[node name="Torch7" parent="Torches" index="6" instance=ExtResource("5_obc6b")]
+position = Vector2(96, 72)
+
+[node name="Ladder" parent="Ladders" index="0" instance=ExtResource("2_t8gfo")]
+position = Vector2(296, 88)
+
+[node name="Ladder2" parent="Ladders" index="1" instance=ExtResource("2_t8gfo")]
+position = Vector2(40, 56)
+
+[node name="LadderThreeHigh" parent="Ladders" index="2" instance=ExtResource("3_vq2yy")]
+position = Vector2(264, 168)
+
+[node name="Exit" parent="." index="6"]
+position = Vector2(168, 216)
+
+[node name="Player" parent="." index="7"]
+position = Vector2(296, 152)
+
+[node name="Key" parent="." index="8"]
+position = Vector2(280, 72)
+
+[node name="FlaskWraith" parent="Enemies" index="0" instance=ExtResource("10_jaldj")]
+position = Vector2(232, 152)
+
+[node name="FlaskWraith2" parent="Enemies" index="1" instance=ExtResource("10_jaldj")]
+position = Vector2(40, 272)
+
+[node name="FlaskWraith3" parent="Enemies" index="2" instance=ExtResource("10_jaldj")]
+position = Vector2(96, 96)
+
+[node name="FlaskWraith4" parent="Enemies" index="3" instance=ExtResource("10_jaldj")]
+position = Vector2(184, -40)
+
+[node name="FlaskWraith5" parent="Enemies" index="4" instance=ExtResource("10_jaldj")]
+position = Vector2(280, 40)
+
+[node name="FlaskWraith6" parent="Enemies" index="5" instance=ExtResource("10_jaldj")]
+position = Vector2(344, 216)
+
+[node name="Mimic" parent="Enemies" index="6" instance=ExtResource("9_i0ub2")]
+position = Vector2(280, 104)
+
+[node name="AlchemicalOoze" parent="Enemies" index="7" instance=ExtResource("11_jnbfy")]
+position = Vector2(96, 208)
+
+[node name="AlchemicalOoze2" parent="Enemies" index="8" instance=ExtResource("11_jnbfy")]
+position = Vector2(208, 96)
+
+[node name="MedusaHead" parent="Enemies" index="9" instance=ExtResource("12_oks2r")]
+position = Vector2(24, 24)
+
+[node name="MedusaHead2" parent="Enemies" index="10" instance=ExtResource("12_oks2r")]
+position = Vector2(168, -40)
+
+[node name="MedusaHead3" parent="Enemies" index="11" instance=ExtResource("12_oks2r")]
+position = Vector2(88, 248)
+
+[node name="P1" type="Marker2D" parent="Paths" index="0"]
+position = Vector2(88, 224)
+
+[node name="P2" type="Marker2D" parent="Paths" index="1"]
+position = Vector2(48, 184)
+
+[node name="P3" type="Marker2D" parent="Paths" index="2"]
+position = Vector2(56, 88)
+
+[node name="P4" type="Marker2D" parent="Paths" index="3"]
+position = Vector2(72, 64)
+
+[node name="P5" type="Marker2D" parent="Paths" index="4"]
+position = Vector2(216, 64)
+
+[node name="P6" type="Marker2D" parent="Paths" index="5"]
+position = Vector2(176, 48)
+
+[node name="Pool" parent="Dangers" index="0" instance=ExtResource("2_r3aho")]
+position = Vector2(176, 112)
+
+[node name="Spikes" parent="Dangers" index="1" instance=ExtResource("5_lj8s0")]
+position = Vector2(24, 72)
+
+[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("3_r3aho")]
+position = Vector2(88, 152)
+destination = NodePath("../../Paths/P1")
+
+[node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("4_slls7")]
+position = Vector2(48, 288)
+destination = NodePath("../../Paths/P2")
+
+[node name="Platform6" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("4_slls7")]
+position = Vector2(176, -24)
+destination = NodePath("../../Paths/P6")
+
+[node name="Platform3" parent="MovingPlatforms" index="3" node_paths=PackedStringArray("destination") instance=ExtResource("3_r3aho")]
+position = Vector2(56, 160)
+destination = NodePath("../../Paths/P3")
+
+[node name="Platform4" parent="MovingPlatforms" index="4" node_paths=PackedStringArray("destination") instance=ExtResource("3_r3aho")]
+position = Vector2(136, 64)
+destination = NodePath("../../Paths/P4")
+
+[node name="Platform5" parent="MovingPlatforms" index="5" node_paths=PackedStringArray("destination") instance=ExtResource("3_r3aho")]
+position = Vector2(152, 64)
+destination = NodePath("../../Paths/P5")
 
 [node name="Music" parent="." index="14"]
 stream = ExtResource("2_fland")
