@@ -22,18 +22,18 @@ func level_setup() -> void:
 	key.hide()
 	key.set_collision_mask_value(2, false)
 	ladder_1.hide()
-	ladder_1.deactivate()
 	ladder_2.hide()
+	ladder_1.deactivate()
 	ladder_2.deactivate()
 
 
 func make_hidden_things_visible() -> void:
 	key.show()
 	key.set_collision_layer_value(6, true)
-	ladder_1.show()	
 	ladder_1.activate()
-	ladder_2.show()
 	ladder_2.activate()
+	ladder_1.show()	
+	ladder_2.show()
 
 
 func on_warrior_wight_killed() -> void:
