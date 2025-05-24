@@ -1,0 +1,45 @@
+extends LevelBase
+
+@onready var key: Area2D = $Key
+@onready var ladder_1: Ladder = $Ladders/Ladder1
+@onready var ladder_2: Ladder = $Ladders/Ladder2
+@onready var camera_2d: Camera2D = $Player/Camera2D
+@onready var camera_trigger: Area2D = $CameraTri640gger
+
+
+func _ready() -> void:
+	super._ready()
+	level_setup()
+	SignalManager.on_mage_wight_killed.connect(on_mage_wight_killed)
+	SignalManager.on_warrior_wight_killed.connect(on_warrior_wight_killed)
+
+
+func on_mage_wight_killed() -> void:
+	make_hidden_things_visible()
+
+
+func level_setup() -> void:
+	key.hide()
+	key.set_collision_mask_value(2, false)
+	ladder_1.hide()
+	ladder_1.deactivate()
+	ladder_2.hide()
+	ladder_2.deactivate()
+
+
+func make_hidden_things_visible() -> void:
+	key.show()
+	key.set_collision_layer_value(6, true)
+	ladder_1.show()	
+	ladder_1.activate()
+	ladder_2.show()
+	ladder_2.activate()
+
+
+func on_warrior_wight_killed() -> void:
+	make_hidden_things_visible()
+
+
+func _on_camera_trigger_area_entered(area: Area2D) -> void:
+	camera_2d.limit_left = 320
+	camera_2d.limit_right = 640
