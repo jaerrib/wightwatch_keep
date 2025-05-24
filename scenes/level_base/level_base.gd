@@ -1,4 +1,4 @@
-extends Node2D
+class_name LevelBase extends Node2D
 
 @onready var music: AudioStreamPlayer = $Music
 @onready var level_overlay: ColorRect = $CanvasLayer/LevelOverlay
