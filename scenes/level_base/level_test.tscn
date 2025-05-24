@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=4 uid="uid://kjos4hgd14xm"]
+[gd_scene load_steps=4 format=4 uid="uid://kjos4hgd14xm"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_hjc1y"]
 [ext_resource type="PackedScene" uid="uid://cg4hvldawovi3" path="res://scenes/stone/stone.tscn" id="2_0bv3l"]
+[ext_resource type="Script" uid="uid://cpp3n6515ajjn" path="res://scenes/level_base/level_test.gd" id="2_112t1"]
 
 [node name="LevelTest" instance=ExtResource("1_hjc1y")]
+script = ExtResource("2_112t1")
 
 [node name="TileMapLayer" parent="TileMapLayers" index="0"]
 tile_map_data = PackedByteArray("AAAAAA4AAAAFAAAAAAABAA4AAAAFAAAAAAACAA4AAAAFAAAAAAADAA4AAAAFAAAAAAAEAA4AAAAFAAAAAAAFAA4AAAAFAAAAAAAGAA4AAAAFAAAAAAAHAA4AAAAFAAAAAAAIAA4AAAAFAAAAAAAJAA4AAAAFAAAAAAAKAA4AAAAFAAAAAAALAA4AAAAFAAAAAAARAA4AAAAFAAAAAAASAA4AAAAFAAAAAAATAA4AAAAFAAAAAAAQAA4AAAAFAAAAAAAMAA4AAAAFAAAAAAAOAA4AAAAFAAAAAAAPAA4AAAAFAAAAAAANAA4AAAAFAAAAAAA=")
