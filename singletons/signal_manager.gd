@@ -4,6 +4,8 @@ signal on_enemy_hit(points: int)
 signal on_player_hit
 signal on_player_died
 
+signal on_create_falling_rock(position: Vector2)
+
 signal on_create_object(
 	pos: Vector2,
 	ob_type: Constants.ObjectType,

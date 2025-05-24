@@ -5,8 +5,10 @@ const ADD_OBJECT: String = "add_object"
 const OBJECT_SCENES: Dictionary = {
 	Constants.ObjectType.COIN: preload("res://scenes/coin/coin.tscn"),
 	Constants.ObjectType.EXPLOSION: preload("res://scenes/explosion/explosion.tscn"),
-	Constants.ObjectType.HEART_LARGE: preload("res://scenes/heart_large/heart_large.tscn")
+	Constants.ObjectType.HEART_LARGE: preload("res://scenes/heart_large/heart_large.tscn"),
+	Constants.ObjectType.FALLING_ROCK: preload("res://scenes/falling_rock/falling_rock.tscn")
 }
+
 
 const SLIME_SCENE: Dictionary = {
 	Constants.EnemyType.SLIME: preload("res://scenes/slime/slime.tscn")
@@ -23,6 +25,7 @@ func _ready() -> void:
 	SignalManager.on_create_object.connect(on_create_object)
 	SignalManager.on_create_projectile.connect(on_create_projectile)
 	SignalManager.on_create_slime.connect(on_create_slime)
+	SignalManager.on_create_falling_rock.connect(on_create_falling_rock)
 
 
 func on_create_object(pos: Vector2, ob_type: Constants.ObjectType) -> void:
@@ -31,6 +34,12 @@ func on_create_object(pos: Vector2, ob_type: Constants.ObjectType) -> void:
 	var n_obj = OBJECT_SCENES[ob_type].instantiate()
 	n_obj.position = pos
 	call_deferred("add_child", n_obj)
+
+
+func on_create_falling_rock(position: Vector2):
+	var scene = OBJECT_SCENES[Constants.ObjectType.FALLING_ROCK].instantiate()
+	scene.position = position
+	call_deferred("add_child", scene)
 
 
 func on_create_projectile(

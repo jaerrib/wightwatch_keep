@@ -7,7 +7,9 @@ enum ObjectType {
 	EXPLOSION,
 	HEART,
 	HEART_LARGE,
+	FALLING_ROCK,
 }
+
 
 enum ProjectileType {
 	CANNONBALL,

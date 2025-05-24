@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqgkipjevnq0w"]
+
+[ext_resource type="Script" uid="uid://ng04puuf86kq" path="res://scenes/falling_rock/falling_rock.gd" id="1_oey3o"]
+[ext_resource type="Texture2D" uid="uid://sbe4bwm818jf" path="res://assets/danger/falling_rocks.png" id="1_owj8d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oey3o"]
+size = Vector2(16, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lq48t"]
+size = Vector2(16, 12)
+
+[node name="FallingRock" type="RigidBody2D" groups=["moveables"]]
+collision_layer = 1536
+collision_mask = 0
+gravity_scale = 0.25
+script = ExtResource("1_oey3o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_owj8d")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oey3o")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_lq48t")
