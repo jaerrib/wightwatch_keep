@@ -10,8 +10,9 @@ const OBJECT_SCENES: Dictionary = {
 }
 
 
-const SLIME_SCENE: Dictionary = {
-	Constants.EnemyType.SLIME: preload("res://scenes/slime/slime.tscn")
+const ENEMY_SCENE: Dictionary = {
+	Constants.EnemyType.SLIME: preload("res://scenes/slime/slime.tscn"),
+	Constants.EnemyType.MINION: preload("res://scenes/minion/minion.tscn"),
 }
 
 const PROJECTILE_SCENE: Dictionary = {
@@ -24,7 +25,7 @@ const PROJECTILE_SCENE: Dictionary = {
 func _ready() -> void:
 	SignalManager.on_create_object.connect(on_create_object)
 	SignalManager.on_create_projectile.connect(on_create_projectile)
-	SignalManager.on_create_slime.connect(on_create_slime)
+	SignalManager.on_create_enemy.connect(on_create_enemy)
 	SignalManager.on_create_falling_rock.connect(on_create_falling_rock)
 
 
@@ -56,8 +57,8 @@ func on_create_projectile(
 	call_deferred(ADD_OBJECT, scene, start_pos)
 
 
-func on_create_slime(position: Vector2):
-	var scene = SLIME_SCENE[0].instantiate()
+func on_create_enemy(position: Vector2, enemy_type: Constants.EnemyType):
+	var scene = ENEMY_SCENE[enemy_type].instantiate()
 	scene.position = position
 	call_deferred("add_child", scene)
 

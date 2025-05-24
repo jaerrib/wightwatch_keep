@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfskpgrpern8t"]
+
+[ext_resource type="PackedScene" uid="uid://bx7ojvlmlpran" path="res://scenes/skeleton/skeleton.tscn" id="1_fi3op"]
+[ext_resource type="Script" uid="uid://c4y3hbgrogpcp" path="res://scenes/minion/minion.gd" id="2_ojsii"]
+
+[node name="Minion" instance=ExtResource("1_fi3op")]
+script = ExtResource("2_ojsii")
+speed = 5.0
+points = 1
+
+[node name="CollisionShape2D" parent="." index="1"]
+disabled = true

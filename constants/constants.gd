@@ -1,6 +1,6 @@
 class_name Constants
 
-enum EnemyType { SLIME }
+enum EnemyType { SLIME, MINION }
 
 enum ObjectType {
 	COIN,

@@ -64,6 +64,6 @@ func die() -> void:
 
 func split_in_two() -> void:
 	var slime1_position: Vector2 = Vector2(global_position.x + SPLIT_DISTANCE, global_position.y)
-	SignalManager.on_create_slime.emit(slime1_position)
+	SignalManager.on_create_enemy.emit(slime1_position, Constants.EnemyType.SLIME)
 	var slime2_position: Vector2 = Vector2(global_position.x - SPLIT_DISTANCE, global_position.y)
-	SignalManager.on_create_slime.emit(slime2_position)
+	SignalManager.on_create_enemy.emit(slime2_position, Constants.EnemyType.SLIME)
