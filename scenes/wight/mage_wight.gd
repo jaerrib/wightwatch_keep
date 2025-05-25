@@ -5,7 +5,7 @@ var _attack_number: int
 var _direction: Vector2 = Vector2.ZERO
 var _flip_sprite: bool = false
 var _invincible: bool = false
-var _life: int = 1
+var _life: int = 10
 var _speed: float = 10
 var _visible: bool = false
 
@@ -99,3 +99,4 @@ func _on_invincible_timer_timeout() -> void:
 
 func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
 	_visible = true
+	attack_timer.start()

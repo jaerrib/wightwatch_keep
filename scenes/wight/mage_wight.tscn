@@ -150,7 +150,6 @@ shape = SubResource("RectangleShape2D_wxc7l")
 [node name="AttackTimer" type="Timer" parent="." index="4"]
 wait_time = 10.0
 one_shot = true
-autostart = true
 
 [node name="FloorDetection" type="RayCast2D" parent="." index="5"]
 position = Vector2(16, 24)
