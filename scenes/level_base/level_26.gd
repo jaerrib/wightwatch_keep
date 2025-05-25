@@ -4,7 +4,7 @@ extends LevelBase
 @onready var ladder_1: Ladder = $Ladders/Ladder1
 @onready var ladder_2: Ladder = $Ladders/Ladder2
 @onready var camera_2d: Camera2D = $Player/Camera2D
-@onready var camera_trigger: Area2D = $CameraTri640gger
+@onready var camera_trigger: Area2D = $CameraTrigger
 
 
 func _ready() -> void:
@@ -12,8 +12,6 @@ func _ready() -> void:
 	level_setup()
 	SignalManager.on_mage_wight_killed.connect(on_mage_wight_killed)
 	SignalManager.on_warrior_wight_killed.connect(on_warrior_wight_killed)
-
-
 
 
 func level_setup() -> void:
@@ -34,8 +32,9 @@ func make_hidden_things_visible() -> void:
 	ladder_2.show()
 
 
-func on_mage_wight_killed() -> void:
-	make_hidden_things_visible()
+func on_mage_wight_killed(position: Vector2) -> void:
+	var adjusted_pos: Vector2 = Vector2(position.x, position.y - 8)
+	SignalManager.on_create_enemy.emit(adjusted_pos, Constants.EnemyType.WARRIOR_WIGHT)
 
 
 func on_warrior_wight_killed() -> void:
