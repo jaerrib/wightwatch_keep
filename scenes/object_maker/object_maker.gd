@@ -13,6 +13,7 @@ const OBJECT_SCENES: Dictionary = {
 const ENEMY_SCENE: Dictionary = {
 	Constants.EnemyType.SLIME: preload("res://scenes/slime/slime.tscn"),
 	Constants.EnemyType.MINION: preload("res://scenes/minion/minion.tscn"),
+	Constants.EnemyType.WARRIOR_WIGHT: preload("res://scenes/wight/warrior_wight.tscn")
 }
 
 const PROJECTILE_SCENE: Dictionary = {
