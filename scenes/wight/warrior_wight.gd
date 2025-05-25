@@ -1,9 +1,9 @@
-extends EnemyBase
+class_name WarriorWight extends EnemyBase
 
 @export var speed: float = 10.0
 
 var _invincible: bool = false
-var _life: int = 10
+var _life: int = 20
 var _nearby: bool = false
 var _player_pos: Vector2
 
@@ -35,6 +35,7 @@ func flip_me() -> void:
 	sprite_2d.flip_h = !sprite_2d.flip_h
 	floor_detection.position.x = -floor_detection.position.x
 	set_sword_hit_box_position()
+
 
 func set_sword_hit_box_position() -> void:
 	if sprite_2d.flip_h:
@@ -70,6 +71,8 @@ func on_hit_box_entered(area: Area2D) -> void:
 	turn_timer.start()
 	go_invincible()
 	_life -= 1
+	if _life % 5 == 0:
+		SignalManager.on_heart_spawn.emit()
 	if _life <= 0:
 		SignalManager.on_warrior_wight_killed.emit()
 		die()
@@ -79,7 +82,6 @@ func go_invincible() -> void:
 	_invincible = true
 	invincible_animation.play("damaged")
 	invincible_timer.start()
-
 
 
 func _on_invincible_timer_timeout() -> void:
