@@ -36,7 +36,7 @@ func fly_to_player() -> void:
 	else:
 		animated_sprite_2d.flip_h = false
 	_fly_direction = Vector2(x_dir, y_dir) * FLY_SPEED
-	print(_player_ref.global_position.y - global_position.y)
+
 
 func _on_direction_timer_timeout() -> void:
 	fly_to_player()
