@@ -39,8 +39,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor() and !_on_ladder:
 		velocity.y += GRAVITY * delta
 	get_input(delta)
-	calculate_state()
 	set_sword_hit_box_position()
+	calculate_state()
 	move_and_slide()
 
 
@@ -62,16 +62,18 @@ func fallen_off() -> void:
 func get_input(delta) -> void:
 	if _state == PlayerState.HURT:
 		return
+	if Input.is_action_just_pressed("attack"):
+		attack()
 	if _on_ladder:
-		if Input.is_action_pressed("up"):
-			velocity.y = -CLIMB_SPEED * delta * 10
-			set_state(PlayerState.ON_LADDER)
-		elif Input.is_action_pressed("down"):
-			velocity.y = CLIMB_SPEED * delta * 10
-			set_state(PlayerState.ON_LADDER)
-		else:
-			velocity.y = 0
+		check_ladder_input(delta)
 	velocity.x = 0
+	check_directional_input()
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+	velocity.y = clampf(velocity.y, JUMP_VELOCITY, MAX_FALL)
+
+
+func check_directional_input() -> void:
 	if Input.is_action_pressed("left"):
 		velocity.x = -RUN_SPEED
 		sprite_2d.flip_h = true
@@ -79,16 +81,23 @@ func get_input(delta) -> void:
 		velocity.x = RUN_SPEED
 		sprite_2d.flip_h = false
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	if Input.is_action_just_pressed("attack"):
-			SoundManager.play_clip(sound, SoundManager.SOUND_PLAYER_ATTACK)
-			animation_player.play("attack")
-	velocity.y = clampf(velocity.y, JUMP_VELOCITY, MAX_FALL)
+
+func check_ladder_input(delta) -> void:
+	if Input.is_action_pressed("up"):
+		velocity.y = -CLIMB_SPEED * delta * 10
+	elif Input.is_action_pressed("down"):
+		velocity.y = CLIMB_SPEED * delta * 10
+	else:
+		velocity.y = 0
+
+
+func attack() -> void:
+	SoundManager.play_clip(sound, SoundManager.SOUND_PLAYER_ATTACK)
+	animation_player.play("attack")
 
 
 func set_state(new_state: PlayerState) -> void:
-	if new_state == _state:
+	if animation_player.current_animation == "attack" or new_state == _state:
 		return
 	_state = new_state
 	match _state:
@@ -115,18 +124,18 @@ func calculate_state() -> void:
 			set_state(PlayerState.IDLE)
 		else:
 			set_state(PlayerState.RUN)
-	if _on_ladder:
+	elif _on_ladder:
 		set_state(PlayerState.ON_LADDER)
 	else:
 		if velocity.y > 0:
 			set_state(PlayerState.FALL)
-		else:
-			if velocity.y < 0:
-				set_state(PlayerState.JUMP)
+		elif velocity.y < 0:
+			set_state(PlayerState.JUMP)
 
 
 func on_ladder(value: bool) -> void:
 	_on_ladder = value
+	set_state(PlayerState.ON_LADDER)
 
 
 func _on_animation_player_animation_finished(anim_name: String) -> void:
