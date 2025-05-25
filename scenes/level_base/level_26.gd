@@ -14,8 +14,6 @@ func _ready() -> void:
 	SignalManager.on_warrior_wight_killed.connect(on_warrior_wight_killed)
 
 
-func on_mage_wight_killed() -> void:
-	make_hidden_things_visible()
 
 
 func level_setup() -> void:
@@ -23,17 +21,21 @@ func level_setup() -> void:
 	key.set_collision_mask_value(2, false)
 	ladder_1.hide()
 	ladder_2.hide()
-	ladder_1.deactivate()
-	ladder_2.deactivate()
 
 
 func make_hidden_things_visible() -> void:
 	key.show()
-	key.set_collision_layer_value(6, true)
-	ladder_1.activate()
-	ladder_2.activate()
+	key.set_collision_mask_value(2, true)
+	#ladder_1.activate()
+	#ladder_2.activate()
+	ladder_1.toggle_status()
+	ladder_2.toggle_status()
 	ladder_1.show()	
 	ladder_2.show()
+
+
+func on_mage_wight_killed() -> void:
+	make_hidden_things_visible()
 
 
 func on_warrior_wight_killed() -> void:

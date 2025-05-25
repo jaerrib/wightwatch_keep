@@ -1,6 +1,12 @@
 class_name Ladder extends Node2D
 
+@export var disabled_status: bool = true
+
 @onready var collision_shape_2d: CollisionShape2D = $LadderArea/CollisionShape2D
+
+
+func _ready() -> void:
+	set_status(disabled_status)
 
 
 func _on_ladder_area_area_entered(area: Area2D) -> void:
@@ -11,9 +17,10 @@ func _on_ladder_area_area_exited(area: Area2D) -> void:
 	SignalManager.on_ladder.emit(false)
 
 
-func activate() -> void:
-	collision_shape_2d.disabled = false
+func set_status(status: bool) -> void:
+	collision_shape_2d.set_deferred("disabled", status)
 
 
-func deactivate() -> void:
-	collision_shape_2d.disabled = true
+func toggle_status() -> void:
+	disabled_status = !disabled_status
+	set_status(disabled_status)

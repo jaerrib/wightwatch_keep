@@ -1,10 +1,11 @@
 extends LevelBase
 
+@onready var ladder: Ladder = $Ladders/Ladder
+
 func _process(delta: float) -> void:
 	super._process(delta)
 	if Input.is_action_just_pressed("spawn"):
-		for i in range(0, 5):
-			SignalManager.on_create_falling_rock.emit(generate_spawn_pos())
+		ladder.toggle_status()
 
 
 func generate_spawn_pos() -> Vector2:
