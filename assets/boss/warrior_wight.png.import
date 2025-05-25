@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0e5df6koywps"
-path="res://.godot/imported/warrior-wight.png-96f53c846a8a4d164c954e0f0779e208.ctex"
+uid="uid://mp28b4qt3nvc"
+path="res://.godot/imported/warrior_wight.png-41ef3b10a8cd0bd3e1268756f69c9810.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/boss/warrior-wight.png"
-dest_files=["res://.godot/imported/warrior-wight.png-96f53c846a8a4d164c954e0f0779e208.ctex"]
+source_file="res://assets/boss/warrior_wight.png"
+dest_files=["res://.godot/imported/warrior_wight.png-41ef3b10a8cd0bd3e1268756f69c9810.ctex"]
 
 [params]
 
