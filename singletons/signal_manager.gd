@@ -23,6 +23,7 @@ signal on_coin_collected(points: int)
 signal on_create_enemy(position: Vector2, enemy_type: Constants.EnemyType)
 signal on_exit_reached
 signal on_game_over
+signal on_heart_spawn
 signal on_heart_collected
 signal on_key_collected
 signal on_ladder(val: bool)
