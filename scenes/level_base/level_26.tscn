@@ -64,9 +64,11 @@ position = Vector2(528, 120)
 
 [node name="Ladder1" parent="Ladders" index="0" instance=ExtResource("5_d3nkn")]
 position = Vector2(456, 88)
+disabled_status = true
 
 [node name="Ladder2" parent="Ladders" index="1" instance=ExtResource("7_u2ywu")]
 position = Vector2(568, 56)
+disabled_status = true
 
 [node name="Exit" parent="." index="6"]
 position = Vector2(616, 24)

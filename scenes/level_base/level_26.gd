@@ -20,6 +20,8 @@ func _ready() -> void:
 func level_setup() -> void:
 	key.hide()
 	key.set_collision_mask_value(2, false)
+	ladder_1.set_disabled_status(true)
+	ladder_1.set_disabled_statusddd(true)
 	ladder_1.hide()
 	ladder_2.hide()
 
