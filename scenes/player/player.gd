@@ -2,6 +2,7 @@ class_name Player extends CharacterBody2D
 
 enum PlayerState { IDLE, RUN, JUMP, FALL, ON_LADDER, HURT }
 
+const ACCELERATION: float = 350.0
 const CLIMB_SPEED: float = 300.0
 const FALLEN_OFF: float = 325.0
 const GRAVITY: float = 690.0
@@ -9,7 +10,8 @@ const HURT_JUMP_VELOCITY: float = -130.0
 const JUMP_VELOCITY: float = -175.0
 const KNOCKBACK: float = -50.0
 const MAX_FALL: float = 400.0
-const RUN_SPEED: float = 120.0
+const RUN_SPEED: float = 100.0
+
 
 @export var right_collision_position: Vector2 = Vector2(9,0)
 @export var left_collision_position: Vector2 = Vector2(-9,0)
@@ -17,6 +19,7 @@ const RUN_SPEED: float = 120.0
 var _invincible: bool = false
 var _on_ladder: bool = false
 var _state: PlayerState = PlayerState.IDLE
+
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision_shape_2d: CollisionShape2D = $SwordHitBox/CollisionShape2D
@@ -66,20 +69,25 @@ func get_input(delta) -> void:
 		attack()
 	if _on_ladder:
 		check_ladder_input(delta)
-	velocity.x = 0
-	check_directional_input()
+	check_directional_input(delta)
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	velocity.y = clampf(velocity.y, JUMP_VELOCITY, MAX_FALL)
 
 
-func check_directional_input() -> void:
+func check_directional_input(delta) -> void:
+	var input_x: int = 0
 	if Input.is_action_pressed("left"):
-		velocity.x = -RUN_SPEED
+		input_x -= 1
 		sprite_2d.flip_h = true
 	elif Input.is_action_pressed("right"):
-		velocity.x = RUN_SPEED
+		input_x += 1
 		sprite_2d.flip_h = false
+	if input_x != 0:
+		velocity.x += input_x * ACCELERATION * delta
+		velocity.x = clamp(velocity.x, -RUN_SPEED, RUN_SPEED)
+	else:
+		velocity.x = 0
 
 
 func check_ladder_input(delta) -> void:
