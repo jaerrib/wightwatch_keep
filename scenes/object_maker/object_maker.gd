@@ -5,9 +5,10 @@ const ADD_OBJECT: String = "add_object"
 const OBJECT_SCENES: Dictionary = {
 	Constants.ObjectType.COIN: preload("res://scenes/coin/coin.tscn"),
 	Constants.ObjectType.EXPLOSION: preload("res://scenes/explosion/explosion.tscn"),
+	Constants.ObjectType.EXTRA_LIFE: preload("res://scenes/stone/stone.tscn"),
+	Constants.ObjectType.FALLING_ROCK: preload("res://scenes/falling_rock/falling_rock.tscn"),
 	Constants.ObjectType.HEART: preload("res://scenes/heart/heart.tscn"),
 	Constants.ObjectType.HEART_LARGE: preload("res://scenes/heart_large/heart_large.tscn"),
-	Constants.ObjectType.FALLING_ROCK: preload("res://scenes/falling_rock/falling_rock.tscn")
 }
 
 

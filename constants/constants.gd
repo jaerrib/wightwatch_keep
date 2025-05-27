@@ -5,9 +5,10 @@ enum EnemyType { SLIME, MINION, WARRIOR_WIGHT }
 enum ObjectType {
 	COIN,
 	EXPLOSION,
+	EXTRA_LIFE,
+	FALLING_ROCK,
 	HEART,
 	HEART_LARGE,
-	FALLING_ROCK,
 }
 
 
