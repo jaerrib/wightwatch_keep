@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://brh8u4dx586nk"]
+[gd_scene load_steps=13 format=4 uid="uid://brh8u4dx586nk"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_t017g"]
 [ext_resource type="PackedScene" uid="uid://uhrc54c3ahkx" path="res://scenes/heart/heart.tscn" id="2_kiojb"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="7_tehan"]
 [ext_resource type="PackedScene" uid="uid://dcguxpbvv842t" path="res://scenes/spikes/spikes.tscn" id="8_lpan3"]
 [ext_resource type="PackedScene" uid="uid://b5p8jjbvvw3q6" path="res://scenes/bat/bat.tscn" id="8_xlamp"]
+[ext_resource type="PackedScene" uid="uid://cs183vdtnapkn" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="10_5ncat"]
 [ext_resource type="AudioStream" uid="uid://timqgr7shy7q" path="res://assets/audio/Garden.ogg" id="11_pwpsl"]
 
 [node name="Level8" instance=ExtResource("1_t017g")]
@@ -75,7 +76,7 @@ position = Vector2(184, 136)
 position = Vector2(128, 168)
 
 [node name="P1" type="Marker2D" parent="Paths" index="0"]
-position = Vector2(232, 192)
+position = Vector2(224, 192)
 
 [node name="P2" type="Marker2D" parent="Paths" index="1"]
 position = Vector2(72, 88)
@@ -92,8 +93,8 @@ position = Vector2(248, 96)
 [node name="Spikes" parent="Dangers" index="0" instance=ExtResource("8_lpan3")]
 position = Vector2(296, 120)
 
-[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("7_tehan")]
-position = Vector2(88, 192)
+[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("10_5ncat")]
+position = Vector2(96, 192)
 destination = NodePath("../../Paths/P1")
 
 [node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("7_tehan")]
