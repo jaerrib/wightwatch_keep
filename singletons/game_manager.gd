@@ -22,6 +22,18 @@ func load_next_level_scene() -> void:
 	get_tree().change_scene_to_packed(_level_scenes[_current_level])
 
 
+func warp_to_level(warp_level: int) -> void:
+	_current_level = warp_level
+	if _current_level > TOTAL_LEVELS:
+		_current_level = 1
+	get_tree().change_scene_to_packed(_level_scenes[_current_level])
+	
+	
+func use_chaos_gate() -> void:
+	var warp_level: int = randi_range(get_current_level() + 1, TOTAL_LEVELS - 1)
+	warp_to_level(warp_level)
+
+
 func reload_current_level_scene() -> void:
 	get_tree().change_scene_to_packed(_level_scenes[_current_level])
 
