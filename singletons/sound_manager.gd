@@ -6,6 +6,7 @@ const SOUND_EXPLOSION = "enemy_hurt_3"
 const SOUND_KEY = "key"
 const SOUND_MAGIC = "magic"
 const SOUND_PLAYER_ATTACK = "player_attack"
+const SOUND_DAMAGE = "sound_damage"
 
 var SOUNDS: Dictionary = {
 	SOUND_PLAYER_ATTACK: preload("res://assets/audio/player_attack.wav") ,
@@ -14,6 +15,7 @@ var SOUNDS: Dictionary = {
 	SOUND_KEY: preload("res://assets/audio/pickup_2.wav"),
 	SOUND_EXIT: preload("res://assets/audio/pickup_1.wav"),
 	SOUND_MAGIC: preload("res://assets/audio/magic.ogg"),
+	SOUND_DAMAGE: preload("res://assets/audio/ooh.ogg"),
 }
 
 

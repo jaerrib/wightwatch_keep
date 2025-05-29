@@ -157,7 +157,7 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 	if _invincible:
 		return
 	SignalManager.on_player_hit.emit()
-	#SoundManager.play_clip(sound, SoundManager.SOUND_DAMAGE)
+	SoundManager.play_clip(sound, SoundManager.SOUND_DAMAGE)
 	go_invincible()
 	set_state(PlayerState.HURT)
 
