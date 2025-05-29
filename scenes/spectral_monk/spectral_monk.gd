@@ -13,6 +13,7 @@ var _speed: float = 20
 @onready var attack_timer: Timer = $AttackTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var floor_detection: RayCast2D = $FloorDetection
+@onready var sound: AudioStreamPlayer2D = $Sound
 
 
 func _physics_process(delta: float) -> void:
@@ -73,6 +74,7 @@ func attack() -> void:
 	animated_sprite_2d.play("attack")
 	set_shoot_position()
 	shoot_magic()
+	SoundManager.play_clip(sound, SoundManager.SOUND_MAGIC)
 	_attacking = true
 	attack_timer.start()
 

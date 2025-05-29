@@ -77,5 +77,7 @@ target_position = Vector2(0, 16)
 wait_time = 2.0
 one_shot = true
 
+[node name="Sound" type="AudioStreamPlayer2D" parent="." index="7"]
+
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
