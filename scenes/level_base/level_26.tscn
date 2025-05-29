@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=4 uid="uid://b4ij323mhutnc"]
+[gd_scene load_steps=11 format=4 uid="uid://b4ij323mhutnc"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_erj2k"]
 [ext_resource type="Script" uid="uid://h4oc1kd2s3gi" path="res://scenes/level_base/level_26.gd" id="2_5xu63"]
-[ext_resource type="AudioStream" uid="uid://cq4c8n3jg27xn" path="res://assets/audio/Boss.ogg" id="2_erj2k"]
 [ext_resource type="PackedScene" uid="uid://bec8j33arb6om" path="res://scenes/secret_block/secret_block.tscn" id="2_mtjhl"]
 [ext_resource type="PackedScene" uid="uid://b2wdggulo22b0" path="res://scenes/chest_heart/chest_heart.tscn" id="3_it4fb"]
 [ext_resource type="PackedScene" uid="uid://cmhf1pgsijpdi" path="res://scenes/torch/torch.tscn" id="4_e2jwk"]
@@ -102,9 +101,6 @@ destination = NodePath("../../Paths/P1")
 [node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("5_hiwb4")]
 position = Vector2(616, 152)
 destination = NodePath("../../Paths/P2")
-
-[node name="Music" parent="." index="14"]
-stream = ExtResource("2_erj2k")
 
 [node name="CameraTrigger" type="Area2D" parent="." index="17"]
 position = Vector2(336, 24)

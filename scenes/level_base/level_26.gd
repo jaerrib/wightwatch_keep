@@ -1,6 +1,12 @@
 extends LevelBase
 
+const AMBIENCE = "ambience"
+const BOSS_MUSIC = "boss_music"
 const HEART_SPAWN_POS: Vector2 = Vector2(480, 120)
+const SOUNDS: Dictionary = {
+	AMBIENCE: preload("res://assets/audio/ambience.ogg"),
+	BOSS_MUSIC: preload("res://assets/audio/Boss.ogg"),
+}
 
 @onready var key: Area2D = $Key
 @onready var ladder_1: Ladder = $Ladders/Ladder1
@@ -9,9 +15,12 @@ const HEART_SPAWN_POS: Vector2 = Vector2(480, 120)
 @onready var camera_trigger: Area2D = $CameraTrigger
 
 
+
 func _ready() -> void:
 	super._ready()
 	level_setup()
+	music.stream = SOUNDS[AMBIENCE]
+	music.play()
 	SignalManager.on_mage_wight_killed.connect(on_mage_wight_killed)
 	SignalManager.on_warrior_wight_killed.connect(on_warrior_wight_killed)
 	SignalManager.on_heart_spawn.connect(on_heart_spawn)
@@ -21,7 +30,7 @@ func level_setup() -> void:
 	key.hide()
 	key.set_collision_mask_value(2, false)
 	ladder_1.set_disabled_status(true)
-	ladder_1.set_disabled_statusddd(true)
+	ladder_1.set_disabled_status(true)
 	ladder_1.hide()
 	ladder_2.hide()
 
@@ -47,6 +56,10 @@ func on_warrior_wight_killed() -> void:
 func _on_camera_trigger_area_entered(area: Area2D) -> void:
 	camera_2d.limit_left = 320
 	camera_2d.limit_right = 640
+	music.stop()
+	music.stream = SOUNDS[BOSS_MUSIC]
+	music.play()
+
 
 
 func on_heart_spawn() -> void:
