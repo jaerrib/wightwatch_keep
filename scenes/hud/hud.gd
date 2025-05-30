@@ -9,8 +9,9 @@ var _can_continue: bool = false
 @onready var hb_hearts: HBoxContainer = $MC/MC2/HB/HBHearts
 @onready var level_label: Label = $MC/MC2/HB/HBLevel/LevelLabel
 @onready var lives_label: Label = $ColorRect/VBPlayerDied/HB/LivesLabel
+@onready var music: AudioStreamPlayer = $Music
 @onready var score_label: Label = $MC/MC2/HB/ScoreLabel
-@onready var sound: AudioStreamPlayer = $Sound
+@onready var sound: AudioStreamPlayer2D = $Sound
 @onready var vb_level_complete: VBoxContainer = $ColorRect/VBLevelComplete
 @onready var vb_game_over: VBoxContainer = $ColorRect/VBGameOver
 @onready var vb_player_died: VBoxContainer = $ColorRect/VBPlayerDied
@@ -63,7 +64,7 @@ func show_hud() -> void:
 
 func on_game_over() -> void:
 	stop_level_music()
-	sound.play()
+	music.play()
 	show_hud()
 	vb_game_over.show()		
 
@@ -76,7 +77,7 @@ func stop_level_music():
 
 
 func on_player_died() -> void:
-	#sound.play()	
+	SoundManager.play_clip(sound, SoundManager.SOUND_PLAYER_DEATH) 
 	death_timer.start()
 
 func on_exit_reached() -> void:
