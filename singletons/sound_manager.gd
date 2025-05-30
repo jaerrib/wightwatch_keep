@@ -1,12 +1,13 @@
 extends Node
 
 const SOUND_COIN = "coin"
+const SOUND_DAMAGE = "sound_damage"
 const SOUND_EXIT = "exit"
 const SOUND_EXPLOSION = "enemy_hurt_3"
 const SOUND_KEY = "key"
 const SOUND_MAGIC = "magic"
+const SOUND_PAUSE = "pause"
 const SOUND_PLAYER_ATTACK = "player_attack"
-const SOUND_DAMAGE = "sound_damage"
 const SOUND_PLAYER_DEATH = "player_death"
 
 var SOUNDS: Dictionary = {
@@ -17,7 +18,8 @@ var SOUNDS: Dictionary = {
 	SOUND_EXIT: preload("res://assets/audio/pickup_1.wav"),
 	SOUND_MAGIC: preload("res://assets/audio/magic.ogg"),
 	SOUND_DAMAGE: preload("res://assets/audio/player_hurt.ogg"),
-	SOUND_PLAYER_DEATH: preload("res://assets/audio/player_death.ogg")
+	SOUND_PLAYER_DEATH: preload("res://assets/audio/player_death.ogg"),
+	SOUND_PAUSE: preload("res://assets/audio/pause.ogg")
 }
 
 

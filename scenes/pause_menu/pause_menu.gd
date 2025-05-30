@@ -1,6 +1,7 @@
 class_name PauseMenu extends Control
 
 @onready var lives_label: Label = $VBoxContainer/HB/LivesLabel
+@onready var sound: AudioStreamPlayer2D = $Sound
 
 
 func _input(event) -> void:
@@ -13,5 +14,6 @@ func _notification(what: int) -> void:
 		Node.NOTIFICATION_PAUSED:
 			hide()
 		Node.NOTIFICATION_UNPAUSED:
+			SoundManager.play_clip(sound, SoundManager.SOUND_PAUSE)
 			show()
 			lives_label.text = str(PlayerManager.get_lives())
