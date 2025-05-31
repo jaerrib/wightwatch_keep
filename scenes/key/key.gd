@@ -10,6 +10,5 @@ func _on_area_entered(area: Area2D) -> void:
 	SoundManager.play_clip(sound, SoundManager.SOUND_KEY)
 
 
-
 func _on_removal_timer_timeout() -> void:
 	queue_free()
