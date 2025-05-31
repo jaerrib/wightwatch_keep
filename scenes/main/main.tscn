@@ -68,7 +68,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l3cfh"]
 shader = ExtResource("3_k2fmo")
-shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/resolution = Vector2(320, 240)
 shader_parameter/scan_line_amount = 0.5
 shader_parameter/warp_amount = 0.05
 shader_parameter/vignette_amount = 0.5
