@@ -39,7 +39,10 @@ func _process(_delta: float) -> void:
 			if vb_player_died.visible:
 				GameManager.reload_current_level_scene()
 			else:
-				GameManager.load_next_level_scene()
+				if GameManager.get_current_level() == 26:
+					GameManager.load_end_scene()
+				else:
+					GameManager.load_next_level_scene()
 
 
 func on_score_updated(score: int) -> void:
@@ -75,10 +78,10 @@ func stop_level_music():
 			node.stop()
 
 
-
 func on_player_died() -> void:
 	SoundManager.play_clip(sound, SoundManager.SOUND_PLAYER_DEATH) 
 	death_timer.start()
+
 
 func on_exit_reached() -> void:
 	show_hud()

@@ -1,6 +1,7 @@
 extends Node
 
 const MAIN = preload("res://scenes/main/main.tscn")
+const ENDING = preload("res://scenes/game_end/game_end.tscn")
 const TOTAL_LEVELS: int = 26
 
 var _level_scenes: Dictionary = {}
@@ -20,6 +21,10 @@ func load_main_scene() -> void:
 func load_next_level_scene() -> void:
 	set_next_level()
 	get_tree().change_scene_to_packed(_level_scenes[_current_level])
+
+
+func load_end_scene() -> void:
+	get_tree().change_scene_to_packed(ENDING)
 
 
 func warp_to_level(warp_level: int) -> void:

@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmyywoqy7djgy"]
+
+[ext_resource type="Script" uid="uid://bqrcmjootxb2o" path="res://scenes/game_end/game_end.gd" id="1_5xvrx"]
+[ext_resource type="Shader" uid="uid://duyhok2fywa0y" path="res://scenes/level_base/scanlines.gdshader" id="2_qy3gy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_liwhc"]
+shader = ExtResource("2_qy3gy")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 0.5
+shader_parameter/warp_amount = 0.05
+shader_parameter/vignette_amount = 0.5
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/grille_amount = 0.05
+shader_parameter/brightness_boost = 1.2
+
+[node name="GameEnd" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5xvrx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Pages" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="GoodEnding" type="RichTextLabel" parent="MarginContainer/Pages"]
+layout_mode = 2
+offset_right = 300.0
+offset_bottom = 220.0
+text = "The hero triumphs, escaping as the cursed tower crumbles. The spirits find peace, their torment vanquished, and the morning sun cuts through lingering darkness. A faint whisper drifts on the wind - evil never truly sleeps. The hero grips their weapon, knowing the nightmare has faded, but the battle may never be over."
+fit_content = true
+scroll_active = false
+
+[node name="NeutralEnding" type="RichTextLabel" parent="MarginContainer/Pages"]
+visible = false
+layout_mode = 2
+offset_right = 300.0
+offset_bottom = 220.0
+text = "The hero defeats the wight and escapes, but the battle has taken its toll. The tower crumbles, and the land begins to heal, yet whispers of lingering evil remain. The hero stands at the ruins, wondering if peace is truly restored. A strange unease settles in their chest, a quiet warning that some nightmares never fully fade."
+fit_content = true
+scroll_active = false
+
+[node name="BadEnding" type="RichTextLabel" parent="MarginContainer/Pages"]
+visible = false
+layout_mode = 2
+offset_right = 300.0
+offset_bottom = 220.0
+text = "The hero barely escapes the collapsing tower, wounded and cursed. The spirits are freed, but the land remains steeped in darkness. As the last embers fade, doubt lingers - 	was their fight in vain? The crimson sky offers no answers, only the weight of a battle that may never truly end."
+fit_content = true
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Scanlines" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_liwhc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.501961)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
