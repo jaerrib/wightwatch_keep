@@ -1,8 +1,11 @@
 extends Control
 
-@onready var bad_ending: RichTextLabel = $MarginContainer/Pages/BadEnding
-@onready var good_ending: RichTextLabel = $MarginContainer/Pages/GoodEnding
-@onready var neutral_ending: RichTextLabel = $MarginContainer/Pages/NeutralEnding
+@onready var bad_ending: RichTextLabel = $MarginContainer/Endings/BadEnding
+@onready var credits: RichTextLabel = $MarginContainer/Credits
+@onready var endings: Control = $MarginContainer/Endings
+@onready var good_ending: RichTextLabel = $MarginContainer/Endings/GoodEnding
+@onready var music: AudioStreamPlayer = $Music
+@onready var neutral_ending: RichTextLabel = $MarginContainer/Endings/NeutralEnding
 
 
 func _ready() -> void:
@@ -18,8 +21,20 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
+		check_visible_text()
+
+func show_credits() -> void:
+	endings.hide()
+	credits.show()
+
+
+func check_visible_text() -> void:
+	if credits.visible:
+		music.volume_linear
 		GameManager.load_main_scene()
+	else:
+		show_credits()
 
 
 func _on_timer_timeout() -> void:
-	GameManager.load_main_scene()
+	check_visible_text()
