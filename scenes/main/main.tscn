@@ -1,20 +1,53 @@
-[gd_scene load_steps=11 format=3 uid="uid://d04dkprfqfpbr"]
+[gd_scene load_steps=19 format=4 uid="uid://d04dkprfqfpbr"]
 
 [ext_resource type="FontFile" uid="uid://b8dqyry4eqxty" path="res://assets/fonts/8-bit-limit.brk.ttf" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://0omryxihp3te" path="res://scenes/main/main.gd" id="1_iuonh"]
 [ext_resource type="AudioStream" uid="uid://b2er7ryp3obvs" path="res://assets/audio/wind.ogg" id="2_l3cfh"]
+[ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="3_hujxm"]
 [ext_resource type="Shader" uid="uid://duyhok2fywa0y" path="res://scenes/level_base/scanlines.gdshader" id="3_k2fmo"]
+[ext_resource type="FontFile" uid="uid://dqmo6s7pvjy4r" path="res://assets/fonts/visitor-brk.visitor-tt1-brk.ttf" id="4_6q06x"]
+[ext_resource type="Texture2D" uid="uid://54u8vug723xr" path="res://assets/enemies/bat.png" id="6_ow5a4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hujxm"]
+atlas = ExtResource("6_ow5a4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyfjg"]
+atlas = ExtResource("6_ow5a4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6q06x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hujxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyfjg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iuonh"]
 font = ExtResource("1_hyk8p")
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_ow5a4"]
+font = ExtResource("1_hyk8p")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_6q06x"]
+font = ExtResource("4_6q06x")
+font_size = 10
 
 [sub_resource type="Animation" id="Animation_6q06x"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer/Label:label_settings:font_color")
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Label:label_settings:font_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -31,7 +64,7 @@ step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer/Label:label_settings:font_color")
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Label:label_settings:font_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -49,7 +82,7 @@ step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer/Label:label_settings:font_color")
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/Label:label_settings:font_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -99,6 +132,10 @@ stream = ExtResource("2_l3cfh")
 volume_db = -5.0
 autoplay = true
 
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAQAAcAAAAIAAAAAAAQAAgAAAABAAEAAAADAAcAAAAIAAAAAAADAAgAAAABAAEAAAAEAAcAAAAIAAAAAAAPAAcAAAAIAAAAAAAGAAcAAAAIAAAAAAAFAAcAAAAIAAAAAAAHAAcAAAAIAAAAAAAIAAcAAAAIAAAAAAAJAAcAAAAIAAAAAAAKAAcAAAAIAAAAAAALAAcAAAAIAAAAAAAMAAcAAAAIAAAAAAANAAcAAAAIAAAAAAAOAAcAAAAIAAAAAAADAAkAAAABAAEAAAAEAAgAAAABAAEAAAAPAAgAAAABAAEAAAAQAAkAAAABAAEAAAATAAAAAAAIAAAAAAASAAAAAAAIAAAAAAARAAAAAAAIAAAAAAAQAAAAAAAIAAAAAAAPAAAAAAAIAAAAAAAOAAAAAAAIAAAAAAANAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAALAAAAAAAIAAAAAAAKAAAAAAAIAAAAAAAJAAAAAAAIAAAAAAAIAAAAAAAIAAAAAAAHAAAAAAAIAAAAAAAGAAAAAAAIAAAAAAAFAAAAAAAIAAAAAAAEAAAAAAAIAAAAAAADAAAAAAAIAAAAAAACAAAAAAAIAAAAAAABAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAA4AAAAIAAAAAAABAA4AAAAIAAAAAAACAA4AAAAIAAAAAAADAA4AAAAIAAAAAAAEAA4AAAAIAAAAAAAFAA4AAAAIAAAAAAAGAA4AAAAIAAAAAAAHAA4AAAAIAAAAAAAIAA4AAAAIAAAAAAAJAA4AAAAIAAAAAAAKAA4AAAAIAAAAAAALAA4AAAAIAAAAAAAMAA4AAAAIAAAAAAANAA4AAAAIAAAAAAAOAA4AAAAIAAAAAAAPAA4AAAAIAAAAAAAQAA4AAAAIAAAAAAARAA4AAAAIAAAAAAASAA4AAAAIAAAAAAATAA4AAAAIAAAAAAATAAEAAwAAABIAAAATAAIAAwACABIAAAATAAMAAwABABIAAAATAAQAAwACABIAAAATAAUAAwAAABIAAAATAAYAAwACABIAAAATAAcAAwACABIAAAATAAgAAwAAABIAAAATAAkAAwACABIAAAATAAoAAwAAABIAAAATAAsAAwAAABIAAAATAAwAAwAAABIAAAATAA0AAwAAABIAAAAAAAEAAwABABIAAAAAAAIAAwACABIAAAAAAAMAAwAAABIAAAAAAAQAAwACABIAAAAAAAUAAwAAABIAAAAAAAYAAwACABIAAAAAAAcAAwABABIAAAAAAAgAAwAAABIAAAAAAAkAAwABABIAAAAAAAoAAwABABIAAAAAAAsAAwACABIAAAAAAAwAAwACABIAAAAAAA0AAwABABIAAAA=")
+tile_set = ExtResource("3_hujxm")
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -111,12 +148,46 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="Label" type="Label" parent="MarginContainer"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
+position = Vector2(201, 66)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_6q06x")
+autoplay = "default"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Wightwatch Keep"
 label_settings = SubResource("LabelSettings_iuonh")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press <jump> to begin"
+label_settings = SubResource("LabelSettings_ow5a4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "🄯 2025 John Beers, Made with Godot"
+label_settings = SubResource("LabelSettings_6q06x")
+horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
