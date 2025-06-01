@@ -9,6 +9,7 @@ extends Control
 
 
 func _ready() -> void:
+	credits.hide()
 	var lives_remaining = PlayerManager.get_lives()
 	if lives_remaining >= 8:
 		good_ending.show()
@@ -22,6 +23,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		check_visible_text()
+
 
 func show_credits() -> void:
 	endings.hide()

@@ -52,6 +52,7 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="Credits" type="RichTextLabel" parent="MarginContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_5cxft")
 theme_override_font_sizes/normal_font_size = 12
