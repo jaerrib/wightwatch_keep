@@ -8,6 +8,10 @@
 [ext_resource type="FontFile" uid="uid://dqmo6s7pvjy4r" path="res://assets/fonts/visitor-brk.visitor-tt1-brk.ttf" id="4_6q06x"]
 [ext_resource type="Texture2D" uid="uid://54u8vug723xr" path="res://assets/enemies/bat.png" id="6_ow5a4"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_6q06x"]
+font = ExtResource("4_6q06x")
+font_size = 10
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_hujxm"]
 atlas = ExtResource("6_ow5a4")
 region = Rect2(0, 0, 16, 16)
@@ -37,10 +41,6 @@ font_size = 32
 [sub_resource type="LabelSettings" id="LabelSettings_ow5a4"]
 font = ExtResource("1_hyk8p")
 font_size = 12
-
-[sub_resource type="LabelSettings" id="LabelSettings_6q06x"]
-font = ExtResource("4_6q06x")
-font_size = 10
 
 [sub_resource type="Animation" id="Animation_6q06x"]
 length = 0.001
@@ -148,6 +148,15 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
+[node name="VersionLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+text = "v1.0"
+label_settings = SubResource("LabelSettings_6q06x")
+horizontal_alignment = 2
+vertical_alignment = 2
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
 position = Vector2(201, 66)
 scale = Vector2(3, 3)
@@ -163,6 +172,7 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Wightwatch Keep"
 label_settings = SubResource("LabelSettings_iuonh")
 horizontal_alignment = 1
@@ -174,6 +184,7 @@ layout_mode = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Press <jump> to begin"
 label_settings = SubResource("LabelSettings_ow5a4")
 horizontal_alignment = 1
@@ -185,9 +196,11 @@ size_flags_vertical = 3
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 6
 text = "🄯 2025 John Beers, Made with Godot"
 label_settings = SubResource("LabelSettings_6q06x")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
