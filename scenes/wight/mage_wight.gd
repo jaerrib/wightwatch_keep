@@ -82,8 +82,8 @@ func on_hit_box_entered(area: Area2D) -> void:
 	go_invincible()
 	_life -= 1
 	if _life <= 0:
-		SignalManager.on_mage_wight_killed.emit(global_position)
 		die()
+		SignalManager.on_mage_wight_killed.emit(global_position)
 
 
 func go_invincible() -> void:
