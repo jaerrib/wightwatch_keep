@@ -40,7 +40,6 @@ func flip_me() -> void:
 	_flip_sprite = animated_sprite_2d.flip_h
 
 
-
 func choose_attack_type() -> void:
 	_attack_number = randi_range(1, 2)
 	var selection: String = "attack" + str(_attack_number)
@@ -74,7 +73,8 @@ func summon_rocks() -> void:
 
 
 func summon_minions() -> void:
-	for i in range(0, 3):
+	var num: int = randi_range(3, 7)
+	for i in range(0, num):
 		SignalManager.on_create_enemy.emit(generate_spawn_pos(), Constants.EnemyType.MINION)
 
 
