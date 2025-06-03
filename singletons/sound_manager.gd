@@ -11,11 +11,11 @@ const SOUND_PLAYER_ATTACK = "player_attack"
 const SOUND_PLAYER_DEATH = "player_death"
 
 var SOUNDS: Dictionary = {
-	SOUND_PLAYER_ATTACK: preload("res://assets/audio/player_attack.wav") ,
-	SOUND_EXPLOSION: preload("res://assets/audio/enemy_hurt_3.wav"),
-	SOUND_COIN: preload("res://assets/audio/enemy_alert_4.wav"),
-	SOUND_KEY: preload("res://assets/audio/pickup_2.wav"),
-	SOUND_EXIT: preload("res://assets/audio/pickup_1.wav"),
+	SOUND_PLAYER_ATTACK: preload("res://assets/audio/player_attack.ogg") ,
+	SOUND_EXPLOSION: preload("res://assets/audio/enemy_hurt_3.ogg"),
+	SOUND_COIN: preload("res://assets/audio/enemy_alert_4.ogg"),
+	SOUND_KEY: preload("res://assets/audio/pickup_2.ogg"),
+	SOUND_EXIT: preload("res://assets/audio/pickup_1.ogg"),
 	SOUND_MAGIC: preload("res://assets/audio/magic.ogg"),
 	SOUND_DAMAGE: preload("res://assets/audio/player_hurt.ogg"),
 	SOUND_PLAYER_DEATH: preload("res://assets/audio/player_death.ogg"),
