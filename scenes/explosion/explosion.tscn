@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cojygachxtfhl"]
 
 [ext_resource type="Texture2D" uid="uid://bvswjjuahj3h0" path="res://assets/explosion/explosion.png" id="1_plwnx"]
-[ext_resource type="AudioStream" uid="uid://b3dof002o2dxe" path="res://assets/audio/enemy_hurt_3.wav" id="2_12s4q"]
+[ext_resource type="AudioStream" uid="uid://bse8hmcqtdl4v" path="res://assets/audio/enemy_hurt_3.ogg" id="2_12s4q"]
 
 [sub_resource type="Animation" id="Animation_wikc1"]
 length = 0.001
