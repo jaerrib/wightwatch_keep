@@ -142,6 +142,8 @@ func calculate_state() -> void:
 
 
 func on_ladder(value: bool) -> void:
+	if value == false and sign(velocity.y) == -1:
+		velocity.y = JUMP_VELOCITY * 0.75
 	_on_ladder = value
 	set_state(PlayerState.ON_LADDER)
 
