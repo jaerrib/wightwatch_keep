@@ -21,6 +21,7 @@ var _on_ladder: bool = false
 var _state: PlayerState = PlayerState.IDLE
 
 
+@onready var above_ladder_area: Area2D = $AboveLadderArea
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var collision_shape_2d: CollisionShape2D = $SwordHitBox/CollisionShape2D
 @onready var death_sprite: AnimatedSprite2D = $DeathSprite
@@ -70,7 +71,7 @@ func get_input(delta) -> void:
 	if _on_ladder:
 		check_ladder_input(delta)
 	check_directional_input(delta)
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and (is_on_floor() or (above_ladder() and _on_ladder)):
 		velocity.y = JUMP_VELOCITY
 	velocity.y = clampf(velocity.y, JUMP_VELOCITY, MAX_FALL)
 
@@ -127,12 +128,12 @@ func set_state(new_state: PlayerState) -> void:
 func calculate_state() -> void:
 	if _state == PlayerState.HURT:
 		return
-	if is_on_floor():
+	if is_on_floor() or above_ladder():
 		if velocity.x == 0:
 			set_state(PlayerState.IDLE)
 		else:
 			set_state(PlayerState.RUN)
-	elif _on_ladder:
+	elif _on_ladder and not above_ladder():
 		set_state(PlayerState.ON_LADDER)
 	else:
 		if velocity.y > 0:
@@ -145,7 +146,8 @@ func on_ladder(value: bool) -> void:
 	if value == false and sign(velocity.y) == -1:
 		velocity.y = JUMP_VELOCITY * 0.75
 	_on_ladder = value
-	set_state(PlayerState.ON_LADDER)
+	if not above_ladder():
+		set_state(PlayerState.ON_LADDER)
 
 
 func _on_animation_player_animation_finished(anim_name: String) -> void:
@@ -191,3 +193,7 @@ func on_player_died() -> void:
 	sprite_2d.hide()
 	death_sprite.show()
 	death_sprite.play("death")
+
+
+func above_ladder() -> bool:
+	return above_ladder_area.get_overlapping_areas().size() == 0
