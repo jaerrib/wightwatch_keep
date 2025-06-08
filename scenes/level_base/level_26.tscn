@@ -111,4 +111,6 @@ collision_mask = 2
 position = Vector2(-4, 1)
 shape = SubResource("RectangleShape2D_u2ywu")
 
+[node name="HeartSpawnSound" type="AudioStreamPlayer2D" parent="." index="18"]
+
 [connection signal="area_entered" from="CameraTrigger" to="." method="_on_camera_trigger_area_entered"]

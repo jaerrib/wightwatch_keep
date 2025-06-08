@@ -8,12 +8,12 @@ const SOUNDS: Dictionary = {
 	BOSS_MUSIC: preload("res://assets/audio/Boss.ogg"),
 }
 
+@onready var heart_spawn_sound: AudioStreamPlayer2D = $HeartSpawnSound
 @onready var key: Area2D = $Key
 @onready var ladder_1: Ladder = $Ladders/Ladder1
 @onready var ladder_2: Ladder = $Ladders/Ladder2
 @onready var camera_2d: Camera2D = $Player/Camera2D
 @onready var camera_trigger: Area2D = $CameraTrigger
-
 
 
 func _ready() -> void:
@@ -61,6 +61,6 @@ func _on_camera_trigger_area_entered(area: Area2D) -> void:
 	music.play()
 
 
-
 func on_heart_spawn() -> void:
 	SignalManager.on_create_object.emit(HEART_SPAWN_POS, Constants.ObjectType.HEART)
+	SoundManager.play_clip(heart_spawn_sound, SoundManager.SOUND_COIN)
