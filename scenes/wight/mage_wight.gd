@@ -12,8 +12,9 @@ var _visible: bool = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var attack_timer: Timer = $AttackTimer
-@onready var invincible_timer: Timer = $InvincibleTimer
 @onready var floor_detection: RayCast2D = $FloorDetection
+@onready var invincible_timer: Timer = $InvincibleTimer
+@onready var sound: AudioStreamPlayer2D = $Sound
 
 
 func _physics_process(delta: float) -> void:
@@ -62,8 +63,10 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	_attacking = false
 	attack_timer.start()
 	if _attack_number == 1:
+		SoundManager.play_clip(sound, SoundManager.SOUND_BOULDERS)
 		summon_rocks()
 	else:
+		SoundManager.play_clip(sound, SoundManager.SOUND_SUMMON)
 		summon_minions()
 
 

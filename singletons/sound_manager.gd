@@ -5,6 +5,8 @@ const SOUND_DAMAGE = "sound_damage"
 const SOUND_EXIT = "exit"
 const SOUND_EXPLOSION = "enemy_hurt_3"
 const SOUND_KEY = "key"
+const SOUND_SUMMON = "summon"
+const SOUND_BOULDERS = "boulders"
 const SOUND_MAGIC = "magic"
 const SOUND_PAUSE = "pause"
 const SOUND_PLAYER_ATTACK = "player_attack"
@@ -19,7 +21,9 @@ var SOUNDS: Dictionary = {
 	SOUND_MAGIC: preload("res://assets/audio/magic.ogg"),
 	SOUND_DAMAGE: preload("res://assets/audio/player_hurt.ogg"),
 	SOUND_PLAYER_DEATH: preload("res://assets/audio/player_death.ogg"),
-	SOUND_PAUSE: preload("res://assets/audio/pause.ogg")
+	SOUND_PAUSE: preload("res://assets/audio/pause.ogg"),
+	SOUND_SUMMON: preload("res://assets/audio/summon.ogg"),
+	SOUND_BOULDERS: preload("res://assets/audio/boulders.ogg")
 }
 
 
