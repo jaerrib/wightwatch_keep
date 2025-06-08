@@ -6,7 +6,7 @@
 [node name="Minion" instance=ExtResource("1_fi3op")]
 script = ExtResource("2_ojsii")
 speed = 5.0
-points = 1
+points = 100
 
 [node name="CollisionShape2D" parent="." index="1"]
 disabled = true
