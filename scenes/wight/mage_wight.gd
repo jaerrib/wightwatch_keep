@@ -82,7 +82,10 @@ func summon_minions() -> void:
 
 
 func on_hit_box_entered(area: Area2D) -> void:
+	if _invincible:
+		return
 	go_invincible()
+	SoundManager.play_clip(sound, SoundManager.SOUND_BOSS_HURT)
 	_life -= 1
 	if _life <= 0:
 		die()

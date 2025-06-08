@@ -11,6 +11,7 @@ var _player_pos: Vector2
 @onready var floor_detection: RayCast2D = $FloorDetection
 @onready var invincible_animation: AnimationPlayer = $InvincibleAnimation
 @onready var invincible_timer: Timer = $InvincibleTimer
+@onready var sound: AudioStreamPlayer2D = $Sound
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var sword_collision: CollisionShape2D = $SwordHitBox/CollisionShape2D
 @onready var sword_hit_box: Area2D = $SwordHitBox
@@ -68,8 +69,11 @@ func is_nearby() -> bool:
 
 
 func on_hit_box_entered(area: Area2D) -> void:
+	if _invincible:
+		return
 	turn_timer.start()
 	go_invincible()
+	SoundManager.play_clip(sound, SoundManager.SOUND_BOSS_HURT)
 	_life -= 1
 	if _life % 5 == 0:
 		SignalManager.on_heart_spawn.emit()
@@ -90,6 +94,11 @@ func _on_invincible_timer_timeout() -> void:
 
 
 func _on_turn_timer_timeout() -> void:
+	SoundManager.play_clip(sound, SoundManager.SOUND_ROAR)
 	get_player_position()
 	if !is_facing():
 		flip_me()
+
+
+func play_attack_sound() -> void:
+	SoundManager.play_clip(sound, SoundManager.SOUND_WARRIOR_SWING)
