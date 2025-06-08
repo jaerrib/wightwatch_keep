@@ -128,7 +128,7 @@ func set_state(new_state: PlayerState) -> void:
 func calculate_state() -> void:
 	if _state == PlayerState.HURT:
 		return
-	if is_on_floor() or above_ladder():
+	if velocity.y == 0 and (is_on_floor() or above_ladder()):
 		if velocity.x == 0:
 			set_state(PlayerState.IDLE)
 		else:
