@@ -9,8 +9,6 @@ func _ready() -> void:
 	SignalManager.on_player_died.connect(on_player_died)
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("advance"):
-		GameManager.load_next_level_scene()
 	if Input.is_action_just_pressed("quit"):
 		GameManager.load_main_scene()
 
