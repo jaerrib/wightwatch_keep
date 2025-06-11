@@ -139,6 +139,7 @@ _data = {
 [node name="WarriorWight" instance=ExtResource("1_f806e")]
 script = ExtResource("2_04cu5")
 speed = 10.0
+points = 1500
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 animation = &""

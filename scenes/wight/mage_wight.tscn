@@ -128,6 +128,7 @@ _data = {
 
 [node name="MageWight" instance=ExtResource("1_hfmn7")]
 script = ExtResource("2_wxc7l")
+points = 1500
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_616nv")
