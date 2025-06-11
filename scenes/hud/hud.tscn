@@ -169,7 +169,7 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="ColorRect/VBLevelComplete"]
 layout_mode = 2
-text = "Press <jump> to advance"
+text = "Press JUMP to advance"
 label_settings = SubResource("LabelSettings_n56i7")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -245,7 +245,7 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="ColorRect/VBGameOver"]
 layout_mode = 2
-text = "Press <jump> for main menu"
+text = "Press JUMP for main menu"
 label_settings = SubResource("LabelSettings_n56i7")
 horizontal_alignment = 1
 vertical_alignment = 1

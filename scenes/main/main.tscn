@@ -185,7 +185,7 @@ layout_mode = 2
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Press <jump> to begin"
+text = "Press JUMP to begin"
 label_settings = SubResource("LabelSettings_ow5a4")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -197,7 +197,7 @@ size_flags_vertical = 3
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
-text = "🄯 2025 John Beers, Made with Godot"
+text = "© 2025 John Beers, Made with Godot"
 label_settings = SubResource("LabelSettings_6q06x")
 horizontal_alignment = 1
 vertical_alignment = 1
