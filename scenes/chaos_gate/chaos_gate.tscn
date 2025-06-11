@@ -16,3 +16,4 @@ shape = SubResource("RectangleShape2D_8luiu")
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="finished" from="Sound" to="." method="_on_sound_finished"]

@@ -13,6 +13,7 @@ const SOUND_PAUSE = "pause"
 const SOUND_PLAYER_ATTACK = "player_attack"
 const SOUND_PLAYER_DEATH = "player_death"
 const SOUND_ROAR = "roar"
+const SOUND_WARP_GATE = "warp_gate"
 const SOUND_WARRIOR_SWING = "warrior_swing"
 
 var SOUNDS: Dictionary = {
@@ -29,7 +30,8 @@ var SOUNDS: Dictionary = {
 	SOUND_BOULDERS: preload("res://assets/audio/boulders.ogg"),
 	SOUND_WARRIOR_SWING: preload("res://assets/audio/warrior_swing.ogg"),
 	SOUND_ROAR: preload("res://assets/audio/roar.ogg"),
-	SOUND_BOSS_HURT: preload("res://assets/audio/boss_hurt.ogg")
+	SOUND_BOSS_HURT: preload("res://assets/audio/boss_hurt.ogg"),
+	SOUND_WARP_GATE: preload("res://assets/audio/warp_gate.ogg")
 }
 
 
