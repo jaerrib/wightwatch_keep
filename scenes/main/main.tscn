@@ -167,6 +167,7 @@ autoplay = "default"
 layout_mode = 2
 
 [node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -185,7 +186,8 @@ layout_mode = 2
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Press JUMP to begin"
+text = "Press JUMP to begin
+or QUIT to exit"
 label_settings = SubResource("LabelSettings_ow5a4")
 horizontal_alignment = 1
 vertical_alignment = 1

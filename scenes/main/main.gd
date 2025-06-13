@@ -23,6 +23,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if !music.has_stream_playback():
 		start_game()
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
 	if Input.is_action_just_pressed("jump") and !_intro_playing:
 		start_intro()
 
