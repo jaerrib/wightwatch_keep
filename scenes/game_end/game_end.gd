@@ -6,9 +6,11 @@ extends Control
 @onready var good_ending: RichTextLabel = $MarginContainer/Endings/GoodEnding
 @onready var music: AudioStreamPlayer = $Music
 @onready var neutral_ending: RichTextLabel = $MarginContainer/Endings/NeutralEnding
+@onready var score_label: Label = $HBoxContainer/ScoreLabel
 
 
 func _ready() -> void:
+	score_label.text = "%06d" % ScoreManager.get_score()
 	credits.hide()
 	var lives_remaining = PlayerManager.get_lives()
 	if lives_remaining >= 8:
