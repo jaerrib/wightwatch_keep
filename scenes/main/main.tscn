@@ -155,7 +155,29 @@ size_flags_vertical = 0
 text = "v1.1"
 label_settings = SubResource("LabelSettings_6q06x")
 horizontal_alignment = 2
-vertical_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="HighScoreText" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "High Score"
+label_settings = SubResource("LabelSettings_6q06x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "0000000"
+label_settings = SubResource("LabelSettings_6q06x")
+vertical_alignment = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
 position = Vector2(201, 66)

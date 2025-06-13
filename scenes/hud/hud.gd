@@ -6,6 +6,7 @@ var _can_continue: bool = false
 @onready var color_rect: ColorRect = $ColorRect
 @onready var continue_timer: Timer = $ContinueTimer
 @onready var death_timer: Timer = $DeathTimer
+@onready var end_score_label: Label = $ColorRect/VBGameOver/HBoxContainer/EndScoreLabel
 @onready var hb_hearts: HBoxContainer = $MC/MC2/HB/HBHearts
 @onready var level_label: Label = $MC/MC2/HB/HBLevel/LevelLabel
 @onready var lives_label: Label = $ColorRect/VBPlayerDied/HB/LivesLabel
@@ -46,7 +47,7 @@ func _process(_delta: float) -> void:
 
 
 func on_score_updated(score: int) -> void:
-	score_label.text = "%05d" % score
+	score_label.text = "%06d" % score
 
 
 func set_hearts() -> void:
@@ -66,6 +67,7 @@ func show_hud() -> void:
 
 
 func on_game_over() -> void:
+	end_score_label.text = score_label.text
 	stop_level_music()
 	music.play()
 	show_hud()

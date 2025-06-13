@@ -5,14 +5,18 @@ const SCORES_PATH = "user://wightwatch_keep.dat"
 var _score: int = 0
 var _high_score: int = 0
 
+
 func _ready() -> void:
 	SignalManager.on_coin_collected.connect(update_score)
 	SignalManager.on_enemy_hit.connect(update_score)
+	SignalManager.on_game_over.connect(on_game_over)
 	load_high_score()
 
 
 func update_score(p: int) -> void:
 	_score += p
+	if _high_score < _score:
+		_high_score = _score
 	SignalManager.on_score_updated.emit(_score)
 
 
@@ -32,13 +36,6 @@ func get_high_score() -> int:
 	return _high_score
 
 
-func increment_score(v: int) -> void:
-	_score += v
-	if _high_score < _score:
-		_high_score = _score
-	SignalManager.on_score_updated.emit(_score)
-
-
 func load_high_score() -> void:
 	var file: FileAccess = FileAccess.open(SCORES_PATH, FileAccess.READ)
 	if file:
@@ -50,3 +47,14 @@ func load_high_score() -> void:
 		file.close()
 	else:
 		print("Failed to load file")
+
+
+func on_game_over() -> void:
+	save_high_score_to_file()
+
+
+func save_high_score_to_file() -> void:
+	var file: FileAccess = FileAccess.open(SCORES_PATH, FileAccess.WRITE)
+	if file:
+		file.store_string(str(_high_score))
+		file.close

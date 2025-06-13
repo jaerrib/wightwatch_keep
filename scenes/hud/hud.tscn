@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b3ch6qbcily7y"]
+[gd_scene load_steps=13 format=3 uid="uid://b3ch6qbcily7y"]
 
 [ext_resource type="Script" uid="uid://b2xk7tgg228f0" path="res://scenes/hud/hud.gd" id="1_c45xl"]
 [ext_resource type="FontFile" uid="uid://c68gjc4nwofmq" path="res://assets/fonts/visitor-brk.visitor-tt2-brk.ttf" id="2_0bx4p"]
@@ -24,6 +24,9 @@ font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_n56i7"]
 font = ExtResource("5_mgtrf")
+
+[sub_resource type="LabelSettings" id="LabelSettings_mq0y1"]
+font = ExtResource("2_0bx4p")
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -249,6 +252,20 @@ text = "Press JUMP for main menu"
 label_settings = SubResource("LabelSettings_n56i7")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBGameOver"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ScoreText" type="Label" parent="ColorRect/VBGameOver/HBoxContainer"]
+layout_mode = 2
+text = "Score"
+label_settings = SubResource("LabelSettings_mq0y1")
+
+[node name="EndScoreLabel" type="Label" parent="ColorRect/VBGameOver/HBoxContainer"]
+layout_mode = 2
+text = "000000"
+label_settings = SubResource("LabelSettings_mq0y1")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_v7mo4")

@@ -11,12 +11,15 @@ var _intro_playing: bool = false
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var flicker_timer: Timer = $FlickerTimer
+@onready var high_score_label: Label = $MarginContainer/HBoxContainer/HighScoreLabel
 @onready var music: AudioStreamPlayer = $Music
 @onready var pulse_delay: Timer = $PulseDelay
 
 
 func _ready() -> void:
 	music.stream = SOUNDS[WIND]
+	high_score_label.text = "%06d" % ScoreManager.get_high_score()
+
 	music.play()
 
 
