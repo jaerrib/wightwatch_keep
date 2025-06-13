@@ -3,7 +3,6 @@ extends Heart
 const GRAVITY: float = 160.0
 const JUMP: float = -60.0
 
-var _collectable: bool = false
 var _speed_y: float = JUMP
 var _start_y: float
 
@@ -24,6 +23,7 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if _collectable:
+		_collectable = false
 		PlayerManager.increase_hearts(heal_amt)
 		SignalManager.on_heart_collected.emit()
 		removal_timer.start()
