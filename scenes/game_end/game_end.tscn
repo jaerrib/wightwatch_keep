@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmyywoqy7djgy"]
+[gd_scene load_steps=9 format=3 uid="uid://bmyywoqy7djgy"]
 
 [ext_resource type="Script" uid="uid://bqrcmjootxb2o" path="res://scenes/game_end/game_end.gd" id="1_5xvrx"]
 [ext_resource type="AudioStream" uid="uid://d1jf0ponmqfx5" path="res://assets/audio/Ending.ogg" id="2_5cxft"]
 [ext_resource type="FontFile" uid="uid://b8dqyry4eqxty" path="res://assets/fonts/8-bit-limit.brk.ttf" id="2_b3wxn"]
 [ext_resource type="Shader" uid="uid://duyhok2fywa0y" path="res://scenes/level_base/scanlines.gdshader" id="2_qy3gy"]
 [ext_resource type="FontFile" uid="uid://dqmo6s7pvjy4r" path="res://assets/fonts/visitor-brk.visitor-tt1-brk.ttf" id="3_5cxft"]
+[ext_resource type="FontFile" uid="uid://c68gjc4nwofmq" path="res://assets/fonts/visitor-brk.visitor-tt2-brk.ttf" id="5_2mvbs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1c2qu"]
+font = ExtResource("5_2mvbs")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_liwhc"]
 shader = ExtResource("2_qy3gy")
@@ -103,6 +107,31 @@ theme_override_font_sizes/normal_font_size = 18
 text = "The hero barely escapes the collapsing tower, wounded and cursed. The spirits are freed, but the land remains steeped in darkness. As the last embers fade, doubt lingers - was their fight in vain? The crimson sky offers no answers, only the weight of a battle that may never truly end."
 fit_content = true
 scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.5
+offset_top = -23.0
+offset_right = 43.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ScoreText" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Score"
+label_settings = SubResource("LabelSettings_1c2qu")
+vertical_alignment = 2
+
+[node name="ScoreLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "000000"
+label_settings = SubResource("LabelSettings_1c2qu")
+vertical_alignment = 2
 
 [node name="EndingTimer" type="Timer" parent="."]
 wait_time = 30.0
