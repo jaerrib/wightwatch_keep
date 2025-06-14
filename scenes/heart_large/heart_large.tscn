@@ -15,5 +15,7 @@ texture = ExtResource("3_8v2n8")
 position = Vector2(0, 0.5)
 
 [node name="CollectionTimer" type="Timer" parent="." index="2"]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="timeout" from="CollectionTimer" to="." method="_on_collection_timer_timeout"]
