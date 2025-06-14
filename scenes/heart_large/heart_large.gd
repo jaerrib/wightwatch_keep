@@ -22,6 +22,8 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
+	if PlayerManager.player_is_at_full_hearts():
+		return
 	if _collectable:
 		_collectable = false
 		PlayerManager.increase_hearts(heal_amt)
