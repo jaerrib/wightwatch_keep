@@ -16,6 +16,6 @@ Wightwatch Keep is a puzzle platformer inspired by NES-era games like Castlevani
 - P (Start) - pause
 - Esc (Select) - quits back to the title screen during the game
 
-## Feeback
+## Feedback
 
 Please provide any feedback you have either by filing an issue or contacting me on Mastodon (@johnbeers@mastodon.social). Email is fine, too (jaerrib@tutanota.com).
