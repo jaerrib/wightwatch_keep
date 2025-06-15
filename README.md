@@ -12,7 +12,7 @@ Wightwatch Keep is a puzzle platformer inspired by NES-era games like Castlevani
 
 - WASD, arrow keys, D-pad or left joystick - move/climb
 - Space (A) - jump
-- Enter (X) - attack
+- Enter, Z (X) - attack
 - P (Start) - pause
 - Esc (Select) - quits back to the title screen during the game
 
