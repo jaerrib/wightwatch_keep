@@ -5,6 +5,7 @@ const SOUND_COIN = "coin"
 const SOUND_DAMAGE = "sound_damage"
 const SOUND_EXIT = "exit"
 const SOUND_EXPLOSION = "enemy_hurt_3"
+const SOUND_EXTRA_LIFE = "extra_life"
 const SOUND_KEY = "key"
 const SOUND_SUMMON = "summon"
 const SOUND_BOULDERS = "boulders"
@@ -31,7 +32,8 @@ var SOUNDS: Dictionary = {
 	SOUND_WARRIOR_SWING: preload("res://assets/audio/warrior_swing.ogg"),
 	SOUND_ROAR: preload("res://assets/audio/roar.ogg"),
 	SOUND_BOSS_HURT: preload("res://assets/audio/boss_hurt.ogg"),
-	SOUND_WARP_GATE: preload("res://assets/audio/warp_gate.ogg")
+	SOUND_WARP_GATE: preload("res://assets/audio/warp_gate.ogg"),
+	SOUND_EXTRA_LIFE: preload("res://singletons/sound_manager.gd")
 }
 
 
