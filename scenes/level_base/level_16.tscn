@@ -35,7 +35,7 @@ position = Vector2(296, 200)
 position = Vector2(168, 120)
 
 [node name="HeartLarge" parent="Hearts" index="1" instance=ExtResource("5_vuid3")]
-position = Vector2(328, 200)
+position = Vector2(328, 168)
 
 [node name="Chest" parent="Chests" index="0" instance=ExtResource("6_jxijg")]
 position = Vector2(296, 40)
