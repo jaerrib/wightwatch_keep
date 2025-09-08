@@ -15,11 +15,10 @@ func _ready() -> void:
 	var lives_remaining = PlayerManager.get_lives()
 	if lives_remaining >= 8:
 		good_ending.show()
+	elif lives_remaining >=4:
+		neutral_ending.show()
 	else:
-		if lives_remaining >=4:
-			neutral_ending.show
-		else:
-			bad_ending.show()
+		bad_ending.show()
 
 
 func _process(delta: float) -> void:
