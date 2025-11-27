@@ -7,7 +7,7 @@ const POSITION_TOGGLE: float = 200.0
 var _falling: bool = true
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var hit_box_collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var floor_detection: RayCast2D = $FloorDetection
 
 func _ready() -> void:
@@ -28,10 +28,21 @@ func _physics_process(delta: float) -> void:
 			flip_me()
 
 
+func die() -> void:
+	if _dying:
+		return
+	_dying = true
+	set_physics_process(false)
+	hide()
+	SignalManager.on_enemy_hit.emit(points)
+	SignalManager.on_create_object.emit(global_position, Constants.ObjectType.EXPLOSION)
+	removal_timer.start()
+
+
 func check_falling_status():
 	if global_position.y > POSITION_TOGGLE:
 		_falling = false
-		collision_shape_2d.disabled = false
+		hit_box_collision_shape_2d.disabled = false
 
 
 func flip_me() -> void:
