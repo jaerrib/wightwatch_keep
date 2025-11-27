@@ -9,6 +9,7 @@ var _gravity: float = 800.0
 var _dying: bool = false
 
 @onready var removal_timer: Timer = $RemovalTimer
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 
 func _ready() -> void:
@@ -25,7 +26,6 @@ func fallen_off() -> void:
 
 
 func die() -> void:
-	#SoundManager.play_clip(sound, SoundManager.SOUND_ENEMY_HURT)
 	if _dying:
 		return
 	_dying = true
@@ -38,6 +38,7 @@ func die() -> void:
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
+	collision_shape_2d.set_deferred("disabled", true)
 	die()
 
 
