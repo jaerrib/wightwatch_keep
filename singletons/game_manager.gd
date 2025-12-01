@@ -9,13 +9,18 @@ var _current_level: int = 0
 
 
 func _ready() -> void:
-	for ln in range(1, TOTAL_LEVELS + 1):
+	for ln in range(0, TOTAL_LEVELS + 1):
 		_level_scenes[ln] = load("res://scenes/level_base/level_%d.tscn" % ln)
 
 
 func load_main_scene() -> void:
 	_current_level = 0
 	get_tree().change_scene_to_packed(MAIN)
+
+
+func load_prototype_level() -> void:
+	_current_level = -1
+	load_next_level_scene()
 
 
 func load_next_level_scene() -> void:

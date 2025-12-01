@@ -29,7 +29,10 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("jump") and !_intro_playing:
-		start_intro()
+		if Input.is_action_pressed("down"):
+			GameManager.load_prototype_level()
+		else:
+			start_intro()
 
 
 func start_intro() -> void:
