@@ -71,7 +71,7 @@ func on_game_over() -> void:
 	stop_level_music()
 	music.play()
 	show_hud()
-	vb_game_over.show()		
+	vb_game_over.show()
 
 
 func stop_level_music():
