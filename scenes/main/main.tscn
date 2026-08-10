@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://d04dkprfqfpbr"]
+[gd_scene format=4 uid="uid://d04dkprfqfpbr"]
 
 [ext_resource type="FontFile" uid="uid://b8dqyry4eqxty" path="res://assets/fonts/8-bit-limit.brk.ttf" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://0omryxihp3te" path="res://scenes/main/main.gd" id="1_iuonh"]
@@ -29,7 +29,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yyfjg")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -109,7 +109,7 @@ shader_parameter/vignette_intensity = 0.3
 shader_parameter/grille_amount = 0.05
 shader_parameter/brightness_boost = 1.2
 
-[node name="Main" type="Control"]
+[node name="Main" type="Control" unique_id=612012121]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -118,7 +118,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_iuonh")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=708293575]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -127,16 +127,16 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1070550390]
 stream = ExtResource("2_l3cfh")
 volume_db = -5.0
 autoplay = true
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=274209142]
 tile_map_data = PackedByteArray("AAAQAAcAAAAIAAAAAAAQAAgAAAABAAEAAAADAAcAAAAIAAAAAAADAAgAAAABAAEAAAAEAAcAAAAIAAAAAAAPAAcAAAAIAAAAAAAGAAcAAAAIAAAAAAAFAAcAAAAIAAAAAAAHAAcAAAAIAAAAAAAIAAcAAAAIAAAAAAAJAAcAAAAIAAAAAAAKAAcAAAAIAAAAAAALAAcAAAAIAAAAAAAMAAcAAAAIAAAAAAANAAcAAAAIAAAAAAAOAAcAAAAIAAAAAAADAAkAAAABAAEAAAAEAAgAAAABAAEAAAAPAAgAAAABAAEAAAAQAAkAAAABAAEAAAATAAAAAAAIAAAAAAASAAAAAAAIAAAAAAARAAAAAAAIAAAAAAAQAAAAAAAIAAAAAAAPAAAAAAAIAAAAAAAOAAAAAAAIAAAAAAANAAAAAAAIAAAAAAAMAAAAAAAIAAAAAAALAAAAAAAIAAAAAAAKAAAAAAAIAAAAAAAJAAAAAAAIAAAAAAAIAAAAAAAIAAAAAAAHAAAAAAAIAAAAAAAGAAAAAAAIAAAAAAAFAAAAAAAIAAAAAAAEAAAAAAAIAAAAAAADAAAAAAAIAAAAAAACAAAAAAAIAAAAAAABAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAA4AAAAIAAAAAAABAA4AAAAIAAAAAAACAA4AAAAIAAAAAAADAA4AAAAIAAAAAAAEAA4AAAAIAAAAAAAFAA4AAAAIAAAAAAAGAA4AAAAIAAAAAAAHAA4AAAAIAAAAAAAIAA4AAAAIAAAAAAAJAA4AAAAIAAAAAAAKAA4AAAAIAAAAAAALAA4AAAAIAAAAAAAMAA4AAAAIAAAAAAANAA4AAAAIAAAAAAAOAA4AAAAIAAAAAAAPAA4AAAAIAAAAAAAQAA4AAAAIAAAAAAARAA4AAAAIAAAAAAASAA4AAAAIAAAAAAATAA4AAAAIAAAAAAATAAEAAwAAABIAAAATAAIAAwACABIAAAATAAMAAwABABIAAAATAAQAAwACABIAAAATAAUAAwAAABIAAAATAAYAAwACABIAAAATAAcAAwACABIAAAATAAgAAwAAABIAAAATAAkAAwACABIAAAATAAoAAwAAABIAAAATAAsAAwAAABIAAAATAAwAAwAAABIAAAATAA0AAwAAABIAAAAAAAEAAwABABIAAAAAAAIAAwACABIAAAAAAAMAAwAAABIAAAAAAAQAAwACABIAAAAAAAUAAwAAABIAAAAAAAYAAwACABIAAAAAAAcAAwABABIAAAAAAAgAAwAAABIAAAAAAAkAAwABABIAAAAAAAoAAwABABIAAAAAAAsAAwACABIAAAAAAAwAAwACABIAAAAAAA0AAwABABIAAAA=")
 tile_set = ExtResource("3_hujxm")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=813861162]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -148,21 +148,21 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VersionLabel" type="Label" parent="MarginContainer"]
+[node name="VersionLabel" type="Label" parent="MarginContainer" unique_id=1661210476]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 0
-text = "v1.4"
+text = "v1.5"
 label_settings = SubResource("LabelSettings_6q06x")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1857759195]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="HighScoreText" type="Label" parent="MarginContainer/HBoxContainer"]
+[node name="HighScoreText" type="Label" parent="MarginContainer/HBoxContainer" unique_id=825227437]
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 0
@@ -171,7 +171,7 @@ label_settings = SubResource("LabelSettings_6q06x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HighScoreLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+[node name="HighScoreLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1072860300]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -179,21 +179,21 @@ text = "0000000"
 label_settings = SubResource("LabelSettings_6q06x")
 vertical_alignment = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer" unique_id=621320564]
 position = Vector2(201, 66)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_6q06x")
 autoplay = "default"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=525495735]
 layout_mode = 2
 
-[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer" unique_id=242407233]
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=174519144]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Wightwatch Keep"
@@ -201,11 +201,11 @@ label_settings = SubResource("LabelSettings_iuonh")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=901699477]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=462602786]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Press JUMP to begin
@@ -214,11 +214,11 @@ label_settings = SubResource("LabelSettings_ow5a4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer" unique_id=124543990]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=168505184]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "© 2025 John Beers, Made with Godot"
@@ -226,14 +226,12 @@ label_settings = SubResource("LabelSettings_6q06x")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ow5a4")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=135150669]
+libraries/ = SubResource("AnimationLibrary_ow5a4")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1700358332]
 
-[node name="Scanlines" type="ColorRect" parent="CanvasLayer"]
+[node name="Scanlines" type="ColorRect" parent="CanvasLayer" unique_id=910078641]
 material = SubResource("ShaderMaterial_l3cfh")
 anchors_preset = 15
 anchor_right = 1.0
@@ -242,7 +240,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=243298573]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -250,11 +248,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.501961)
 
-[node name="PulseDelay" type="Timer" parent="."]
+[node name="PulseDelay" type="Timer" parent="." unique_id=1560735500]
 wait_time = 3.5
 one_shot = true
 
-[node name="FlickerTimer" type="Timer" parent="."]
+[node name="FlickerTimer" type="Timer" parent="." unique_id=779946998]
 wait_time = 9.0
 autostart = true
 
