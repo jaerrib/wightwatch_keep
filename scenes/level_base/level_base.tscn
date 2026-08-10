@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="Script" uid="uid://cpu8i24wwtp1s" path="res://scenes/level_base/level_base.gd" id="1_p2h7h"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
+[ext_resource type="TileSet" uid="uid://bj3n3prtgpjja" path="res://assets/bg_tile_map.tres" id="2_uakon"]
 [ext_resource type="Shader" uid="uid://duyhok2fywa0y" path="res://scenes/level_base/scanlines.gdshader" id="6_tn631"]
 [ext_resource type="PackedScene" uid="uid://b3ch6qbcily7y" path="res://scenes/hud/hud.tscn" id="7_48c0a"]
 [ext_resource type="PackedScene" uid="uid://c7tum2odl7akn" path="res://scenes/game_play_manager/game_play_manager.tscn" id="7_cr6la"]
@@ -36,6 +37,12 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1175897490]
+
+[node name="RearTileMapLayer" type="TileMapLayer" parent="TileMapLayers" unique_id=1568766868]
+tile_set = ExtResource("2_uakon")
+
+[node name="MidTileMapLayer" type="TileMapLayer" parent="TileMapLayers" unique_id=1099010322]
+tile_set = ExtResource("2_uakon")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayers" unique_id=662068882]
 tile_set = ExtResource("2_48c0a")
