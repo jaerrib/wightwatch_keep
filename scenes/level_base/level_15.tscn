@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dhiybg52enmcg"]
+[gd_scene format=4 uid="uid://dhiybg52enmcg"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_8a4bp"]
 [ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="2_1bh7p"]
@@ -17,151 +17,157 @@
 [ext_resource type="PackedScene" uid="uid://cylfy3tmf2x4d" path="res://scenes/ghost/ghost.tscn" id="11_fki0g"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="13_frykh"]
 
-[node name="Level12" instance=ExtResource("1_8a4bp")]
+[node name="Level12" unique_id=208989411 instance=ExtResource("1_8a4bp")]
 script = ExtResource("2_3ahw3")
 
-[node name="TileMapLayer" parent="TileMapLayers" index="0"]
-tile_map_data = PackedByteArray("AAAAAAAAAwAJABEAAAABAAAAAwAJABEAAAACAAAAAwAJABEAAAADAAAAAwAJABEAAAAEAAAAAwAJABEAAAAFAAAAAwAJABEAAAAGAAAAAwAIABEAAAAHAAAAAwAIABEAAAAIAAAAAwAJABEAAAAJAAAAAwAIABEAAAAKAAAAAwAIABEAAAAMAAAAAwAJABEAAAANAAAAAwAJABEAAAAOAAAAAwAJABEAAAAPAAAAAwAIABEAAAAQAAAAAwAIABEAAAARAAAAAwAJABEAAAASAAAAAwAIABEAAAATAAAAAwAIABEAAAATAA4AAwAIABEAAAASAA4AAwAJABEAAAARAA4AAwAJABEAAAAQAA4AAwAJABEAAAAPAA4AAwAIABEAAAAOAA4AAwAJABEAAAANAA4AAwAIABEAAAAMAA4AAwAIABEAAAALAA4AAwAIABEAAAAKAA4AAwAJABEAAAAJAA4AAwAIABEAAAABAA4AAwAIABEAAAAAAA4AAwAJABEAAAACAA4AAwAIABEAAAADAA4AAwAIABEAAAAEAA4AAwAJABEAAAAFAA4AAwAIABEAAAAGAA4AAwAIABEAAAAHAA4AAwAIABEAAAAIAA4AAwAIABEAAAATAAEAAAAKAAAAAAATAAIAAAAKAAAAAAATAAMAAwAJABEAAAATAAQAAwAJABEAAAATAAUAAAAKAAAAAAATAAYAAwAIABEAAAATAAcAAwAJABEAAAATAAgAAAAKAAAAAAATAAkAAwAIABEAAAATAAoAAwAJABEAAAATAAsAAwAJABEAAAATAAwAAwAIABEAAAATAA0AAAABAAAAAAAAAA0AAwAJABEAAAAAAAwAAwAJABEAAAAAAAsAAwAJABEAAAAAAAoAAAAKAAAAAAAAAAkAAAAKAAAAAAAAAAgAAwAJABEAAAAAAAcAAAAKAAAAAAAAAAYAAAAKAAAAAAAAAAUAAwAJABEAAAAAAAQAAAAKAAAAAAAAAAMAAAAKAAAAAAAAAAIAAwAJABEAAAAAAAEAAwAIABEAAAASAAQAAwAJABEAAAARAAQAAwAJABEAAAAQAAQAAwAJABEAAAAPAAQAAwAIABEAAAAOAAQAAwAJABEAAAANAAQAAwAIABEAAAAOAA0AAwAIABEAAAAOAAwAAwAIABEAAAAOAAsAAwAIABEAAAACAAsAAwAJABEAAAADAAsAAwAJABEAAAAEAAsAAwAIABEAAAAFAAsAAwAJABEAAAACAAgAAwAIABEAAAADAAgAAwAIABEAAAAEAAgAAwAJABEAAAAFAAgAAwAJABEAAAAGAAgAAwAJABEAAAACAAUAAwAIABEAAAADAAUAAwAJABEAAAAEAAUAAwAJABEAAAAFAAUAAwAJABEAAAAGAAUAAwAIABEAAAAHAAUAAwAIABEAAAACAAIAAwAJABEAAAADAAIAAwAJABEAAAAEAAIAAwAJABEAAAAFAAIAAwAIABEAAAAGAAIAAwAIABEAAAAHAAIAAwAIABEAAAAIAAIAAwAJABEAAAALAAYAAwAIABEAAAALAAcAAwAJABEAAAAMAAcAAwAJABEAAAANAAcAAwAJABEAAAAOAAcAAwAIABEAAAAPAAcAAwAIABEAAAAQAAcAAwAIABEAAAARAAcAAwAIABEAAAAQAAgAAwAIABEAAAAQAAkAAwAJABEAAAAQAAoAAwAJABEAAAAQAAsAAwAJABEAAAAPAAsAAwAIABEAAAANAAsAAwAIABEAAAAMAAsAAwAJABEAAAALAAsAAwAJABEAAAASAAoAAwAJABEAAAAMAAYAAwAIABEAAAALAAUAAwAIABEAAAAIAAUAAwAIABEAAAAHAAgAAwAIABEAAAAGAAsAAwAIABEAAAAJAAIAAwAJABEAAAAFAAwAAAAHAAEAAAAFAA0AAAAHAAIAAAADAAkAAAAHAAEAAAADAAoAAAAHAAIAAAAFAAYAAAAHAAEAAAAFAAcAAAAHAAIAAAADAAMAAAAHAAEAAAADAAQAAAAHAAIAAAAHAAMAAAAHAAEAAAAHAAQAAAAHAAIAAAAFAAEAAAAHAAIAAAAMAAwAAAAHAAEAAAAMAA0AAAAHAAIAAAAMAAEAAAABAAEAAAAMAAIAAAABAAEAAAANAAEAAAABAAEAAAAIAAYAAAABAAEAAAALAAgAAAABAAEAAAAPAAgAAAABAAEAAAAPAAkAAAABAAEAAAAOAAgAAAABAAEAAAARAAUAAAABAAEAAAAHAAkAAAABAAEAAAAHAAoAAAABAAEAAAAKAP//AwAIABEAAAAMAP//AwAIABEAAAAMAP7/AwAJABEAAAALAP7/AwAJABEAAAAKAP7/AwAIABEAAAA=")
+[node name="RearTileMapLayer" parent="TileMapLayers" parent_id_path=PackedInt32Array(1175897490) index="0" unique_id=1568766868]
+tile_map_data = PackedByteArray("AAAAAAAAAgAHAAAAAAAAAAEAAgAHAAAAAAAAAAIAAgAHAAAAAAAAAAUAAgAHAAAAAAAAAAgAAgAHAAAAAAAAAAsAAgAHAAAAAAAAAAwAAgAHAAAAAAAAAA0AAgAHAAAAAAAAAA4AAgAHAAAAAAABAAAAAgAHAAAAAAABAAEAAgAHAAAAAAABAAIAAgAHAAAAAAABAAMAAgAHAAAAAAABAAQAAgAHAAAAAAABAAUAAgAHAAAAAAABAAYAAgAHAAAAAAABAAcAAgAHAAAAAAABAAgAAgAHAAAAAAABAAkAAgAHAAAAAAABAAoAAgAHAAAAAAABAAsAAgAHAAAAAAABAAwAAgAHAAAAAAABAA0AAgAHAAAAAAABAA4AAgAHAAAAAAACAAAAAgAHAAAAAAACAAEAAgAHAAAAAAACAAIAAgAHAAAAAAACAAMAAgAHAAAAAAACAAQAAgAHAAAAAAACAAUAAgAHAAAAAAACAAYAAgAHAAAAAAACAAcAAgAHAAAAAAACAAgAAgAHAAAAAAACAAkAAgAHAAAAAAACAAoAAgAHAAAAAAACAAsAAgAHAAAAAAACAAwAAgAHAAAAAAACAA0AAgAHAAAAAAACAA4AAgAHAAAAAAADAAAAAgAHAAAAAAADAAEAAgAHAAAAAAADAAIAAgAHAAAAAAADAAMAAgAHAAAAAAADAAQAAgAHAAAAAAADAAUAAgAHAAAAAAADAAYAAgAHAAAAAAADAAcAAgAHAAAAAAADAAgAAgAHAAAAAAADAAkAAgAHAAAAAAADAAoAAgAHAAAAAAADAAsAAgAHAAAAAAADAAwAAgAHAAAAAAADAA0AAgAHAAAAAAADAA4AAgAHAAAAAAAEAAAAAgAHAAAAAAAEAAEAAgAHAAAAAAAEAAIAAgAHAAAAAAAEAAMAAgAHAAAAAAAEAAQAAgAHAAAAAAAEAAUAAgAHAAAAAAAEAAYAAgAHAAAAAAAEAAcAAgAHAAAAAAAEAAgAAgAHAAAAAAAEAAkAAgAHAAAAAAAEAAoAAgAHAAAAAAAEAAsAAgAHAAAAAAAEAAwAAgAHAAAAAAAEAA0AAgAHAAAAAAAEAA4AAgAHAAAAAAAFAAAAAgAHAAAAAAAFAAEAAgAHAAAAAAAFAAIAAgAHAAAAAAAFAAMAAgAHAAAAAAAFAAQAAgAHAAAAAAAFAAUAAgAHAAAAAAAFAAYAAgAHAAAAAAAFAAcAAgAHAAAAAAAFAAgAAgAHAAAAAAAFAAkAAgAHAAAAAAAFAAoAAgAHAAAAAAAFAAsAAgAHAAAAAAAFAAwAAgAHAAAAAAAFAA0AAgAHAAAAAAAFAA4AAgAHAAAAAAAGAAAAAgAHAAAAAAAGAAEAAgAHAAAAAAAGAAIAAgAHAAAAAAAGAAMAAgAHAAAAAAAGAAQAAgAHAAAAAAAGAAUAAgAHAAAAAAAGAAYAAgAHAAAAAAAGAAcAAgAHAAAAAAAGAAgAAgAHAAAAAAAGAAkAAgAHAAAAAAAGAAoAAgAHAAAAAAAGAAsAAgAHAAAAAAAGAAwAAgAHAAAAAAAGAA0AAgAHAAAAAAAGAA4AAgAHAAAAAAAHAAAAAgAHAAAAAAAHAAEAAgAHAAAAAAAHAAIAAgAHAAAAAAAHAAMAAgAHAAAAAAAHAAQAAgAHAAAAAAAHAAUAAgAHAAAAAAAHAAYAAgAHAAAAAAAHAAcAAgAHAAAAAAAHAAgAAgAHAAAAAAAHAAkAAgAHAAAAAAAHAAoAAgAHAAAAAAAHAAsAAgAHAAAAAAAHAAwAAgAHAAAAAAAHAA0AAgAHAAAAAAAHAA4AAgAHAAAAAAAIAAAAAgAHAAAAAAAIAAEAAgAHAAAAAAAIAAIAAgAHAAAAAAAIAAMAAgAHAAAAAAAIAAQAAgAHAAAAAAAIAAUAAgAHAAAAAAAIAAYAAgAHAAAAAAAIAAcAAgAHAAAAAAAIAAgAAgAHAAAAAAAIAAkAAgAHAAAAAAAIAAoAAgAHAAAAAAAIAAsAAgAHAAAAAAAIAAwAAgAHAAAAAAAIAA0AAgAHAAAAAAAIAA4AAgAHAAAAAAAJAAAAAgAHAAAAAAAJAAEAAgAHAAAAAAAJAAIAAgAHAAAAAAAJAAMAAgAHAAAAAAAJAAQAAgAHAAAAAAAJAAUAAgAHAAAAAAAJAAYAAgAHAAAAAAAJAAcAAgAHAAAAAAAJAAgAAgAHAAAAAAAJAAkAAgAHAAAAAAAJAAoAAgAHAAAAAAAJAAsAAgAHAAAAAAAJAAwAAgAHAAAAAAAJAA0AAgAHAAAAAAAJAA4AAgAHAAAAAAAKAAAAAgAHAAAAAAAKAAEAAgAHAAAAAAAKAAIAAgAHAAAAAAAKAAMAAgAHAAAAAAAKAAQAAgAHAAAAAAAKAAUAAgAHAAAAAAAKAAYAAgAHAAAAAAAKAAcAAgAHAAAAAAAKAAgAAgAHAAAAAAAKAAkAAgAHAAAAAAAKAAoAAgAHAAAAAAAKAAsAAgAHAAAAAAAKAAwAAgAHAAAAAAAKAA0AAgAHAAAAAAAKAA4AAgAHAAAAAAALAAAAAgAHAAAAAAALAAEAAgAHAAAAAAALAAIAAgAHAAAAAAALAAMAAgAHAAAAAAALAAQAAgAHAAAAAAALAAUAAgAHAAAAAAALAAYAAgAHAAAAAAALAAcAAgAHAAAAAAALAAgAAgAHAAAAAAALAAkAAgAHAAAAAAALAAoAAgAHAAAAAAALAAsAAgAHAAAAAAALAAwAAgAHAAAAAAALAA0AAgAHAAAAAAALAA4AAgAHAAAAAAAMAAAAAgAHAAAAAAAMAAEAAgAHAAAAAAAMAAIAAgAHAAAAAAAMAAMAAgAHAAAAAAAMAAQAAgAHAAAAAAAMAAUAAgAHAAAAAAAMAAYAAgAHAAAAAAAMAAcAAgAHAAAAAAAMAAgAAgAHAAAAAAAMAAkAAgAHAAAAAAAMAAoAAgAHAAAAAAAMAAsAAgAHAAAAAAAMAAwAAgAHAAAAAAAMAA0AAgAHAAAAAAAMAA4AAgAHAAAAAAANAAAAAgAHAAAAAAANAAEAAgAHAAAAAAANAAIAAgAHAAAAAAANAAMAAgAHAAAAAAANAAQAAgAHAAAAAAANAAUAAgAHAAAAAAANAAYAAgAHAAAAAAANAAcAAgAHAAAAAAANAAgAAgAHAAAAAAANAAkAAgAHAAAAAAANAAoAAgAHAAAAAAANAAsAAgAHAAAAAAANAAwAAgAHAAAAAAANAA0AAgAHAAAAAAANAA4AAgAHAAAAAAAOAAAAAgAHAAAAAAAOAAEAAgAHAAAAAAAOAAIAAgAHAAAAAAAOAAMAAgAHAAAAAAAOAAQAAgAHAAAAAAAOAAUAAgAHAAAAAAAOAAYAAgAHAAAAAAAOAAcAAgAHAAAAAAAOAAgAAgAHAAAAAAAOAAkAAgAHAAAAAAAOAAoAAgAHAAAAAAAOAAsAAgAHAAAAAAAOAAwAAgAHAAAAAAAOAA0AAgAHAAAAAAAOAA4AAgAHAAAAAAAPAAAAAgAHAAAAAAAPAAEAAgAHAAAAAAAPAAIAAgAHAAAAAAAPAAMAAgAHAAAAAAAPAAQAAgAHAAAAAAAPAAUAAgAHAAAAAAAPAAYAAgAHAAAAAAAPAAcAAgAHAAAAAAAPAAgAAgAHAAAAAAAPAAkAAgAHAAAAAAAPAAoAAgAHAAAAAAAPAAsAAgAHAAAAAAAPAAwAAgAHAAAAAAAPAA0AAgAHAAAAAAAPAA4AAgAHAAAAAAAQAAAAAgAHAAAAAAAQAAEAAgAHAAAAAAAQAAIAAgAHAAAAAAAQAAMAAgAHAAAAAAAQAAQAAgAHAAAAAAAQAAUAAgAHAAAAAAAQAAYAAgAHAAAAAAAQAAcAAgAHAAAAAAAQAAgAAgAHAAAAAAAQAAkAAgAHAAAAAAAQAAoAAgAHAAAAAAAQAAsAAgAHAAAAAAAQAAwAAgAHAAAAAAAQAA0AAgAHAAAAAAAQAA4AAgAHAAAAAAARAAAAAgAHAAAAAAARAAEAAgAHAAAAAAARAAIAAgAHAAAAAAARAAMAAgAHAAAAAAARAAQAAgAHAAAAAAARAAUAAgAHAAAAAAARAAYAAgAHAAAAAAARAAcAAgAHAAAAAAARAAgAAgAHAAAAAAARAAkAAgAHAAAAAAARAAoAAgAHAAAAAAARAAsAAgAHAAAAAAARAAwAAgAHAAAAAAARAA0AAgAHAAAAAAARAA4AAgAHAAAAAAASAAAAAgAHAAAAAAASAAEAAgAHAAAAAAASAAIAAgAHAAAAAAASAAMAAgAHAAAAAAASAAQAAgAHAAAAAAASAAUAAgAHAAAAAAASAAYAAgAHAAAAAAASAAcAAgAHAAAAAAASAAgAAgAHAAAAAAASAAkAAgAHAAAAAAASAAoAAgAHAAAAAAASAAsAAgAHAAAAAAASAAwAAgAHAAAAAAASAA0AAgAHAAAAAAASAA4AAgAHAAAAAAATAAAAAgAHAAAAAAATAAMAAgAHAAAAAAATAAQAAgAHAAAAAAATAAYAAgAHAAAAAAATAAcAAgAHAAAAAAATAAkAAgAHAAAAAAATAAoAAgAHAAAAAAATAAsAAgAHAAAAAAATAAwAAgAHAAAAAAATAA0AAgAHAAAAAAATAA4AAgAHAAAAAAA=")
 
-[node name="Box" parent="Secrets" index="0" instance=ExtResource("2_4e11x")]
+[node name="MidTileMapLayer" parent="TileMapLayers" parent_id_path=PackedInt32Array(1175897490) index="1" unique_id=1099010322]
+tile_map_data = PackedByteArray("AAAMAAwAAwAHAAEAAAAMAA0AAwAHAAIAAAAFAAwAAwAHAAEAAAAFAA0AAwAHAAIAAAADAAkAAwAHAAEAAAADAAoAAwAHAAIAAAAFAAYAAwAHAAEAAAAFAAcAAwAHAAIAAAAHAAMAAwAHAAEAAAAHAAQAAwAHAAIAAAADAAMAAwAHAAEAAAADAAQAAwAHAAIAAAAFAAEAAwAHAAIAAAALAAgAAwABAAEAAAAHAAkAAwABAAEAAAAHAAoAAwABAAEAAAAIAAYAAwABAAEAAAAOAAgAAwABAAEAAAAPAAgAAwABAAEAAAAPAAkAAwABAAEAAAANAAEAAwABAAEAAAAMAAEAAwABAAEAAAAMAAIAAwABAAEAAAARAAUAAwABAAEAAAA=")
+
+[node name="TileMapLayer" parent="TileMapLayers" parent_id_path=PackedInt32Array(1175897490) index="2" unique_id=662068882]
+tile_map_data = PackedByteArray("AAAAAAAAAwAJABEAAAABAAAAAwAJABEAAAACAAAAAwAJABEAAAADAAAAAwAJABEAAAAEAAAAAwAJABEAAAAFAAAAAwAJABEAAAAGAAAAAwAIABEAAAAHAAAAAwAIABEAAAAIAAAAAwAJABEAAAAJAAAAAwAIABEAAAAKAAAAAwAIABEAAAAMAAAAAwAJABEAAAANAAAAAwAJABEAAAAOAAAAAwAJABEAAAAPAAAAAwAIABEAAAAQAAAAAwAIABEAAAARAAAAAwAJABEAAAASAAAAAwAIABEAAAATAAAAAwAIABEAAAATAA4AAwAIABEAAAASAA4AAwAJABEAAAARAA4AAwAJABEAAAAQAA4AAwAJABEAAAAPAA4AAwAIABEAAAAOAA4AAwAJABEAAAANAA4AAwAIABEAAAAMAA4AAwAIABEAAAALAA4AAwAIABEAAAAKAA4AAwAJABEAAAAJAA4AAwAIABEAAAABAA4AAwAIABEAAAAAAA4AAwAJABEAAAACAA4AAwAIABEAAAADAA4AAwAIABEAAAAEAA4AAwAJABEAAAAFAA4AAwAIABEAAAAGAA4AAwAIABEAAAAHAA4AAwAIABEAAAAIAA4AAwAIABEAAAATAAEAAAAKAAAAAAATAAIAAAAKAAAAAAATAAMAAwAJABEAAAATAAQAAwAJABEAAAATAAUAAAAKAAAAAAATAAYAAwAIABEAAAATAAcAAwAJABEAAAATAAgAAAAKAAAAAAATAAkAAwAIABEAAAATAAoAAwAJABEAAAATAAsAAwAJABEAAAATAAwAAwAIABEAAAATAA0AAAABAAAAAAAAAA0AAwAJABEAAAAAAAwAAwAJABEAAAAAAAsAAwAJABEAAAAAAAoAAAAKAAAAAAAAAAkAAAAKAAAAAAAAAAgAAwAJABEAAAAAAAcAAAAKAAAAAAAAAAYAAAAKAAAAAAAAAAUAAwAJABEAAAAAAAQAAAAKAAAAAAAAAAMAAAAKAAAAAAAAAAIAAwAJABEAAAAAAAEAAwAIABEAAAASAAQAAwAJABEAAAARAAQAAwAJABEAAAAQAAQAAwAJABEAAAAPAAQAAwAIABEAAAAOAAQAAwAJABEAAAANAAQAAwAIABEAAAAOAA0AAwAIABEAAAAOAAwAAwAIABEAAAAOAAsAAwAIABEAAAACAAsAAwAJABEAAAADAAsAAwAJABEAAAAEAAsAAwAIABEAAAAFAAsAAwAJABEAAAACAAgAAwAIABEAAAADAAgAAwAIABEAAAAEAAgAAwAJABEAAAAFAAgAAwAJABEAAAAGAAgAAwAJABEAAAACAAUAAwAIABEAAAADAAUAAwAJABEAAAAEAAUAAwAJABEAAAAFAAUAAwAJABEAAAAGAAUAAwAIABEAAAAHAAUAAwAIABEAAAACAAIAAwAJABEAAAADAAIAAwAJABEAAAAEAAIAAwAJABEAAAAFAAIAAwAIABEAAAAGAAIAAwAIABEAAAAHAAIAAwAIABEAAAAIAAIAAwAJABEAAAALAAYAAwAIABEAAAALAAcAAwAJABEAAAAMAAcAAwAJABEAAAANAAcAAwAJABEAAAAOAAcAAwAIABEAAAAPAAcAAwAIABEAAAAQAAcAAwAIABEAAAARAAcAAwAIABEAAAAQAAgAAwAIABEAAAAQAAkAAwAJABEAAAAQAAoAAwAJABEAAAAQAAsAAwAJABEAAAAPAAsAAwAIABEAAAANAAsAAwAIABEAAAAMAAsAAwAJABEAAAALAAsAAwAJABEAAAASAAoAAwAJABEAAAAMAAYAAwAIABEAAAALAAUAAwAIABEAAAAIAAUAAwAIABEAAAAHAAgAAwAIABEAAAAGAAsAAwAIABEAAAAJAAIAAwAJABEAAAAKAP//AwAIABEAAAAMAP//AwAIABEAAAAMAP7/AwAJABEAAAALAP7/AwAJABEAAAAKAP7/AwAIABEAAAA=")
+
+[node name="Box" parent="Secrets" parent_id_path=PackedInt32Array(1217555252) index="0" unique_id=708347847 instance=ExtResource("2_4e11x")]
 position = Vector2(80, 72)
 
-[node name="Box2" parent="Secrets" index="1" instance=ExtResource("2_4e11x")]
+[node name="Box2" parent="Secrets" parent_id_path=PackedInt32Array(1217555252) index="1" unique_id=1824850893 instance=ExtResource("2_4e11x")]
 position = Vector2(88, 120)
 
-[node name="Box3" parent="Secrets" index="2" instance=ExtResource("2_4e11x")]
+[node name="Box3" parent="Secrets" parent_id_path=PackedInt32Array(1217555252) index="2" unique_id=1868933942 instance=ExtResource("2_4e11x")]
 position = Vector2(88, 168)
 
-[node name="Hearts" parent="." index="2"]
+[node name="Hearts" parent="." index="3" unique_id=456472185]
 position = Vector2(16, 0)
 
-[node name="HeartLarge" parent="Hearts" index="0" instance=ExtResource("3_obw5v")]
+[node name="HeartLarge" parent="Hearts" index="0" unique_id=393873210 instance=ExtResource("3_obw5v")]
 position = Vector2(168, -8)
 
-[node name="Chest" parent="Chests" index="0" instance=ExtResource("2_1bh7p")]
+[node name="Chest" parent="Chests" parent_id_path=PackedInt32Array(740440984) index="0" unique_id=1001303929 instance=ExtResource("2_1bh7p")]
 position = Vector2(264, 56)
 
-[node name="ChestHeart" parent="Chests" index="1" instance=ExtResource("3_4b7pw")]
+[node name="ChestHeart" parent="Chests" parent_id_path=PackedInt32Array(740440984) index="1" unique_id=1820826846 instance=ExtResource("3_4b7pw")]
 position = Vector2(296, 56)
 
-[node name="Torch" parent="Torches" index="0" instance=ExtResource("2_4k25v")]
+[node name="Torch" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="0" unique_id=1913659309 instance=ExtResource("2_4k25v")]
 position = Vector2(232, 48)
 
-[node name="Torch2" parent="Torches" index="1" instance=ExtResource("2_4k25v")]
+[node name="Torch2" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="1" unique_id=18328022 instance=ExtResource("2_4k25v")]
 position = Vector2(232, 96)
 
-[node name="Torch3" parent="Torches" index="2" instance=ExtResource("2_4k25v")]
+[node name="Torch3" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="2" unique_id=233469069 instance=ExtResource("2_4k25v")]
 position = Vector2(264, 96)
 
-[node name="Torch4" parent="Torches" index="3" instance=ExtResource("2_4k25v")]
+[node name="Torch4" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="3" unique_id=2053946618 instance=ExtResource("2_4k25v")]
 position = Vector2(192, 160)
 
-[node name="Torch5" parent="Torches" index="4" instance=ExtResource("2_4k25v")]
+[node name="Torch5" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="4" unique_id=895870634 instance=ExtResource("2_4k25v")]
 position = Vector2(232, 160)
 
-[node name="Torch6" parent="Torches" index="5" instance=ExtResource("2_4k25v")]
+[node name="Torch6" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="5" unique_id=495942570 instance=ExtResource("2_4k25v")]
 position = Vector2(152, 200)
 
-[node name="Torch7" parent="Torches" index="6" instance=ExtResource("2_4k25v")]
+[node name="Torch7" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="6" unique_id=700024283 instance=ExtResource("2_4k25v")]
 position = Vector2(104, 200)
 
-[node name="Torch8" parent="Torches" index="7" instance=ExtResource("2_4k25v")]
+[node name="Torch8" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="7" unique_id=812977561 instance=ExtResource("2_4k25v")]
 position = Vector2(104, 160)
 
-[node name="Torch9" parent="Torches" index="8" instance=ExtResource("2_4k25v")]
+[node name="Torch9" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="8" unique_id=610400878 instance=ExtResource("2_4k25v")]
 position = Vector2(104, 112)
 
-[node name="Torch10" parent="Torches" index="9" instance=ExtResource("2_4k25v")]
+[node name="Torch10" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="9" unique_id=1640749011 instance=ExtResource("2_4k25v")]
 position = Vector2(104, 56)
 
-[node name="LadderTwoHigh" parent="Ladders" index="0" instance=ExtResource("2_52vet")]
+[node name="LadderTwoHigh" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="0" unique_id=1188413617 instance=ExtResource("2_52vet")]
 position = Vector2(296, 120)
 
-[node name="LadderThreeHigh" parent="Ladders" index="1" instance=ExtResource("3_4k25v")]
+[node name="LadderThreeHigh" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="1" unique_id=912565379 instance=ExtResource("3_4k25v")]
 position = Vector2(280, 168)
 
-[node name="HiddenLadder" parent="Ladders" index="2" instance=ExtResource("3_4k25v")]
+[node name="HiddenLadder" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="2" unique_id=793622257 instance=ExtResource("3_4k25v")]
 visible = false
 position = Vector2(184, 8)
 disabled_status = true
 
-[node name="Exit" parent="." index="6"]
+[node name="Exit" parent="." index="7" unique_id=114751284]
 position = Vector2(216, 216)
 
-[node name="Player" parent="." index="7"]
+[node name="Player" parent="." index="8" unique_id=1608711460]
 position = Vector2(288, 216)
 
-[node name="Key" parent="." index="8"]
+[node name="Key" parent="." index="9" unique_id=2119962341]
 position = Vector2(248, 168)
 
-[node name="Mimic" parent="Enemies" index="0" instance=ExtResource("7_pkwo8")]
+[node name="Mimic" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="0" unique_id=1172768150 instance=ExtResource("7_pkwo8")]
 position = Vector2(280, 56)
 
-[node name="Skeleton" parent="Enemies" index="1" instance=ExtResource("9_cjnvj")]
+[node name="Skeleton" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="1" unique_id=58934745 instance=ExtResource("9_cjnvj")]
 position = Vector2(40, 72)
 
-[node name="Skeleton2" parent="Enemies" index="2" instance=ExtResource("9_cjnvj")]
+[node name="Skeleton2" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="2" unique_id=1511438643 instance=ExtResource("9_cjnvj")]
 position = Vector2(56, 120)
 
-[node name="Skeleton3" parent="Enemies" index="3" instance=ExtResource("9_cjnvj")]
+[node name="Skeleton3" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="3" unique_id=652498114 instance=ExtResource("9_cjnvj")]
 position = Vector2(72, 168)
 
-[node name="Skeleton4" parent="Enemies" index="4" instance=ExtResource("9_cjnvj")]
+[node name="Skeleton4" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="4" unique_id=386549482 instance=ExtResource("9_cjnvj")]
 position = Vector2(120, 24)
 
-[node name="Skeleton5" parent="Enemies" index="5" instance=ExtResource("9_cjnvj")]
+[node name="Skeleton5" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="5" unique_id=1553511654 instance=ExtResource("9_cjnvj")]
 position = Vector2(248, 104)
 
-[node name="Skeleton6" parent="Enemies" index="6" instance=ExtResource("9_cjnvj")]
+[node name="Skeleton6" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="6" unique_id=2098200280 instance=ExtResource("9_cjnvj")]
 position = Vector2(248, 216)
 
-[node name="SpectralMonk" parent="Enemies" index="7" instance=ExtResource("10_cjnvj")]
+[node name="SpectralMonk" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="7" unique_id=645001534 instance=ExtResource("10_cjnvj")]
 position = Vector2(216, 168)
 
-[node name="Ghost" parent="Enemies" index="8" instance=ExtResource("11_fki0g")]
+[node name="Ghost" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="8" unique_id=1381104470 instance=ExtResource("11_fki0g")]
 position = Vector2(40, 24)
 
-[node name="Ghost2" parent="Enemies" index="9" instance=ExtResource("11_fki0g")]
+[node name="Ghost2" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="9" unique_id=192506803 instance=ExtResource("11_fki0g")]
 position = Vector2(280, 24)
 
-[node name="Ghost3" parent="Enemies" index="10" instance=ExtResource("11_fki0g")]
+[node name="Ghost3" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="10" unique_id=463743453 instance=ExtResource("11_fki0g")]
 position = Vector2(40, 216)
 
-[node name="P1" type="Marker2D" parent="Paths" index="0"]
+[node name="P1" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="0" unique_id=1564042264]
 position = Vector2(24, 40)
 
-[node name="P2" type="Marker2D" parent="Paths" index="1"]
+[node name="P2" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="1" unique_id=783147191]
 position = Vector2(24, 136)
 
-[node name="P3" type="Marker2D" parent="Paths" index="2"]
+[node name="P3" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="2" unique_id=1513167244]
 position = Vector2(168, 40)
 
-[node name="Spikes" parent="Dangers" index="0" instance=ExtResource("10_fki0g")]
+[node name="Spikes" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="0" unique_id=901349261 instance=ExtResource("10_fki0g")]
 position = Vector2(152, 216)
 
-[node name="Spikes2" parent="Dangers" index="1" instance=ExtResource("10_fki0g")]
+[node name="Spikes2" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="1" unique_id=856126113 instance=ExtResource("10_fki0g")]
 position = Vector2(168, 216)
 
-[node name="Spikes3" parent="Dangers" index="2" instance=ExtResource("10_fki0g")]
+[node name="Spikes3" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="2" unique_id=1096956807 instance=ExtResource("10_fki0g")]
 position = Vector2(136, 216)
 
-[node name="Spikes4" parent="Dangers" index="3" instance=ExtResource("10_fki0g")]
+[node name="Spikes4" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="3" unique_id=438934187 instance=ExtResource("10_fki0g")]
 position = Vector2(120, 216)
 
-[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("13_frykh")]
+[node name="Platform1" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="0" unique_id=1862413429 node_paths=PackedStringArray("destination") instance=ExtResource("13_frykh")]
 position = Vector2(24, 128)
 destination = NodePath("../../Paths/P1")
 
-[node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("13_frykh")]
+[node name="Platform2" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="1" unique_id=1455992588 node_paths=PackedStringArray("destination") instance=ExtResource("13_frykh")]
 position = Vector2(24, 216)
 destination = NodePath("../../Paths/P2")
 
-[node name="Platform3" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("13_frykh")]
+[node name="Platform3" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="2" unique_id=1979372446 node_paths=PackedStringArray("destination") instance=ExtResource("13_frykh")]
 position = Vector2(168, 176)
 destination = NodePath("../../Paths/P3")
 
-[node name="Music" parent="." index="14"]
+[node name="Music" parent="." index="15" unique_id=1451329559]
 stream = ExtResource("2_yulw5")
 
-[node name="LevelOverlay" parent="CanvasLayer" index="3"]
+[node name="LevelOverlay" parent="CanvasLayer" parent_id_path=PackedInt32Array(1730577306) index="3" unique_id=1260241101]
 color = Color(0.545098, 0, 0, 0.501961)
