@@ -1,5 +1,7 @@
 extends Node
 
+@warning_ignore_start("unused_signal")
+
 signal on_enemy_hit(points: int)
 signal on_player_hit
 signal on_player_died

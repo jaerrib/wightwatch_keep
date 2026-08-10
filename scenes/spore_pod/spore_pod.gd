@@ -9,7 +9,7 @@ var _spores: bool = false
 @onready var spore_timer: Timer = $SporeTimer
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	check_player_proximity()
 	determine_activity()
 

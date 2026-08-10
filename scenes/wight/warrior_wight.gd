@@ -68,7 +68,7 @@ func is_nearby() -> bool:
 	return (abs(_player_pos.x) < 96) and abs(_player_pos.y) < 48
 
 
-func on_hit_box_entered(area: Area2D) -> void:
+func on_hit_box_entered(_area: Area2D) -> void:
 	if _invincible:
 		return
 	turn_timer.start()

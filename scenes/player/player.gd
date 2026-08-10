@@ -157,7 +157,7 @@ func _on_animation_player_animation_finished(anim_name: String) -> void:
 			animation_player.play("climbing")
 
 
-func _on_hit_box_area_entered(area: Area2D) -> void:
+func _on_hit_box_area_entered(_area: Area2D) -> void:
 	if _invincible:
 		return
 	SignalManager.on_player_hit.emit()

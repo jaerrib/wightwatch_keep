@@ -7,7 +7,7 @@ var _can_collect: bool = true
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
-func _on_hit_box_area_entered(area: Area2D) -> void:
+func _on_hit_box_area_entered(_area: Area2D) -> void:
 	if !_can_collect:
 		return
 	animated_sprite_2d.play("open")

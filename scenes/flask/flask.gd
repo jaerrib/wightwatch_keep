@@ -13,7 +13,7 @@ func setup(direction: Vector2, speed: float, flip_sprite: bool) -> void:
 	sprite.flip_h = flip_sprite
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if (
 		floor_detection.is_colliding() or
 		floor_detection_2.is_colliding() or

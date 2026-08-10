@@ -9,7 +9,7 @@ var _collectable = true
 
 
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	if _collectable:
 		_collectable = false
 		collision_shape_2d.disabled = true

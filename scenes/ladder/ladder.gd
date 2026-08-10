@@ -9,11 +9,11 @@ func _ready() -> void:
 	set_disabled_status(disabled_status)
 
 
-func _on_ladder_area_area_entered(area: Area2D) -> void:
+func _on_ladder_area_area_entered(_area: Area2D) -> void:
 	SignalManager.on_ladder.emit(true)
 
 
-func _on_ladder_area_area_exited(area: Area2D) -> void:
+func _on_ladder_area_area_exited(_area: Area2D) -> void:
 	SignalManager.on_ladder.emit(false)
 
 
