@@ -31,7 +31,9 @@ PlayerManager="*res://singletons/player_manager.gd"
 
 window/size/viewport_width=320
 window/size/viewport_height=240
+window/size/mode=3
 window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
 
 [global_group]
 
