@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://2h05uwsdvof2"]
+[gd_scene format=3 uid="uid://2h05uwsdvof2"]
 
 [ext_resource type="Texture2D" uid="uid://c5pj7tpnj03d0" path="res://assets/player/player.png" id="1_8afob"]
 [ext_resource type="Script" uid="uid://bay430eedeaus" path="res://scenes/player/player.gd" id="1_dovo2"]
@@ -226,72 +226,75 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_75vfm")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death",
 "speed": 4.0
 }]
 
-[node name="Player" type="CharacterBody2D" groups=["moveables", "player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1452317611 groups=["moveables", "player"]]
 collision_layer = 0
 collision_mask = 257
 script = ExtResource("1_dovo2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=355793185]
+zoom = Vector2(1.33, 1.33)
+limit_left = 0
+limit_top = 0
+limit_right = 320
+limit_bottom = 240
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1128069935]
 texture = ExtResource("1_8afob")
 hframes = 10
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_gmlin")
-}
-autoplay = "idle"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=100096539]
+libraries/ = SubResource("AnimationLibrary_gmlin")
+autoplay = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2020098002]
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_dovo2")
 
-[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=785265628]
 
-[node name="HitBox" type="Area2D" parent="." groups=["player"]]
+[node name="HitBox" type="Area2D" parent="." unique_id=443065164 groups=["player"]]
 collision_layer = 2
 collision_mask = 1672
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=728667495]
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_dovo2")
 
-[node name="SwordHitBox" type="Area2D" parent="."]
+[node name="SwordHitBox" type="Area2D" parent="." unique_id=836016624]
 position = Vector2(9, 0)
 collision_layer = 4
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox" unique_id=970085351]
 shape = SubResource("RectangleShape2D_8afob")
 disabled = true
 
-[node name="AboveLadderArea" type="Area2D" parent="."]
+[node name="AboveLadderArea" type="Area2D" parent="." unique_id=11145268]
 position = Vector2(0, 3)
 collision_layer = 2
 collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AboveLadderArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AboveLadderArea" unique_id=1155234445]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_gmlin")
 
-[node name="InvincibleTimer" type="Timer" parent="."]
+[node name="InvincibleTimer" type="Timer" parent="." unique_id=37912568]
 wait_time = 3.0
 one_shot = true
 
-[node name="InvinciblePlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_qek5x")
-}
+[node name="InvinciblePlayer" type="AnimationPlayer" parent="." unique_id=840724569]
+libraries/ = SubResource("AnimationLibrary_qek5x")
 
-[node name="HurtTimer" type="Timer" parent="."]
+[node name="HurtTimer" type="Timer" parent="." unique_id=223417943]
 wait_time = 0.5
 one_shot = true
 
-[node name="DeathSprite" type="AnimatedSprite2D" parent="."]
+[node name="DeathSprite" type="AnimatedSprite2D" parent="." unique_id=424244279]
 visible = false
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_0owmy")
