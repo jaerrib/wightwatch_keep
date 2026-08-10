@@ -59,7 +59,6 @@ func fallen_off() -> void:
 	if global_position.y < FALLEN_OFF:
 		return
 	set_physics_process(false)
-	queue_free()
 	SignalManager.on_player_died.emit()
 
 
