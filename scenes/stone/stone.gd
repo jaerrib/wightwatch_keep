@@ -11,7 +11,7 @@ var _collectable = true
 func _on_area_entered(_area: Area2D) -> void:
 	if _collectable:
 		_collectable = false
-		collision_shape_2d.disabled = true
+		collision_shape_2d.set_deferred("disabled", true)
 		SoundManager.play_clip(sound, SoundManager.SOUND_EXTRA_LIFE)
 		animation_player.play("float")
 		PlayerManager.gain_extra_life()
