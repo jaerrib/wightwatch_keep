@@ -8,6 +8,7 @@ const SOUNDS: Dictionary = {
 const WIND = "wind"
 
 var _intro_playing: bool = false
+var _play_level_0: bool = false
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var flicker_timer: Timer = $FlickerTimer
@@ -29,9 +30,10 @@ func _process(_delta: float) -> void:
 		get_tree().quit()
 	if Input.is_action_just_pressed("jump") and !_intro_playing:
 		if Input.is_action_pressed("down"):
-			GameManager.load_prototype_level()
-		else:
-			start_intro()
+			_play_level_0 = true
+			#GameManager.load_prototype_level()
+		#else:
+		start_intro()
 
 
 func start_intro() -> void:
@@ -45,7 +47,10 @@ func start_intro() -> void:
 
 func start_game() -> void:
 	PlayerManager.set_initial_stats()
-	GameManager.load_next_level_scene()
+	if _play_level_0:
+		GameManager.load_prototype_level()
+	else:
+		GameManager.load_next_level_scene()
 
 
 func _on_pulse_delay_timeout() -> void:
