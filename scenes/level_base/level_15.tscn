@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cylfy3tmf2x4d" path="res://scenes/ghost/ghost.tscn" id="11_fki0g"]
 [ext_resource type="PackedScene" uid="uid://bqqhhcco74o4u" path="res://scenes/moving_platform/moving_platform.tscn" id="13_frykh"]
 
-[node name="Level12" unique_id=208989411 instance=ExtResource("1_8a4bp")]
+[node name="Level15" unique_id=208989411 instance=ExtResource("1_8a4bp")]
 script = ExtResource("2_3ahw3")
 
 [node name="RearTileMapLayer" parent="TileMapLayers" parent_id_path=PackedInt32Array(1175897490) index="0" unique_id=1568766868]
