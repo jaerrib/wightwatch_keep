@@ -33,7 +33,7 @@ var SOUNDS: Dictionary = {
 	SOUND_ROAR: preload("res://assets/audio/roar.ogg"),
 	SOUND_BOSS_HURT: preload("res://assets/audio/boss_hurt.ogg"),
 	SOUND_WARP_GATE: preload("res://assets/audio/warp_gate.ogg"),
-	SOUND_EXTRA_LIFE: preload("res://singletons/sound_manager.gd")
+	SOUND_EXTRA_LIFE: preload("res://assets/audio/extra_life.ogg")
 }
 
 
