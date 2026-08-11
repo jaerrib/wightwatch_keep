@@ -19,7 +19,6 @@ var _intro_playing: bool = false
 func _ready() -> void:
 	music.stream = SOUNDS[WIND]
 	high_score_label.text = "%06d" % ScoreManager.get_high_score()
-
 	music.play()
 
 

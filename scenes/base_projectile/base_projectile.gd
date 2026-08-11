@@ -11,6 +11,7 @@ var _flip_sprite: bool = false
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
+
 func _ready() -> void:
 	sprite_2d.flip_h = _flip_sprite
 

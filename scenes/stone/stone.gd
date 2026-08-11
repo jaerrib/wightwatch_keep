@@ -8,7 +8,6 @@ var _collectable = true
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 
-
 func _on_area_entered(_area: Area2D) -> void:
 	if _collectable:
 		_collectable = false

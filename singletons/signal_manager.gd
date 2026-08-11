@@ -19,7 +19,7 @@ signal on_create_projectile(
 	speed: float,
 	flip_sprite: bool,
 	projectile_type: BaseProjectile.ProjectileType,
-	)
+)
 
 signal on_coin_collected(points: int)
 signal on_create_enemy(position: Vector2, enemy_type: Constants.EnemyType)

@@ -8,6 +8,7 @@ func _ready() -> void:
 	SignalManager.on_game_over.connect(on_game_over)
 	SignalManager.on_player_died.connect(on_player_died)
 
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("quit"):
 		GameManager.load_main_scene()

@@ -10,6 +10,7 @@ var _falling: bool = true
 @onready var hit_box_collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var floor_detection: RayCast2D = $FloorDetection
 
+
 func _ready() -> void:
 	var flipped: bool = [true, false].pick_random()
 	animated_sprite_2d.flip_h = flipped

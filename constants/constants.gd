@@ -11,7 +11,6 @@ enum ObjectType {
 	HEART_LARGE,
 }
 
-
 enum ProjectileType {
 	CANNONBALL,
 	FLASK,

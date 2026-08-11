@@ -46,7 +46,7 @@ func shoot_magic() -> void:
 		_shoot_speed,
 		_flip_sprite,
 		BaseProjectile.ProjectileType.MAGIC
-		)
+	)
 
 
 func check_attack() -> void:
