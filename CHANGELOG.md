@@ -1,5 +1,31 @@
 # Changelog
 
+## 1.5
+
+### New features
+
+#### Visual presentation
+
+- Add black background to improve contrast and readability
+- Add new background tiles with different contrasts to increase depth
+- Add player camera with zoom to enlarge details and provide a feeling of movement
+- Update main menu to match new visual look
+
+#### Player movement
+
+- Reduce player run speed and acceleration
+- Add variable jump height (tapping versus holding the input) and increase overall player jump height
+
+### Fixes
+
+- Fix broken extra life sound
+- Fix issue where player started prototype level with zero hearts
+
+### Changes
+
+- Upgrade project to Godot Engine 4.7
+- Switch to full screen with integer scaling
+
 ## 1.4
 
 ### New features
