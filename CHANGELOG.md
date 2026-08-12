@@ -1,0 +1,64 @@
+# Changelog
+
+## 1.4
+
+### New features
+
+- Add empty hearts to improve visibility of player health (based on player feedback)
+- Add the original "1-bit dungeon" prototype level as an Easter egg!
+
+### Fixes
+
+- Disable enemy collision shapes sooner after death to reduce likelihood of player getting hit while explosion animation was playing
+
+### Changes
+
+- Prevent summoned minions from dropping coins to prevent "score cheesing"
+
+## 1.3
+
+### Fixes
+
+- Fixed an issue where the neutral ending text wasn't displaying
+- Fixed an issue with Level 18 where the hidden block would make it impossible for the player to jump back up if they fell off below where it dropped
+
+
+## 1.2
+
+### New features
+
+- Add more sound effects
+- Enhance the visuals of several levels
+
+### Changes
+
+- Set one-way collision on the wide platform variation
+- Adjusted one of the secret areas to make large heart inaccessible without taking the upper path
+- Make jumps a little easier in a couple places on level 17
+
+## 1.1
+
+### New features
+
+- Add more sound effects
+- Add a little "hop" when pressing up at the top of a ladder to assist with transitioning to adjacent platforms
+- Add new movement controls (arrow keys and left joystick)
+- Keep track of and save high score
+- Display player score after losing all your lives or on game completion
+- Add the ability to jump from the top of a ladder
+
+### Fixes
+
+- Fix some various animation issues
+- Fix issue with picking up coins or hearts twice when you jump through them
+- Fix missing characters in text
+
+### Changes
+
+- Remove the level skip function present in version 1.0
+
+## 1.0
+
+### New features
+
+- Initial release
