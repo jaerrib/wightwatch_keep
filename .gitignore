@@ -4,8 +4,6 @@ game/.godot/
 
 # Godot-specific ignores
 game/.import/
-game/export.cfg
-game/export_presets.cfg
 
 # Imported translations (automatically generated from CSV files)
 game/*.translation
