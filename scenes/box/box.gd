@@ -20,7 +20,7 @@ func _on_right_area_entered(area: Area2D) -> void:
 		velocity.x += _player_ref.velocity.x
 
 
-func _on_right_area_exited(area: Area2D) -> void:
+func _on_right_area_exited(_area: Area2D) -> void:
 	velocity.x = 0
 
 
@@ -29,5 +29,5 @@ func _on_left_side_area_entered(area: Area2D) -> void:
 		velocity.x += _player_ref.velocity.x
 
 
-func _on_left_side_area_exited(area: Area2D) -> void:
+func _on_left_side_area_exited(_area: Area2D) -> void:
 	velocity.x = 0

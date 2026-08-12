@@ -3,6 +3,7 @@ extends LevelBase
 @onready var hidden_ladder: Ladder = $Ladders/HiddenLadder
 @onready var torches: Node2D = get_node("Torches")
 
+
 func _process(delta: float) -> void:
 	super._process(delta)
 	check_torches()

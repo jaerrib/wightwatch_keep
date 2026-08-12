@@ -13,7 +13,7 @@ func remove() -> void:
 	queue_free()
 
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	if PlayerManager.player_is_at_full_hearts():
 		return
 	if _collectable:

@@ -4,6 +4,7 @@ extends EnemyBase
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
 	velocity.x = speed if animated_sprite_2d.flip_h else -speed

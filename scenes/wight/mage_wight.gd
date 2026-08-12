@@ -81,7 +81,7 @@ func summon_minions() -> void:
 		SignalManager.on_create_enemy.emit(generate_spawn_pos(), Constants.EnemyType.MINION)
 
 
-func on_hit_box_entered(area: Area2D) -> void:
+func on_hit_box_entered(_area: Area2D) -> void:
 	if _invincible:
 		return
 	go_invincible()

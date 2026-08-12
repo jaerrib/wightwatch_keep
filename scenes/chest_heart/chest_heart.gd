@@ -1,5 +1,6 @@
 extends Chest
 
+
 func _on_hit_box_area_entered(area: Area2D) -> void:
 	super._on_hit_box_area_entered(area)
 	if !_can_collect:

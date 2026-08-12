@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://8elgt0vlduob"]
+[gd_scene format=3 uid="uid://8elgt0vlduob"]
 
 [ext_resource type="PackedScene" uid="uid://2h05uwsdvof2" path="res://scenes/player/player.tscn" id="1_myc1q"]
 [ext_resource type="Script" uid="uid://cpu8i24wwtp1s" path="res://scenes/level_base/level_base.gd" id="1_p2h7h"]
 [ext_resource type="TileSet" uid="uid://c5ps7sp0v1sfc" path="res://assets/tile_map.tres" id="2_48c0a"]
+[ext_resource type="TileSet" uid="uid://bj3n3prtgpjja" path="res://assets/bg_tile_map.tres" id="2_uakon"]
 [ext_resource type="Shader" uid="uid://duyhok2fywa0y" path="res://scenes/level_base/scanlines.gdshader" id="6_tn631"]
 [ext_resource type="PackedScene" uid="uid://b3ch6qbcily7y" path="res://scenes/hud/hud.tscn" id="7_48c0a"]
 [ext_resource type="PackedScene" uid="uid://c7tum2odl7akn" path="res://scenes/game_play_manager/game_play_manager.tscn" id="7_cr6la"]
@@ -21,53 +22,69 @@ shader_parameter/vignette_intensity = 0.3
 shader_parameter/grille_amount = 0.05
 shader_parameter/brightness_boost = 1.2
 
-[node name="LevelBase" type="Node2D"]
+[node name="LevelBase" type="Node2D" unique_id=1867815694]
 process_mode = 1
 script = ExtResource("1_p2h7h")
 
-[node name="TileMapLayers" type="Node2D" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1919254507]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 320.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayers"]
+[node name="TileMapLayers" type="Node2D" parent="." unique_id=1175897490]
+
+[node name="RearTileMapLayer" type="TileMapLayer" parent="TileMapLayers" unique_id=1568766868]
+tile_set = ExtResource("2_uakon")
+
+[node name="MidTileMapLayer" type="TileMapLayer" parent="TileMapLayers" unique_id=1099010322]
+tile_set = ExtResource("2_uakon")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayers" unique_id=662068882]
 tile_set = ExtResource("2_48c0a")
 
-[node name="Secrets" type="Node2D" parent="."]
+[node name="Secrets" type="Node2D" parent="." unique_id=1217555252]
 
-[node name="Hearts" type="Node2D" parent="."]
+[node name="Hearts" type="Node2D" parent="." unique_id=456472185]
 
-[node name="Chests" type="Node2D" parent="."]
+[node name="Chests" type="Node2D" parent="." unique_id=740440984]
 
-[node name="Torches" type="Node2D" parent="."]
+[node name="Torches" type="Node2D" parent="." unique_id=831442372]
 
-[node name="Ladders" type="Node2D" parent="."]
+[node name="Ladders" type="Node2D" parent="." unique_id=2109478550]
 
-[node name="Exit" parent="." instance=ExtResource("17_qgxpy")]
+[node name="Exit" parent="." unique_id=114751284 instance=ExtResource("17_qgxpy")]
 
-[node name="Player" parent="." instance=ExtResource("1_myc1q")]
+[node name="Player" parent="." unique_id=1608711460 instance=ExtResource("1_myc1q")]
 
-[node name="Key" parent="." instance=ExtResource("11_uakon")]
+[node name="Key" parent="." unique_id=2119962341 instance=ExtResource("11_uakon")]
 
-[node name="ObjectMaker" parent="." instance=ExtResource("10_v0a34")]
+[node name="ObjectMaker" parent="." unique_id=915663095 instance=ExtResource("10_v0a34")]
 
-[node name="Enemies" type="Node2D" parent="."]
+[node name="Enemies" type="Node2D" parent="." unique_id=612136010]
 
-[node name="Paths" type="Node2D" parent="."]
+[node name="Paths" type="Node2D" parent="." unique_id=939698982]
 
-[node name="Dangers" type="Node2D" parent="."]
+[node name="Dangers" type="Node2D" parent="." unique_id=159903423]
 
-[node name="MovingPlatforms" type="Node2D" parent="."]
+[node name="MovingPlatforms" type="Node2D" parent="." unique_id=515113779]
 
-[node name="Music" type="AudioStreamPlayer" parent="." groups=["level_music"]]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1451329559 groups=["level_music"]]
 volume_db = -5.0
 autoplay = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1730577306]
 
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("7_48c0a")]
+[node name="HUD" parent="CanvasLayer" unique_id=1667910176 instance=ExtResource("7_48c0a")]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("8_v0a34")]
+[node name="PauseMenu" parent="CanvasLayer" unique_id=2024124968 instance=ExtResource("8_v0a34")]
 visible = false
 
-[node name="Scanlines" type="ColorRect" parent="CanvasLayer"]
+[node name="Scanlines" type="ColorRect" parent="CanvasLayer" unique_id=120012438]
 material = SubResource("ShaderMaterial_p2h7h")
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,7 +93,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="LevelOverlay" type="ColorRect" parent="CanvasLayer"]
+[node name="LevelOverlay" type="ColorRect" parent="CanvasLayer" unique_id=1260241101]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -84,4 +101,4 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.501961)
 
-[node name="GamePlayManager" parent="." instance=ExtResource("7_cr6la")]
+[node name="GamePlayManager" parent="." unique_id=1928135095 instance=ExtResource("7_cr6la")]

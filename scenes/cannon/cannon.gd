@@ -28,8 +28,9 @@ func _on_shoot_timer_timeout() -> void:
 		_speed,
 		_flip_sprite,
 		BaseProjectile.ProjectileType.CANNONBALL
-		)
-		
+	)
+
+
 func set_shoot_position():
 	if sprite_2d.flip_h:
 		_shoot_position.x = global_position.x + 12

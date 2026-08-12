@@ -2,16 +2,15 @@ class_name Player extends CharacterBody2D
 
 enum PlayerState { IDLE, RUN, JUMP, FALL, ON_LADDER, HURT }
 
-const ACCELERATION: float = 350.0
+const ACCELERATION: float = 280
 const CLIMB_SPEED: float = 300.0
 const FALLEN_OFF: float = 325.0
 const GRAVITY: float = 690.0
 const HURT_JUMP_VELOCITY: float = -130.0
-const JUMP_VELOCITY: float = -175.0
+const JUMP_VELOCITY: float = -210
 const KNOCKBACK: float = -50.0
-const MAX_FALL: float = 400.0
-const RUN_SPEED: float = 100.0
-
+const MAX_FALL: float = 360
+const RUN_SPEED: float = 80
 
 @export var right_collision_position: Vector2 = Vector2(9,0)
 @export var left_collision_position: Vector2 = Vector2(-9,0)
@@ -19,7 +18,6 @@ const RUN_SPEED: float = 100.0
 var _invincible: bool = false
 var _on_ladder: bool = false
 var _state: PlayerState = PlayerState.IDLE
-
 
 @onready var above_ladder_area: Area2D = $AboveLadderArea
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -32,6 +30,7 @@ var _state: PlayerState = PlayerState.IDLE
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var sound: AudioStreamPlayer2D = $Sound
 @onready var sword_hit_box: Area2D = $SwordHitBox
+
 
 func _ready() -> void:
 	SignalManager.on_ladder.connect(on_ladder)
@@ -59,7 +58,6 @@ func fallen_off() -> void:
 	if global_position.y < FALLEN_OFF:
 		return
 	set_physics_process(false)
-	queue_free()
 	SignalManager.on_player_died.emit()
 
 
@@ -73,6 +71,8 @@ func get_input(delta) -> void:
 	check_directional_input(delta)
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or (above_ladder() and _on_ladder)):
 		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_released("jump") and velocity.y < 0 and not _on_ladder:
+		velocity.y *= 0.5
 	velocity.y = clampf(velocity.y, JUMP_VELOCITY, MAX_FALL)
 
 
@@ -157,7 +157,7 @@ func _on_animation_player_animation_finished(anim_name: String) -> void:
 			animation_player.play("climbing")
 
 
-func _on_hit_box_area_entered(area: Area2D) -> void:
+func _on_hit_box_area_entered(_area: Area2D) -> void:
 	if _invincible:
 		return
 	SignalManager.on_player_hit.emit()

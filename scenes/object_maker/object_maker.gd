@@ -40,9 +40,9 @@ func on_create_object(pos: Vector2, ob_type: Constants.ObjectType) -> void:
 	call_deferred("add_child", n_obj)
 
 
-func on_create_falling_rock(position: Vector2):
+func on_create_falling_rock(pos: Vector2):
 	var scene = OBJECT_SCENES[Constants.ObjectType.FALLING_ROCK].instantiate()
-	scene.position = position
+	scene.position = pos
 	call_deferred("add_child", scene)
 
 
@@ -60,12 +60,12 @@ func on_create_projectile(
 	call_deferred(ADD_OBJECT, scene, start_pos)
 
 
-func on_create_enemy(position: Vector2, enemy_type: Constants.EnemyType):
+func on_create_enemy(pos: Vector2, enemy_type: Constants.EnemyType):
 	var scene = ENEMY_SCENE[enemy_type].instantiate()
-	scene.position = position
+	scene.position = pos
 	call_deferred("add_child", scene)
 
 
-func add_object(obj: Node, global_position: Vector2) -> void:
+func add_object(obj: Node, pos: Vector2) -> void:
 	add_child(obj)
-	obj.global_position = global_position
+	obj.global_position = pos

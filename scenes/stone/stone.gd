@@ -8,11 +8,10 @@ var _collectable = true
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 
-
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	if _collectable:
 		_collectable = false
-		collision_shape_2d.disabled = true
+		collision_shape_2d.set_deferred("disabled", true)
 		SoundManager.play_clip(sound, SoundManager.SOUND_EXTRA_LIFE)
 		animation_player.play("float")
 		PlayerManager.gain_extra_life()

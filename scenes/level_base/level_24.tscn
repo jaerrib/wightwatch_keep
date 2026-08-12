@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://fhyoytm1pca7"]
+[gd_scene format=4 uid="uid://fhyoytm1pca7"]
 
 [ext_resource type="PackedScene" uid="uid://8elgt0vlduob" path="res://scenes/level_base/level_base.tscn" id="1_ogvk8"]
 [ext_resource type="PackedScene" uid="uid://bvxswk5rh0y66" path="res://scenes/chest/chest.tscn" id="2_00g5m"]
@@ -14,194 +14,200 @@
 [ext_resource type="PackedScene" uid="uid://esoplsifphdt" path="res://scenes/medusa_head/medusa_head.tscn" id="9_t2t4f"]
 [ext_resource type="PackedScene" uid="uid://cs183vdtnapkn" path="res://scenes/moving_platform/moving_platform_wide.tscn" id="10_5sxo6"]
 
-[node name="Level24" instance=ExtResource("1_ogvk8")]
+[node name="Level24" unique_id=1696471374 instance=ExtResource("1_ogvk8")]
 
-[node name="TileMapLayer" parent="TileMapLayers" index="0"]
-tile_map_data = PackedByteArray("AAATAAAAAwALABIAAAASAAAAAwALABIAAAARAAAAAwALABIAAAAQAAAAAwALABIAAAAPAAAAAwAKABIAAAAOAAAAAwAKABIAAAANAAAAAwALABIAAAAMAAAAAwALABIAAAALAAAAAwAKABIAAAAKAAAAAwAKABIAAAAJAAAAAwALABIAAAAIAAAAAwALABIAAAAHAAAAAwALABIAAAAGAAAAAwAKABIAAAAFAAAAAwAKABIAAAAEAAAAAwAKABIAAAADAAAAAwAKABIAAAACAAAAAwAKABIAAAABAAAAAwAKABIAAAAAAAAAAwAKABIAAAAAAA4AAwAKABIAAAABAA4AAwAKABIAAAACAA4AAwALABIAAAARAA4AAwALABIAAAASAA4AAwAKABIAAAATAA4AAwALABIAAAATAAEAAAAKAAAAAAATAAIAAAAKAAAAAAATAAMAAwALABIAAAATAAQAAwAKABIAAAATAAUAAwAKABIAAAATAAYAAwALABIAAAATAAcAAwAKABIAAAATAAgAAwALABIAAAATAAkAAwALABIAAAATAAoAAwAKABIAAAATAAsAAAAKAAAAAAATAAwAAAAKAAAAAAATAA0AAAAKAAAAAAAAAAEAAwAKABIAAAAAAAIAAAABAAAAAAAAAAMAAwALABIAAAAAAAQAAAAKAAAAAAAAAAUAAAAKAAAAAAAAAAYAAwAKABIAAAAAAAcAAAAKAAAAAAAAAAgAAAAKAAAAAAAAAAkAAAAKAAAAAAAAAAoAAwAKABIAAAAAAAsAAAAKAAAAAAAAAAwAAAAKAAAAAAAAAA0AAAAKAAAAAAARAAMAAwALABIAAAAPAAQAAwALABIAAAAOAAQAAwAKABIAAAANAAQAAwALABIAAAALAAMAAwAKABIAAAAKAAMAAwALABIAAAAJAAMAAwAKABIAAAAGAAMAAwAKABIAAAAFAAIAAwALABIAAAAFAAMAAwALABIAAAAEAAEAAwAKABIAAAAEAAIAAwALABIAAAAEAAMAAwALABIAAAADAAMAAwALABIAAAACAAMAAwALABIAAAACAAYAAwALABIAAAADAAYAAwAKABIAAAACAAoAAwAKABIAAAAJAAcAAwALABIAAAAKAAcAAwALABIAAAARAAYAAwALABIAAAARAAoAAwAKABIAAAAQAAoAAwALABIAAAANAAsAAwAKABIAAAAGAAsAAwAKABIAAAAFAAsAAwALABIAAAACAAQAAAAHAAEAAAACAAUAAAAHAAIAAAARAAQAAAAHAAEAAAARAAUAAAAHAAIAAAAJAAEAAwAAABIAAAAJAAIAAwACABIAAAALAAEAAwABABIAAAALAAIAAwABABIAAAANAAEAAwACABIAAAANAAIAAwACABIAAAANAAMAAwACABIAAAAPAAEAAwABABIAAAAPAAIAAwABABIAAAAPAAMAAwABABIAAAAQAAsAAwAFABIAAAAQAAwAAwAEABIAAAARAAsAAwAEABIAAAAFAAwAAwAFABIAAAASAA0AAAAGAAEAAAARAA0AAAAEAAEAAAABAA0AAAAFAAEAAAACAA0AAAAEAAEAAAAFAAQAAAABAAEAAAAGAAQAAAABAAEAAAAGAAUAAAABAAEAAAAOAAUAAAABAAEAAAAOAAYAAAABAAEAAAAPAAUAAAABAAEAAAA=")
+[node name="RearTileMapLayer" parent="TileMapLayers" parent_id_path=PackedInt32Array(1175897490) index="0" unique_id=1568766868]
+tile_map_data = PackedByteArray("AAADAA4AAgAIAAAAAAAEAA4AAgAIAAAAAAAFAA4AAgAIAAAAAAAGAA4AAgAIAAAAAAAHAA4AAgAIAAAAAAAIAA4AAgAIAAAAAAAJAA4AAgAIAAAAAAAKAA4AAgAIAAAAAAALAA4AAgAIAAAAAAAMAA4AAgAIAAAAAAANAA4AAgAIAAAAAAAOAA4AAgAIAAAAAAAPAA4AAgAIAAAAAAAQAA4AAgAIAAAAAAABAA0AAgAIAAAAAAACAA0AAgAIAAAAAAADAA0AAgAIAAAAAAADAAwAAgAIAAAAAAAEAAwAAgAIAAAAAAAFAAwAAgAIAAAAAAAGAAwAAgAIAAAAAAAHAAwAAgAIAAAAAAAIAAwAAgAIAAAAAAAJAAwAAgAIAAAAAAAKAAwAAgAIAAAAAAALAAwAAgAIAAAAAAAMAAwAAgAIAAAAAAANAAwAAgAIAAAAAAABAAwAAgAIAAAAAAACAAwAAgAIAAAAAAAEAA0AAgAIAAAAAAAFAA0AAgAIAAAAAAAGAA0AAgAIAAAAAAAHAA0AAgAIAAAAAAAIAA0AAgAIAAAAAAAJAA0AAgAIAAAAAAAKAA0AAgAIAAAAAAALAA0AAgAIAAAAAAAMAA0AAgAIAAAAAAANAA0AAgAIAAAAAAAOAAwAAgAIAAAAAAAOAA0AAgAIAAAAAAAPAAwAAgAIAAAAAAAPAA0AAgAIAAAAAAAQAAwAAgAIAAAAAAAQAA0AAgAIAAAAAAARAAwAAgAIAAAAAAARAA0AAgAIAAAAAAASAAwAAgAIAAAAAAASAA0AAgAIAAAAAAAOAAsAAgAIAAAAAAAPAAsAAgAIAAAAAAAQAAsAAgAIAAAAAAARAAsAAgAIAAAAAAASAAsAAgAIAAAAAAAHAAsAAgAIAAAAAAAIAAsAAgAIAAAAAAAJAAsAAgAIAAAAAAAKAAsAAgAIAAAAAAALAAsAAgAIAAAAAAAMAAsAAgAIAAAAAAABAAsAAgAIAAAAAAACAAsAAgAIAAAAAAADAAsAAgAIAAAAAAAEAAsAAgAIAAAAAAADAAoAAgAIAAAAAAAEAAoAAgAIAAAAAAAFAAoAAgAIAAAAAAAGAAoAAgAIAAAAAAAHAAoAAgAIAAAAAAAIAAoAAgAIAAAAAAAJAAoAAgAIAAAAAAAKAAoAAgAIAAAAAAALAAoAAgAIAAAAAAAMAAoAAgAIAAAAAAANAAoAAgAIAAAAAAAOAAoAAgAIAAAAAAAFAAkAAgAIAAAAAAAGAAkAAgAIAAAAAAAHAAkAAgAIAAAAAAAIAAkAAgAIAAAAAAAJAAkAAgAIAAAAAAAKAAkAAgAIAAAAAAALAAkAAgAIAAAAAAAMAAkAAgAIAAAAAAANAAkAAgAIAAAAAAAOAAkAAgAIAAAAAAAPAAkAAgAIAAAAAAAQAAkAAgAIAAAAAAARAAkAAgAIAAAAAAASAAkAAgAIAAAAAAABAAkAAgAIAAAAAAACAAkAAgAIAAAAAAADAAkAAgAIAAAAAAAEAAkAAgAIAAAAAAABAAgAAgAIAAAAAAACAAgAAgAIAAAAAAADAAgAAgAIAAAAAAAEAAgAAgAIAAAAAAAFAAgAAgAIAAAAAAAGAAgAAgAIAAAAAAAHAAgAAgAIAAAAAAAIAAgAAgAIAAAAAAAJAAgAAgAIAAAAAAAKAAgAAgAIAAAAAAALAAgAAgAIAAAAAAAMAAgAAgAIAAAAAAANAAgAAgAIAAAAAAAOAAgAAgAIAAAAAAAPAAgAAgAIAAAAAAAQAAgAAgAIAAAAAAARAAgAAgAIAAAAAAASAAgAAgAIAAAAAAALAAcAAgAIAAAAAAAMAAcAAgAIAAAAAAANAAcAAgAIAAAAAAAOAAcAAgAIAAAAAAAPAAcAAgAIAAAAAAAQAAcAAgAIAAAAAAARAAcAAgAIAAAAAAASAAcAAgAIAAAAAAABAAcAAgAIAAAAAAACAAcAAgAIAAAAAAADAAcAAgAIAAAAAAAEAAcAAgAIAAAAAAAFAAcAAgAIAAAAAAAGAAcAAgAIAAAAAAAHAAcAAgAIAAAAAAAIAAcAAgAIAAAAAAABAAYAAgAIAAAAAAAEAAYAAgAIAAAAAAAFAAYAAgAIAAAAAAAGAAYAAgAIAAAAAAAHAAYAAgAIAAAAAAAIAAYAAgAIAAAAAAAJAAYAAgAIAAAAAAAKAAYAAgAIAAAAAAALAAYAAgAIAAAAAAAMAAYAAgAIAAAAAAANAAYAAgAIAAAAAAAOAAYAAgAIAAAAAAAPAAYAAgAIAAAAAAAQAAYAAgAIAAAAAAASAAUAAgAIAAAAAAASAAYAAgAIAAAAAAAHAAUAAgAIAAAAAAAIAAUAAgAIAAAAAAAJAAUAAgAIAAAAAAAKAAUAAgAIAAAAAAALAAUAAgAIAAAAAAAMAAUAAgAIAAAAAAANAAUAAgAIAAAAAAAOAAUAAgAIAAAAAAAPAAUAAgAIAAAAAAAQAAUAAgAIAAAAAAARAAUAAgAIAAAAAAABAAUAAgAIAAAAAAACAAUAAgAIAAAAAAADAAUAAgAIAAAAAAAEAAUAAgAIAAAAAAAFAAUAAgAIAAAAAAAGAAUAAgAIAAAAAAABAAQAAgAIAAAAAAACAAQAAgAIAAAAAAADAAQAAgAIAAAAAAAEAAQAAgAIAAAAAAAFAAQAAgAIAAAAAAAGAAQAAgAIAAAAAAAHAAQAAgAIAAAAAAAIAAQAAgAIAAAAAAAJAAQAAgAIAAAAAAAKAAQAAgAIAAAAAAALAAQAAgAIAAAAAAAMAAQAAgAIAAAAAAAQAAQAAgAIAAAAAAARAAQAAgAIAAAAAAASAAQAAgAIAAAAAAASAAMAAgAIAAAAAAAMAAMAAgAIAAAAAAANAAMAAgAIAAAAAAAOAAMAAgAIAAAAAAAPAAMAAgAIAAAAAAAQAAMAAgAIAAAAAAAHAAMAAgAIAAAAAAAIAAMAAgAIAAAAAAABAAMAAgAIAAAAAAABAAIAAgAIAAAAAAACAAIAAgAIAAAAAAABAAEAAgAIAAAAAAACAAEAAgAIAAAAAAADAAEAAgAIAAAAAAADAAIAAgAIAAAAAAAFAAEAAgAIAAAAAAAGAAEAAgAIAAAAAAAGAAIAAgAIAAAAAAAHAAEAAgAIAAAAAAAHAAIAAgAIAAAAAAAIAAEAAgAIAAAAAAAIAAIAAgAIAAAAAAAJAAEAAgAIAAAAAAAJAAIAAgAIAAAAAAAKAAEAAgAIAAAAAAAKAAIAAgAIAAAAAAALAAEAAgAIAAAAAAALAAIAAgAIAAAAAAAMAAEAAgAIAAAAAAAMAAIAAgAIAAAAAAANAAEAAgAIAAAAAAANAAIAAgAIAAAAAAAOAAEAAgAIAAAAAAAOAAIAAgAIAAAAAAAPAAEAAgAIAAAAAAAPAAIAAgAIAAAAAAAQAAEAAgAIAAAAAAAQAAIAAgAIAAAAAAARAAEAAgAIAAAAAAARAAIAAgAIAAAAAAASAAEAAgAIAAAAAAASAAIAAgAIAAAAAAAPAAoAAgAIAAAAAAA=")
 
-[node name="Heart" parent="Hearts" index="0" instance=ExtResource("2_krb8e")]
+[node name="MidTileMapLayer" parent="TileMapLayers" parent_id_path=PackedInt32Array(1175897490) index="1" unique_id=1099010322]
+tile_map_data = PackedByteArray("AAARAAQAAwAHAAEAAAARAAUAAwAHAAIAAAACAAQAAwAHAAEAAAACAAUAAwAHAAIAAAAOAAUAAwABAAEAAAAOAAYAAwABAAEAAAAPAAUAAwABAAEAAAAFAAQAAwABAAEAAAAGAAQAAwABAAEAAAAGAAUAAwABAAEAAAAPAAEAAQACABIAAAAPAAIAAQACABIAAAAPAAMAAQABABIAAAANAAEAAQABABIAAAANAAIAAQABABIAAAANAAMAAQABABIAAAALAAEAAQABABIAAAALAAIAAQABABIAAAAJAAEAAQABABIAAAAJAAIAAQABABIAAAAQAAsAAQAFABIAAAAQAAwAAQAEABIAAAARAAsAAQAEABIAAAAFAAwAAQAFABIAAAA=")
+
+[node name="TileMapLayer" parent="TileMapLayers" parent_id_path=PackedInt32Array(1175897490) index="2" unique_id=662068882]
+tile_map_data = PackedByteArray("AAATAAAAAwALABIAAAASAAAAAwALABIAAAARAAAAAwALABIAAAAQAAAAAwALABIAAAAPAAAAAwAKABIAAAAOAAAAAwAKABIAAAANAAAAAwALABIAAAAMAAAAAwALABIAAAALAAAAAwAKABIAAAAKAAAAAwAKABIAAAAJAAAAAwALABIAAAAIAAAAAwALABIAAAAHAAAAAwALABIAAAAGAAAAAwAKABIAAAAFAAAAAwAKABIAAAAEAAAAAwAKABIAAAADAAAAAwAKABIAAAACAAAAAwAKABIAAAABAAAAAwAKABIAAAAAAAAAAwAKABIAAAAAAA4AAwAKABIAAAABAA4AAwAKABIAAAACAA4AAwALABIAAAARAA4AAwALABIAAAASAA4AAwAKABIAAAATAA4AAwALABIAAAATAAEAAAAKAAAAAAATAAIAAAAKAAAAAAATAAMAAwALABIAAAATAAQAAwAKABIAAAATAAUAAwAKABIAAAATAAYAAwALABIAAAATAAcAAwAKABIAAAATAAgAAwALABIAAAATAAkAAwALABIAAAATAAoAAwAKABIAAAATAAsAAAAKAAAAAAATAAwAAAAKAAAAAAATAA0AAAAKAAAAAAAAAAEAAwAKABIAAAAAAAIAAAABAAAAAAAAAAMAAwALABIAAAAAAAQAAAAKAAAAAAAAAAUAAAAKAAAAAAAAAAYAAwAKABIAAAAAAAcAAAAKAAAAAAAAAAgAAAAKAAAAAAAAAAkAAAAKAAAAAAAAAAoAAwAKABIAAAAAAAsAAAAKAAAAAAAAAAwAAAAKAAAAAAAAAA0AAAAKAAAAAAARAAMAAwALABIAAAAPAAQAAwALABIAAAAOAAQAAwAKABIAAAANAAQAAwALABIAAAALAAMAAwAKABIAAAAKAAMAAwALABIAAAAJAAMAAwAKABIAAAAGAAMAAwAKABIAAAAFAAIAAwALABIAAAAFAAMAAwALABIAAAAEAAEAAwAKABIAAAAEAAIAAwALABIAAAAEAAMAAwALABIAAAADAAMAAwALABIAAAACAAMAAwALABIAAAACAAYAAwALABIAAAADAAYAAwAKABIAAAACAAoAAwAKABIAAAAJAAcAAwALABIAAAAKAAcAAwALABIAAAARAAYAAwALABIAAAARAAoAAwAKABIAAAAQAAoAAwALABIAAAANAAsAAwAKABIAAAAGAAsAAwAKABIAAAAFAAsAAwALABIAAAASAA0AAAAGAAEAAAARAA0AAAAEAAEAAAABAA0AAAAFAAEAAAACAA0AAAAEAAEAAAA=")
+
+[node name="Heart" parent="Hearts" parent_id_path=PackedInt32Array(456472185) index="0" unique_id=50571434 instance=ExtResource("2_krb8e")]
 position = Vector2(88, 168)
 
-[node name="Heart2" parent="Hearts" index="1" instance=ExtResource("2_krb8e")]
+[node name="Heart2" parent="Hearts" parent_id_path=PackedInt32Array(456472185) index="1" unique_id=1780602836 instance=ExtResource("2_krb8e")]
 position = Vector2(56, 40)
 
-[node name="Chest" parent="Chests" index="0" instance=ExtResource("2_00g5m")]
+[node name="Chest" parent="Chests" parent_id_path=PackedInt32Array(740440984) index="0" unique_id=77956229 instance=ExtResource("2_00g5m")]
 position = Vector2(88, 24)
 
-[node name="Torch" parent="Torches" index="0" instance=ExtResource("2_csdco")]
+[node name="Torch" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="0" unique_id=414287726 instance=ExtResource("2_csdco")]
 position = Vector2(168, 24)
 
-[node name="Torch2" parent="Torches" index="1" instance=ExtResource("2_csdco")]
+[node name="Torch2" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="1" unique_id=421201470 instance=ExtResource("2_csdco")]
 position = Vector2(232, 40)
 
-[node name="Torch3" parent="Torches" index="2" instance=ExtResource("2_csdco")]
+[node name="Torch3" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="2" unique_id=1854936296 instance=ExtResource("2_csdco")]
 position = Vector2(280, 24)
 
-[node name="Torch4" parent="Torches" index="3" instance=ExtResource("2_csdco")]
+[node name="Torch4" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="3" unique_id=1254967397 instance=ExtResource("2_csdco")]
 position = Vector2(280, 136)
 
-[node name="Torch5" parent="Torches" index="4" instance=ExtResource("2_csdco")]
+[node name="Torch5" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="4" unique_id=501897305 instance=ExtResource("2_csdco")]
 position = Vector2(280, 200)
 
-[node name="Torch6" parent="Torches" index="5" instance=ExtResource("2_csdco")]
+[node name="Torch6" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="5" unique_id=412071588 instance=ExtResource("2_csdco")]
 position = Vector2(216, 152)
 
-[node name="Torch7" parent="Torches" index="6" instance=ExtResource("2_csdco")]
+[node name="Torch7" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="6" unique_id=1121349088 instance=ExtResource("2_csdco")]
 position = Vector2(104, 152)
 
-[node name="Torch8" parent="Torches" index="7" instance=ExtResource("2_csdco")]
+[node name="Torch8" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="7" unique_id=476022584 instance=ExtResource("2_csdco")]
 position = Vector2(40, 200)
 
-[node name="Torch9" parent="Torches" index="8" instance=ExtResource("2_csdco")]
+[node name="Torch9" parent="Torches" parent_id_path=PackedInt32Array(831442372) index="8" unique_id=1977431335 instance=ExtResource("2_csdco")]
 position = Vector2(40, 144)
 
-[node name="Ladder" parent="Ladders" index="0" instance=ExtResource("2_fw4n4")]
+[node name="Ladder" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="0" unique_id=504382689 instance=ExtResource("2_fw4n4")]
 position = Vector2(120, 184)
 
-[node name="Ladder2" parent="Ladders" index="1" instance=ExtResource("2_fw4n4")]
+[node name="Ladder2" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="1" unique_id=241207695 instance=ExtResource("2_fw4n4")]
 position = Vector2(200, 184)
 
-[node name="LadderTwoHigh" parent="Ladders" index="2" instance=ExtResource("3_csdco")]
+[node name="LadderTwoHigh" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="2" unique_id=1873534402 instance=ExtResource("3_csdco")]
 position = Vector2(24, 56)
 
-[node name="LadderTwoHigh2" parent="Ladders" index="3" instance=ExtResource("3_csdco")]
+[node name="LadderTwoHigh2" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="3" unique_id=550314716 instance=ExtResource("3_csdco")]
 position = Vector2(296, 56)
 
-[node name="LadderThreeHigh" parent="Ladders" index="4" instance=ExtResource("4_00g5m")]
+[node name="LadderThreeHigh" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="4" unique_id=1637497043 instance=ExtResource("4_00g5m")]
 position = Vector2(24, 104)
 
-[node name="LadderThreeHigh2" parent="Ladders" index="5" instance=ExtResource("4_00g5m")]
+[node name="LadderThreeHigh2" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="5" unique_id=759558350 instance=ExtResource("4_00g5m")]
 position = Vector2(24, 168)
 
-[node name="LadderThreeHigh3" parent="Ladders" index="6" instance=ExtResource("4_00g5m")]
+[node name="LadderThreeHigh3" parent="Ladders" parent_id_path=PackedInt32Array(2109478550) index="6" unique_id=1829102787 instance=ExtResource("4_00g5m")]
 position = Vector2(296, 168)
 
-[node name="Exit" parent="." index="6"]
+[node name="Exit" parent="." index="7" unique_id=114751284]
 position = Vector2(56, 88)
 
-[node name="Player" parent="." index="7"]
+[node name="Player" parent="." index="8" unique_id=1608711460]
 position = Vector2(40, 40)
 
-[node name="Key" parent="." index="8"]
+[node name="Key" parent="." index="9" unique_id=2119962341]
 position = Vector2(104, 40)
 
-[node name="FlaskWraith" parent="Enemies" index="0" instance=ExtResource("8_2x8a7")]
+[node name="FlaskWraith" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="0" unique_id=272210299 instance=ExtResource("8_2x8a7")]
 position = Vector2(168, 104)
 
-[node name="FlaskWraith2" parent="Enemies" index="1" instance=ExtResource("8_2x8a7")]
+[node name="FlaskWraith2" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="1" unique_id=1516836978 instance=ExtResource("8_2x8a7")]
 position = Vector2(152, 136)
 
-[node name="FlaskWraith3" parent="Enemies" index="2" instance=ExtResource("8_2x8a7")]
+[node name="FlaskWraith3" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="2" unique_id=1198460591 instance=ExtResource("8_2x8a7")]
 position = Vector2(168, 40)
 
-[node name="FlaskWraith4" parent="Enemies" index="3" instance=ExtResource("8_2x8a7")]
+[node name="FlaskWraith4" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="3" unique_id=396571195 instance=ExtResource("8_2x8a7")]
 position = Vector2(232, 56)
 
-[node name="MedusaHead" parent="Enemies" index="4" instance=ExtResource("9_t2t4f")]
+[node name="MedusaHead" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="4" unique_id=772699585 instance=ExtResource("9_t2t4f")]
 position = Vector2(120, 88)
 
-[node name="MedusaHead2" parent="Enemies" index="5" instance=ExtResource("9_t2t4f")]
+[node name="MedusaHead2" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="5" unique_id=652292219 instance=ExtResource("9_t2t4f")]
 position = Vector2(200, 88)
 
-[node name="MedusaHead3" parent="Enemies" index="6" instance=ExtResource("9_t2t4f")]
+[node name="MedusaHead3" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="6" unique_id=1299649835 instance=ExtResource("9_t2t4f")]
 position = Vector2(104, 200)
 
-[node name="MedusaHead4" parent="Enemies" index="7" instance=ExtResource("9_t2t4f")]
+[node name="MedusaHead4" parent="Enemies" parent_id_path=PackedInt32Array(612136010) index="7" unique_id=1130139771 instance=ExtResource("9_t2t4f")]
 position = Vector2(216, 200)
 
-[node name="P1" type="Marker2D" parent="Paths" index="0"]
+[node name="P1" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="0" unique_id=779773630]
 position = Vector2(72, 136)
 
-[node name="P2" type="Marker2D" parent="Paths" index="1"]
+[node name="P2" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="1" unique_id=454120434]
 position = Vector2(120, 104)
 
-[node name="P3" type="Marker2D" parent="Paths" index="2"]
+[node name="P3" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="2" unique_id=483262659]
 position = Vector2(200, 136)
 
-[node name="P4" type="Marker2D" parent="Paths" index="3"]
+[node name="P4" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="3" unique_id=565947449]
 position = Vector2(248, 104)
 
-[node name="P5" type="Marker2D" parent="Paths" index="4"]
+[node name="P5" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="4" unique_id=262809386]
 position = Vector2(256, 224)
 
-[node name="P6" type="Marker2D" parent="Paths" index="5"]
+[node name="P6" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="5" unique_id=1841285025]
 position = Vector2(64, 224)
 
-[node name="P7" type="Marker2D" parent="Paths" index="6"]
+[node name="P7" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="6" unique_id=483773035]
 position = Vector2(160, 208)
 
-[node name="Pool" parent="Dangers" index="0" instance=ExtResource("2_riwet")]
+[node name="Pool" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="0" unique_id=682036899 instance=ExtResource("2_riwet")]
 position = Vector2(48, 224)
 
-[node name="Pool2" parent="Dangers" index="1" instance=ExtResource("2_riwet")]
+[node name="Pool2" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="1" unique_id=1368206650 instance=ExtResource("2_riwet")]
 position = Vector2(64, 224)
 
-[node name="Pool3" parent="Dangers" index="2" instance=ExtResource("2_riwet")]
+[node name="Pool3" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="2" unique_id=1981678223 instance=ExtResource("2_riwet")]
 position = Vector2(80, 224)
 
-[node name="Pool4" parent="Dangers" index="3" instance=ExtResource("2_riwet")]
+[node name="Pool4" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="3" unique_id=1634683323 instance=ExtResource("2_riwet")]
 position = Vector2(96, 224)
 
-[node name="Pool5" parent="Dangers" index="4" instance=ExtResource("2_riwet")]
+[node name="Pool5" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="4" unique_id=682000461 instance=ExtResource("2_riwet")]
 position = Vector2(112, 224)
 
-[node name="Pool6" parent="Dangers" index="5" instance=ExtResource("2_riwet")]
+[node name="Pool6" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="5" unique_id=420526357 instance=ExtResource("2_riwet")]
 position = Vector2(128, 224)
 
-[node name="Pool7" parent="Dangers" index="6" instance=ExtResource("2_riwet")]
+[node name="Pool7" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="6" unique_id=1048167183 instance=ExtResource("2_riwet")]
 position = Vector2(144, 224)
 
-[node name="Pool8" parent="Dangers" index="7" instance=ExtResource("2_riwet")]
+[node name="Pool8" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="7" unique_id=106688669 instance=ExtResource("2_riwet")]
 position = Vector2(160, 224)
 
-[node name="Pool9" parent="Dangers" index="8" instance=ExtResource("2_riwet")]
+[node name="Pool9" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="8" unique_id=1108735184 instance=ExtResource("2_riwet")]
 position = Vector2(176, 224)
 
-[node name="Pool10" parent="Dangers" index="9" instance=ExtResource("2_riwet")]
+[node name="Pool10" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="9" unique_id=1648189801 instance=ExtResource("2_riwet")]
 position = Vector2(192, 224)
 
-[node name="Pool11" parent="Dangers" index="10" instance=ExtResource("2_riwet")]
+[node name="Pool11" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="10" unique_id=1342666197 instance=ExtResource("2_riwet")]
 position = Vector2(208, 224)
 
-[node name="Pool12" parent="Dangers" index="11" instance=ExtResource("2_riwet")]
+[node name="Pool12" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="11" unique_id=1540715409 instance=ExtResource("2_riwet")]
 position = Vector2(224, 224)
 
-[node name="Pool13" parent="Dangers" index="12" instance=ExtResource("2_riwet")]
+[node name="Pool13" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="12" unique_id=1734477801 instance=ExtResource("2_riwet")]
 position = Vector2(240, 224)
 
-[node name="Pool14" parent="Dangers" index="13" instance=ExtResource("2_riwet")]
+[node name="Pool14" parent="Dangers" parent_id_path=PackedInt32Array(159903423) index="13" unique_id=1525701402 instance=ExtResource("2_riwet")]
 position = Vector2(256, 224)
 
-[node name="Platform1" parent="MovingPlatforms" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
+[node name="Platform1" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="0" unique_id=590649454 node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
 position = Vector2(72, 104)
 destination = NodePath("../../Paths/P1")
 
-[node name="Platform2" parent="MovingPlatforms" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
+[node name="Platform2" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="1" unique_id=1283113414 node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
 position = Vector2(120, 144)
 destination = NodePath("../../Paths/P2")
 
-[node name="Platform3" parent="MovingPlatforms" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
+[node name="Platform3" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="2" unique_id=49435951 node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
 position = Vector2(200, 104)
 destination = NodePath("../../Paths/P3")
 
-[node name="Platform4" parent="MovingPlatforms" index="3" node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
+[node name="Platform4" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="3" unique_id=1269588101 node_paths=PackedStringArray("destination") instance=ExtResource("9_6drgj")]
 position = Vector2(248, 168)
 destination = NodePath("../../Paths/P4")
 
-[node name="Platform5" parent="MovingPlatforms" index="4" node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
+[node name="Platform5" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="4" unique_id=682459646 node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
 position = Vector2(176, 224)
 destination = NodePath("../../Paths/P5")
 
-[node name="Platform6" parent="MovingPlatforms" index="5" node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
+[node name="Platform6" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="5" unique_id=1195876999 node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
 position = Vector2(144, 224)
 destination = NodePath("../../Paths/P6")
 
-[node name="Platform7" parent="MovingPlatforms" index="6" node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
+[node name="Platform7" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="6" unique_id=191625470 node_paths=PackedStringArray("destination") instance=ExtResource("10_5sxo6")]
 position = Vector2(160, 152)
 destination = NodePath("../../Paths/P7")
 
-[node name="Music" parent="." index="14"]
+[node name="Music" parent="." index="15" unique_id=1451329559]
 stream = ExtResource("2_aaxh5")
 
-[node name="LevelOverlay" parent="CanvasLayer" index="3"]
+[node name="LevelOverlay" parent="CanvasLayer" parent_id_path=PackedInt32Array(1730577306) index="3" unique_id=1260241101]
 color = Color(0.823529, 0.709804, 0.345098, 0.501961)

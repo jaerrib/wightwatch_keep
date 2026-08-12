@@ -11,6 +11,7 @@ var _flip_sprite: bool = false
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
+
 func _ready() -> void:
 	sprite_2d.flip_h = _flip_sprite
 
@@ -37,6 +38,6 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
 
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	set_process(false)
 	queue_free()

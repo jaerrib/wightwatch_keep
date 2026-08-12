@@ -44,8 +44,8 @@ func make_hidden_things_visible() -> void:
 	ladder_2.show()
 
 
-func on_mage_wight_killed(position: Vector2) -> void:
-	var adjusted_pos: Vector2 = Vector2(position.x, position.y - 8)
+func on_mage_wight_killed(pos: Vector2) -> void:
+	var adjusted_pos: Vector2 = Vector2(pos.x, pos.y - 8)
 	SignalManager.on_create_enemy.emit(adjusted_pos, Constants.EnemyType.WARRIOR_WIGHT)
 
 
@@ -53,7 +53,7 @@ func on_warrior_wight_killed() -> void:
 	make_hidden_things_visible()
 
 
-func _on_camera_trigger_area_entered(area: Area2D) -> void:
+func _on_camera_trigger_area_entered(_area: Area2D) -> void:
 	camera_2d.limit_left = 320
 	camera_2d.limit_right = 640
 	music.stop()

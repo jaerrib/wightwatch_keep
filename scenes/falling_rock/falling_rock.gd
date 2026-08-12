@@ -11,7 +11,7 @@ func _ready() -> void:
 	sprite_2d.frame = _sprite_selection
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if global_position.y > FALLEN_OFF:
 		set_physics_process(false)
 		queue_free()
