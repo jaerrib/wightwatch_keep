@@ -1,6 +1,7 @@
 extends EnemyBase
 
 var _attacking: bool = false
+var _can_attack: bool = true
 var _throw_direction: Vector2
 var _facing: bool = false
 var _flip_sprite: bool = false
@@ -14,6 +15,10 @@ var _waiting: bool = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_timer: Timer = $AttackTimer
 @onready var wait_timer: Timer = $WaitTimer
+
+
+func _ready() -> void:
+	SignalManager.on_exit_reached.connect(on_exit_reached)
 
 
 func _physics_process(delta: float) -> void:
@@ -33,15 +38,16 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if is_on_wall() or not floor_detection.is_colliding():
 			flip_me()
-	
+
+
 func check_attack() -> void:
-	if _attacking:
+	if _attacking or not _can_attack or _waiting:
 		return
 	var x_dir = _player_ref.global_position.x - global_position.x
 	var y_dir = _player_ref.global_position.y - global_position.y
 	_facing = (x_dir > 0 and !animated_sprite_2d.flip_h) or (x_dir < 0 and animated_sprite_2d.flip_h)
 	_nearby = (abs(x_dir) < 56) and abs(y_dir) < 24
-	if !_attacking and !_waiting and _facing and _nearby:
+	if _facing and _nearby:
 		attack()
 
 
@@ -85,3 +91,8 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	if animated_sprite_2d.animation.contains("attack"):
 		set_up_throw()
 		throw_flask()
+
+
+func on_exit_reached() -> void:
+	_can_attack = false
+	attack_timer.stop()

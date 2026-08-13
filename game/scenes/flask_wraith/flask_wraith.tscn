@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b60bywinfuw4f"]
+[gd_scene format=3 uid="uid://b60bywinfuw4f"]
 
 [ext_resource type="PackedScene" uid="uid://cf57h23ilq1xh" path="res://scenes/enemy_base/enemy_base.tscn" id="1_sxunq"]
 [ext_resource type="Texture2D" uid="uid://cq0p4lk2bcs5a" path="res://assets/enemies/flask_wraith.png" id="2_8jalk"]
@@ -52,7 +52,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wuuv3")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack",
 "speed": 8.0
 }, {
@@ -63,7 +63,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1ut1y")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -80,7 +80,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0ncaj")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 5.0
 }]
@@ -91,34 +91,34 @@ size = Vector2(9, 12)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrw7b"]
 size = Vector2(9, 12)
 
-[node name="FlaskWraith" instance=ExtResource("1_sxunq")]
+[node name="FlaskWraith" unique_id=1075027453 instance=ExtResource("1_sxunq")]
 script = ExtResource("2_wrw7b")
 points = 200
 
-[node name="AnimatedSprite2D" parent="." index="0"]
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=625191044]
 sprite_frames = SubResource("SpriteFrames_srise")
 animation = &"attack"
 autoplay = "walk"
 frame = 2
 frame_progress = 1.0
 
-[node name="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" parent="." index="1" unique_id=77008173]
 position = Vector2(-0.5, 2)
 shape = SubResource("RectangleShape2D_8jalk")
 
-[node name="CollisionShape2D" parent="HitBox" index="0"]
+[node name="CollisionShape2D" parent="HitBox" parent_id_path=PackedInt32Array(464170844) index="0" unique_id=1909653121]
 position = Vector2(-0.5, 2)
 shape = SubResource("RectangleShape2D_wrw7b")
 
-[node name="FloorDetection" type="RayCast2D" parent="." index="4"]
+[node name="FloorDetection" type="RayCast2D" parent="." index="4" unique_id=750802875]
 position = Vector2(5, 0)
 target_position = Vector2(0, 11)
 
-[node name="AttackTimer" type="Timer" parent="." index="5"]
+[node name="AttackTimer" type="Timer" parent="." index="5" unique_id=593575876]
 wait_time = 0.5
 one_shot = true
 
-[node name="WaitTimer" type="Timer" parent="." index="6"]
+[node name="WaitTimer" type="Timer" parent="." index="6" unique_id=306488214]
 one_shot = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
