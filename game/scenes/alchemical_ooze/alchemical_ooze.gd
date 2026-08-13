@@ -10,7 +10,6 @@ var _moving: bool = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var move_timer: Timer = $MoveTimer
 @onready var pause_timer: Timer = $PauseTimer
-@onready var spawn_timer: Timer = $SpawnTimer
 
 
 func _ready() -> void:
