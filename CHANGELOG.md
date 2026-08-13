@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.5.1
+
+### Fixes
+
+- Add missing background tile on level 25
+- Stop projectiles from moving on player reaching exit
+- Stop cannons from firing and enemies from attacking on player reaching exit
+- Disable hitbox when enemy dies to reduce unintended player damage before explosion and coin are spawned
+  - **Note:** if the player is moving towards the enemy, there may a frame where damage can still occur
+
 ## 1.5
 
 ### New features
