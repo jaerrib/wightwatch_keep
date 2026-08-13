@@ -86,6 +86,9 @@ func on_player_died() -> void:
 
 
 func on_exit_reached() -> void:
+	for mv in get_tree().get_nodes_in_group(Constants.MOVEABLES_GROUP):
+		mv.set_process(false)
+		mv.set_physics_process(false)
 	show_hud()
 	vb_level_complete.show()
 
