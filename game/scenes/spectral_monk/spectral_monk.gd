@@ -1,6 +1,7 @@
 extends EnemyBase
 
 var _attacking: bool = false
+var _can_attack: bool = true
 var _direction: Vector2 = Vector2.ZERO
 var facing: bool = false
 var _flip_sprite: bool = false
@@ -14,6 +15,10 @@ var _speed: float = 20
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var floor_detection: RayCast2D = $FloorDetection
 @onready var sound: AudioStreamPlayer2D = $Sound
+
+
+func _ready() -> void:
+	SignalManager.on_exit_reached.connect(on_exit_reached)
 
 
 func _physics_process(delta: float) -> void:
@@ -50,13 +55,13 @@ func shoot_magic() -> void:
 
 
 func check_attack() -> void:
-	if _attacking:
+	if _attacking or not _can_attack:
 		return
 	var x_dir = _player_ref.global_position.x - global_position.x
 	var y_dir = _player_ref.global_position.y - global_position.y
 	facing = (x_dir > 0 and !animated_sprite_2d.flip_h) or (x_dir < 0 and animated_sprite_2d.flip_h)
 	nearby = (abs(x_dir) < 56) and abs(y_dir) < 16
-	if !_attacking and facing and nearby:
+	if facing and nearby:
 		attack()
 
 
@@ -81,3 +86,8 @@ func attack() -> void:
 
 func _on_attack_timer_timeout() -> void:
 	_attacking = false
+
+
+func on_exit_reached() -> void:
+	_can_attack = false
+	attack_timer.stop()
