@@ -8,6 +8,7 @@ var _player_ref: Player
 var _gravity: float = 800.0
 var _dying: bool = false
 
+@onready var hit_box: Area2D = $HitBox
 @onready var removal_timer: Timer = $RemovalTimer
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
@@ -38,6 +39,7 @@ func die() -> void:
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
+	hit_box.set_deferred("monitorable", false)
 	collision_shape_2d.set_deferred("disabled", true)
 	die()
 
