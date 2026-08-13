@@ -5,7 +5,6 @@ var _spores: bool = false
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var burst_timer: Timer = $BurstTimer
-@onready var hit_box: Area2D = $HitBox
 @onready var spore_timer: Timer = $SporeTimer
 
 

@@ -6,7 +6,6 @@ var _moving: bool = false
 
 @onready var floor_detection: RayCast2D = $FloorDetection
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var hit_box: Area2D = $HitBox
 @onready var move_timer: Timer = $MoveTimer
 @onready var pause_timer: Timer = $PauseTimer
 @onready var spawn_timer: Timer = $SpawnTimer
