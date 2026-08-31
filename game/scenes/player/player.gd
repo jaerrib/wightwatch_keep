@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-enum PlayerState { IDLE, RUN, JUMP, FALL, ON_LADDER, HURT }
+enum PlayerState { IDLE, RUN, JUMP, FALL, ON_LADDER, HURT , ATTACK }
 
 const ACCELERATION: float = 280
 const CLIMB_SPEED: float = 300.0
@@ -101,13 +101,21 @@ func check_ladder_input(delta) -> void:
 
 
 func attack() -> void:
+	if _state == PlayerState.ATTACK and animation_player.is_playing():
+		return
 	SoundManager.play_clip(sound, SoundManager.SOUND_PLAYER_ATTACK)
+	set_state(PlayerState.ATTACK)
 	animation_player.play("attack")
 
 
 func set_state(new_state: PlayerState) -> void:
-	if animation_player.current_animation == "attack" or new_state == _state:
+	if animation_player.current_animation == "attack" and animation_player.is_playing():
 		return
+	if new_state == _state:
+		return
+	
+	#if animation_player.current_animation == "attack" or new_state == _state:
+		#return
 	_state = new_state
 	match _state:
 		PlayerState.ON_LADDER:
@@ -121,12 +129,17 @@ func set_state(new_state: PlayerState) -> void:
 		PlayerState.FALL:
 			animation_player.play("jump")
 			collision_shape_2d.disabled = true
+		PlayerState.ATTACK:
+			animation_player.play("attack")
 		PlayerState.HURT:
 			apply_hurt_jump()
 
 
 func calculate_state() -> void:
 	if _state == PlayerState.HURT:
+		return
+	if _state == PlayerState.ATTACK and \
+		animation_player.current_animation == "attack" and animation_player.is_playing():
 		return
 	if velocity.y == 0 and (is_on_floor() or above_ladder()):
 		if velocity.x == 0:
@@ -152,9 +165,10 @@ func on_ladder(value: bool) -> void:
 
 func _on_animation_player_animation_finished(anim_name: String) -> void:
 	if anim_name == "attack":
-		collision_shape_2d.disabled = true
-		if _on_ladder:
-			animation_player.play("climbing")
+		calculate_state()
+		#collision_shape_2d.disabled = true
+		#if _on_ladder:
+			#animation_player.play("climbing")
 
 
 func _on_hit_box_area_entered(_area: Area2D) -> void:
