@@ -13,3 +13,8 @@ game/.mono/
 game/data_*/
 game/mono_crash.*.json
 
+# Flatpak-related ignores
+/build
+/builddir
+/repo
+/.flatpak-builder
