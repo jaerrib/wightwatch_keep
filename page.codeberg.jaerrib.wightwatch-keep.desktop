@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Wightwatch Keep
+Comment=Purge the evil from the tower
+Categories=Game;ActionGame;
+Icon=page.codeberg.jaerrib.wightwatch-keep
+Exec=godot-runner
+Type=Application
+Terminal=false
