@@ -113,9 +113,6 @@ func set_state(new_state: PlayerState) -> void:
 		return
 	if new_state == _state:
 		return
-	
-	#if animation_player.current_animation == "attack" or new_state == _state:
-		#return
 	_state = new_state
 	match _state:
 		PlayerState.ON_LADDER:
@@ -166,9 +163,6 @@ func on_ladder(value: bool) -> void:
 func _on_animation_player_animation_finished(anim_name: String) -> void:
 	if anim_name == "attack":
 		calculate_state()
-		#collision_shape_2d.disabled = true
-		#if _on_ladder:
-			#animation_player.play("climbing")
 
 
 func _on_hit_box_area_entered(_area: Area2D) -> void:
