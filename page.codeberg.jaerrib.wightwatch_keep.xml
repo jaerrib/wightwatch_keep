@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>page.codeberg.jaerrib.wightwatch-keep</id>
+  <id>page.codeberg.jaerrib.wightwatch_keep</id>
 
   <name>Wightwatch Keep</name>
   <summary>Purge the evil from the tower</summary>
