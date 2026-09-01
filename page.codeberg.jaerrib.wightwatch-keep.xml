@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>page.codeberg.jaerrib.wightwatch-keep</id>
+
+  <name>Wightwatch Keep</name>
+  <summary>Purge the evil from the tower</summary>
+
+<developer id="page.codeberg.jaerrib">
+  <name translatable="no">John Beers</name>
+</developer>
+
+  <description>
+    <p>
+      Wightwatch Keep is an open source, puzzle-platformer inspired by NES-era games like Castlevania and Adventures of Lolo as well as older style visuals.
+    </p>
+    <p>
+      Your goal is to find the key and reveal the exit on each of the 25 floors within the tower before facing the menacing wight on the 26th floor. There are 5 themed zones, each consisting of 5 levels: the crypt, the garden, the corrupted sanctuary, the guard&apos;s quarters, and the alchemist&apos;s lab.
+    </p>
+    <p>
+      Many obstacles and enemies will be in your way before you can purge the evil from the tower. Find the keys, solve the puzzles, and defeat the wight!
+    </p>
+  </description>
+
+  <content_rating type="oars-1.0" />
+
+
+  <url type="homepage">https://codeberg.org/jaerrib/wightwatch-keep</url>
+  <url type="bugtracker">https://codeberg.org/jaerrib/wightwatch-keep/issues</url>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#545454</color>
+    <color type="primary" scheme_preference="dark">#121212</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://codeberg.org/jaerrib/wightwatch_keep/raw/commit/589ddf9cb204dbaf67c7f8dc019542fc6f5f4e87/img/screenshot02.jpg</image>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://codeberg.org/jaerrib/wightwatch_keep/raw/commit/589ddf9cb204dbaf67c7f8dc019542fc6f5f4e87/img/screenshot03.jpg</image>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://codeberg.org/jaerrib/wightwatch_keep/raw/commit/589ddf9cb204dbaf67c7f8dc019542fc6f5f4e87/img/screenshot04.jpg</image>
+    </screenshot>
+  </screenshots>
+
+  <requires>
+    <!-- ONLY desktop supported -->
+    <control>keyboard</control>
+    <display_length compare="ge">320</display_length>
+  </requires>
+
+  <supports>
+    <control>gamepad</control>
+  </supports>
+
+
+  <releases>
+    <release version="1.5.2" date="2026-09-01">
+      <description>
+        <p>Initial version for FlatHub.</p>
+      </description>
+    </release>
+  </releases>
+
+  <launchable type="desktop-id">page.codeberg.jaerrib.wightwatch-keep.desktop</launchable>
+  <metadata_license>CC-BY-SA-4.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+</component>
