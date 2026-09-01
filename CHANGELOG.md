@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.5.2
+
+### Fixes
+
+- Backported a fix from Wightwatch Keep 2 to address an issue where the player would fail to resume
+the running animation if attacking while continuing to press left or right
+
+### Changes
+
+- Updated icon in preparation for Flathub release
+
+### New features
+
+- Added metadata and desktop icon in preparation for Flathub release
+
 ## 1.5.1
 
 ### Fixes
