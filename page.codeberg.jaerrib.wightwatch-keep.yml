@@ -1,0 +1,35 @@
+id: page.codeberg.jaerrib.wightwatch-keep
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+base: org.godotengine.godot.BaseApp
+base-version: '4.7'
+sdk: org.freedesktop.Sdk
+command: godot-runner
+
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --device=dri
+  - --device=input
+
+modules:
+  - name: wightwatchkeep
+    buildsystem: simple
+
+    sources:
+      - type: git
+        url: https://codeberg.org/jaerrib/wightwatch-keep.git
+        commit: 8c0a102014365a64fb1658afcd537bdbc6b355d2
+
+      - type: file
+        url: https://codeberg.org/jaerrib/wightwatch-keep/releases/download/1.5.2/Wightwatch_Keep-1-5-2.pck
+        dest-filename: Wightwatch_Keep.pck
+        sha256: 9fe39ce4e7e86a34b7a815ed78a65eb0a1159b8ec8b2b5f91358bdab34716069
+
+    build-commands:
+      - install -Dm644 Wightwatch_Keep.pck ${FLATPAK_DEST}/bin/godot-runner.pck
+      - install -Dm644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 ${FLATPAK_ID}.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 ${FLATPAK_ID}.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
