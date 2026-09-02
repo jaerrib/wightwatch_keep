@@ -24,8 +24,8 @@
   <content_rating type="oars-1.0" />
 
 
-  <url type="homepage">https://codeberg.org/jaerrib/wightwatch-keep</url>
-  <url type="bugtracker">https://codeberg.org/jaerrib/wightwatch-keep/issues</url>
+  <url type="homepage">https://codeberg.org/jaerrib/wightwatch_keep</url>
+  <url type="bugtracker">https://codeberg.org/jaerrib/wightwatch_keep/issues</url>
 
   <branding>
     <color type="primary" scheme_preference="light">#545454</color>
@@ -52,18 +52,18 @@
 
   <supports>
     <control>gamepad</control>
-  </supports>
+  </supports>page.codeberg.jaerrib.wightwatch_keep
 
 
   <releases>
-    <release version="1.5.2" date="2026-09-01">
+    <release version="1.5.2.1" date="2026-09-01">
       <description>
         <p>Initial version for FlatHub.</p>
       </description>
     </release>
   </releases>
 
-  <launchable type="desktop-id">page.codeberg.jaerrib.wightwatch-keep.desktop</launchable>
+  <launchable type="desktop-id">page.codeberg.jaerrib.wightwatch_keep.desktop</launchable>
   <metadata_license>CC-BY-SA-4.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
 </component>
