@@ -102,17 +102,17 @@ position = Vector2(168, 184)
 position = Vector2(72, 120)
 
 [node name="P2" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="1" unique_id=2107497781]
-position = Vector2(176, 120)
+position = Vector2(240, 120)
 
 [node name="P3" type="Marker2D" parent="Paths" parent_id_path=PackedInt32Array(939698982) index="2" unique_id=1174737438]
 position = Vector2(80, 176)
 
 [node name="Platform1" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="0" unique_id=2000468865 node_paths=PackedStringArray("destination") instance=ExtResource("8_ckbfx")]
-position = Vector2(152, 120)
+position = Vector2(144, 120)
 destination = NodePath("../../Paths/P1")
 
 [node name="Platform2" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="1" unique_id=1377960404 node_paths=PackedStringArray("destination") instance=ExtResource("8_ckbfx")]
-position = Vector2(248, 120)
+position = Vector2(168, 120)
 destination = NodePath("../../Paths/P2")
 
 [node name="Platform3" parent="MovingPlatforms" parent_id_path=PackedInt32Array(515113779) index="2" unique_id=564682428 node_paths=PackedStringArray("destination") instance=ExtResource("10_l8hb4")]
