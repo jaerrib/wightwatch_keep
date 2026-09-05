@@ -1,0 +1,128 @@
+[gd_scene format=4 uid="uid://bhf7t226sdndb"]
+
+[ext_resource type="FontFile" uid="uid://b8dqyry4eqxty" path="res://assets/fonts/8-bit-limit.brk.ttf" id="1_d84ve"]
+[ext_resource type="Script" uid="uid://kd713s1c0i6s" path="res://scenes/tutorial_page/tutorial_page.gd" id="1_rpfrn"]
+[ext_resource type="FontFile" uid="uid://c68gjc4nwofmq" path="res://assets/fonts/visitor-brk.visitor-tt2-brk.ttf" id="2_rpfrn"]
+[ext_resource type="TileSet" uid="uid://bj3n3prtgpjja" path="res://assets/bg_tile_map.tres" id="2_ug6mv"]
+
+[sub_resource type="Animation" id="Animation_ug6mv"]
+resource_name = "Pulse"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/AdvanceLabel:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.7529412, 0, 0, 1), Color(0.7528677, 0, 0, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y5rnv"]
+_data = {
+&"Pulse": SubResource("Animation_ug6mv")
+}
+
+[node name="TutorialPage" type="Node2D" unique_id=1959282528]
+script = ExtResource("1_rpfrn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1611664705]
+offset_right = 320.0
+offset_bottom = 240.0
+color = Color(0, 0, 0, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1058950622]
+tile_map_data = PackedByteArray("AAATAA4AAgAFAAAAAAASAA4AAgAFAAAAAAARAA4AAgAFAAAAAAAQAA4AAgAFAAAAAAAAAA4AAgAFAAAAAAABAA4AAgAFAAAAAAACAA4AAgAFAAAAAAADAA4AAgAFAAAAAAARAAAAAgAFAAAAAAASAAAAAgAFAAAAAAATAAAAAgAFAAAAAAAAAAAAAgAFAAAAAAABAAAAAgAFAAAAAAACAAAAAgAFAAAAAAATAAEAAgABAAEAAAATAAIAAgABAAEAAAATAAMAAgABAAEAAAASAAEAAgABAAEAAAASAAIAAgABAAEAAAABAAEAAgABAAEAAAABAAIAAgABAAEAAAAAAAIAAgABAAEAAAAAAAMAAgABAAEAAAAAAAEAAgABAAEAAAAQAAAAAgAFAAAAAAAPAAAAAgAFAAAAAAAOAAAAAgAFAAAAAAANAAAAAgAFAAAAAAAMAAAAAgAFAAAAAAALAAAAAgAFAAAAAAAKAAAAAgAFAAAAAAAJAAAAAgAFAAAAAAAIAAAAAgAFAAAAAAAHAAAAAgAFAAAAAAAGAAAAAgAFAAAAAAAFAAAAAgAFAAAAAAAEAAAAAgAFAAAAAAADAAAAAgAFAAAAAAAEAA4AAgAFAAAAAAAFAA4AAgAFAAAAAAAGAA4AAgAFAAAAAAAHAA4AAgAFAAAAAAAIAA4AAgAFAAAAAAAJAA4AAgAFAAAAAAAKAA4AAgAFAAAAAAALAA4AAgAFAAAAAAAMAA4AAgAFAAAAAAANAA4AAgAFAAAAAAAOAA4AAgAFAAAAAAAPAA4AAgAFAAAAAAABAAwAAgAHAAEAAAABAA0AAgAHAAIAAAASAAwAAgAHAAEAAAASAA0AAgAHAAIAAAA=")
+tile_set = ExtResource("2_ug6mv")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1551577530]
+offset_right = 320.0
+offset_bottom = 240.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=666627468]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1423396760]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.7529412, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_d84ve")
+text = "Wightwatch Keep - Controls"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1566882390]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=167648756]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_rpfrn")
+text = "Keyboard (Gamepad)"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=166389031]
+layout_mode = 2
+
+[node name="VBoxContainerL" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=632513651]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ControlsListL" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainerL" unique_id=1529285001]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_rpfrn")
+text = "Movement:
+WASD / Arrows
+(D-pad / Left Stick)
+
+Jump:
+Space (A)"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1524755299]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ControlsListR" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1479993172]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_rpfrn")
+text = "Attack:
+Enter / Z (X)
+
+Pause:
+P (Start Button)
+
+Quit:
+Esc (Back Button)"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Space2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=155388209]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AdvanceLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=640167232]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0.7529412, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_d84ve")
+text = "Press JUMP to advance"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=119219013]
+libraries/ = SubResource("AnimationLibrary_y5rnv")
+autoplay = &"Pulse"
