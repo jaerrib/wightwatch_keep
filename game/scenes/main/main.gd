@@ -31,8 +31,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and !_intro_playing:
 		if Input.is_action_pressed("down"):
 			_play_level_0 = true
-			#GameManager.load_prototype_level()
-		#else:
 		start_intro()
 
 
