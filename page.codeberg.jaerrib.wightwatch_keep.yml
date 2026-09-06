@@ -12,6 +12,7 @@ finish-args:
   - --socket=fallback-x11
   - --socket=pulseaudio
   - --device=dri
+  - --device=input
 
 modules:
   - name: wightwatchkeep
@@ -20,12 +21,13 @@ modules:
     sources:
       - type: git
         url: https://codeberg.org/jaerrib/wightwatch_keep.git
-        commit: d66e786412a6171fa2923e3506713e24ad050719
+        tag: 1.6
+        commit: b249bcf5b7af7257982ac50f6b327ef8bfaabaa2
 
       - type: file
-        url: https://codeberg.org/jaerrib/wightwatch_keep/releases/download/1.5.2/Wightwatch_Keep-1-5-2.pck
+        url: https://codeberg.org/jaerrib/wightwatch_keep/releases/download/1.6/Wightwatch_Keep-1.6.pck
         dest-filename: Wightwatch_Keep.pck
-        sha256: 9c150e1d4320719b2f3daee311661d417d3518a4ce860f5a05790791268cddbb
+        sha256: 0f715f737cc505ee06a38df63bdfa4ec4241934cb754be5634b4b6d19b5f5ccc
 
     build-commands:
       - install -Dm644 Wightwatch_Keep.pck ${FLATPAK_DEST}/bin/godot-runner.pck
