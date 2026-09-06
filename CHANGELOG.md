@@ -9,6 +9,7 @@
 
 ## Fixes
 
+- Fixed gamepads not being seen in the flatpak version
 - Improved the platform timing on level 9
 - Made the input mapping match what was displayed on the tutorial page
 
