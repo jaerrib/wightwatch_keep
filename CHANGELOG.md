@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.6
+
+## Changes
+
+- Added a tutorial screen when the game launches to help clarify the controls (based on user feedback)
+- Switched from integer to fractional scaling for those with resolutions that don't scale cleanly
+
+## Fixes
+
+- Improved the platform timing on level 9
+- Made the input mapping match what was displayed on the tutorial page
+
 ## 1.5.2
 
 ### Fixes
