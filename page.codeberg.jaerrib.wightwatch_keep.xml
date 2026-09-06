@@ -63,7 +63,7 @@
           <li>Added a tutorial screen when the game launches to help clarify the controls (based on user feedback)</li>
           <li>Switched from integer to fractional scaling for those with resolutions that don't scale cleanly</li>
         </ul>
-        <p>Fixes
+        <p>Fixes</p>
         <ul>
           <li>Fixed gamepads not being seen in the flatpak version</li>
           <li>Improved the platform timing on level 9</li>
