@@ -3,7 +3,7 @@
   <id>page.codeberg.jaerrib.wightwatch_keep</id>
 
   <name>Wightwatch Keep</name>
-  <summary>Purge the evil from the tower</summary>
+  <summary>Purge evil from the tower</summary>
 
 <developer id="page.codeberg.jaerrib">
   <name translatable="no">John Beers</name>
@@ -52,10 +52,25 @@
 
   <supports>
     <control>gamepad</control>
-  </supports>page.codeberg.jaerrib.wightwatch_keep
+  </supports>
 
 
   <releases>
+      <release version="1.6" date="2026-09-06">
+      <description>
+        <p>Changes</p>
+        <ul>
+          <li>Added a tutorial screen when the game launches to help clarify the controls (based on user feedback)</li>
+          <li>Switched from integer to fractional scaling for those with resolutions that don't scale cleanly</li>
+        </ul>
+        <p>Fixes
+        <ul>
+          <li>Fixed gamepads not being seen in the flatpak version</li>
+          <li>Improved the platform timing on level 9</li>
+          <li>Made the input mapping match what was displayed on the tutorial page</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.2.1" date="2026-09-01">
       <description>
         <p>Initial version for FlatHub.</p>
