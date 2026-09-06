@@ -2,12 +2,12 @@
 
 ## 1.6
 
-## Changes
+### Changes
 
 - Added a tutorial screen when the game launches to help clarify the controls (based on user feedback)
 - Switched from integer to fractional scaling for those with resolutions that don't scale cleanly
 
-## Fixes
+### Fixes
 
 - Fixed gamepads not being seen in the flatpak version
 - Improved the platform timing on level 9
