@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0.1
+
+### Changes
+
+- Update to most recent Godot base app runner for flatpak
+- No gameplay changes
+
 ## 1.6
 
 ### Changes
